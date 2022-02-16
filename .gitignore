@@ -1,0 +1,30 @@
+# Game ignores
+instance.cfg
+coremods/
+crash-reports/
+mods/
+local/
+logs/
+saves/
+resourcepacks/
+schematics/
+screenshots/
+server-resource-packs/
+shaderpacks/
+texturepacks/
+.minecraft/options.txt
+.minecraft/realms_persistence.json
+.minecraft/usercache.json
+.minecraft/usernamecache.json
+
+# Tweaking workspace
+*.py
+__pycache__/
+compiler/
+exported/
+kubetypings/
+type_transformer.json
+tsconfig.json
+raw_en_us.json
+package.json
+package-lock.json

@@ -1,0 +1,45 @@
+{
+  "dictionary": {
+    "byg:araucaria_savanna": [
+      "SAVANNA",
+      "OVERWORLD"
+    ],
+    "byg:bayou": [
+      "SWAMP",
+      "FOREST",
+      "WET",
+      "OVERWORLD"
+    ],
+    "byg:autumnal_valley": [
+      "PLAINS",
+      "DRY",
+      "OVERWORLD"
+    ],
+    "byg:borealis_grove": [
+      "FOREST",
+      "OVERWORLD"
+    ],
+    "byg:amaranth_fields": [
+      "PLAINS",
+      "RARE",
+      "LUSH",
+      "OVERWORLD"
+    ],
+    "byg:aspen_forest": [
+      "FOREST",
+      "OVERWORLD"
+    ],
+    "byg:allium_fields": [
+      "PLAINS",
+      "RARE",
+      "LUSH",
+      "OVERWORLD"
+    ],
+    "byg:baobab_savanna": [
+      "SAVANNA",
+      "SPARSE",
+      "DRY",
+      "OVERWORLD"
+    ]
+  }
+}
