@@ -1,14 +1,28 @@
 // priority: 0
 
 const namedOnlyItems = [
-
+    "cheese",
+    "dough_berry",
+    "dough_cocoa",
+    "raw_wrap_bread",
+    "raw_pie_crust",
+    "raw_cookie_plain",
+    "raw_cookie_berry",
+    "raw_cookie_cocoa"
 ];
+
+const plainFood = [
+    new PlainFood("cookie_plain", 1, 1).always(),
+    new PlainFood("wraped_bread", 5, 3)
+]
 
 const namedOnlyFluids = [
     //Ore processing
     new NameColorHolder("dissolvent", Color.rgba(198, 198, 32, 1.0)),
     new NameColorHolder("purifying_agent", Color.rgba(255, 255, 255, 1.0)),
-    new NameColorHolder("purifying_agent", Color.rgba(255, 255, 255, 1.0))
+    new NameColorHolder("crystallizing_fluid", Color.rgba(255, 255, 255, 1.0)),
+    //Milk
+    new NameColorHolder("cream", Color.rgba(255, 255, 240, 1.0))
 ];
 
 //TODO: fix item colors
@@ -17,9 +31,12 @@ const coloredItems = [
     new PrefixedColoredItems("powder")
         .addItem("salt", Color.rgba(255, 255, 255, 1.0))
         .addItem("sulfur", Color.rgba(255, 255, 255, 1.0)),
+    //TODO: Give it a texture
+    new PrefixedColoredItems("flour")
+        .addItem("corn", Color.rgba(255, 255, 255, 1.0)),
     //Doughs, remade and expanded
     new PrefixedColoredItems("dough")
-        .addItem("wheat", Color.rgba(255, 255, 255, 1.0))
+        .addItem("sweet", Color.rgba(255, 255, 255, 1.0)),
 ]
 
 const oreColorMappings = {
@@ -81,7 +98,7 @@ captureEvent("item.registry", event => {
         builder.tooltip(
             Text.translate("item.kubejs.sodium_chloride_desc").gray())
     })
-
+    plainFood.forEach((v, i, a) => event.create(v.food, builder => builder.food(food => food.hunger(v.hunger).saturation(v.saturation).alwaysEdible(v._always)).translationKey(v.food)))
     namedOnlyItems.forEach((v, i, a) => event.create(v, builder => builder.translationKey(v)))
     coloredItems.forEach((v, i, a) => v.members.forEach((n, ii, aa) => {
         event.create(v.prefix + "_" + n.name, builder => {

@@ -16,6 +16,7 @@ texturepacks/
 .minecraft/realms_persistence.json
 .minecraft/usercache.json
 .minecraft/usernamecache.json
+natives/
 
 # Tweaking workspace
 *.py

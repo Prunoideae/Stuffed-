@@ -6,7 +6,6 @@ captureEvent("jei.hide.items", event => {
 	})
 
 	event.hide(items.create.dough)
-	event.hide(items.farmersdelight.wheat_dough)
 })
 
 captureEvent("item.tooltip", event => {

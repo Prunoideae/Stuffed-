@@ -12,7 +12,7 @@
  * 
  * @param {Item} output 
  * @param {number} duration 
- * @param {Item} input 
+ * @param {Ingredient} input 
  * @param {Fluid} fluid 
  * @return {DryingBasingRecipe}
  */
@@ -53,9 +53,32 @@ function DryingBasingRecipe(output, duration, input, fluid) {
         })
     }
 
-    this.drying = function (event) { this.createOfTypes(event, ["integrateddynamics:drying_basin"]) }
+    this.drying = function (event) { this.createOfTypes(event, ["integrateddynamics:drying_basin"]); return this; }
 
-    this.mechanical = function (event) { this.createOfTypes(event, ["integrateddynamics:mechanical_drying_basin"]) }
+    this.mechanical = function (event) { this.createOfTypes(event, ["integrateddynamics:mechanical_drying_basin"]); return this; }
 
     this.universal = function (event) { this.createOfTypes(event, ["integrateddynamics:drying_basin", "integrateddynamics:mechanical_drying_basin"]) }
+}
+
+function CuttingRecipe(output, input, tool) {
+    this.output = []
+    this.input = []
+    output.forEach((v, i, a) => this.output.push(v.toResultJson()))
+    input.forEach((v, i, a) => this.input.push(v.toJson()))
+    this.tool = tool
+
+    /**
+     * 
+     * @param {dev.latvian.mods.kubejs.recipe.RecipeEventJS} event 
+     */
+    this.create = function (event) {
+        event.custom({
+            type: "farmersdelight:cutting",
+            ingredients: this.input,
+            tool: {
+                "tag": this.tool
+            },
+            result: this.output
+        })
+    }
 }

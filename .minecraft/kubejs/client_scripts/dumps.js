@@ -1032,6 +1032,25 @@ zelkova_stairs:"byg:zelkova_stairs",
 zelkova_trapdoor:"byg:zelkova_trapdoor",
 zelkova_wood:"byg:zelkova_wood"
 },
+corn_delight:{
+boiled_corn:"corn_delight:boiled_corn",
+corn:"corn_delight:corn",
+corn_crate:"corn_delight:corn_crate",
+corn_kernel_bag:"corn_delight:corn_kernel_bag",
+corn_seeds:"corn_delight:corn_seeds",
+corn_soup:"corn_delight:corn_soup",
+cornbread:"corn_delight:cornbread",
+cornbread_batter:"corn_delight:cornbread_batter",
+cornbread_stuffing:"corn_delight:cornbread_stuffing",
+creamed_corn:"corn_delight:creamed_corn",
+creamy_corn_drink:"corn_delight:creamy_corn_drink",
+grilled_corn:"corn_delight:grilled_corn",
+popcorn:"corn_delight:popcorn",
+taco:"corn_delight:taco",
+tortilla:"corn_delight:tortilla",
+tortilla_raw:"corn_delight:tortilla_raw",
+wild_corn:"corn_delight:wild_corn"
+},
 create:{
 acacia_window:"create:acacia_window",
 acacia_window_pane:"create:acacia_window_pane",
@@ -1965,6 +1984,8 @@ part_interface_item:"integratedtunnels:part_interface_item",
 part_player_simulator:"integratedtunnels:part_player_simulator"
 },
 kubejs:{
+cheese:"kubejs:cheese",
+cookie_plain:"kubejs:cookie_plain",
 crushed_ametrine_ore:"kubejs:crushed_ametrine_ore",
 crushed_anthracite_ore:"kubejs:crushed_anthracite_ore",
 crushed_blue_nether_gold_ore:"kubejs:crushed_blue_nether_gold_ore",
@@ -1989,6 +2010,9 @@ crushed_redstone:"kubejs:crushed_redstone",
 crushed_zinc_ore:"kubejs:crushed_zinc_ore",
 crystallizing_fluid_bucket:"kubejs:crystallizing_fluid_bucket",
 dissolvent_bucket:"kubejs:dissolvent_bucket",
+dough_berry:"kubejs:dough_berry",
+dough_cocoa:"kubejs:dough_cocoa",
+dough_sweet:"kubejs:dough_sweet",
 dummy_fluid_item:"kubejs:dummy_fluid_item",
 dust_ametrine_ore:"kubejs:dust_ametrine_ore",
 dust_anthracite_ore:"kubejs:dust_anthracite_ore",
@@ -2012,7 +2036,9 @@ dust_pendorite_ore:"kubejs:dust_pendorite_ore",
 dust_quartz:"kubejs:dust_quartz",
 dust_redstone:"kubejs:dust_redstone",
 dust_zinc_ore:"kubejs:dust_zinc_ore",
+flour_corn:"kubejs:flour_corn",
 powder_salt:"kubejs:powder_salt",
+powder_sulfur:"kubejs:powder_sulfur",
 purified_ametrine_ore:"kubejs:purified_ametrine_ore",
 purified_anthracite_ore:"kubejs:purified_anthracite_ore",
 purified_blue_nether_gold_ore:"kubejs:purified_blue_nether_gold_ore",
@@ -2058,6 +2084,11 @@ purified_quartz:"kubejs:purified_quartz",
 purified_redstone:"kubejs:purified_redstone",
 purified_zinc_ore:"kubejs:purified_zinc_ore",
 purifying_agent_bucket:"kubejs:purifying_agent_bucket",
+raw_cookie_berry:"kubejs:raw_cookie_berry",
+raw_cookie_cocoa:"kubejs:raw_cookie_cocoa",
+raw_cookie_plain:"kubejs:raw_cookie_plain",
+raw_pie_crust:"kubejs:raw_pie_crust",
+raw_wrap_bread:"kubejs:raw_wrap_bread",
 recrystallized_ametrine_ore:"kubejs:recrystallized_ametrine_ore",
 recrystallized_anthracite_ore:"kubejs:recrystallized_anthracite_ore",
 recrystallized_blue_nether_gold_ore:"kubejs:recrystallized_blue_nether_gold_ore",
@@ -2155,7 +2186,9 @@ solution_pendorite_ore_bucket:"kubejs:solution_pendorite_ore_bucket",
 solution_quartz_bucket:"kubejs:solution_quartz_bucket",
 solution_redstone_bucket:"kubejs:solution_redstone_bucket",
 solution_zinc_ore_bucket:"kubejs:solution_zinc_ore_bucket",
-white_hair_wolf_ear_loli:"kubejs:white_hair_wolf_ear_loli"
+white_hair_wolf_ear_loli:"kubejs:white_hair_wolf_ear_loli",
+wraped_bread:"kubejs:wraped_bread",
+cream_bucket:"kubejs:cream_bucket"
 },
 minecraft:{
 acacia_boat:"minecraft:acacia_boat",
@@ -3410,7 +3443,8 @@ solution_netherite_scrap:"kubejs:solution_netherite_scrap",
 solution_pendorite_ore:"kubejs:solution_pendorite_ore",
 solution_quartz:"kubejs:solution_quartz",
 solution_redstone:"kubejs:solution_redstone",
-solution_zinc_ore:"kubejs:solution_zinc_ore"
+solution_zinc_ore:"kubejs:solution_zinc_ore",
+cream:"kubejs:cream"
 },
 minecraft:{
 empty:"minecraft:empty",
@@ -3420,6 +3454,48 @@ water:"minecraft:water"
 }
 };
 const tags ={
+fluids:{
+minecraft:{
+lava:{
+tag:"minecraft:lava",
+members:["minecraft:lava", "minecraft:flowing_lava"]
+},
+water:{
+tag:"minecraft:water",
+members:["minecraft:water", "minecraft:flowing_water", "create:flowing_honey", "create:honey", "create:flowing_chocolate", "create:chocolate", "createaddition:flowing_seed_oil", "createaddition:seed_oil"]
+}
+},
+forge:{
+crude_oil:{
+tag:"forge:crude_oil",
+members:[]
+},
+chocolate:{
+tag:"forge:chocolate",
+members:["create:flowing_chocolate", "create:chocolate"]
+},
+milk:{
+tag:"forge:milk",
+members:["minecraft:milk?", "minecraft:flowing_milk?"]
+},
+tea:{
+tag:"forge:tea",
+members:["create:flowing_tea", "create:tea"]
+},
+honey:{
+tag:"forge:honey",
+members:["create:flowing_honey", "create:honey"]
+},
+creosote:{
+tag:"forge:creosote",
+members:[]
+},
+plantoil:{
+tag:"forge:plantoil",
+members:["createaddition:flowing_seed_oil", "createaddition:seed_oil"]
+}
+}
+},
 entity_types:{
 minecraft:{
 freeze_hurts_extra_types:{
@@ -3471,2198 +3547,6 @@ members:["minecraft:horse", "minecraft:skeleton_horse", "minecraft:zombie_horse"
 dog_food_users:{
 tag:"farmersdelight:dog_food_users",
 members:["minecraft:wolf"]
-}
-}
-},
-fluids:{
-minecraft:{
-lava:{
-tag:"minecraft:lava",
-members:["minecraft:lava", "minecraft:flowing_lava"]
-},
-water:{
-tag:"minecraft:water",
-members:["minecraft:water", "minecraft:flowing_water", "create:flowing_honey", "create:honey", "create:flowing_chocolate", "create:chocolate", "createaddition:flowing_seed_oil", "createaddition:seed_oil"]
-}
-},
-forge:{
-crude_oil:{
-tag:"forge:crude_oil",
-members:[]
-},
-chocolate:{
-tag:"forge:chocolate",
-members:["create:flowing_chocolate", "create:chocolate"]
-},
-milk:{
-tag:"forge:milk",
-members:["minecraft:milk?", "minecraft:flowing_milk?"]
-},
-tea:{
-tag:"forge:tea",
-members:["create:flowing_tea", "create:tea"]
-},
-honey:{
-tag:"forge:honey",
-members:["create:flowing_honey", "create:honey"]
-},
-creosote:{
-tag:"forge:creosote",
-members:[]
-},
-plantoil:{
-tag:"forge:plantoil",
-members:["createaddition:flowing_seed_oil", "createaddition:seed_oil"]
-}
-}
-},
-items:{
-byg:{
-pine_logs:{
-tag:"byg:pine_logs",
-members:["byg:pine_log", "byg:stripped_pine_log", "byg:pine_wood", "byg:stripped_pine_wood"]
-},
-maple_logs:{
-tag:"byg:maple_logs",
-members:["byg:maple_log", "byg:stripped_maple_log", "byg:maple_wood", "byg:stripped_maple_wood"]
-},
-blue_sand:{
-tag:"byg:blue_sand",
-members:["byg:blue_sand"]
-},
-willow_logs:{
-tag:"byg:willow_logs",
-members:["byg:willow_log", "byg:stripped_willow_log", "byg:willow_wood", "byg:stripped_willow_wood"]
-},
-red_dye:{
-tag:"byg:red_dye",
-members:["byg:amaranth", "byg:begonia", "byg:kovan_flower", "byg:rose", "byg:torch_ginger"]
-},
-palo_verde_logs:{
-tag:"byg:palo_verde_logs",
-members:["byg:palo_verde_log", "byg:stripped_palo_verde_log", "byg:palo_verde_wood", "byg:stripped_palo_verde_wood"]
-},
-fir_logs:{
-tag:"byg:fir_logs",
-members:["byg:fir_log", "byg:stripped_fir_log", "byg:fir_wood", "byg:stripped_fir_wood"]
-},
-orange_dye:{
-tag:"byg:orange_dye",
-members:["byg:orange_amaranth", "byg:orange_daisy", "byg:guzmania", "byg:incan_lily", "byg:california_poppy"]
-},
-pink_sand:{
-tag:"byg:pink_sand",
-members:["byg:pink_sand"]
-},
-double_purple_dye:{
-tag:"byg:double_purple_dye",
-members:["byg:tall_allium"]
-},
-imparius_stems:{
-tag:"byg:imparius_stems",
-members:["byg:imparius_stem", "byg:imparius_hyphae", "byg:fungal_imparius_stem", "byg:fungal_imparius_hyphae"]
-},
-yellow_dye:{
-tag:"byg:yellow_dye",
-members:["byg:lolipop_flower", "byg:yellow_daffodil", "byg:yellow_tulip"]
-},
-withering_oak_logs:{
-tag:"byg:withering_oak_logs",
-members:["byg:withering_oak_log", "byg:withering_oak_wood"]
-},
-green_dye:{
-tag:"byg:green_dye",
-members:["byg:golden_spined_cactus", "byg:horseweed", "byg:mini_cactus", "byg:prickly_pear_cactus"]
-},
-embur_pedus:{
-tag:"byg:embur_pedus",
-members:["byg:embur_pedu", "byg:stripped_embur_pedu", "byg:embur_hyphae", "byg:stripped_embur_hyphae"]
-},
-black_sand:{
-tag:"byg:black_sand",
-members:["byg:purple_sand"]
-},
-light_blue_dye:{
-tag:"byg:light_blue_dye",
-members:["byg:winter_scilla", "byg:thereal_bellflower"]
-},
-double_pink_dye:{
-tag:"byg:double_pink_dye",
-members:["byg:japanese_orchid", "byg:tall_pink_allium"]
-},
-cherry_logs:{
-tag:"byg:cherry_logs",
-members:["byg:cherry_log", "byg:stripped_cherry_log", "byg:cherry_wood", "byg:stripped_cherry_wood"]
-},
-cypress_logs:{
-tag:"byg:cypress_logs",
-members:["byg:cypress_log", "byg:stripped_cypress_log", "byg:cypress_wood", "byg:stripped_cypress_wood"]
-},
-green_enchanted_logs:{
-tag:"byg:green_enchanted_logs",
-members:["byg:green_enchanted_log", "byg:stripped_green_enchanted_log", "byg:green_enchanted_wood", "byg:stripped_green_enchanted_wood"]
-},
-pink_dye:{
-tag:"byg:pink_dye",
-members:["byg:osiria_rose", "byg:japanese_orchid", "byg:silver_vase_flower", "byg:daffodil", "byg:bistort", "byg:firecracker_flower_bush", "byg:peach_leather_flower", "byg:pink_allium", "byg:pink_allium_flower_bush", "byg:pink_anemone", "byg:pink_daffodil", "byg:tall_pink_allium"]
-},
-bulbis_stems:{
-tag:"byg:bulbis_stems",
-members:["byg:bulbis_stem", "byg:stripped_bulbis_stem", "byg:bulbis_wood", "byg:stripped_bulbis_wood"]
-},
-sythian_stems:{
-tag:"byg:sythian_stems",
-members:["byg:sythian_stem", "byg:stripped_sythian_stem", "byg:sythian_hyphae", "byg:stripped_sythian_hyphae"]
-},
-white_dye:{
-tag:"byg:white_dye",
-members:["byg:white_anemone", "byg:white_sage", "byg:winter_rose", "byg:snowdrops", "byg:angelica"]
-},
-zelkova_logs:{
-tag:"byg:zelkova_logs",
-members:["byg:zelkova_log", "byg:stripped_zelkova_log", "byg:zelkova_wood", "byg:stripped_zelkova_wood"]
-},
-double_blue_dye:{
-tag:"byg:double_blue_dye",
-members:["byg:hydrangea_bush", "byg:delphinium"]
-},
-nightshade_logs:{
-tag:"byg:nightshade_logs",
-members:["byg:nightshade_log", "byg:stripped_nightshade_log", "byg:nightshade_wood", "byg:stripped_nightshade_wood"]
-},
-skyris_logs:{
-tag:"byg:skyris_logs",
-members:["byg:skyris_log", "byg:stripped_skyris_log", "byg:skyris_wood", "byg:stripped_skyris_wood"]
-},
-white_sand:{
-tag:"byg:white_sand",
-members:["byg:white_sand"]
-},
-light_gray_dye:{
-tag:"byg:light_gray_dye",
-members:["byg:richea"]
-},
-cyan_dye:{
-tag:"byg:cyan_dye",
-members:["byg:cyan_amaranth", "byg:cyan_rose", "byg:cyan_tulip", "byg:winter_cyclamen"]
-},
-baobab_logs:{
-tag:"byg:baobab_logs",
-members:["byg:baobab_log", "byg:stripped_baobab_log", "byg:baobab_wood", "byg:stripped_baobab_wood"]
-},
-black_dye:{
-tag:"byg:black_dye",
-members:["byg:black_rose"]
-},
-mangrove_logs:{
-tag:"byg:mangrove_logs",
-members:["byg:mangrove_log", "byg:stripped_mangrove_log", "byg:mangrove_wood", "byg:stripped_mangrove_wood"]
-},
-witch_hazel_logs:{
-tag:"byg:witch_hazel_logs",
-members:["byg:witch_hazel_log", "byg:stripped_witch_hazel_log", "byg:witch_hazel_wood", "byg:stripped_witch_hazel_wood"]
-},
-purple_dye:{
-tag:"byg:purple_dye",
-members:["byg:allium_flower_bush", "byg:alpine_bellflower", "byg:iris", "byg:purple_sage", "byg:purple_tulip", "byg:purple_amaranth", "byg:crocus", "byg:tall_allium"]
-},
-mahogany_logs:{
-tag:"byg:mahogany_logs",
-members:["byg:mahogany_log", "byg:stripped_mahogany_log", "byg:mahogany_wood", "byg:stripped_mahogany_wood"]
-},
-lament_logs:{
-tag:"byg:lament_logs",
-members:["byg:lament_log", "byg:stripped_lament_log", "byg:lament_wood", "byg:stripped_lament_wood"]
-},
-blue_dye:{
-tag:"byg:blue_dye",
-members:["byg:blue_sage", "byg:violet_leather_flower", "byg:blueberries"]
-},
-redwood_logs:{
-tag:"byg:redwood_logs",
-members:["byg:redwood_log", "byg:stripped_redwood_log", "byg:redwood_wood", "byg:stripped_redwood_wood"]
-},
-brown_dye:{
-tag:"byg:brown_dye",
-members:["byg:mud_ball"]
-},
-ether_logs:{
-tag:"byg:ether_logs",
-members:["byg:ether_log", "byg:stripped_ether_log", "byg:ether_wood", "byg:stripped_ether_wood"]
-},
-rainbow_eucalyptus_logs:{
-tag:"byg:rainbow_eucalyptus_logs",
-members:["byg:rainbow_eucalyptus_log", "byg:stripped_rainbow_eucalyptus_log", "byg:rainbow_eucalyptus_wood", "byg:stripped_rainbow_eucalyptus_wood"]
-},
-lime_dye:{
-tag:"byg:lime_dye",
-members:["byg:green_tulip"]
-},
-blue_enchanted_logs:{
-tag:"byg:blue_enchanted_logs",
-members:["byg:blue_enchanted_log", "byg:stripped_blue_enchanted_log", "byg:blue_enchanted_wood", "byg:stripped_blue_enchanted_wood"]
-},
-palm_logs:{
-tag:"byg:palm_logs",
-members:["byg:palm_log", "byg:stripped_palm_log", "byg:palm_wood", "byg:stripped_palm_wood"]
-},
-double_cyan_dye:{
-tag:"byg:double_cyan_dye",
-members:["byg:foxglove"]
-},
-aspen_logs:{
-tag:"byg:aspen_logs",
-members:["byg:aspen_log", "byg:stripped_aspen_log", "byg:aspen_wood", "byg:stripped_aspen_wood"]
-},
-purple_sand:{
-tag:"byg:purple_sand",
-members:["byg:purple_sand"]
-},
-jacaranda_logs:{
-tag:"byg:jacaranda_logs",
-members:["byg:jacaranda_log", "byg:stripped_jacaranda_log", "byg:jacaranda_wood", "byg:stripped_jacaranda_wood"]
-},
-cika_logs:{
-tag:"byg:cika_logs",
-members:["byg:cika_log", "byg:stripped_cika_log", "byg:cika_wood", "byg:stripped_cika_wood"]
-},
-magenta_dye:{
-tag:"byg:magenta_dye",
-members:["byg:magenta_amaranth", "byg:magenta_tulip", "byg:lazarus_bellflower", "byg:protea_flower", "byg:fairy_slipper"]
-},
-ebony_logs:{
-tag:"byg:ebony_logs",
-members:["byg:ebony_log", "byg:stripped_ebony_log", "byg:ebony_wood", "byg:stripped_ebony_wood"]
-},
-holly_logs:{
-tag:"byg:holly_logs",
-members:["byg:holly_log", "byg:stripped_holly_log", "byg:holly_wood", "byg:stripped_holly_wood"]
-}
-},
-forge:{
-cobblestone_mossy:{
-tag:"forge:cobblestone/mossy",
-members:["minecraft:mossy_cobblestone"]
-},
-glass_panes_magenta:{
-tag:"forge:glass_panes/magenta",
-members:["minecraft:magenta_stained_glass_pane"]
-},
-nuggets:{
-tag:"forge:nuggets",
-members:["create:copper_nugget", "create:zinc_nugget", "create:brass_nugget", "create:experience_nugget", "#forge:nuggets/iron", "#forge:nuggets/gold"]
-},
-glass_tinted:{
-tag:"forge:glass/tinted",
-members:["minecraft:tinted_glass"]
-},
-plates:{
-tag:"forge:plates",
-members:["create:copper_sheet", "create:brass_sheet", "create:iron_sheet", "create:golden_sheet", "createaddition:zinc_sheet"]
-},
-dyes_gray:{
-tag:"forge:dyes/gray",
-members:["minecraft:gray_dye"]
-},
-plates_zinc:{
-tag:"forge:plates/zinc",
-members:["createaddition:zinc_sheet"]
-},
-wires_gold:{
-tag:"forge:wires/gold",
-members:["createaddition:gold_wire"]
-},
-flour:{
-tag:"forge:flour",
-members:["farmers_extra_foods:flour?"]
-},
-rods_gold:{
-tag:"forge:rods/gold",
-members:["createaddition:gold_rod"]
-},
-axes:{
-tag:"forge:axes",
-members:["byg:pendorite_axe", "byg:pendorite_battleaxe"]
-},
-rods_blaze:{
-tag:"forge:rods/blaze",
-members:["minecraft:blaze_rod"]
-},
-storage_blocks_netherite:{
-tag:"forge:storage_blocks/netherite",
-members:["minecraft:netherite_block"]
-},
-glass_panes_white:{
-tag:"forge:glass_panes/white",
-members:["minecraft:white_stained_glass_pane"]
-},
-glass_panes_light_gray:{
-tag:"forge:glass_panes/light_gray",
-members:["minecraft:light_gray_stained_glass_pane"]
-},
-beacon_payment:{
-tag:"forge:beacon_payment",
-members:["#create:create_ingots"]
-},
-vegetables_carrot:{
-tag:"forge:vegetables/carrot",
-members:["minecraft:carrot"]
-},
-storage_blocks_ametrine:{
-tag:"forge:storage_blocks/ametrine",
-members:["byg:ametrine_block"]
-},
-crushed_kubejs:{
-tag:"forge:crushed_kubejs",
-members:["kubejs:crushed_zinc_ore", "kubejs:crushed_ametrine_ore", "kubejs:crushed_anthracite_ore", "kubejs:crushed_budding_ametrine_ore", "kubejs:crushed_cryptic_redstone_ore", "kubejs:crushed_lignite_ore", "kubejs:crushed_pendorite_ore", "kubejs:crushed_blue_nether_gold_ore", "kubejs:crushed_blue_nether_quartz_ore", "kubejs:crushed_brimstone_nether_gold_ore", "kubejs:crushed_brimstone_nether_quartz_ore", "kubejs:crushed_coal", "kubejs:crushed_copper", "kubejs:crushed_diamond", "kubejs:crushed_emerald", "kubejs:crushed_gold", "kubejs:crushed_iron", "kubejs:crushed_lapis", "kubejs:crushed_redstone", "kubejs:crushed_quartz", "kubejs:crushed_netherite_scrap", "kubejs:crushed_nether_gold"]
-},
-glass_pink:{
-tag:"forge:glass/pink",
-members:["minecraft:pink_stained_glass"]
-},
-chests:{
-tag:"forge:chests",
-members:["#forge:chests/ender", "#forge:chests/trapped", "#forge:chests/wooden"]
-},
-storage_blocks_emerald:{
-tag:"forge:storage_blocks/emerald",
-members:["minecraft:emerald_block"]
-},
-ores_redstone:{
-tag:"forge:ores/redstone",
-members:["#minecraft:redstone_ores", "byg:cryptic_redstone_ore", "#minecraft:redstone_ores"]
-},
-salad_ingredients:{
-tag:"forge:salad_ingredients",
-members:["#forge:salad_ingredients/cabbage"]
-},
-glass_red:{
-tag:"forge:glass/red",
-members:["minecraft:red_stained_glass"]
-},
-ender_pearls:{
-tag:"forge:ender_pearls",
-members:["minecraft:ender_pearl"]
-},
-cobblestone_deepslate:{
-tag:"forge:cobblestone/deepslate",
-members:["minecraft:cobbled_deepslate"]
-},
-glass_panes_green:{
-tag:"forge:glass_panes/green",
-members:["minecraft:green_stained_glass_pane"]
-},
-chests_trapped:{
-tag:"forge:chests/trapped",
-members:["minecraft:trapped_chest"]
-},
-fence_gates:{
-tag:"forge:fence_gates",
-members:["byg:aspen_fence_gate", "byg:baobab_fence_gate", "byg:blue_enchanted_fence_gate", "byg:cherry_fence_gate", "byg:cika_fence_gate", "byg:cypress_fence_gate", "byg:ebony_fence_gate", "byg:fir_fence_gate", "byg:green_enchanted_fence_gate", "byg:holly_fence_gate", "byg:jacaranda_fence_gate", "byg:mahogany_fence_gate", "byg:mangrove_fence_gate", "byg:maple_fence_gate", "byg:pine_fence_gate", "byg:rainbow_eucalyptus_fence_gate", "byg:redwood_fence_gate", "byg:skyris_fence_gate", "byg:willow_fence_gate", "byg:witch_hazel_fence_gate", "byg:zelkova_fence_gate", "byg:sythian_fence_gate", "byg:embur_fence_gate", "byg:palm_fence_gate", "byg:lament_fence_gate", "byg:ether_fence_gate", "byg:bulbis_fence_gate", "byg:nightshade_fence_gate", "byg:imparius_fence_gate", "#forge:fence_gates/wooden"]
-},
-ingots:{
-tag:"forge:ingots",
-members:["#create:create_ingots", "#forge:ingots/brick", "#forge:ingots/copper", "#forge:ingots/gold", "#forge:ingots/iron", "#forge:ingots/netherite", "#forge:ingots/nether_brick"]
-},
-fruits_lime:{
-tag:"forge:fruits/lime",
-members:["fruittrees:lime"]
-},
-crops_nether_wart:{
-tag:"forge:crops/nether_wart",
-members:["minecraft:nether_wart"]
-},
-sandstone:{
-tag:"forge:sandstone",
-members:["byg:black_sandstone", "byg:black_chiseled_sandstone", "byg:black_cut_sandstone", "byg:blue_sandstone", "byg:blue_chiseled_sandstone", "byg:blue_cut_sandstone", "byg:white_sandstone", "byg:white_chiseled_sandstone", "byg:white_cut_sandstone", "byg:purple_sandstone", "byg:purple_chiseled_sandstone", "byg:purple_cut_sandstone", "byg:pink_sandstone", "byg:pink_chiseled_sandstone", "byg:pink_cut_sandstone", "byg:windswept_sandstone", "byg:chiseled_windswept_sandstone", "byg:cut_windswept_sandstone", "byg:smooth_windswept_sandstone", "byg:windswept_sandstone_pillar", "minecraft:sandstone", "minecraft:cut_sandstone", "minecraft:chiseled_sandstone", "minecraft:smooth_sandstone", "minecraft:red_sandstone", "minecraft:cut_red_sandstone", "minecraft:chiseled_red_sandstone", "minecraft:smooth_red_sandstone"]
-},
-storage_blocks_copper:{
-tag:"forge:storage_blocks/copper",
-members:["minecraft:copper_block", "minecraft:cut_copper"]
-},
-milk_milk:{
-tag:"forge:milk/milk",
-members:["minecraft:milk_bucket"]
-},
-glass_panes_colorless:{
-tag:"forge:glass_panes/colorless",
-members:["minecraft:glass_pane"]
-},
-bread_wheat:{
-tag:"forge:bread/wheat",
-members:["minecraft:bread"]
-},
-raw_fishes:{
-tag:"forge:raw_fishes",
-members:["#forge:raw_fishes/cod", "#forge:raw_fishes/salmon", "#forge:raw_fishes/tropical_fish"]
-},
-ingots_nether_brick:{
-tag:"forge:ingots/nether_brick",
-members:["minecraft:nether_brick"]
-},
-pickaxes:{
-tag:"forge:pickaxes",
-members:["byg:pendorite_pickaxe"]
-},
-cobblestone_infested:{
-tag:"forge:cobblestone/infested",
-members:["minecraft:infested_cobblestone"]
-},
-storage_blocks_lapis:{
-tag:"forge:storage_blocks/lapis",
-members:["minecraft:lapis_block"]
-},
-ores_diamond:{
-tag:"forge:ores/diamond",
-members:["#minecraft:diamond_ores", "#minecraft:diamond_ores"]
-},
-black_sand:{
-tag:"forge:black_sand",
-members:["byg:black_sand"]
-},
-ore_rates_dense:{
-tag:"forge:ore_rates/dense",
-members:["minecraft:copper_ore", "minecraft:deepslate_copper_ore", "minecraft:deepslate_lapis_ore", "minecraft:deepslate_redstone_ore", "minecraft:lapis_ore", "minecraft:redstone_ore"]
-},
-fruits_melon:{
-tag:"forge:fruits/melon",
-members:["minecraft:melon_slice"]
-},
-dyes_orange:{
-tag:"forge:dyes/orange",
-members:["minecraft:orange_dye"]
-},
-rods_iron:{
-tag:"forge:rods/iron",
-members:["createaddition:iron_rod"]
-},
-fruits_sweet_berries:{
-tag:"forge:fruits/sweet_berries",
-members:["minecraft:sweet_berries"]
-},
-pasta_raw_pasta:{
-tag:"forge:pasta/raw_pasta",
-members:["farmersdelight:raw_pasta"]
-},
-glass_white:{
-tag:"forge:glass/white",
-members:["minecraft:white_stained_glass"]
-},
-glass_panes_red:{
-tag:"forge:glass_panes/red",
-members:["minecraft:red_stained_glass_pane"]
-},
-cooked_beef:{
-tag:"forge:cooked_beef",
-members:["minecraft:cooked_beef", "farmersdelight:beef_patty"]
-},
-tools_knives:{
-tag:"forge:tools/knives",
-members:["farmersdelight:flint_knife", "farmersdelight:iron_knife", "farmersdelight:diamond_knife", "farmersdelight:golden_knife", "farmersdelight:netherite_knife"]
-},
-fruits:{
-tag:"forge:fruits",
-members:["integrateddynamics:menril_berries", "fruittrees:cherry?", "fruittrees:redlove?", "minecraft:apple", "minecraft:melon_slice", "minecraft:sweet_berries", "minecraft:chorus_fruit", "minecraft:glow_berries", "fruittrees:citron", "fruittrees:grapefruit", "fruittrees:lemon", "fruittrees:lime", "fruittrees:mandarin", "fruittrees:orange", "fruittrees:pomelo", "byg:blueberries", "byg:green_apple", "byg:crimson_berries", "byg:baobab_fruit", "byg:joshua_fruit"]
-},
-cobblestone_normal:{
-tag:"forge:cobblestone/normal",
-members:["minecraft:cobblestone"]
-},
-sand_colorless:{
-tag:"forge:sand/colorless",
-members:["byg:end_sand", "minecraft:sand"]
-},
-raw_materials_iron:{
-tag:"forge:raw_materials/iron",
-members:["minecraft:raw_iron", "minecraft:raw_iron"]
-},
-boots:{
-tag:"forge:boots",
-members:["byg:ametrine_boots"]
-},
-crops_cabbage:{
-tag:"forge:crops/cabbage",
-members:["farmersdelight:cabbage", "farmersdelight:cabbage_leaf"]
-},
-nuggets_brass:{
-tag:"forge:nuggets/brass",
-members:["create:brass_nugget"]
-},
-swords:{
-tag:"forge:swords",
-members:["byg:pendorite_sword", "byg:pendorite_battleaxe"]
-},
-gems_diamond:{
-tag:"forge:gems/diamond",
-members:["minecraft:diamond"]
-},
-glass_green:{
-tag:"forge:glass/green",
-members:["minecraft:green_stained_glass"]
-},
-gems:{
-tag:"forge:gems",
-members:["byg:ametrine_gems", "#forge:gems/amethyst", "#forge:gems/diamond", "#forge:gems/emerald", "#forge:gems/lapis", "#forge:gems/prismarine", "#forge:gems/quartz"]
-},
-end_stones:{
-tag:"forge:end_stones",
-members:["minecraft:end_stone"]
-},
-raw_chicken:{
-tag:"forge:raw_chicken",
-members:["minecraft:chicken", "farmersdelight:chicken_cuts"]
-},
-chocolatebar:{
-tag:"forge:chocolatebar",
-members:["create:bar_of_chocolate?", "neapolitan:chocolate_bar?"]
-},
-fences_wooden:{
-tag:"forge:fences/wooden",
-members:["#minecraft:wooden_fences"]
-},
-flowers_lavender:{
-tag:"forge:flowers/lavender",
-members:["biomesoplenty:lavender?", "druidcraft:lavender?"]
-},
-dyes_light_gray:{
-tag:"forge:dyes/light_gray",
-members:["minecraft:light_gray_dye"]
-},
-storage_blocks:{
-tag:"forge:storage_blocks",
-members:["create:raw_zinc_block", "create:zinc_block", "create:brass_block", "integrateddynamics:crystalized_chorus_block", "integrateddynamics:crystalized_menril_block", "byg:ametrine_block", "byg:pendorite_block", "byg:anthracite_block", "byg:lignite_block", "#forge:storage_blocks/amethyst", "#forge:storage_blocks/coal", "#forge:storage_blocks/copper", "#forge:storage_blocks/diamond", "#forge:storage_blocks/emerald", "#forge:storage_blocks/gold", "#forge:storage_blocks/iron", "#forge:storage_blocks/lapis", "#forge:storage_blocks/quartz", "#forge:storage_blocks/raw_copper", "#forge:storage_blocks/raw_gold", "#forge:storage_blocks/raw_iron", "#forge:storage_blocks/redstone", "#forge:storage_blocks/netherite"]
-},
-glass_panes_orange:{
-tag:"forge:glass_panes/orange",
-members:["minecraft:orange_stained_glass_pane"]
-},
-milk:{
-tag:"forge:milk",
-members:["#forge:milk/milk", "#forge:milk/milk_bottle", "minecraft:milk_bucket"]
-},
-ingots_copper:{
-tag:"forge:ingots/copper",
-members:["minecraft:copper_ingot"]
-},
-ores_quartz:{
-tag:"forge:ores/quartz",
-members:["minecraft:nether_quartz_ore", "minecraft:nether_quartz_ore"]
-},
-ingots_brick:{
-tag:"forge:ingots/brick",
-members:["minecraft:brick"]
-},
-glass_blue:{
-tag:"forge:glass/blue",
-members:["minecraft:blue_stained_glass"]
-},
-raw_beef:{
-tag:"forge:raw_beef",
-members:["minecraft:beef", "farmersdelight:minced_beef"]
-},
-saplings:{
-tag:"forge:saplings",
-members:["byg:aspen_sapling", "byg:baobab_sapling", "byg:blue_enchanted_sapling", "byg:blue_spruce_sapling", "byg:brown_birch_sapling", "byg:brown_oak_sapling", "byg:cika_sapling", "byg:cypress_sapling", "byg:ebony_sapling", "byg:fir_sapling", "byg:green_enchanted_sapling", "byg:holly_sapling", "byg:jacaranda_sapling", "byg:indigo_jacaranda_sapling", "byg:mahogany_sapling", "byg:mangrove_sapling", "byg:maple_sapling", "byg:orange_birch_sapling", "byg:orange_oak_sapling", "byg:orange_spruce_sapling", "byg:orchard_sapling", "byg:palo_verde_sapling", "byg:joshua_sapling", "byg:yellow_spruce_sapling", "byg:pine_sapling", "byg:pink_cherry_sapling", "byg:rainbow_eucalyptus_sapling", "byg:red_birch_sapling", "byg:red_maple_sapling", "byg:red_oak_sapling", "byg:red_spruce_sapling", "byg:redwood_sapling", "byg:silver_maple_sapling", "byg:white_cherry_sapling", "byg:willow_sapling", "byg:witch_hazel_sapling", "byg:yellow_birch_sapling", "byg:zelkova_sapling", "byg:skyris_sapling", "byg:palm_sapling", "byg:araucaria_sapling", "byg:brown_zelkova_sapling", "byg:lament_sapling", "byg:withering_oak_sapling", "byg:ether_sapling", "byg:nightshade_sapling"]
-},
-cooked_pork:{
-tag:"forge:cooked_pork",
-members:["minecraft:cooked_porkchop", "farmersdelight:cooked_bacon"]
-},
-storage_blocks_coal:{
-tag:"forge:storage_blocks/coal",
-members:["minecraft:coal_block"]
-},
-glass_light_blue:{
-tag:"forge:glass/light_blue",
-members:["minecraft:light_blue_stained_glass"]
-},
-wires:{
-tag:"forge:wires",
-members:["createaddition:copper_wire", "createaddition:iron_wire", "createaddition:gold_wire"]
-},
-ingots_brass:{
-tag:"forge:ingots/brass",
-members:["create:brass_ingot"]
-},
-storage_blocks_redstone:{
-tag:"forge:storage_blocks/redstone",
-members:["minecraft:redstone_block"]
-},
-storage_blocks_amethyst:{
-tag:"forge:storage_blocks/amethyst",
-members:["minecraft:amethyst_block"]
-},
-cooked_mutton:{
-tag:"forge:cooked_mutton",
-members:["minecraft:cooked_mutton", "farmersdelight:cooked_mutton_chops"]
-},
-vegetables_tomato:{
-tag:"forge:vegetables/tomato",
-members:["farmersdelight:tomato"]
-},
-cooked_bacon:{
-tag:"forge:cooked_bacon",
-members:["farmersdelight:cooked_bacon"]
-},
-raw_materials_gold:{
-tag:"forge:raw_materials/gold",
-members:["minecraft:raw_gold", "minecraft:raw_gold"]
-},
-seeds_rice:{
-tag:"forge:seeds/rice",
-members:["farmersdelight:rice"]
-},
-fruits_chorusfruit:{
-tag:"forge:fruits/chorusfruit",
-members:["minecraft:chorus_fruit"]
-},
-glass_purple:{
-tag:"forge:glass/purple",
-members:["minecraft:purple_stained_glass"]
-},
-tools_shovels:{
-tag:"forge:tools/shovels",
-members:["minecraft:wooden_shovel", "minecraft:stone_shovel", "minecraft:iron_shovel", "minecraft:diamond_shovel", "minecraft:golden_shovel", "minecraft:netherite_shovel"]
-},
-dyes_magenta:{
-tag:"forge:dyes/magenta",
-members:["minecraft:magenta_dye"]
-},
-purple_sand:{
-tag:"forge:purple_sand",
-members:["byg:purple_sand"]
-},
-dyes_cyan:{
-tag:"forge:dyes/cyan",
-members:["minecraft:cyan_dye"]
-},
-raw_fishes_salmon:{
-tag:"forge:raw_fishes/salmon",
-members:["minecraft:salmon", "farmersdelight:salmon_slice"]
-},
-fruits_lemon:{
-tag:"forge:fruits/lemon",
-members:["fruittrees:lemon"]
-},
-seeds_wheat:{
-tag:"forge:seeds/wheat",
-members:["minecraft:wheat_seeds"]
-},
-ingots_iron:{
-tag:"forge:ingots/iron",
-members:["minecraft:iron_ingot"]
-},
-crops_rice:{
-tag:"forge:crops/rice",
-members:["farmersdelight:rice"]
-},
-dyes_purple:{
-tag:"forge:dyes/purple",
-members:["minecraft:purple_dye"]
-},
-ores_in_ground_deepslate:{
-tag:"forge:ores_in_ground/deepslate",
-members:["create:deepslate_zinc_ore", "minecraft:deepslate_coal_ore", "minecraft:deepslate_copper_ore", "minecraft:deepslate_diamond_ore", "minecraft:deepslate_emerald_ore", "minecraft:deepslate_gold_ore", "minecraft:deepslate_iron_ore", "minecraft:deepslate_lapis_ore", "minecraft:deepslate_redstone_ore"]
-},
-sand:{
-tag:"forge:sand",
-members:["byg:white_sand", "byg:black_sand", "byg:blue_sand", "byg:pink_sand", "byg:purple_sand", "byg:end_sand", "byg:windswept_sand", "#forge:sand/colorless", "#forge:sand/red"]
-},
-dyes_yellow:{
-tag:"forge:dyes/yellow",
-members:["minecraft:yellow_dye"]
-},
-storage_blocks_raw_gold:{
-tag:"forge:storage_blocks/raw_gold",
-members:["minecraft:raw_gold_block"]
-},
-sand_purple:{
-tag:"forge:sand/purple",
-members:["byg:purple_sand"]
-},
-gems_prismarine:{
-tag:"forge:gems/prismarine",
-members:["minecraft:prismarine_crystals"]
-},
-ores_gold:{
-tag:"forge:ores/gold",
-members:["#minecraft:gold_ores", "#minecraft:gold_ores"]
-},
-raw_materials:{
-tag:"forge:raw_materials",
-members:["create:raw_zinc", "#forge:raw_materials/copper", "#forge:raw_materials/gold", "#forge:raw_materials/iron"]
-},
-ingots_zinc:{
-tag:"forge:ingots/zinc",
-members:["create:zinc_ingot"]
-},
-cooked_eggs:{
-tag:"forge:cooked_eggs",
-members:["farmersdelight:fried_egg"]
-},
-nuggets_zinc:{
-tag:"forge:nuggets/zinc",
-members:["create:zinc_nugget"]
-},
-glass_black:{
-tag:"forge:glass/black",
-members:["minecraft:black_stained_glass"]
-},
-grain_wheat:{
-tag:"forge:grain/wheat",
-members:["minecraft:wheat"]
-},
-fences_nether_brick:{
-tag:"forge:fences/nether_brick",
-members:["minecraft:nether_brick_fence"]
-},
-rods:{
-tag:"forge:rods",
-members:["#forge:rods/blaze", "#forge:rods/wooden", "createaddition:iron_rod", "createaddition:copper_rod", "createaddition:gold_rod", "createaddition:brass_rod"]
-},
-glass_lime:{
-tag:"forge:glass/lime",
-members:["minecraft:lime_stained_glass"]
-},
-chests_wooden:{
-tag:"forge:chests/wooden",
-members:["minecraft:chest", "minecraft:trapped_chest"]
-},
-ores_iron:{
-tag:"forge:ores/iron",
-members:["#minecraft:iron_ores", "#minecraft:iron_ores"]
-},
-wires_iron:{
-tag:"forge:wires/iron",
-members:["createaddition:iron_wire"]
-},
-gems_emerald:{
-tag:"forge:gems/emerald",
-members:["minecraft:emerald"]
-},
-tools:{
-tag:"forge:tools",
-members:["#forge:tools/axes", "#forge:tools/knives", "#forge:tools/pickaxes", "#forge:tools/shovels"]
-},
-storage_blocks_anthracite:{
-tag:"forge:storage_blocks/anthracite",
-members:["byg:anthracite_block"]
-},
-storage_blocks_quartz:{
-tag:"forge:storage_blocks/quartz",
-members:["minecraft:quartz_block"]
-},
-glass_orange:{
-tag:"forge:glass/orange",
-members:["minecraft:orange_stained_glass"]
-},
-storage_blocks_raw_zinc:{
-tag:"forge:storage_blocks/raw_zinc",
-members:["create:raw_zinc_block"]
-},
-dyes_green:{
-tag:"forge:dyes/green",
-members:["minecraft:green_dye"]
-},
-raw_mutton:{
-tag:"forge:raw_mutton",
-members:["minecraft:mutton", "farmersdelight:mutton_chops"]
-},
-plates_gold:{
-tag:"forge:plates/gold",
-members:["create:golden_sheet"]
-},
-crops_onion:{
-tag:"forge:crops/onion",
-members:["farmersdelight:onion"]
-},
-ores_emerald:{
-tag:"forge:ores/emerald",
-members:["#minecraft:emerald_ores", "#minecraft:emerald_ores"]
-},
-dyes_lime:{
-tag:"forge:dyes/lime",
-members:["minecraft:lime_dye"]
-},
-dusts_diamond:{
-tag:"forge:dusts/diamond",
-members:["createaddition:diamond_grit"]
-},
-plates_iron:{
-tag:"forge:plates/iron",
-members:["create:iron_sheet"]
-},
-raw_pork:{
-tag:"forge:raw_pork",
-members:["minecraft:porkchop", "farmersdelight:bacon"]
-},
-barrels_wooden:{
-tag:"forge:barrels/wooden",
-members:["minecraft:barrel"]
-},
-storage_blocks_raw_iron:{
-tag:"forge:storage_blocks/raw_iron",
-members:["minecraft:raw_iron_block"]
-},
-seeds_cabbage:{
-tag:"forge:seeds/cabbage",
-members:["farmersdelight:cabbage_seeds"]
-},
-sand_black:{
-tag:"forge:sand/black",
-members:["byg:black_sand"]
-},
-bookshelves:{
-tag:"forge:bookshelves",
-members:["byg:aspen_bookshelf", "byg:baobab_bookshelf", "byg:blue_enchanted_bookshelf", "byg:cherry_bookshelf", "byg:cika_bookshelf", "byg:cypress_bookshelf", "byg:ebony_bookshelf", "byg:fir_bookshelf", "byg:green_enchanted_bookshelf", "byg:holly_bookshelf", "byg:jacaranda_bookshelf", "byg:mahogany_bookshelf", "byg:mangrove_bookshelf", "byg:maple_bookshelf", "byg:pine_bookshelf", "byg:rainbow_eucalyptus_bookshelf", "byg:redwood_bookshelf", "byg:skyris_bookshelf", "byg:willow_bookshelf", "byg:witch_hazel_bookshelf", "byg:zelkova_bookshelf", "byg:sythian_bookshelf", "byg:embur_bookshelf", "byg:palm_bookshelf", "byg:lament_bookshelf", "byg:bulbis_bookshelf", "byg:ether_bookshelf", "byg:nightshade_bookshelf", "byg:imparius_bookshelf", "minecraft:bookshelf"]
-},
-ores_in_ground_stone:{
-tag:"forge:ores_in_ground/stone",
-members:["create:zinc_ore", "minecraft:coal_ore", "minecraft:copper_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:gold_ore", "minecraft:iron_ore", "minecraft:lapis_ore", "minecraft:redstone_ore"]
-},
-dyes:{
-tag:"forge:dyes",
-members:["#forge:dyes/white", "#forge:dyes/orange", "#forge:dyes/magenta", "#forge:dyes/light_blue", "#forge:dyes/yellow", "#forge:dyes/lime", "#forge:dyes/pink", "#forge:dyes/gray", "#forge:dyes/light_gray", "#forge:dyes/cyan", "#forge:dyes/purple", "#forge:dyes/blue", "#forge:dyes/brown", "#forge:dyes/green", "#forge:dyes/red", "#forge:dyes/black"]
-},
-glass_panes_pink:{
-tag:"forge:glass_panes/pink",
-members:["minecraft:pink_stained_glass_pane"]
-},
-fruits_mandarin:{
-tag:"forge:fruits/mandarin",
-members:["fruittrees:mandarin"]
-},
-dusts_obsidian:{
-tag:"forge:dusts/obsidian",
-members:["create:powdered_obsidian"]
-},
-netherrack:{
-tag:"forge:netherrack",
-members:["byg:overgrown_netherrack", "byg:overgrown_crimson_blackstone", "byg:blue_netherrack", "byg:brimstone", "byg:embur_nylium", "byg:sythian_nylium", "minecraft:netherrack"]
-},
-fruits_grapefruit:{
-tag:"forge:fruits/grapefruit",
-members:["fruittrees:grapefruit"]
-},
-hoes:{
-tag:"forge:hoes",
-members:["byg:pendorite_hoe"]
-},
-rods_copper:{
-tag:"forge:rods/copper",
-members:["createaddition:copper_rod"]
-},
-eggs:{
-tag:"forge:eggs",
-members:["minecraft:egg", "minecraft:egg"]
-},
-wires_copper:{
-tag:"forge:wires/copper",
-members:["createaddition:copper_wire"]
-},
-dyes_red:{
-tag:"forge:dyes/red",
-members:["minecraft:red_dye"]
-},
-gravel:{
-tag:"forge:gravel",
-members:["minecraft:gravel"]
-},
-glass_panes_cyan:{
-tag:"forge:glass_panes/cyan",
-members:["minecraft:cyan_stained_glass_pane"]
-},
-dyes_black:{
-tag:"forge:dyes/black",
-members:["minecraft:black_dye"]
-},
-raw_fishes_tropical_fish:{
-tag:"forge:raw_fishes/tropical_fish",
-members:["minecraft:tropical_fish"]
-},
-dusts_glowstone:{
-tag:"forge:dusts/glowstone",
-members:["minecraft:glowstone_dust"]
-},
-glass_colorless:{
-tag:"forge:glass/colorless",
-members:["create:tiled_glass", "create:framed_glass", "create:horizontal_framed_glass", "create:vertical_framed_glass", "minecraft:glass"]
-},
-cooked_fishes_cod:{
-tag:"forge:cooked_fishes/cod",
-members:["minecraft:cooked_cod", "farmersdelight:cooked_cod_slice"]
-},
-vegetables_beetroot:{
-tag:"forge:vegetables/beetroot",
-members:["minecraft:beetroot"]
-},
-glass_panes_light_blue:{
-tag:"forge:glass_panes/light_blue",
-members:["minecraft:light_blue_stained_glass_pane"]
-},
-ores_zinc:{
-tag:"forge:ores/zinc",
-members:["create:zinc_ore", "create:deepslate_zinc_ore"]
-},
-ores_netherite_scrap:{
-tag:"forge:ores/netherite_scrap",
-members:["minecraft:ancient_debris"]
-},
-nuggets_copper:{
-tag:"forge:nuggets/copper",
-members:["create:copper_nugget"]
-},
-stained_glass:{
-tag:"forge:stained_glass",
-members:["minecraft:white_stained_glass", "minecraft:orange_stained_glass", "minecraft:magenta_stained_glass", "minecraft:light_blue_stained_glass", "minecraft:yellow_stained_glass", "minecraft:lime_stained_glass", "minecraft:pink_stained_glass", "minecraft:gray_stained_glass", "minecraft:light_gray_stained_glass", "minecraft:cyan_stained_glass", "minecraft:purple_stained_glass", "minecraft:blue_stained_glass", "minecraft:brown_stained_glass", "minecraft:green_stained_glass", "minecraft:red_stained_glass", "minecraft:black_stained_glass"]
-},
-crops_carrot:{
-tag:"forge:crops/carrot",
-members:["minecraft:carrot"]
-},
-salad_ingredients_cabbage:{
-tag:"forge:salad_ingredients/cabbage",
-members:["farmersdelight:cabbage", "farmersdelight:cabbage_leaf"]
-},
-nuggets_gold:{
-tag:"forge:nuggets/gold",
-members:["minecraft:gold_nugget"]
-},
-leggings:{
-tag:"forge:leggings",
-members:["byg:ametrine_leggings"]
-},
-nether_stars:{
-tag:"forge:nether_stars",
-members:["minecraft:nether_star"]
-},
-shovels:{
-tag:"forge:shovels",
-members:["byg:pendorite_shovel"]
-},
-dyes_blue:{
-tag:"forge:dyes/blue",
-members:["minecraft:blue_dye"]
-},
-storage_blocks_iron:{
-tag:"forge:storage_blocks/iron",
-members:["minecraft:iron_block"]
-},
-tools_pickaxes:{
-tag:"forge:tools/pickaxes",
-members:["minecraft:wooden_pickaxe", "minecraft:stone_pickaxe", "minecraft:iron_pickaxe", "minecraft:diamond_pickaxe", "minecraft:golden_pickaxe", "minecraft:netherite_pickaxe"]
-},
-glass_panes_brown:{
-tag:"forge:glass_panes/brown",
-members:["minecraft:brown_stained_glass_pane"]
-},
-heads:{
-tag:"forge:heads",
-members:["minecraft:creeper_head", "minecraft:dragon_head", "minecraft:player_head", "minecraft:skeleton_skull", "minecraft:wither_skeleton_skull", "minecraft:zombie_head"]
-},
-ores_lignite:{
-tag:"forge:ores/lignite",
-members:["byg:lignite_ore"]
-},
-tools_axes:{
-tag:"forge:tools/axes",
-members:["minecraft:wooden_axe", "minecraft:stone_axe", "minecraft:iron_axe", "minecraft:diamond_axe", "minecraft:golden_axe", "minecraft:netherite_axe"]
-},
-bones:{
-tag:"forge:bones",
-members:["minecraft:bone"]
-},
-glass_panes:{
-tag:"forge:glass_panes",
-members:["create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane", "create:oak_window_pane", "create:spruce_window_pane", "create:birch_window_pane", "create:jungle_window_pane", "create:acacia_window_pane", "create:dark_oak_window_pane", "create:crimson_window_pane", "create:warped_window_pane", "create:ornate_iron_window_pane", "#forge:glass_panes/colorless", "#forge:stained_glass_panes"]
-},
-enchanting_fuels:{
-tag:"forge:enchanting_fuels",
-members:["#forge:gems/lapis"]
-},
-sand_pink:{
-tag:"forge:sand/pink",
-members:["byg:pink_sand", "byg:windswept_sand"]
-},
-blue_sand:{
-tag:"forge:blue_sand",
-members:["byg:blue_sand"]
-},
-raw_bacon:{
-tag:"forge:raw_bacon",
-members:["farmersdelight:bacon"]
-},
-fruits_citron:{
-tag:"forge:fruits/citron",
-members:["fruittrees:citron"]
-},
-mushrooms:{
-tag:"forge:mushrooms",
-members:["byg:green_mushroom", "byg:wood_blewit", "byg:weeping_milkcap", "byg:white_puffball_cap", "byg:sythian_fungus", "byg:imparius_mushroom", "minecraft:brown_mushroom", "minecraft:red_mushroom"]
-},
-vegetables_onion:{
-tag:"forge:vegetables/onion",
-members:["farmersdelight:onion"]
-},
-recrystallized_kubejs:{
-tag:"forge:recrystallized_kubejs",
-members:["kubejs:recrystallized_zinc_ore", "kubejs:recrystallized_ametrine_ore", "kubejs:recrystallized_anthracite_ore", "kubejs:recrystallized_budding_ametrine_ore", "kubejs:recrystallized_cryptic_redstone_ore", "kubejs:recrystallized_lignite_ore", "kubejs:recrystallized_pendorite_ore", "kubejs:recrystallized_blue_nether_gold_ore", "kubejs:recrystallized_blue_nether_quartz_ore", "kubejs:recrystallized_brimstone_nether_gold_ore", "kubejs:recrystallized_brimstone_nether_quartz_ore", "kubejs:recrystallized_coal", "kubejs:recrystallized_copper", "kubejs:recrystallized_diamond", "kubejs:recrystallized_emerald", "kubejs:recrystallized_gold", "kubejs:recrystallized_iron", "kubejs:recrystallized_lapis", "kubejs:recrystallized_redstone", "kubejs:recrystallized_quartz", "kubejs:recrystallized_netherite_scrap", "kubejs:recrystallized_nether_gold"]
-},
-dust_kubejs:{
-tag:"forge:dust_kubejs",
-members:["kubejs:dust_zinc_ore", "kubejs:dust_ametrine_ore", "kubejs:dust_anthracite_ore", "kubejs:dust_budding_ametrine_ore", "kubejs:dust_cryptic_redstone_ore", "kubejs:dust_lignite_ore", "kubejs:dust_pendorite_ore", "kubejs:dust_blue_nether_gold_ore", "kubejs:dust_blue_nether_quartz_ore", "kubejs:dust_brimstone_nether_gold_ore", "kubejs:dust_brimstone_nether_quartz_ore", "kubejs:dust_coal", "kubejs:dust_copper", "kubejs:dust_diamond", "kubejs:dust_emerald", "kubejs:dust_gold", "kubejs:dust_iron", "kubejs:dust_lapis", "kubejs:dust_redstone", "kubejs:dust_quartz", "kubejs:dust_netherite_scrap", "kubejs:dust_nether_gold"]
-},
-ingots_netherite:{
-tag:"forge:ingots/netherite",
-members:["minecraft:netherite_ingot"]
-},
-rods_all_metal:{
-tag:"forge:rods/all_metal",
-members:["createaddition:iron_rod", "createaddition:copper_rod", "createaddition:gold_rod", "createaddition:brass_rod"]
-},
-fruits_apple:{
-tag:"forge:fruits/apple",
-members:["minecraft:apple", "fruittrees:redlove?"]
-},
-foods_apples:{
-tag:"forge:foods/apples",
-members:["#forge:fruits/apple"]
-},
-ores_copper:{
-tag:"forge:ores/copper",
-members:["#minecraft:copper_ores", "#minecraft:copper_ores"]
-},
-seeds_beetroot:{
-tag:"forge:seeds/beetroot",
-members:["minecraft:beetroot_seeds"]
-},
-chestplates:{
-tag:"forge:chestplates",
-members:["byg:ametrine_chestplate"]
-},
-cooked_fishes:{
-tag:"forge:cooked_fishes",
-members:["#forge:cooked_fishes/cod", "#forge:cooked_fishes/salmon"]
-},
-obsidian:{
-tag:"forge:obsidian",
-members:["minecraft:obsidian"]
-},
-ore_rates_singular:{
-tag:"forge:ore_rates/singular",
-members:["minecraft:ancient_debris", "minecraft:coal_ore", "minecraft:deepslate_coal_ore", "minecraft:deepslate_diamond_ore", "minecraft:deepslate_emerald_ore", "minecraft:deepslate_gold_ore", "minecraft:deepslate_iron_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:gold_ore", "minecraft:iron_ore", "minecraft:nether_quartz_ore"]
-},
-rods_brass:{
-tag:"forge:rods/brass",
-members:["createaddition:brass_rod"]
-},
-cooked_chicken:{
-tag:"forge:cooked_chicken",
-members:["minecraft:cooked_chicken", "farmersdelight:cooked_chicken_cuts"]
-},
-buckets_honey:{
-tag:"forge:buckets/honey",
-members:["create:honey_bucket"]
-},
-raw_materials_copper:{
-tag:"forge:raw_materials/copper",
-members:["minecraft:raw_copper", "minecraft:raw_copper"]
-},
-glass_magenta:{
-tag:"forge:glass/magenta",
-members:["minecraft:magenta_stained_glass"]
-},
-ores_coal:{
-tag:"forge:ores/coal",
-members:["#minecraft:coal_ores"]
-},
-feathers:{
-tag:"forge:feathers",
-members:["minecraft:feather"]
-},
-pasta:{
-tag:"forge:pasta",
-members:["#forge:pasta/raw_pasta"]
-},
-sand_white:{
-tag:"forge:sand/white",
-members:["byg:white_sand"]
-},
-workbench:{
-tag:"forge:workbench",
-members:["byg:aspen_crafting_table", "byg:baobab_crafting_table", "byg:blue_enchanted_crafting_table", "byg:cherry_crafting_table", "byg:cika_crafting_table", "byg:cypress_crafting_table", "byg:ebony_crafting_table", "byg:fir_crafting_table", "byg:green_enchanted_crafting_table", "byg:holly_crafting_table", "byg:jacaranda_crafting_table", "byg:mahogany_crafting_table", "byg:mangrove_crafting_table", "byg:maple_crafting_table", "byg:pine_crafting_table", "byg:rainbow_eucalyptus_crafting_table", "byg:redwood_crafting_table", "byg:skyris_crafting_table", "byg:willow_crafting_table", "byg:witch_hazel_crafting_table", "byg:zelkova_crafting_table", "byg:sythian_crafting_table", "byg:embur_crafting_table", "byg:palm_crafting_table", "byg:lament_crafting_table", "byg:ether_crafting_table", "byg:bulbis_crafting_table", "byg:nightshade_crafting_table", "byg:imparius_crafting_table"]
-},
-storage_blocks_pendorite:{
-tag:"forge:storage_blocks/pendorite",
-members:["byg:pendorite_block"]
-},
-string:{
-tag:"forge:string",
-members:["minecraft:string"]
-},
-grain_rice:{
-tag:"forge:grain/rice",
-members:["farmersdelight:rice"]
-},
-ingots_gold:{
-tag:"forge:ingots/gold",
-members:["minecraft:gold_ingot"]
-},
-glass_cyan:{
-tag:"forge:glass/cyan",
-members:["minecraft:cyan_stained_glass"]
-},
-leather:{
-tag:"forge:leather",
-members:["minecraft:leather"]
-},
-cooked_fishes_salmon:{
-tag:"forge:cooked_fishes/salmon",
-members:["minecraft:cooked_salmon", "farmersdelight:cooked_salmon_slice"]
-},
-glass:{
-tag:"forge:glass",
-members:["#forge:glass/colorless", "#forge:stained_glass", "#forge:glass/tinted"]
-},
-gems_ametrine:{
-tag:"forge:gems/ametrine",
-members:["byg:ametrine_gems"]
-},
-nuggets_iron:{
-tag:"forge:nuggets/iron",
-members:["minecraft:iron_nugget"]
-},
-storage_blocks_lignite:{
-tag:"forge:storage_blocks/lignite",
-members:["byg:lignite_block"]
-},
-ores_in_ground_netherrack:{
-tag:"forge:ores_in_ground/netherrack",
-members:["minecraft:nether_gold_ore", "minecraft:nether_quartz_ore"]
-},
-storage_blocks_brass:{
-tag:"forge:storage_blocks/brass",
-members:["create:brass_block"]
-},
-crops_potato:{
-tag:"forge:crops/potato",
-members:["minecraft:potato"]
-},
-fruits_cherry:{
-tag:"forge:fruits/cherry",
-members:["fruittrees:cherry?"]
-},
-glass_panes_gray:{
-tag:"forge:glass_panes/gray",
-members:["minecraft:gray_stained_glass_pane"]
-},
-tools_wrench:{
-tag:"forge:tools/wrench",
-members:["integrateddynamics:wrench"]
-},
-stained_glass_panes:{
-tag:"forge:stained_glass_panes",
-members:["minecraft:white_stained_glass_pane", "minecraft:orange_stained_glass_pane", "minecraft:magenta_stained_glass_pane", "minecraft:light_blue_stained_glass_pane", "minecraft:yellow_stained_glass_pane", "minecraft:lime_stained_glass_pane", "minecraft:pink_stained_glass_pane", "minecraft:gray_stained_glass_pane", "minecraft:light_gray_stained_glass_pane", "minecraft:cyan_stained_glass_pane", "minecraft:purple_stained_glass_pane", "minecraft:blue_stained_glass_pane", "minecraft:brown_stained_glass_pane", "minecraft:green_stained_glass_pane", "minecraft:red_stained_glass_pane", "minecraft:black_stained_glass_pane"]
-},
-storage_blocks_zinc:{
-tag:"forge:storage_blocks/zinc",
-members:["create:zinc_block"]
-},
-sand_red:{
-tag:"forge:sand/red",
-members:["minecraft:red_sand"]
-},
-glass_brown:{
-tag:"forge:glass/brown",
-members:["minecraft:brown_stained_glass"]
-},
-vegetables:{
-tag:"forge:vegetables",
-members:["#forge:vegetables/beetroot", "#forge:vegetables/carrot", "#forge:vegetables/onion", "#forge:vegetables/potato", "#forge:vegetables/tomato"]
-},
-glass_gray:{
-tag:"forge:glass/gray",
-members:["minecraft:gray_stained_glass"]
-},
-purified_dust_kubejs:{
-tag:"forge:purified_dust_kubejs",
-members:["kubejs:purified_dust_zinc_ore", "kubejs:purified_dust_ametrine_ore", "kubejs:purified_dust_anthracite_ore", "kubejs:purified_dust_budding_ametrine_ore", "kubejs:purified_dust_cryptic_redstone_ore", "kubejs:purified_dust_lignite_ore", "kubejs:purified_dust_pendorite_ore", "kubejs:purified_dust_blue_nether_gold_ore", "kubejs:purified_dust_blue_nether_quartz_ore", "kubejs:purified_dust_brimstone_nether_gold_ore", "kubejs:purified_dust_brimstone_nether_quartz_ore", "kubejs:purified_dust_coal", "kubejs:purified_dust_copper", "kubejs:purified_dust_diamond", "kubejs:purified_dust_emerald", "kubejs:purified_dust_gold", "kubejs:purified_dust_iron", "kubejs:purified_dust_lapis", "kubejs:purified_dust_redstone", "kubejs:purified_dust_quartz", "kubejs:purified_dust_netherite_scrap", "kubejs:purified_dust_nether_gold"]
-},
-glass_light_gray:{
-tag:"forge:glass/light_gray",
-members:["minecraft:light_gray_stained_glass"]
-},
-dyes_light_blue:{
-tag:"forge:dyes/light_blue",
-members:["minecraft:light_blue_dye"]
-},
-milk_milk_bottle:{
-tag:"forge:milk/milk_bottle",
-members:["farmersdelight:milk_bottle"]
-},
-dyes_white:{
-tag:"forge:dyes/white",
-members:["minecraft:white_dye"]
-},
-seeds_pumpkin:{
-tag:"forge:seeds/pumpkin",
-members:["minecraft:pumpkin_seeds"]
-},
-ore_bearing_ground_stone:{
-tag:"forge:ore_bearing_ground/stone",
-members:["minecraft:stone"]
-},
-glass_panes_black:{
-tag:"forge:glass_panes/black",
-members:["minecraft:black_stained_glass_pane"]
-},
-dusts_redstone:{
-tag:"forge:dusts/redstone",
-members:["minecraft:redstone"]
-},
-dyes_pink:{
-tag:"forge:dyes/pink",
-members:["minecraft:pink_dye"]
-},
-gems_quartz:{
-tag:"forge:gems/quartz",
-members:["minecraft:quartz"]
-},
-crops_beetroot:{
-tag:"forge:crops/beetroot",
-members:["minecraft:beetroot"]
-},
-glass_panes_blue:{
-tag:"forge:glass_panes/blue",
-members:["minecraft:blue_stained_glass_pane"]
-},
-seeds_melon:{
-tag:"forge:seeds/melon",
-members:["minecraft:melon_seeds"]
-},
-crops_wheat:{
-tag:"forge:crops/wheat",
-members:["minecraft:wheat"]
-},
-stone:{
-tag:"forge:stone",
-members:["byg:soapstone", "byg:scoria_stone", "byg:dacite", "byg:rocky_stone", "byg:mossy_stone", "byg:overgrown_stone", "byg:overgrown_dacite", "byg:sythian_nylium", "byg:podzol_dacite", "byg:red_rock", "byg:ether_stone", "minecraft:andesite", "minecraft:diorite", "minecraft:granite", "minecraft:infested_stone", "minecraft:stone", "minecraft:polished_andesite", "minecraft:polished_diorite", "minecraft:polished_granite", "minecraft:deepslate", "minecraft:polished_deepslate", "minecraft:infested_deepslate", "minecraft:tuff"]
-},
-glass_panes_yellow:{
-tag:"forge:glass_panes/yellow",
-members:["minecraft:yellow_stained_glass_pane"]
-},
-gems_lapis:{
-tag:"forge:gems/lapis",
-members:["minecraft:lapis_lazuli"]
-},
-gunpowder:{
-tag:"forge:gunpowder",
-members:["minecraft:gunpowder"]
-},
-plates_brass:{
-tag:"forge:plates/brass",
-members:["create:brass_sheet"]
-},
-crops_tomato:{
-tag:"forge:crops/tomato",
-members:["farmersdelight:tomato"]
-},
-ore_rates_sparse:{
-tag:"forge:ore_rates/sparse",
-members:["minecraft:nether_gold_ore"]
-},
-crops:{
-tag:"forge:crops",
-members:["#forge:crops/cabbage", "#forge:crops/onion", "#forge:crops/rice", "#forge:crops/tomato", "byg:blueberries", "byg:green_apple", "byg:crimson_berries", "#forge:crops/beetroot", "#forge:crops/carrot", "#forge:crops/nether_wart", "#forge:crops/potato", "#forge:crops/wheat"]
-},
-ore_bearing_ground_netherrack:{
-tag:"forge:ore_bearing_ground/netherrack",
-members:["minecraft:netherrack"]
-},
-glass_panes_purple:{
-tag:"forge:glass_panes/purple",
-members:["minecraft:purple_stained_glass_pane"]
-},
-dusts:{
-tag:"forge:dusts",
-members:["#forge:dusts/glowstone", "#forge:dusts/prismarine", "#forge:dusts/redstone", "createaddition:diamond_grit", "create:powdered_obsidian"]
-},
-glass_yellow:{
-tag:"forge:glass/yellow",
-members:["minecraft:yellow_stained_glass"]
-},
-fruits_pomelo:{
-tag:"forge:fruits/pomelo",
-members:["fruittrees:pomelo"]
-},
-fruits_orange:{
-tag:"forge:fruits/orange",
-members:["fruittrees:orange"]
-},
-seeds:{
-tag:"forge:seeds",
-members:["#forge:seeds/cabbage", "#forge:seeds/rice", "#forge:seeds/tomato", "#forge:seeds/beetroot", "#forge:seeds/melon", "#forge:seeds/pumpkin", "#forge:seeds/wheat"]
-},
-helmets:{
-tag:"forge:helmets",
-members:["byg:ametrine_helmet"]
-},
-ores_anthracite:{
-tag:"forge:ores/anthracite",
-members:["byg:anthracite_ore"]
-},
-barrels:{
-tag:"forge:barrels",
-members:["#forge:barrels/wooden"]
-},
-pink_sand:{
-tag:"forge:pink_sand",
-members:["byg:pink_sand"]
-},
-ores_lapis:{
-tag:"forge:ores/lapis",
-members:["#minecraft:lapis_ores", "#minecraft:lapis_ores"]
-},
-bread:{
-tag:"forge:bread",
-members:["#forge:bread/wheat"]
-},
-slimeballs:{
-tag:"forge:slimeballs",
-members:["minecraft:slime_ball"]
-},
-raw_materials_zinc:{
-tag:"forge:raw_materials/zinc",
-members:["create:raw_zinc"]
-},
-chests_ender:{
-tag:"forge:chests/ender",
-members:["minecraft:ender_chest"]
-},
-white_sand:{
-tag:"forge:white_sand",
-members:["byg:white_sand"]
-},
-fence_gates_wooden:{
-tag:"forge:fence_gates/wooden",
-members:["fruittrees:cherry_fence_gate?", "fruittrees:citrus_fence_gate", "byg:aspen_fence_gate", "byg:baobab_fence_gate", "byg:blue_enchanted_fence_gate", "byg:cherry_fence_gate", "byg:cika_fence_gate", "byg:cypress_fence_gate", "byg:ebony_fence_gate", "byg:fir_fence_gate", "byg:green_enchanted_fence_gate", "byg:holly_fence_gate", "byg:jacaranda_fence_gate", "byg:mahogany_fence_gate", "byg:mangrove_fence_gate", "byg:maple_fence_gate", "byg:pine_fence_gate", "byg:rainbow_eucalyptus_fence_gate", "byg:redwood_fence_gate", "byg:skyris_fence_gate", "byg:willow_fence_gate", "byg:witch_hazel_fence_gate", "byg:zelkova_fence_gate", "byg:sythian_fence_gate", "byg:embur_fence_gate", "byg:palm_fence_gate", "byg:lament_fence_gate", "byg:ether_fence_gate", "byg:bulbis_fence_gate", "byg:nightshade_fence_gate", "byg:imparius_fence_gate", "minecraft:oak_fence_gate", "minecraft:spruce_fence_gate", "minecraft:birch_fence_gate", "minecraft:jungle_fence_gate", "minecraft:acacia_fence_gate", "minecraft:dark_oak_fence_gate", "minecraft:crimson_fence_gate", "minecraft:warped_fence_gate"]
-},
-storage_blocks_raw_copper:{
-tag:"forge:storage_blocks/raw_copper",
-members:["minecraft:raw_copper_block"]
-},
-glass_panes_lime:{
-tag:"forge:glass_panes/lime",
-members:["minecraft:lime_stained_glass_pane"]
-},
-shears:{
-tag:"forge:shears",
-members:["minecraft:shears"]
-},
-torches:{
-tag:"forge:torches",
-members:["integrateddynamics:menril_torch", "integrateddynamics:menril_torch_stone"]
-},
-grain:{
-tag:"forge:grain",
-members:["#forge:grain/wheat", "#forge:grain/rice"]
-},
-sand_blue:{
-tag:"forge:sand/blue",
-members:["byg:blue_sand"]
-},
-purified_kubejs:{
-tag:"forge:purified_kubejs",
-members:["kubejs:purified_zinc_ore", "kubejs:purified_ametrine_ore", "kubejs:purified_anthracite_ore", "kubejs:purified_budding_ametrine_ore", "kubejs:purified_cryptic_redstone_ore", "kubejs:purified_lignite_ore", "kubejs:purified_pendorite_ore", "kubejs:purified_blue_nether_gold_ore", "kubejs:purified_blue_nether_quartz_ore", "kubejs:purified_brimstone_nether_gold_ore", "kubejs:purified_brimstone_nether_quartz_ore", "kubejs:purified_coal", "kubejs:purified_copper", "kubejs:purified_diamond", "kubejs:purified_emerald", "kubejs:purified_gold", "kubejs:purified_iron", "kubejs:purified_lapis", "kubejs:purified_redstone", "kubejs:purified_quartz", "kubejs:purified_netherite_scrap", "kubejs:purified_nether_gold"]
-},
-recrystallized_shard_kubejs:{
-tag:"forge:recrystallized_shard_kubejs",
-members:["kubejs:recrystallized_shard_zinc_ore", "kubejs:recrystallized_shard_ametrine_ore", "kubejs:recrystallized_shard_anthracite_ore", "kubejs:recrystallized_shard_budding_ametrine_ore", "kubejs:recrystallized_shard_cryptic_redstone_ore", "kubejs:recrystallized_shard_lignite_ore", "kubejs:recrystallized_shard_pendorite_ore", "kubejs:recrystallized_shard_blue_nether_gold_ore", "kubejs:recrystallized_shard_blue_nether_quartz_ore", "kubejs:recrystallized_shard_brimstone_nether_gold_ore", "kubejs:recrystallized_shard_brimstone_nether_quartz_ore", "kubejs:recrystallized_shard_coal", "kubejs:recrystallized_shard_copper", "kubejs:recrystallized_shard_diamond", "kubejs:recrystallized_shard_emerald", "kubejs:recrystallized_shard_gold", "kubejs:recrystallized_shard_iron", "kubejs:recrystallized_shard_lapis", "kubejs:recrystallized_shard_redstone", "kubejs:recrystallized_shard_quartz", "kubejs:recrystallized_shard_netherite_scrap", "kubejs:recrystallized_shard_nether_gold"]
-},
-vegetables_potato:{
-tag:"forge:vegetables/potato",
-members:["minecraft:potato"]
-},
-cobblestone:{
-tag:"forge:cobblestone",
-members:["byg:red_rock", "byg:dacite_cobblestone", "byg:scoria_cobblestone", "byg:soapstone", "byg:cobbled_ether_stone", "#forge:cobblestone/normal", "#forge:cobblestone/infested", "#forge:cobblestone/mossy", "#forge:cobblestone/deepslate"]
-},
-gems_amethyst:{
-tag:"forge:gems/amethyst",
-members:["minecraft:amethyst_shard"]
-},
-glass_silica:{
-tag:"forge:glass/silica",
-members:["minecraft:glass", "minecraft:black_stained_glass", "minecraft:blue_stained_glass", "minecraft:brown_stained_glass", "minecraft:cyan_stained_glass", "minecraft:gray_stained_glass", "minecraft:green_stained_glass", "minecraft:light_blue_stained_glass", "minecraft:light_gray_stained_glass", "minecraft:lime_stained_glass", "minecraft:magenta_stained_glass", "minecraft:orange_stained_glass", "minecraft:pink_stained_glass", "minecraft:purple_stained_glass", "minecraft:red_stained_glass", "minecraft:white_stained_glass", "minecraft:yellow_stained_glass"]
-},
-dyes_brown:{
-tag:"forge:dyes/brown",
-members:["minecraft:brown_dye"]
-},
-seeds_tomato:{
-tag:"forge:seeds/tomato",
-members:["farmersdelight:tomato_seeds"]
-},
-storage_blocks_gold:{
-tag:"forge:storage_blocks/gold",
-members:["minecraft:gold_block"]
-},
-raw_fishes_cod:{
-tag:"forge:raw_fishes/cod",
-members:["minecraft:cod", "farmersdelight:cod_slice"]
-},
-ores_pendorite:{
-tag:"forge:ores/pendorite",
-members:["byg:pendorite_ore"]
-},
-ores_ametrine:{
-tag:"forge:ores/ametrine",
-members:["byg:ametrine_ore", "byg:budding_ametrine_ore"]
-},
-ores:{
-tag:"forge:ores",
-members:["create:zinc_ore", "create:deepslate_zinc_ore", "byg:ametrine_ore", "byg:anthracite_ore", "byg:budding_ametrine_ore", "byg:cryptic_redstone_ore", "byg:lignite_ore", "byg:pendorite_ore", "byg:blue_nether_gold_ore", "byg:blue_nether_quartz_ore", "byg:brimstone_nether_gold_ore", "byg:brimstone_nether_quartz_ore", "#forge:ores/coal", "#forge:ores/copper", "#forge:ores/diamond", "#forge:ores/emerald", "#forge:ores/gold", "#forge:ores/iron", "#forge:ores/lapis", "#forge:ores/redstone", "#forge:ores/quartz", "#forge:ores/netherite_scrap", "#kubejs:ores/nether_gold"]
-},
-rods_wooden:{
-tag:"forge:rods/wooden",
-members:["minecraft:stick"]
-},
-dusts_prismarine:{
-tag:"forge:dusts/prismarine",
-members:["minecraft:prismarine_shard"]
-},
-fences:{
-tag:"forge:fences",
-members:["#forge:fences/nether_brick", "#forge:fences/wooden"]
-},
-storage_blocks_diamond:{
-tag:"forge:storage_blocks/diamond",
-members:["minecraft:diamond_block"]
-},
-plates_copper:{
-tag:"forge:plates/copper",
-members:["create:copper_sheet"]
-},
-ore_bearing_ground_deepslate:{
-tag:"forge:ore_bearing_ground/deepslate",
-members:["minecraft:deepslate"]
-}
-},
-create:{
-stone_types_veridium:{
-tag:"create:stone_types/veridium",
-members:["create:cut_veridium", "create:cut_veridium_stairs", "create:cut_veridium_wall", "create:polished_cut_veridium", "create:polished_cut_veridium_stairs", "create:polished_cut_veridium_wall", "create:cut_veridium_bricks", "create:cut_veridium_brick_stairs", "create:cut_veridium_brick_wall", "create:small_veridium_bricks", "create:small_veridium_brick_stairs", "create:small_veridium_brick_wall", "create:layered_veridium", "create:veridium_pillar"]
-},
-upright_on_belt:{
-tag:"create:upright_on_belt",
-members:["farmersdelight:milk_bottle", "farmersdelight:hot_cocoa", "farmersdelight:pie_crust", "farmersdelight:apple_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:chocolate_pie", "create:blaze_cake_base", "create:blaze_cake", "create:creative_blaze_cake", "create:builders_tea", "minecraft:glass_bottle", "minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion", "minecraft:honey_bottle", "minecraft:cake", "fruittrees:honey_pomelo_tea?", "fruittrees:grapefruit_panna_cotta?", "createaddition:cake_base", "createaddition:cake_base_baked", "createaddition:chocolate_cake", "createaddition:honey_cake", "minecraft:cake", "createaddition:seed_oil_bucket"]
-},
-stone_types_granite:{
-tag:"create:stone_types/granite",
-members:["create:cut_granite", "create:cut_granite_stairs", "create:cut_granite_wall", "create:polished_cut_granite", "create:polished_cut_granite_stairs", "create:polished_cut_granite_wall", "create:cut_granite_bricks", "create:cut_granite_brick_stairs", "create:cut_granite_brick_wall", "create:small_granite_bricks", "create:small_granite_brick_stairs", "create:small_granite_brick_wall", "create:layered_granite", "create:granite_pillar"]
-},
-stone_types_diorite:{
-tag:"create:stone_types/diorite",
-members:["create:cut_diorite", "create:cut_diorite_stairs", "create:cut_diorite_wall", "create:polished_cut_diorite", "create:polished_cut_diorite_stairs", "create:polished_cut_diorite_wall", "create:cut_diorite_bricks", "create:cut_diorite_brick_stairs", "create:cut_diorite_brick_wall", "create:small_diorite_bricks", "create:small_diorite_brick_stairs", "create:small_diorite_brick_wall", "create:layered_diorite", "create:diorite_pillar"]
-},
-stone_types_scorchia:{
-tag:"create:stone_types/scorchia",
-members:["create:cut_scorchia", "create:cut_scorchia_stairs", "create:cut_scorchia_wall", "create:polished_cut_scorchia", "create:polished_cut_scorchia_stairs", "create:polished_cut_scorchia_wall", "create:cut_scorchia_bricks", "create:cut_scorchia_brick_stairs", "create:cut_scorchia_brick_wall", "create:small_scorchia_bricks", "create:small_scorchia_brick_stairs", "create:small_scorchia_brick_wall", "create:layered_scorchia", "create:scorchia_pillar"]
-},
-valve_handles:{
-tag:"create:valve_handles",
-members:["create:copper_valve_handle", "create:white_valve_handle", "create:orange_valve_handle", "create:magenta_valve_handle", "create:light_blue_valve_handle", "create:yellow_valve_handle", "create:lime_valve_handle", "create:pink_valve_handle", "create:gray_valve_handle", "create:light_gray_valve_handle", "create:cyan_valve_handle", "create:purple_valve_handle", "create:blue_valve_handle", "create:brown_valve_handle", "create:green_valve_handle", "create:red_valve_handle", "create:black_valve_handle"]
-},
-stone_types_andesite:{
-tag:"create:stone_types/andesite",
-members:["create:cut_andesite", "create:cut_andesite_stairs", "create:cut_andesite_wall", "create:polished_cut_andesite", "create:polished_cut_andesite_stairs", "create:polished_cut_andesite_wall", "create:cut_andesite_bricks", "create:cut_andesite_brick_stairs", "create:cut_andesite_brick_wall", "create:small_andesite_bricks", "create:small_andesite_brick_stairs", "create:small_andesite_brick_wall", "create:layered_andesite", "create:andesite_pillar"]
-},
-stone_types_deepslate:{
-tag:"create:stone_types/deepslate",
-members:["create:cut_deepslate", "create:cut_deepslate_stairs", "create:cut_deepslate_wall", "create:polished_cut_deepslate", "create:polished_cut_deepslate_stairs", "create:polished_cut_deepslate_wall", "create:cut_deepslate_bricks", "create:cut_deepslate_brick_stairs", "create:cut_deepslate_brick_wall", "create:small_deepslate_bricks", "create:small_deepslate_brick_stairs", "create:small_deepslate_brick_wall", "create:layered_deepslate", "create:deepslate_pillar"]
-},
-stone_types_scoria:{
-tag:"create:stone_types/scoria",
-members:["create:cut_scoria", "create:cut_scoria_stairs", "create:cut_scoria_wall", "create:polished_cut_scoria", "create:polished_cut_scoria_stairs", "create:polished_cut_scoria_wall", "create:cut_scoria_bricks", "create:cut_scoria_brick_stairs", "create:cut_scoria_brick_wall", "create:small_scoria_bricks", "create:small_scoria_brick_stairs", "create:small_scoria_brick_wall", "create:layered_scoria", "create:scoria_pillar"]
-},
-stone_types_tuff:{
-tag:"create:stone_types/tuff",
-members:["create:cut_tuff", "create:cut_tuff_stairs", "create:cut_tuff_wall", "create:polished_cut_tuff", "create:polished_cut_tuff_stairs", "create:polished_cut_tuff_wall", "create:cut_tuff_bricks", "create:cut_tuff_brick_stairs", "create:cut_tuff_brick_wall", "create:small_tuff_bricks", "create:small_tuff_brick_stairs", "create:small_tuff_brick_wall", "create:layered_tuff", "create:tuff_pillar"]
-},
-create_ingots:{
-tag:"create:create_ingots",
-members:["create:zinc_ingot", "create:brass_ingot"]
-},
-stone_types_calcite:{
-tag:"create:stone_types/calcite",
-members:["create:cut_calcite", "create:cut_calcite_stairs", "create:cut_calcite_wall", "create:polished_cut_calcite", "create:polished_cut_calcite_stairs", "create:polished_cut_calcite_wall", "create:cut_calcite_bricks", "create:cut_calcite_brick_stairs", "create:cut_calcite_brick_wall", "create:small_calcite_bricks", "create:small_calcite_brick_stairs", "create:small_calcite_brick_wall", "create:layered_calcite", "create:calcite_pillar"]
-},
-seats:{
-tag:"create:seats",
-members:["create:white_seat", "create:orange_seat", "create:magenta_seat", "create:light_blue_seat", "create:yellow_seat", "create:lime_seat", "create:pink_seat", "create:gray_seat", "create:light_gray_seat", "create:cyan_seat", "create:purple_seat", "create:blue_seat", "create:brown_seat", "create:green_seat", "create:red_seat", "create:black_seat"]
-},
-sandpaper:{
-tag:"create:sandpaper",
-members:["create:sand_paper", "create:red_sand_paper", "createaddition:diamond_grit_sandpaper"]
-},
-stone_types_limestone:{
-tag:"create:stone_types/limestone",
-members:["create:cut_limestone", "create:cut_limestone_stairs", "create:cut_limestone_wall", "create:polished_cut_limestone", "create:polished_cut_limestone_stairs", "create:polished_cut_limestone_wall", "create:cut_limestone_bricks", "create:cut_limestone_brick_stairs", "create:cut_limestone_brick_wall", "create:small_limestone_bricks", "create:small_limestone_brick_stairs", "create:small_limestone_brick_wall", "create:layered_limestone", "create:limestone_pillar"]
-},
-toolboxes:{
-tag:"create:toolboxes",
-members:["create:white_toolbox", "create:orange_toolbox", "create:magenta_toolbox", "create:light_blue_toolbox", "create:yellow_toolbox", "create:lime_toolbox", "create:pink_toolbox", "create:gray_toolbox", "create:light_gray_toolbox", "create:cyan_toolbox", "create:purple_toolbox", "create:blue_toolbox", "create:brown_toolbox", "create:green_toolbox", "create:red_toolbox", "create:black_toolbox"]
-},
-crushed_ores:{
-tag:"create:crushed_ores",
-members:["create:crushed_iron_ore", "create:crushed_gold_ore", "create:crushed_copper_ore", "create:crushed_zinc_ore", "create:crushed_osmium_ore", "create:crushed_platinum_ore", "create:crushed_silver_ore", "create:crushed_tin_ore", "create:crushed_lead_ore", "create:crushed_quicksilver_ore", "create:crushed_aluminum_ore", "create:crushed_uranium_ore", "create:crushed_nickel_ore"]
-},
-stone_types_crimsite:{
-tag:"create:stone_types/crimsite",
-members:["create:cut_crimsite", "create:cut_crimsite_stairs", "create:cut_crimsite_wall", "create:polished_cut_crimsite", "create:polished_cut_crimsite_stairs", "create:polished_cut_crimsite_wall", "create:cut_crimsite_bricks", "create:cut_crimsite_brick_stairs", "create:cut_crimsite_brick_wall", "create:small_crimsite_bricks", "create:small_crimsite_brick_stairs", "create:small_crimsite_brick_wall", "create:layered_crimsite", "create:crimsite_pillar"]
-},
-stone_types_asurine:{
-tag:"create:stone_types/asurine",
-members:["create:cut_asurine", "create:cut_asurine_stairs", "create:cut_asurine_wall", "create:polished_cut_asurine", "create:polished_cut_asurine_stairs", "create:polished_cut_asurine_wall", "create:cut_asurine_bricks", "create:cut_asurine_brick_stairs", "create:cut_asurine_brick_wall", "create:small_asurine_bricks", "create:small_asurine_brick_stairs", "create:small_asurine_brick_wall", "create:layered_asurine", "create:asurine_pillar"]
-},
-stone_types_ochrum:{
-tag:"create:stone_types/ochrum",
-members:["create:cut_ochrum", "create:cut_ochrum_stairs", "create:cut_ochrum_wall", "create:polished_cut_ochrum", "create:polished_cut_ochrum_stairs", "create:polished_cut_ochrum_wall", "create:cut_ochrum_bricks", "create:cut_ochrum_brick_stairs", "create:cut_ochrum_brick_wall", "create:small_ochrum_bricks", "create:small_ochrum_brick_stairs", "create:small_ochrum_brick_wall", "create:layered_ochrum", "create:ochrum_pillar"]
-},
-stone_types_dripstone:{
-tag:"create:stone_types/dripstone",
-members:["create:cut_dripstone", "create:cut_dripstone_stairs", "create:cut_dripstone_wall", "create:polished_cut_dripstone", "create:polished_cut_dripstone_stairs", "create:polished_cut_dripstone_wall", "create:cut_dripstone_bricks", "create:cut_dripstone_brick_stairs", "create:cut_dripstone_brick_wall", "create:small_dripstone_bricks", "create:small_dripstone_brick_stairs", "create:small_dripstone_brick_wall", "create:layered_dripstone", "create:dripstone_pillar"]
-}
-},
-minecraft:{
-occludes_vibration_signals:{
-tag:"minecraft:occludes_vibration_signals",
-members:["#minecraft:wool"]
-},
-coals:{
-tag:"minecraft:coals",
-members:["minecraft:coal", "minecraft:charcoal", "byg:lignite", "byg:anthracite"]
-},
-piglin_food:{
-tag:"minecraft:piglin_food",
-members:["minecraft:porkchop", "minecraft:cooked_porkchop"]
-},
-beds:{
-tag:"minecraft:beds",
-members:["minecraft:red_bed", "minecraft:black_bed", "minecraft:blue_bed", "minecraft:brown_bed", "minecraft:cyan_bed", "minecraft:gray_bed", "minecraft:green_bed", "minecraft:light_blue_bed", "minecraft:light_gray_bed", "minecraft:lime_bed", "minecraft:magenta_bed", "minecraft:orange_bed", "minecraft:pink_bed", "minecraft:purple_bed", "minecraft:white_bed", "minecraft:yellow_bed"]
-},
-doors:{
-tag:"minecraft:doors",
-members:["#minecraft:wooden_doors", "minecraft:iron_door", "integrateddynamics:menril_door"]
-},
-signs:{
-tag:"minecraft:signs",
-members:["minecraft:oak_sign", "minecraft:spruce_sign", "minecraft:birch_sign", "minecraft:acacia_sign", "minecraft:jungle_sign", "minecraft:dark_oak_sign", "minecraft:crimson_sign", "minecraft:warped_sign", "fruittrees:cherry_sign?", "fruittrees:citrus_sign"]
-},
-fishes:{
-tag:"minecraft:fishes",
-members:["minecraft:cod", "minecraft:cooked_cod", "minecraft:salmon", "minecraft:cooked_salmon", "minecraft:pufferfish", "minecraft:tropical_fish"]
-},
-redstone_ores:{
-tag:"minecraft:redstone_ores",
-members:["minecraft:redstone_ore", "minecraft:deepslate_redstone_ore"]
-},
-walls:{
-tag:"minecraft:walls",
-members:["minecraft:cobblestone_wall", "minecraft:mossy_cobblestone_wall", "minecraft:brick_wall", "minecraft:prismarine_wall", "minecraft:red_sandstone_wall", "minecraft:mossy_stone_brick_wall", "minecraft:granite_wall", "minecraft:stone_brick_wall", "minecraft:nether_brick_wall", "minecraft:andesite_wall", "minecraft:red_nether_brick_wall", "minecraft:sandstone_wall", "minecraft:end_stone_brick_wall", "minecraft:diorite_wall", "minecraft:blackstone_wall", "minecraft:polished_blackstone_brick_wall", "minecraft:polished_blackstone_wall", "minecraft:cobbled_deepslate_wall", "minecraft:polished_deepslate_wall", "minecraft:deepslate_tile_wall", "minecraft:deepslate_brick_wall", "create:cut_granite_wall", "create:polished_cut_granite_wall", "create:cut_granite_brick_wall", "create:small_granite_brick_wall", "create:cut_diorite_wall", "create:polished_cut_diorite_wall", "create:cut_diorite_brick_wall", "create:small_diorite_brick_wall", "create:cut_andesite_wall", "create:polished_cut_andesite_wall", "create:cut_andesite_brick_wall", "create:small_andesite_brick_wall", "create:cut_calcite_wall", "create:polished_cut_calcite_wall", "create:cut_calcite_brick_wall", "create:small_calcite_brick_wall", "create:cut_dripstone_wall", "create:polished_cut_dripstone_wall", "create:cut_dripstone_brick_wall", "create:small_dripstone_brick_wall", "create:cut_deepslate_wall", "create:polished_cut_deepslate_wall", "create:cut_deepslate_brick_wall", "create:small_deepslate_brick_wall", "create:cut_tuff_wall", "create:polished_cut_tuff_wall", "create:cut_tuff_brick_wall", "create:small_tuff_brick_wall", "create:cut_asurine_wall", "create:polished_cut_asurine_wall", "create:cut_asurine_brick_wall", "create:small_asurine_brick_wall", "create:cut_crimsite_wall", "create:polished_cut_crimsite_wall", "create:cut_crimsite_brick_wall", "create:small_crimsite_brick_wall", "create:cut_limestone_wall", "create:polished_cut_limestone_wall", "create:cut_limestone_brick_wall", "create:small_limestone_brick_wall", "create:cut_ochrum_wall", "create:polished_cut_ochrum_wall", "create:cut_ochrum_brick_wall", "create:small_ochrum_brick_wall", "create:cut_scoria_wall", "create:polished_cut_scoria_wall", "create:cut_scoria_brick_wall", "create:small_scoria_brick_wall", "create:cut_scorchia_wall", "create:polished_cut_scorchia_wall", "create:cut_scorchia_brick_wall", "create:small_scorchia_brick_wall", "create:cut_veridium_wall", "create:polished_cut_veridium_wall", "create:cut_veridium_brick_wall", "create:small_veridium_brick_wall", "byg:dacite_cobblestone_wall", "byg:dacite_wall", "byg:dacite_tile_wall", "byg:dacite_brick_wall", "byg:mossy_stone_wall", "byg:rocky_stone_wall", "byg:scoria_stone_wall", "byg:scoria_cobblestone_wall", "byg:scoria_stonebrick_wall", "byg:soapstone_wall", "byg:polished_soapstone_wall", "byg:soapstone_brick_wall", "byg:soapstone_tile_wall", "byg:red_rock_wall", "byg:red_rock_brick_wall", "byg:mossy_red_rock_brick_wall", "byg:cracked_red_rock_brick_wall", "byg:chiseled_red_rock_brick_wall", "byg:ether_stone_wall", "byg:purpur_stone_wall", "byg:cryptic_stone_wall", "byg:chiseled_therium_wall", "byg:shiny_chiseled_therium_wall", "byg:cobbled_ether_stone_wall", "byg:carved_ether_stone_wall", "byg:travertine_wall", "byg:polished_travertine_wall", "byg:chiseled_travertine_wall", "byg:chiseled_fungal_imparius_wall", "byg:windswept_sandstone_wall", "byg:cut_windswept_sandstone_wall", "byg:chiseled_windswept_sandstone_wall", "byg:smooth_windswept_sandstone_wall"]
-},
-music_discs:{
-tag:"minecraft:music_discs",
-members:["#minecraft:creeper_drop_music_discs", "minecraft:music_disc_pigstep", "minecraft:music_disc_otherside"]
-},
-sand:{
-tag:"minecraft:sand",
-members:["minecraft:sand", "minecraft:red_sand", "byg:white_sand", "byg:black_sand", "byg:blue_sand", "byg:pink_sand", "byg:purple_sand", "byg:end_sand", "byg:windswept_sand"]
-},
-beacon_payment_items:{
-tag:"minecraft:beacon_payment_items",
-members:["minecraft:netherite_ingot", "minecraft:emerald", "minecraft:diamond", "minecraft:gold_ingot", "minecraft:iron_ingot", "byg:ametrine_gems", "byg:pendorite_scraps"]
-},
-coal_ores:{
-tag:"minecraft:coal_ores",
-members:["minecraft:coal_ore", "minecraft:deepslate_coal_ore"]
-},
-wooden_trapdoors:{
-tag:"minecraft:wooden_trapdoors",
-members:["minecraft:acacia_trapdoor", "minecraft:birch_trapdoor", "minecraft:dark_oak_trapdoor", "minecraft:jungle_trapdoor", "minecraft:oak_trapdoor", "minecraft:spruce_trapdoor", "minecraft:crimson_trapdoor", "minecraft:warped_trapdoor", "byg:aspen_trapdoor", "byg:baobab_trapdoor", "byg:blue_enchanted_trapdoor", "byg:cherry_trapdoor", "byg:cika_trapdoor", "byg:cypress_trapdoor", "byg:ebony_trapdoor", "byg:fir_trapdoor", "byg:green_enchanted_trapdoor", "byg:holly_trapdoor", "byg:jacaranda_trapdoor", "byg:mahogany_trapdoor", "byg:mangrove_trapdoor", "byg:maple_trapdoor", "byg:pine_trapdoor", "byg:rainbow_eucalyptus_trapdoor", "byg:redwood_trapdoor", "byg:skyris_trapdoor", "byg:willow_trapdoor", "byg:witch_hazel_trapdoor", "byg:zelkova_trapdoor", "byg:sythian_trapdoor", "byg:embur_trapdoor", "byg:palm_trapdoor", "byg:lament_trapdoor", "byg:ether_trapdoor", "byg:bulbis_trapdoor", "byg:nightshade_trapdoor", "byg:imparius_trapdoor"]
-},
-stairs:{
-tag:"minecraft:stairs",
-members:["#minecraft:wooden_stairs", "minecraft:cobblestone_stairs", "minecraft:sandstone_stairs", "minecraft:nether_brick_stairs", "minecraft:stone_brick_stairs", "minecraft:brick_stairs", "minecraft:purpur_stairs", "minecraft:quartz_stairs", "minecraft:red_sandstone_stairs", "minecraft:prismarine_brick_stairs", "minecraft:prismarine_stairs", "minecraft:dark_prismarine_stairs", "minecraft:polished_granite_stairs", "minecraft:smooth_red_sandstone_stairs", "minecraft:mossy_stone_brick_stairs", "minecraft:polished_diorite_stairs", "minecraft:mossy_cobblestone_stairs", "minecraft:end_stone_brick_stairs", "minecraft:stone_stairs", "minecraft:smooth_sandstone_stairs", "minecraft:smooth_quartz_stairs", "minecraft:granite_stairs", "minecraft:andesite_stairs", "minecraft:red_nether_brick_stairs", "minecraft:polished_andesite_stairs", "minecraft:diorite_stairs", "minecraft:blackstone_stairs", "minecraft:polished_blackstone_brick_stairs", "minecraft:polished_blackstone_stairs", "minecraft:cobbled_deepslate_stairs", "minecraft:polished_deepslate_stairs", "minecraft:deepslate_tile_stairs", "minecraft:deepslate_brick_stairs", "minecraft:oxidized_cut_copper_stairs", "minecraft:weathered_cut_copper_stairs", "minecraft:exposed_cut_copper_stairs", "minecraft:cut_copper_stairs", "minecraft:waxed_weathered_cut_copper_stairs", "minecraft:waxed_exposed_cut_copper_stairs", "minecraft:waxed_cut_copper_stairs", "minecraft:waxed_oxidized_cut_copper_stairs", "create:cut_granite_stairs", "create:polished_cut_granite_stairs", "create:cut_granite_brick_stairs", "create:small_granite_brick_stairs", "create:cut_diorite_stairs", "create:polished_cut_diorite_stairs", "create:cut_diorite_brick_stairs", "create:small_diorite_brick_stairs", "create:cut_andesite_stairs", "create:polished_cut_andesite_stairs", "create:cut_andesite_brick_stairs", "create:small_andesite_brick_stairs", "create:cut_calcite_stairs", "create:polished_cut_calcite_stairs", "create:cut_calcite_brick_stairs", "create:small_calcite_brick_stairs", "create:cut_dripstone_stairs", "create:polished_cut_dripstone_stairs", "create:cut_dripstone_brick_stairs", "create:small_dripstone_brick_stairs", "create:cut_deepslate_stairs", "create:polished_cut_deepslate_stairs", "create:cut_deepslate_brick_stairs", "create:small_deepslate_brick_stairs", "create:cut_tuff_stairs", "create:polished_cut_tuff_stairs", "create:cut_tuff_brick_stairs", "create:small_tuff_brick_stairs", "create:cut_asurine_stairs", "create:polished_cut_asurine_stairs", "create:cut_asurine_brick_stairs", "create:small_asurine_brick_stairs", "create:cut_crimsite_stairs", "create:polished_cut_crimsite_stairs", "create:cut_crimsite_brick_stairs", "create:small_crimsite_brick_stairs", "create:cut_limestone_stairs", "create:polished_cut_limestone_stairs", "create:cut_limestone_brick_stairs", "create:small_limestone_brick_stairs", "create:cut_ochrum_stairs", "create:polished_cut_ochrum_stairs", "create:cut_ochrum_brick_stairs", "create:small_ochrum_brick_stairs", "create:cut_scoria_stairs", "create:polished_cut_scoria_stairs", "create:cut_scoria_brick_stairs", "create:small_scoria_brick_stairs", "create:cut_scorchia_stairs", "create:polished_cut_scorchia_stairs", "create:cut_scorchia_brick_stairs", "create:small_scorchia_brick_stairs", "create:cut_veridium_stairs", "create:polished_cut_veridium_stairs", "create:cut_veridium_brick_stairs", "create:small_veridium_brick_stairs", "integrateddynamics:crystalized_chorus_block_stairs", "integrateddynamics:crystalized_chorus_brick_stairs", "integrateddynamics:crystalized_menril_block_stairs", "integrateddynamics:crystalized_menril_brick_stairs", "integrateddynamics:menril_planks_stairs", "byg:aspen_stairs", "byg:baobab_stairs", "byg:blue_enchanted_stairs", "byg:cherry_stairs", "byg:cika_stairs", "byg:cypress_stairs", "byg:ebony_stairs", "byg:fir_stairs", "byg:green_enchanted_stairs", "byg:holly_stairs", "byg:jacaranda_stairs", "byg:mahogany_stairs", "byg:mangrove_stairs", "byg:maple_stairs", "byg:pine_stairs", "byg:rainbow_eucalyptus_stairs", "byg:redwood_stairs", "byg:skyris_stairs", "byg:willow_stairs", "byg:witch_hazel_stairs", "byg:zelkova_stairs", "byg:dacite_cobblestone_stairs", "byg:mossy_stone_stairs", "byg:rocky_stone_stairs", "byg:scoria_stone_stairs", "byg:scoria_cobblestone_stairs", "byg:scoria_stonebrick_stairs", "byg:soapstone_stairs", "byg:polished_soapstone_stairs", "byg:soapstone_brick_stairs", "byg:soapstone_tile_stairs", "byg:red_rock_stairs", "byg:red_rock_brick_stairs", "byg:mossy_red_rock_brick_stairs", "byg:cracked_red_rock_brick_stairs", "byg:chiseled_red_rock_brick_stairs", "byg:sythian_stairs", "byg:embur_stairs", "byg:palm_stairs", "byg:lament_stairs", "byg:ether_stairs", "byg:bulbis_stairs", "byg:nightshade_stairs", "byg:ether_stone_stairs", "byg:carved_ether_stone_stairs", "byg:cobbled_ether_stone_stairs", "byg:purpur_stone_stairs", "byg:imparius_stairs", "byg:chiseled_fungal_imparius_stairs", "byg:windswept_sandstone_stairs", "byg:cut_windswept_sandstone_stairs", "byg:chiseled_windswept_sandstone_stairs", "byg:smooth_windswept_sandstone_stairs"]
-},
-logs:{
-tag:"minecraft:logs",
-members:["#minecraft:logs_that_burn", "#minecraft:crimson_stems", "#minecraft:warped_stems", "#byg:aspen_logs", "#byg:baobab_logs", "#byg:blue_enchanted_logs", "#byg:cherry_logs", "#byg:cika_logs", "#byg:cypress_logs", "#byg:ebony_logs", "#byg:fir_logs", "#byg:green_enchanted_logs", "#byg:holly_logs", "#byg:jacaranda_logs", "#byg:mahogany_logs", "#byg:mangrove_logs", "#byg:maple_logs", "#byg:palo_verde_logs", "#byg:pine_logs", "#byg:rainbow_eucalyptus_logs", "#byg:redwood_logs", "#byg:skyris_logs", "#byg:willow_logs", "#byg:witch_hazel_logs", "#byg:zelkova_logs", "#byg:sythian_stems", "#byg:embur_pedus", "#byg:palm_logs", "#byg:lament_logs", "#byg:bulbis_stems", "#byg:ether_logs", "#byg:nightshade_logs", "#byg:withering_oak_logs", "byg:imbued_nightshade_log", "#byg:imparius_stems"]
-},
-arrows:{
-tag:"minecraft:arrows",
-members:["minecraft:arrow", "minecraft:tipped_arrow", "minecraft:spectral_arrow"]
-},
-wooden_doors:{
-tag:"minecraft:wooden_doors",
-members:["minecraft:oak_door", "minecraft:spruce_door", "minecraft:birch_door", "minecraft:jungle_door", "minecraft:acacia_door", "minecraft:dark_oak_door", "minecraft:crimson_door", "minecraft:warped_door", "integrateddynamics:menril_door", "fruittrees:cherry_door?", "fruittrees:cherry_sliding_door?", "fruittrees:citrus_door", "byg:aspen_door", "byg:baobab_door", "byg:blue_enchanted_door", "byg:cherry_door", "byg:cika_door", "byg:cypress_door", "byg:ebony_door", "byg:fir_door", "byg:green_enchanted_door", "byg:holly_door", "byg:jacaranda_door", "byg:mahogany_door", "byg:mangrove_door", "byg:maple_door", "byg:pine_door", "byg:rainbow_eucalyptus_door", "byg:redwood_door", "byg:skyris_door", "byg:willow_door", "byg:witch_hazel_door", "byg:zelkova_door", "byg:sythian_door", "byg:embur_door", "byg:palm_door", "byg:lament_door", "byg:ether_door", "byg:bulbis_door", "byg:nightshade_door", "byg:imparius_door"]
-},
-emerald_ores:{
-tag:"minecraft:emerald_ores",
-members:["minecraft:emerald_ore", "minecraft:deepslate_emerald_ore"]
-},
-crimson_stems:{
-tag:"minecraft:crimson_stems",
-members:["minecraft:crimson_stem", "minecraft:stripped_crimson_stem", "minecraft:crimson_hyphae", "minecraft:stripped_crimson_hyphae"]
-},
-ignored_by_piglin_babies:{
-tag:"minecraft:ignored_by_piglin_babies",
-members:["minecraft:leather"]
-},
-stone_tool_materials:{
-tag:"minecraft:stone_tool_materials",
-members:["minecraft:cobblestone", "minecraft:blackstone", "minecraft:cobbled_deepslate", "byg:red_rock", "byg:dacite_cobblestone", "byg:scoria_cobblestone", "byg:soapstone", "byg:cobbled_ether_stone"]
-},
-terracotta:{
-tag:"minecraft:terracotta",
-members:["minecraft:terracotta", "minecraft:white_terracotta", "minecraft:orange_terracotta", "minecraft:magenta_terracotta", "minecraft:light_blue_terracotta", "minecraft:yellow_terracotta", "minecraft:lime_terracotta", "minecraft:pink_terracotta", "minecraft:gray_terracotta", "minecraft:light_gray_terracotta", "minecraft:cyan_terracotta", "minecraft:purple_terracotta", "minecraft:blue_terracotta", "minecraft:brown_terracotta", "minecraft:green_terracotta", "minecraft:red_terracotta", "minecraft:black_terracotta"]
-},
-anvil:{
-tag:"minecraft:anvil",
-members:["minecraft:anvil", "minecraft:chipped_anvil", "minecraft:damaged_anvil"]
-},
-iron_ores:{
-tag:"minecraft:iron_ores",
-members:["minecraft:iron_ore", "minecraft:deepslate_iron_ore"]
-},
-stone_crafting_materials:{
-tag:"minecraft:stone_crafting_materials",
-members:["minecraft:cobblestone", "minecraft:blackstone", "minecraft:cobbled_deepslate", "byg:red_rock", "byg:dacite_cobblestone", "byg:scoria_cobblestone", "byg:soapstone", "byg:cobbled_ether_stone"]
-},
-piglin_repellents:{
-tag:"minecraft:piglin_repellents",
-members:["minecraft:soul_torch", "minecraft:soul_lantern", "minecraft:soul_campfire"]
-},
-wooden_stairs:{
-tag:"minecraft:wooden_stairs",
-members:["minecraft:oak_stairs", "minecraft:spruce_stairs", "minecraft:birch_stairs", "minecraft:jungle_stairs", "minecraft:acacia_stairs", "minecraft:dark_oak_stairs", "minecraft:crimson_stairs", "minecraft:warped_stairs", "integrateddynamics:menril_planks_stairs", "fruittrees:cherry_stairs?", "fruittrees:citrus_stairs", "byg:aspen_stairs", "byg:baobab_stairs", "byg:blue_enchanted_stairs", "byg:cherry_stairs", "byg:cika_stairs", "byg:cypress_stairs", "byg:ebony_stairs", "byg:fir_stairs", "byg:green_enchanted_stairs", "byg:holly_stairs", "byg:jacaranda_stairs", "byg:mahogany_stairs", "byg:mangrove_stairs", "byg:maple_stairs", "byg:pine_stairs", "byg:rainbow_eucalyptus_stairs", "byg:redwood_stairs", "byg:skyris_stairs", "byg:willow_stairs", "byg:witch_hazel_stairs", "byg:zelkova_stairs", "byg:sythian_stairs", "byg:embur_stairs", "byg:palm_stairs", "byg:lament_stairs", "byg:ether_stairs", "byg:bulbis_stairs", "byg:nightshade_stairs", "byg:imparius_stairs"]
-},
-carpets:{
-tag:"minecraft:carpets",
-members:["minecraft:white_carpet", "minecraft:orange_carpet", "minecraft:magenta_carpet", "minecraft:light_blue_carpet", "minecraft:yellow_carpet", "minecraft:lime_carpet", "minecraft:pink_carpet", "minecraft:gray_carpet", "minecraft:light_gray_carpet", "minecraft:cyan_carpet", "minecraft:purple_carpet", "minecraft:blue_carpet", "minecraft:brown_carpet", "minecraft:green_carpet", "minecraft:red_carpet", "minecraft:black_carpet", "farmersdelight:full_tatami_mat", "farmersdelight:half_tatami_mat"]
-},
-wooden_buttons:{
-tag:"minecraft:wooden_buttons",
-members:["minecraft:oak_button", "minecraft:spruce_button", "minecraft:birch_button", "minecraft:jungle_button", "minecraft:acacia_button", "minecraft:dark_oak_button", "minecraft:crimson_button", "minecraft:warped_button", "fruittrees:cherry_button?", "fruittrees:citrus_button", "byg:aspen_button", "byg:baobab_button", "byg:blue_enchanted_button", "byg:cherry_button", "byg:cika_button", "byg:cypress_button", "byg:ebony_button", "byg:fir_button", "byg:green_enchanted_button", "byg:holly_button", "byg:jacaranda_button", "byg:mahogany_button", "byg:mangrove_button", "byg:maple_button", "byg:pine_button", "byg:rainbow_eucalyptus_button", "byg:redwood_button", "byg:skyris_button", "byg:willow_button", "byg:witch_hazel_button", "byg:zelkova_button", "byg:sythian_button", "byg:embur_button", "byg:palm_button", "byg:lament_button", "byg:ether_button", "byg:bulbis_button", "byg:nightshade_button", "byg:imparius_button"]
-},
-stone_bricks:{
-tag:"minecraft:stone_bricks",
-members:["minecraft:stone_bricks", "minecraft:mossy_stone_bricks", "minecraft:cracked_stone_bricks", "minecraft:chiseled_stone_bricks", "byg:soapstone_bricks", "byg:scoria_stonebricks", "byg:red_rock_bricks", "byg:carved_ether_stone", "byg:chiseled_therium", "byg:shiny_chiseled_therium"]
-},
-slabs:{
-tag:"minecraft:slabs",
-members:["#minecraft:wooden_slabs", "minecraft:stone_slab", "minecraft:smooth_stone_slab", "minecraft:stone_brick_slab", "minecraft:sandstone_slab", "minecraft:purpur_slab", "minecraft:quartz_slab", "minecraft:red_sandstone_slab", "minecraft:brick_slab", "minecraft:cobblestone_slab", "minecraft:nether_brick_slab", "minecraft:petrified_oak_slab", "minecraft:prismarine_slab", "minecraft:prismarine_brick_slab", "minecraft:dark_prismarine_slab", "minecraft:polished_granite_slab", "minecraft:smooth_red_sandstone_slab", "minecraft:mossy_stone_brick_slab", "minecraft:polished_diorite_slab", "minecraft:mossy_cobblestone_slab", "minecraft:end_stone_brick_slab", "minecraft:smooth_sandstone_slab", "minecraft:smooth_quartz_slab", "minecraft:granite_slab", "minecraft:andesite_slab", "minecraft:red_nether_brick_slab", "minecraft:polished_andesite_slab", "minecraft:diorite_slab", "minecraft:cut_sandstone_slab", "minecraft:cut_red_sandstone_slab", "minecraft:blackstone_slab", "minecraft:polished_blackstone_brick_slab", "minecraft:polished_blackstone_slab", "minecraft:cobbled_deepslate_slab", "minecraft:polished_deepslate_slab", "minecraft:deepslate_tile_slab", "minecraft:deepslate_brick_slab", "minecraft:waxed_weathered_cut_copper_slab", "minecraft:waxed_exposed_cut_copper_slab", "minecraft:waxed_cut_copper_slab", "minecraft:oxidized_cut_copper_slab", "minecraft:weathered_cut_copper_slab", "minecraft:exposed_cut_copper_slab", "minecraft:cut_copper_slab", "minecraft:waxed_oxidized_cut_copper_slab", "create:cut_granite_slab", "create:polished_cut_granite_slab", "create:cut_granite_brick_slab", "create:small_granite_brick_slab", "create:cut_diorite_slab", "create:polished_cut_diorite_slab", "create:cut_diorite_brick_slab", "create:small_diorite_brick_slab", "create:cut_andesite_slab", "create:polished_cut_andesite_slab", "create:cut_andesite_brick_slab", "create:small_andesite_brick_slab", "create:cut_calcite_slab", "create:polished_cut_calcite_slab", "create:cut_calcite_brick_slab", "create:small_calcite_brick_slab", "create:cut_dripstone_slab", "create:polished_cut_dripstone_slab", "create:cut_dripstone_brick_slab", "create:small_dripstone_brick_slab", "create:cut_deepslate_slab", "create:polished_cut_deepslate_slab", "create:cut_deepslate_brick_slab", "create:small_deepslate_brick_slab", "create:cut_tuff_slab", "create:polished_cut_tuff_slab", "create:cut_tuff_brick_slab", "create:small_tuff_brick_slab", "create:cut_asurine_slab", "create:polished_cut_asurine_slab", "create:cut_asurine_brick_slab", "create:small_asurine_brick_slab", "create:cut_crimsite_slab", "create:polished_cut_crimsite_slab", "create:cut_crimsite_brick_slab", "create:small_crimsite_brick_slab", "create:cut_limestone_slab", "create:polished_cut_limestone_slab", "create:cut_limestone_brick_slab", "create:small_limestone_brick_slab", "create:cut_ochrum_slab", "create:polished_cut_ochrum_slab", "create:cut_ochrum_brick_slab", "create:small_ochrum_brick_slab", "create:cut_scoria_slab", "create:polished_cut_scoria_slab", "create:cut_scoria_brick_slab", "create:small_scoria_brick_slab", "create:cut_scorchia_slab", "create:polished_cut_scorchia_slab", "create:cut_scorchia_brick_slab", "create:small_scorchia_brick_slab", "create:cut_veridium_slab", "create:polished_cut_veridium_slab", "create:cut_veridium_brick_slab", "create:small_veridium_brick_slab", "byg:aspen_slab", "byg:baobab_slab", "byg:blue_enchanted_slab", "byg:cherry_slab", "byg:cika_slab", "byg:cypress_slab", "byg:ebony_slab", "byg:fir_slab", "byg:green_enchanted_slab", "byg:holly_slab", "byg:jacaranda_slab", "byg:mahogany_slab", "byg:mangrove_slab", "byg:maple_slab", "byg:pine_slab", "byg:rainbow_eucalyptus_slab", "byg:redwood_slab", "byg:skyris_slab", "byg:willow_slab", "byg:witch_hazel_slab", "byg:zelkova_slab", "byg:dacite_cobblestone_slab", "byg:mossy_stone_slab", "byg:rocky_stone_slab", "byg:scoria_stone_slab", "byg:scoria_cobblestone_slab", "byg:scoria_stonebrick_slab", "byg:soapstone_slab", "byg:polished_soapstone_slab", "byg:soapstone_brick_slab", "byg:soapstone_tile_slab", "byg:red_rock_slab", "byg:red_rock_brick_slab", "byg:mossy_red_rock_brick_slab", "byg:cracked_red_rock_brick_slab", "byg:chiseled_red_rock_brick_slab", "byg:sythian_slab", "byg:embur_slab", "byg:palm_slab", "byg:lament_slab", "byg:ether_slab", "byg:bulbis_slab", "byg:nightshade_slab", "byg:ether_stone_slab", "byg:cobbled_ether_stone_slab", "byg:carved_ether_stone_slab", "byg:purpur_stone_slab", "byg:imparius_slab", "byg:chiseled_fungal_imparius_slab", "byg:windswept_sandstone_slab", "byg:cut_windswept_sandstone_slab", "byg:chiseled_windswept_sandstone_slab", "byg:smooth_windswept_sandstone_slab"]
-},
-buttons:{
-tag:"minecraft:buttons",
-members:["#minecraft:wooden_buttons", "minecraft:stone_button", "minecraft:polished_blackstone_button", "byg:aspen_button", "byg:baobab_button", "byg:blue_enchanted_button", "byg:cherry_button", "byg:cika_button", "byg:cypress_button", "byg:ebony_button", "byg:fir_button", "byg:green_enchanted_button", "byg:holly_button", "byg:jacaranda_button", "byg:mahogany_button", "byg:mangrove_button", "byg:maple_button", "byg:pine_button", "byg:rainbow_eucalyptus_button", "byg:redwood_button", "byg:skyris_button", "byg:willow_button", "byg:witch_hazel_button", "byg:zelkova_button", "byg:sythian_button", "byg:embur_button", "byg:palm_button", "byg:lament_button", "byg:ether_button", "byg:bulbis_button", "byg:nightshade_button", "byg:imparius_button"]
-},
-rails:{
-tag:"minecraft:rails",
-members:["minecraft:rail", "minecraft:powered_rail", "minecraft:detector_rail", "minecraft:activator_rail"]
-},
-wooden_pressure_plates:{
-tag:"minecraft:wooden_pressure_plates",
-members:["minecraft:oak_pressure_plate", "minecraft:spruce_pressure_plate", "minecraft:birch_pressure_plate", "minecraft:jungle_pressure_plate", "minecraft:acacia_pressure_plate", "minecraft:dark_oak_pressure_plate", "minecraft:crimson_pressure_plate", "minecraft:warped_pressure_plate", "fruittrees:cherry_stairs?", "fruittrees:citrus_stairs", "byg:aspen_pressure_plate", "byg:baobab_pressure_plate", "byg:blue_enchanted_pressure_plate", "byg:cherry_pressure_plate", "byg:cika_pressure_plate", "byg:cypress_pressure_plate", "byg:ebony_pressure_plate", "byg:fir_pressure_plate", "byg:green_enchanted_pressure_plate", "byg:holly_pressure_plate", "byg:jacaranda_pressure_plate", "byg:mahogany_pressure_plate", "byg:mangrove_pressure_plate", "byg:maple_pressure_plate", "byg:pine_pressure_plate", "byg:rainbow_eucalyptus_pressure_plate", "byg:redwood_pressure_plate", "byg:skyris_pressure_plate", "byg:willow_pressure_plate", "byg:witch_hazel_pressure_plate", "byg:zelkova_pressure_plate", "byg:sythian_pressure_plate", "byg:embur_pressure_plate", "byg:palm_pressure_plate", "byg:lament_pressure_plate", "byg:ether_pressure_plate", "byg:bulbis_pressure_plate", "byg:nightshade_pressure_plate", "byg:imparius_pressure_plate"]
-},
-tall_flowers:{
-tag:"minecraft:tall_flowers",
-members:["minecraft:sunflower", "minecraft:lilac", "minecraft:peony", "minecraft:rose_bush", "farmersdelight:wild_rice", "byg:foxglove", "byg:delphinium", "byg:japanese_orchid", "byg:hydrangea_bush", "byg:tall_allium", "byg:tall_pink_allium"]
-},
-gold_ores:{
-tag:"minecraft:gold_ores",
-members:["minecraft:gold_ore", "minecraft:nether_gold_ore", "minecraft:deepslate_gold_ore"]
-},
-dirt:{
-tag:"minecraft:dirt",
-members:["minecraft:dirt", "minecraft:grass_block", "minecraft:podzol", "minecraft:coarse_dirt", "minecraft:mycelium", "minecraft:rooted_dirt", "minecraft:moss_block"]
-},
-cluster_max_harvestables:{
-tag:"minecraft:cluster_max_harvestables",
-members:["minecraft:diamond_pickaxe", "minecraft:golden_pickaxe", "minecraft:iron_pickaxe", "minecraft:netherite_pickaxe", "minecraft:stone_pickaxe", "minecraft:wooden_pickaxe"]
-},
-soul_fire_base_blocks:{
-tag:"minecraft:soul_fire_base_blocks",
-members:["minecraft:soul_sand", "minecraft:soul_soil"]
-},
-wool:{
-tag:"minecraft:wool",
-members:["minecraft:white_wool", "minecraft:orange_wool", "minecraft:magenta_wool", "minecraft:light_blue_wool", "minecraft:yellow_wool", "minecraft:lime_wool", "minecraft:pink_wool", "minecraft:gray_wool", "minecraft:light_gray_wool", "minecraft:cyan_wool", "minecraft:purple_wool", "minecraft:blue_wool", "minecraft:brown_wool", "minecraft:green_wool", "minecraft:red_wool", "minecraft:black_wool"]
-},
-warped_stems:{
-tag:"minecraft:warped_stems",
-members:["minecraft:warped_stem", "minecraft:stripped_warped_stem", "minecraft:warped_hyphae", "minecraft:stripped_warped_hyphae"]
-},
-dark_oak_logs:{
-tag:"minecraft:dark_oak_logs",
-members:["minecraft:dark_oak_log", "minecraft:dark_oak_wood", "minecraft:stripped_dark_oak_log", "minecraft:stripped_dark_oak_wood"]
-},
-non_flammable_wood:{
-tag:"minecraft:non_flammable_wood",
-members:["minecraft:warped_stem", "minecraft:stripped_warped_stem", "minecraft:warped_hyphae", "minecraft:stripped_warped_hyphae", "minecraft:crimson_stem", "minecraft:stripped_crimson_stem", "minecraft:crimson_hyphae", "minecraft:stripped_crimson_hyphae", "minecraft:crimson_planks", "minecraft:warped_planks", "minecraft:crimson_slab", "minecraft:warped_slab", "minecraft:crimson_pressure_plate", "minecraft:warped_pressure_plate", "minecraft:crimson_fence", "minecraft:warped_fence", "minecraft:crimson_trapdoor", "minecraft:warped_trapdoor", "minecraft:crimson_fence_gate", "minecraft:warped_fence_gate", "minecraft:crimson_stairs", "minecraft:warped_stairs", "minecraft:crimson_button", "minecraft:warped_button", "minecraft:crimson_door", "minecraft:warped_door", "minecraft:crimson_sign", "minecraft:warped_sign"]
-},
-lapis_ores:{
-tag:"minecraft:lapis_ores",
-members:["minecraft:lapis_ore", "minecraft:deepslate_lapis_ore"]
-},
-fences:{
-tag:"minecraft:fences",
-members:["#minecraft:wooden_fences", "minecraft:nether_brick_fence"]
-},
-saplings:{
-tag:"minecraft:saplings",
-members:["minecraft:oak_sapling", "minecraft:spruce_sapling", "minecraft:birch_sapling", "minecraft:jungle_sapling", "minecraft:acacia_sapling", "minecraft:dark_oak_sapling", "minecraft:azalea", "minecraft:flowering_azalea", "integrateddynamics:menril_sapling", "fruittrees:cherry_sapling?", "fruittrees:redlove_sapling?", "fruittrees:apple_sapling", "fruittrees:citron_sapling", "fruittrees:grapefruit_sapling", "fruittrees:lemon_sapling", "fruittrees:lime_sapling", "fruittrees:mandarin_sapling", "fruittrees:orange_sapling", "fruittrees:pomelo_sapling", "byg:aspen_sapling", "byg:baobab_sapling", "byg:blue_enchanted_sapling", "byg:blue_spruce_sapling", "byg:brown_birch_sapling", "byg:brown_oak_sapling", "byg:cika_sapling", "byg:cypress_sapling", "byg:ebony_sapling", "byg:fir_sapling", "byg:green_enchanted_sapling", "byg:holly_sapling", "byg:jacaranda_sapling", "byg:indigo_jacaranda_sapling", "byg:mahogany_sapling", "byg:mangrove_sapling", "byg:maple_sapling", "byg:orange_birch_sapling", "byg:orange_oak_sapling", "byg:orange_spruce_sapling", "byg:orchard_sapling", "byg:palo_verde_sapling", "byg:pine_sapling", "byg:pink_cherry_sapling", "byg:rainbow_eucalyptus_sapling", "byg:red_birch_sapling", "byg:red_maple_sapling", "byg:red_oak_sapling", "byg:red_spruce_sapling", "byg:redwood_sapling", "byg:silver_maple_sapling", "byg:white_cherry_sapling", "byg:willow_sapling", "byg:witch_hazel_sapling", "byg:yellow_birch_sapling", "byg:zelkova_sapling", "byg:skyris_sapling", "byg:palm_sapling", "byg:araucaria_sapling", "byg:brown_zelkova_sapling", "byg:lament_sapling", "byg:withering_oak_sapling", "byg:ether_sapling", "byg:nightshade_sapling"]
-},
-banners:{
-tag:"minecraft:banners",
-members:["minecraft:white_banner", "minecraft:orange_banner", "minecraft:magenta_banner", "minecraft:light_blue_banner", "minecraft:yellow_banner", "minecraft:lime_banner", "minecraft:pink_banner", "minecraft:gray_banner", "minecraft:light_gray_banner", "minecraft:cyan_banner", "minecraft:purple_banner", "minecraft:blue_banner", "minecraft:brown_banner", "minecraft:green_banner", "minecraft:red_banner", "minecraft:black_banner"]
-},
-wooden_fences:{
-tag:"minecraft:wooden_fences",
-members:["minecraft:oak_fence", "minecraft:acacia_fence", "minecraft:dark_oak_fence", "minecraft:spruce_fence", "minecraft:birch_fence", "minecraft:jungle_fence", "minecraft:crimson_fence", "minecraft:warped_fence", "integrateddynamics:menril_fence", "fruittrees:cherry_fence?", "fruittrees:citrus_fence", "byg:aspen_fence", "byg:baobab_fence", "byg:blue_enchanted_fence", "byg:cherry_fence", "byg:cika_fence", "byg:cypress_fence", "byg:ebony_fence", "byg:fir_fence", "byg:green_enchanted_fence", "byg:holly_fence", "byg:jacaranda_fence", "byg:mahogany_fence", "byg:mangrove_fence", "byg:maple_fence", "byg:pine_fence", "byg:rainbow_eucalyptus_fence", "byg:redwood_fence", "byg:skyris_fence", "byg:willow_fence", "byg:witch_hazel_fence", "byg:zelkova_fence", "byg:sythian_fence", "byg:embur_fence", "byg:palm_fence", "byg:lament_fence", "byg:ether_fence", "byg:bulbis_fence", "byg:nightshade_fence", "byg:imparius_fence"]
-},
-trapdoors:{
-tag:"minecraft:trapdoors",
-members:["#minecraft:wooden_trapdoors", "minecraft:iron_trapdoor", "byg:aspen_trapdoor", "byg:baobab_trapdoor", "byg:blue_enchanted_trapdoor", "byg:cherry_trapdoor", "byg:cika_trapdoor", "byg:cypress_trapdoor", "byg:ebony_trapdoor", "byg:fir_trapdoor", "byg:green_enchanted_trapdoor", "byg:holly_trapdoor", "byg:jacaranda_trapdoor", "byg:mahogany_trapdoor", "byg:mangrove_trapdoor", "byg:maple_trapdoor", "byg:pine_trapdoor", "byg:rainbow_eucalyptus_trapdoor", "byg:redwood_trapdoor", "byg:skyris_trapdoor", "byg:willow_trapdoor", "byg:witch_hazel_trapdoor", "byg:zelkova_trapdoor", "byg:sythian_trapdoor", "byg:embur_trapdoor", "byg:palm_trapdoor", "byg:lament_trapdoor", "byg:ether_trapdoor", "byg:bulbis_trapdoor", "byg:nightshade_trapdoor", "byg:imparius_trapdoor"]
-},
-boats:{
-tag:"minecraft:boats",
-members:["minecraft:oak_boat", "minecraft:spruce_boat", "minecraft:birch_boat", "minecraft:jungle_boat", "minecraft:acacia_boat", "minecraft:dark_oak_boat"]
-},
-leaves:{
-tag:"minecraft:leaves",
-members:["minecraft:jungle_leaves", "minecraft:oak_leaves", "minecraft:spruce_leaves", "minecraft:dark_oak_leaves", "minecraft:acacia_leaves", "minecraft:birch_leaves", "minecraft:azalea_leaves", "minecraft:flowering_azalea_leaves", "integrateddynamics:menril_leaves", "fruittrees:cherry_leaves?", "fruittrees:redlove_leaves?", "fruittrees:apple_leaves", "fruittrees:citron_leaves", "fruittrees:grapefruit_leaves", "fruittrees:lemon_leaves", "fruittrees:lime_leaves", "fruittrees:mandarin_leaves", "fruittrees:orange_leaves", "fruittrees:pomelo_leaves", "byg:baobab_leaves", "byg:blooming_witch_hazel_leaves", "byg:blue_enchanted_leaves", "byg:blue_spruce_leaves", "byg:brown_birch_leaves", "byg:brown_oak_leaves", "byg:cika_leaves", "byg:cypress_leaves", "byg:ebony_leaves", "byg:fir_leaves", "byg:flowering_orchard_leaves", "byg:flowering_palo_verde_leaves", "byg:green_enchanted_leaves", "byg:holly_berry_leaves", "byg:holly_leaves", "byg:jacaranda_leaves", "byg:joshua_leaves", "byg:ripe_joshua_leaves", "byg:indigo_jacaranda_leaves", "byg:mahogany_leaves", "byg:mangrove_leaves", "byg:maple_leaves", "byg:orange_birch_leaves", "byg:orange_oak_leaves", "byg:orange_spruce_leaves", "byg:orchard_leaves", "byg:palo_verde_leaves", "byg:pine_leaves", "byg:pink_cherry_leaves", "byg:rainbow_eucalyptus_leaves", "byg:red_birch_leaves", "byg:red_maple_leaves", "byg:red_oak_leaves", "byg:red_spruce_leaves", "byg:redwood_leaves", "byg:ripe_orchard_leaves", "byg:silver_maple_leaves", "byg:skyris_leaves", "byg:green_apple_skyris_leaves", "byg:white_cherry_leaves", "byg:willow_leaves", "byg:witch_hazel_leaves", "byg:yellow_birch_leaves", "byg:yellow_spruce_leaves", "byg:aspen_leaves", "byg:zelkova_leaves", "byg:palm_leaves", "byg:araucaria_leaves", "byg:brown_zelkova_leaves", "byg:lament_leaves", "byg:withering_oak_leaves", "byg:ether_leaves", "byg:nightshade_leaves", "byg:flowering_nightshade_leaves", "byg:flowering_jacaranda_leaves", "byg:flowering_indigo_jacaranda_leaves"]
-},
-acacia_logs:{
-tag:"minecraft:acacia_logs",
-members:["minecraft:acacia_log", "minecraft:acacia_wood", "minecraft:stripped_acacia_log", "minecraft:stripped_acacia_wood"]
-},
-piglin_loved:{
-tag:"minecraft:piglin_loved",
-members:["#minecraft:gold_ores", "minecraft:gold_block", "minecraft:gilded_blackstone", "minecraft:light_weighted_pressure_plate", "minecraft:gold_ingot", "minecraft:bell", "minecraft:clock", "minecraft:golden_carrot", "minecraft:glistering_melon_slice", "minecraft:golden_apple", "minecraft:enchanted_golden_apple", "minecraft:golden_helmet", "minecraft:golden_chestplate", "minecraft:golden_leggings", "minecraft:golden_boots", "minecraft:golden_horse_armor", "minecraft:golden_sword", "minecraft:golden_pickaxe", "minecraft:golden_shovel", "minecraft:golden_axe", "minecraft:golden_hoe", "minecraft:raw_gold", "minecraft:raw_gold_block", "farmersdelight:golden_knife", "create:golden_sheet", "create:crushed_gold_ore", "byg:sythian_stalk_block"]
-},
-copper_ores:{
-tag:"minecraft:copper_ores",
-members:["minecraft:copper_ore", "minecraft:deepslate_copper_ore"]
-},
-logs_that_burn:{
-tag:"minecraft:logs_that_burn",
-members:["#minecraft:dark_oak_logs", "#minecraft:oak_logs", "#minecraft:acacia_logs", "#minecraft:birch_logs", "#minecraft:jungle_logs", "#minecraft:spruce_logs", "integrateddynamics:menril_log", "integrateddynamics:menril_log_filled", "#fruittrees:cherry_logs", "#fruittrees:citrus_logs", "#byg:aspen_logs", "#byg:baobab_logs", "#byg:blue_enchanted_logs", "#byg:cherry_logs", "#byg:cika_logs", "#byg:cypress_logs", "#byg:ebony_logs", "#byg:fir_logs", "#byg:green_enchanted_logs", "#byg:holly_logs", "#byg:jacaranda_logs", "#byg:mahogany_logs", "#byg:mangrove_logs", "#byg:maple_logs", "#byg:palo_verde_logs", "#byg:pine_logs", "#byg:rainbow_eucalyptus_logs", "#byg:redwood_logs", "#byg:skyris_logs", "#byg:willow_logs", "#byg:witch_hazel_logs", "#byg:zelkova_logs", "#byg:palm_logs", "#byg:bulbis_stems", "#byg:ether_logs", "#byg:nightshade_logs", "#byg:withering_oak_logs", "#byg:imparius_stems"]
-},
-wooden_slabs:{
-tag:"minecraft:wooden_slabs",
-members:["minecraft:oak_slab", "minecraft:spruce_slab", "minecraft:birch_slab", "minecraft:jungle_slab", "minecraft:acacia_slab", "minecraft:dark_oak_slab", "minecraft:crimson_slab", "minecraft:warped_slab", "integrateddynamics:menril_slab", "fruittrees:cherry_slab?", "fruittrees:citrus_slab", "byg:aspen_slab", "byg:baobab_slab", "byg:blue_enchanted_slab", "byg:cherry_slab", "byg:cika_slab", "byg:cypress_slab", "byg:ebony_slab", "byg:fir_slab", "byg:green_enchanted_slab", "byg:holly_slab", "byg:jacaranda_slab", "byg:mahogany_slab", "byg:mangrove_slab", "byg:maple_slab", "byg:pine_slab", "byg:rainbow_eucalyptus_slab", "byg:redwood_slab", "byg:skyris_slab", "byg:willow_slab", "byg:witch_hazel_slab", "byg:zelkova_slab", "byg:sythian_slab", "byg:embur_slab", "byg:palm_slab", "byg:lament_slab", "byg:ether_slab", "byg:bulbis_slab", "byg:nightshade_slab", "byg:imparius_slab"]
-},
-small_flowers:{
-tag:"minecraft:small_flowers",
-members:["minecraft:dandelion", "minecraft:poppy", "minecraft:blue_orchid", "minecraft:allium", "minecraft:azure_bluet", "minecraft:red_tulip", "minecraft:orange_tulip", "minecraft:white_tulip", "minecraft:pink_tulip", "minecraft:oxeye_daisy", "minecraft:cornflower", "minecraft:lily_of_the_valley", "minecraft:wither_rose", "farmersdelight:wild_carrots", "farmersdelight:wild_potatoes", "farmersdelight:wild_beetroots", "farmersdelight:wild_cabbages", "farmersdelight:wild_tomatoes", "farmersdelight:wild_onions", "byg:allium_flower_bush", "byg:alpine_bellflower", "byg:amaranth", "byg:angelica", "byg:hydrangea_bush", "byg:begonia", "byg:bistort", "byg:blue_sage", "byg:black_rose", "byg:california_poppy", "byg:crocus", "byg:cyan_amaranth", "byg:cyan_rose", "byg:cyan_tulip", "byg:daffodil", "byg:delphinium", "byg:fairy_slipper", "byg:firecracker_flower_bush", "byg:foxglove", "byg:golden_spined_cactus", "byg:green_tulip", "byg:guzmania", "byg:incan_lily", "byg:iris", "byg:japanese_orchid", "byg:kovan_flower", "byg:lazarus_bellflower", "byg:lolipop_flower", "byg:magenta_amaranth", "byg:magenta_tulip", "byg:orange_amaranth", "byg:orange_daisy", "byg:osiria_rose", "byg:peach_leather_flower", "byg:pink_allium", "byg:pink_allium_flower_bush", "byg:pink_anemone", "byg:pink_daffodil", "byg:prairie_grass", "byg:protea_flower", "byg:purple_amaranth", "byg:purple_sage", "byg:purple_tulip", "byg:richea", "byg:rose", "byg:snowdrops", "byg:silver_vase_flower", "byg:torch_ginger", "byg:violet_leather_flower", "byg:white_anemone", "byg:white_sage", "byg:winter_rose", "byg:winter_cyclamen", "byg:winter_scilla", "byg:yellow_daffodil", "byg:yellow_tulip", "byg:pollen_block", "byg:tall_allium", "byg:tall_pink_allium", "byg:thereal_bellflower"]
-},
-axolotl_tempt_items:{
-tag:"minecraft:axolotl_tempt_items",
-members:["minecraft:tropical_fish_bucket"]
-},
-creeper_drop_music_discs:{
-tag:"minecraft:creeper_drop_music_discs",
-members:["minecraft:music_disc_13", "minecraft:music_disc_cat", "minecraft:music_disc_blocks", "minecraft:music_disc_chirp", "minecraft:music_disc_far", "minecraft:music_disc_mall", "minecraft:music_disc_mellohi", "minecraft:music_disc_stal", "minecraft:music_disc_strad", "minecraft:music_disc_ward", "minecraft:music_disc_11", "minecraft:music_disc_wait"]
-},
-birch_logs:{
-tag:"minecraft:birch_logs",
-members:["minecraft:birch_log", "minecraft:birch_wood", "minecraft:stripped_birch_log", "minecraft:stripped_birch_wood"]
-},
-oak_logs:{
-tag:"minecraft:oak_logs",
-members:["minecraft:oak_log", "minecraft:oak_wood", "minecraft:stripped_oak_log", "minecraft:stripped_oak_wood", "byg:withering_oak_log", "byg:withering_oak_wood"]
-},
-jungle_logs:{
-tag:"minecraft:jungle_logs",
-members:["minecraft:jungle_log", "minecraft:jungle_wood", "minecraft:stripped_jungle_log", "minecraft:stripped_jungle_wood"]
-},
-lectern_books:{
-tag:"minecraft:lectern_books",
-members:["minecraft:written_book", "minecraft:writable_book", "patchouli:guide_book"]
-},
-spruce_logs:{
-tag:"minecraft:spruce_logs",
-members:["minecraft:spruce_log", "minecraft:spruce_wood", "minecraft:stripped_spruce_log", "minecraft:stripped_spruce_wood"]
-},
-flowers:{
-tag:"minecraft:flowers",
-members:["#minecraft:small_flowers", "#minecraft:tall_flowers", "minecraft:flowering_azalea_leaves", "minecraft:flowering_azalea", "byg:flowering_indigo_jacaranda_bush", "byg:flowering_jacaranda_bush", "byg:flowering_indigo_jacaranda_leaves", "byg:flowering_jacaranda_leaves", "byg:flowering_orchard_leaves", "byg:flowering_palo_verde_leaves", "byg:flowering_nightshade_leaves"]
-},
-planks:{
-tag:"minecraft:planks",
-members:["minecraft:oak_planks", "minecraft:spruce_planks", "minecraft:birch_planks", "minecraft:jungle_planks", "minecraft:acacia_planks", "minecraft:dark_oak_planks", "minecraft:crimson_planks", "minecraft:warped_planks", "integrateddynamics:menril_planks", "fruittrees:cherry_planks?", "fruittrees:citrus_planks", "byg:aspen_planks", "byg:baobab_planks", "byg:blue_enchanted_planks", "byg:cherry_planks", "byg:cika_planks", "byg:cypress_planks", "byg:ebony_planks", "byg:fir_planks", "byg:green_enchanted_planks", "byg:holly_planks", "byg:jacaranda_planks", "byg:mahogany_planks", "byg:mangrove_planks", "byg:maple_planks", "byg:pine_planks", "byg:rainbow_eucalyptus_planks", "byg:redwood_planks", "byg:skyris_planks", "byg:willow_planks", "byg:witch_hazel_planks", "byg:zelkova_planks", "byg:sythian_planks", "byg:embur_planks", "byg:palm_planks", "byg:lament_planks", "byg:ether_planks", "byg:bulbis_planks", "byg:nightshade_planks", "byg:imparius_planks"]
-},
-fox_food:{
-tag:"minecraft:fox_food",
-members:["minecraft:sweet_berries", "minecraft:glow_berries", "#forge:fruits"]
-},
-diamond_ores:{
-tag:"minecraft:diamond_ores",
-members:["minecraft:diamond_ore", "minecraft:deepslate_diamond_ore"]
-},
-candles:{
-tag:"minecraft:candles",
-members:["minecraft:candle", "minecraft:white_candle", "minecraft:orange_candle", "minecraft:magenta_candle", "minecraft:light_blue_candle", "minecraft:yellow_candle", "minecraft:lime_candle", "minecraft:pink_candle", "minecraft:gray_candle", "minecraft:light_gray_candle", "minecraft:cyan_candle", "minecraft:purple_candle", "minecraft:blue_candle", "minecraft:brown_candle", "minecraft:green_candle", "minecraft:red_candle", "minecraft:black_candle"]
-},
-freeze_immune_wearables:{
-tag:"minecraft:freeze_immune_wearables",
-members:["minecraft:leather_boots", "minecraft:leather_leggings", "minecraft:leather_chestplate", "minecraft:leather_helmet", "minecraft:leather_horse_armor"]
-}
-},
-fabric:{
-pickaxes:{
-tag:"fabric:pickaxes",
-members:["byg:pendorite_pickaxe"]
-},
-axes:{
-tag:"fabric:axes",
-members:["byg:pendorite_axe", "byg:pendorite_battleaxe"]
-},
-hoes:{
-tag:"fabric:hoes",
-members:["byg:pendorite_hoe"]
-},
-chestplates:{
-tag:"fabric:chestplates",
-members:["byg:ametrine_chestplate"]
-},
-leggings:{
-tag:"fabric:leggings",
-members:["byg:ametrine_leggings"]
-},
-shovels:{
-tag:"fabric:shovels",
-members:["byg:pendorite_shovel"]
-},
-helmets:{
-tag:"fabric:helmets",
-members:["byg:ametrine_helmet"]
-},
-boots:{
-tag:"fabric:boots",
-members:["byg:ametrine_boots"]
-},
-swords:{
-tag:"fabric:swords",
-members:["byg:pendorite_sword", "byg:pendorite_battleaxe"]
-}
-},
-integrateddynamics:{
-parts:{
-tag:"integrateddynamics:parts",
-members:["integratedterminals:part_terminal_storage", "integratedterminals:part_terminal_crafting_job", "integrateddynamics:part_audio_reader", "integrateddynamics:part_audio_writer", "integrateddynamics:part_block_reader", "integrateddynamics:part_connector_mono_directional", "integrateddynamics:part_connector_omni_directional", "integrateddynamics:part_display_panel", "integrateddynamics:part_dynamic_light_panel", "integrateddynamics:part_effect_writer", "integrateddynamics:part_entity_reader", "integrateddynamics:part_entity_writer", "integrateddynamics:part_extradimensional_reader", "integrateddynamics:part_fluid_reader", "integrateddynamics:part_inventory_reader", "integrateddynamics:part_inventory_writer", "integrateddynamics:part_machine_reader", "integrateddynamics:part_machine_writer", "integrateddynamics:part_network_reader", "integrateddynamics:part_redstone_reader", "integrateddynamics:part_redstone_writer", "integrateddynamics:part_static_light_panel", "integrateddynamics:part_world_reader", "integratedtunnels:part_interface_energy", "integratedtunnels:part_interface_filter_energy", "integratedtunnels:part_importer_energy", "integratedtunnels:part_exporter_energy", "integratedtunnels:part_importer_world_energy", "integratedtunnels:part_exporter_world_energy", "integratedtunnels:part_interface_item", "integratedtunnels:part_interface_filter_item", "integratedtunnels:part_importer_item", "integratedtunnels:part_exporter_item", "integratedtunnels:part_importer_world_item", "integratedtunnels:part_exporter_world_item", "integratedtunnels:part_interface_fluid", "integratedtunnels:part_interface_filter_fluid", "integratedtunnels:part_importer_fluid", "integratedtunnels:part_exporter_fluid", "integratedtunnels:part_importer_world_fluid", "integratedtunnels:part_exporter_world_fluid", "integratedtunnels:part_importer_world_block", "integratedtunnels:part_exporter_world_block", "integratedtunnels:part_player_simulator"]
-},
-menril_logs:{
-tag:"integrateddynamics:menril_logs",
-members:["integrateddynamics:menril_log", "integrateddynamics:menril_log_filled", "integrateddynamics:menril_log_stripped", "integrateddynamics:menril_wood", "integrateddynamics:menril_wood_stripped"]
-}
-},
-diet:{
-sugars:{
-tag:"diet:sugars",
-members:["minecraft:cake", "minecraft:cocoa_beans", "minecraft:honey_bottle", "minecraft:honeycomb", "minecraft:sugar", "aoa3:candy_cane?", "aoa3:candy_corn?", "aoa3:gingerbread_cookie?", "aoa3:gingerbread_wing?", "aoa3:peppermint_candy?", "aoa3:sour_candy?", "aoa3:sour_gummy?", "aoa3:sour_pop?", "aoa3:spearmint_candy?", "autumnity:pancake?", "autumnity:syrup_bottle?", "blueberry:blueberry_muffin?", "buzzier_bees:sticky_honey_wand?", "charcoal_pit:choco_powder?", "charcoal_pit:chocolate?", "create:bar_of_chocolate?", "create:chocolate_glazed_berries?", "create:honeyed_apple?", "create:sweet_roll?", "create_confectionery:bar_of_black_chocolate?", "create_confectionery:bar_of_caramel?", "create_confectionery:bar_of_ruby_chocolate?", "create_confectionery:bar_of_white_chocolate?", "create_confectionery:black_chocolate_glazed_berries?", "create_confectionery:caramel_glazed_berries?", "create_confectionery:hot_chocolate_bottle?", "create_confectionery:marshmallow?", "create_confectionery:ruby_chocolate_glazed_berries?", "create_confectionery:white_chocolate_glazed_berries?", "createaddition:chocolate_cake?", "createaddition:honey_cake?", "crockpot:avaj?", "crockpot:candy?", "crockpot:honey_ham?", "crockpot:honey_nuggets?", "crockpot:hot_cocoa?", "crockpot:ice_cream?", "crockpot:iced_tea?", "crockpot:pow_cake?", "crockpot:pumpkin_cookie?", "crockpot:syrup?", "crockpot:taffy?", "croptopia:apple_pie?", "croptopia:brownies?", "croptopia:cheese_cake?", "croptopia:cherry_pie?", "croptopia:churros?", "croptopia:doughnut?", "croptopia:eton_mess?", "croptopia:figgy_pudding?", "croptopia:molasses?", "croptopia:scones?", "croptopia:tres_leche_cake?", "druidcraft:blueberry_muffin?", "environmental:truffle?", "extrafood:cupcake?", "extrafood:pancake?", "extrafoods:chocolate_chip_waffle?", "extrafoods:waffle?", "farmersdelight:honey_glazed_ham?", "fluffy_farmer:carmel?", "fluffy_farmer:chocolate_bar?", "fluffy_farmer:melted_carmel?", "foodexpansion:chocolate_cake?", "frozenup:truffle?", "gaiadimension:blue_geode_slice?", "gaiadimension:green_geode_slice?", "gaiadimension:pink_geode_slice?", "gaiadimension:purple_geode_slice?", "good_nights_sleep:candy?", "iceandfire:cannoli?", "iceandfire:pixie_dust?", "meetyourfight:aether_glazed_cupcake?", "minecolonies:cake_batter?", "minecolonies:cookie_dough?", "minecolonies:raw_pumpkin_pie?", "neapolitan:adzuki_cake?", "neapolitan:banana_cake?", "neapolitan:chocolate_bar?", "neapolitan:chocolate_cake?", "neapolitan:mint_cake?", "neapolitan:strawberry_cake?", "neapolitan:vanilla_cake?", "pamhc2foodcore:caramelitem?", "pamhc2foodcore:trailmixitem?", "pamhc2foodextended:aebleskiversitem?", "pamhc2foodextended:brownieitem?", "pamhc2foodextended:candycornitem?", "pamhc2foodextended:cherrysodaitem?", "pamhc2foodextended:colasodaitem?", "pamhc2foodextended:frosteddonutitem?", "pamhc2foodextended:gingersodaitem?", "pamhc2foodextended:grapefruitsodaitem?", "pamhc2foodextended:grapesodaitem?", "pamhc2foodextended:holidaycakeitem?", "pamhc2foodextended:honeyglazedcarrotsitem?", "pamhc2foodextended:honeyglazedhamitem?", "pamhc2foodextended:lemonlimesodaitem?", "pamhc2foodextended:meringuebrownieitem?", "pamhc2foodextended:meringueitem?", "pamhc2foodextended:mochicakeitem?", "pamhc2foodextended:orangesodaitem?", "pamhc2foodextended:pavlovaitem?", "pamhc2foodextended:rivermudcakeitem?", "pamhc2foodextended:rootbeersodaitem?", "pamhc2foodextended:strawberrysodaitem?", "pamhc2foodextended:sugarcookieitem?", "pamhc2foodextended:theatreboxitem?", "pamhc2foodextended:timtamitem?", "pamhc2trees:maplesyrupitem?", "peculiars:aloe_cake?", "peculiars:passionfruit_cake?", "peculiars:yucca_cake?", "pumpkin_spice_everything:pumpkin_spice?", "pumpkin_spice_everything:pumpkin_spice_cake?", "rankine:cake_slice?", "rankine:maple_syrup?", "rats:treacle?", "resourcefulbees:catnip_honey_bottle?", "resourcefulbees:oreo_cookie?", "resourcefulbees:rainbow_honey_bottle?", "seasonals:pumpkin_cake?", "seasonals:sweet_berry_cake?", "simpledelights:creamcicle?", "simpledelights:fruit_tart?", "simpledelights:plum_pudding?", "simpledelights:strawberry_shortcake?", "simplefarming:birthday_cake?", "simplefarming:chocolate?", "simplefarming:chocolate_cake?", "simplefarming:jaffa_cake?", "simplefarming:marshmallow?", "simplefarming:pancakes?", "supplementaries:pancake?", "survivalplus:cheese_cake?", "survivalplus:sponge_cake?", "tconstruct:blood_cake?", "tconstruct:earth_cake?", "tconstruct:ender_cake?", "tconstruct:magma_cake?", "tconstruct:sky_cake?", "tea_kettle:half_honey_bottle?", "terraincognita:taffy?", "the_bumblezone:honey_crystal_shards?", "the_bumblezone:sugar_water_bottle?", "thermal:carrot_cake?", "thermal:chocolate_cake?", "thermal:potion_cake?", "thermal:spice_cake?", "thermal:syrup_bottle?", "trickcreeps:treat_powder?", "twilightforest:experiment_115?", "vanillacookbook:berry_brownie?", "vanillacookbook:berry_cake?", "vanillacookbook:berry_pancake?", "vanillacookbook:book_cake?", "vanillacookbook:brownie?", "vanillacookbook:carrot_cake?", "vanillacookbook:chocolate?", "vanillacookbook:chocolate_cake?", "vanillacookbook:chocolate_egg?", "vanillacookbook:chorus_cake?", "vanillacookbook:honey_pancake?", "vanillacookbook:ice_cream_cake?", "vanillacookbook:mohnkuchen?", "vanillacookbook:pancake?", "vanillacookbook:rose_cake?", "vanillafoodpantry:apple_bread?", "vanillafoodpantry:apple_muffin?", "vanillafoodpantry:bottle_syrup_base?", "vanillafoodpantry:carrot_muffin?", "vanillafoodpantry:chocolate_sunbutter_sandwich?", "vanillafoodpantry:cookie_apple?", "vanillafoodpantry:enriched_pumpkin_pie?", "vanillafoodpantry:fizzing_agent?", "vanillafoodpantry:fizzydrink_apple?", "vanillafoodpantry:fizzydrink_klingon?", "vanillafoodpantry:fizzydrink_melon?", "vanillafoodpantry:fizzydrink_milk?", "vanillafoodpantry:gelo_apple?", "vanillafoodpantry:gelo_berry_mix?", "vanillafoodpantry:gelo_chorusfruit?", "vanillafoodpantry:gelo_cocoa?", "vanillafoodpantry:gelo_dandy?", "vanillafoodpantry:gelo_honey?", "vanillafoodpantry:gelo_klingon?", "vanillafoodpantry:gelo_melon?", "vanillafoodpantry:gelo_midnight?", "vanillafoodpantry:gelo_orange?", "vanillafoodpantry:gelo_poppy?", "vanillafoodpantry:gelo_sugarbomb?", "vanillafoodpantry:gelo_ugli?", "vanillafoodpantry:hardened_sugar?", "vanillafoodpantry:honey_bread?", "vanillafoodpantry:honey_muffin?", "vanillafoodpantry:honey_sunbutter_sandwich?", "vanillafoodpantry:molasses_bread?", "vanillafoodpantry:pumpkin_bread?", "vanillafoodpantry:snocone_apple?", "vanillafoodpantry:snocone_melon?", "vanillafoodpantry:teadrink_bushtea?", "vanillafoodpantry:teadrink_milky_bushtea?", "vanillafoodpantry:teadrink_milky_dandtea?", "vanillafoodpantry:uglifruit_muffin?", "xercamod:ender_cupcake?", "xercamod:item_apple_cupcake?", "xercamod:item_apple_pie?", "xercamod:item_carrot_cupcake?", "xercamod:item_chocolate?", "xercamod:item_cocoa_cupcake?", "xercamod:item_donut?", "xercamod:item_fancy_apple_cupcake?", "xercamod:item_fancy_donut?", "xercamod:item_fancy_pumpkin_cupcake?", "xercamod:item_honey_cupcake?", "xercamod:item_melon_cupcake?", "xercamod:item_pumpkin_cupcake?", "xercamod:sweet_berry_cupcake?", "xercamod:sweet_berry_cupcake_fancy?", "xercamod:sweet_berry_pie?"]
-},
-special_food:{
-tag:"diet:special_food",
-members:["minecraft:cake", "atmospheric:yucca_gateau?", "autumnity:cooked_turkey?", "autumnity:pancake?", "autumnity:turkey?", "betteranimalsplus:turkey_cooked?", "betteranimalsplus:turkey_raw?", "createaddition:chocolate_cake?", "createaddition:honey_cake?", "farmersdelight:apple_pie?", "farmersdelight:chocolate_pie?", "farmersdelight:sweet_berry_cheesecake?", "foodexpansion:chocolate_cake?", "neapolitan:adzuki_cake?", "neapolitan:banana_cake?", "neapolitan:chocolate_cake?", "neapolitan:mint_cake?", "neapolitan:strawberry_cake?", "neapolitan:vanilla_cake?", "nefdecomod:meal_01?", "nefdecomod:meal_02?", "nefdecomod:meal_03?", "nefdecomod:meal_04?", "nethers_delight:stuffed_hoglin_item?", "peculiars:aloe_cake?", "peculiars:passionfruit_cake?", "peculiars:yucca_cake?", "pumpkin_spice_everything:pumpkin_spice_cake?", "rankine:aged_cheese?", "rankine:unaged_cheese?", "seasonals:pumpkin_cake?", "seasonals:sweet_berry_cake?", "simplefarming:birthday_cake?", "simplefarming:cheese_block?", "simplefarming:chocolate_cake?", "supplementaries:pancake?", "survivalplus:cheese_cake?", "survivalplus:sponge_cake?", "tconstruct:blood_cake?", "tconstruct:earth_cake?", "tconstruct:ender_cake?", "tconstruct:magma_cake?", "tconstruct:sky_cake?", "thermal:carrot_cake?", "thermal:cheese_wheel?", "thermal:chocolate_cake?", "thermal:potion_cake?", "thermal:spice_cake?", "thermal:stuffed_pumpkin?", "vanillacookbook:berry_cake?", "vanillacookbook:book_cake?", "vanillacookbook:brownie_tray?", "vanillacookbook:carrot_cake?", "vanillacookbook:cheesecake?", "vanillacookbook:chocolate_cake?", "vanillacookbook:chorus_cake?", "vanillacookbook:ice_cream_cake?", "vanillacookbook:mohnkuchen?", "vanillacookbook:pancake_stack?", "vanillacookbook:rose_cake?", "xercamod:item_apple_pie?", "xercamod:sweet_berry_pie?"]
-},
-proteins:{
-tag:"diet:proteins",
-members:["#minecraft:fishes", "minecraft:beef", "minecraft:bone", "minecraft:chicken", "minecraft:egg", "minecraft:fermented_spider_eye", "minecraft:ink_sac", "minecraft:milk_bucket", "minecraft:mutton", "minecraft:porkchop", "minecraft:rabbit", "minecraft:rotten_flesh", "minecraft:spider_eye", "minecraft:suspicious_stew", "minecraft:turtle_egg", "alexsmobs:blobfish?", "alexsmobs:emu_egg?", "alexsmobs:kangaroo_meat?", "alexsmobs:lobster_tail?", "alexsmobs:maggot?", "alexsmobs:moose_ribs?", "alexsmobs:shrimp_fried_rice?", "animalium:bear_meat?", "animalium:piranha_steak?", "animalium:rat_meat?", "aoa3:eye_bulb?", "aoa3:fiery_chops?", "aoa3:halycon_milk?", "aoa3:raw_charger_shank?", "aoa3:raw_chimera_chop?", "aoa3:raw_furlion_chop?", "aoa3:raw_halycon_beef?", "aquaculture:fish_fillet_raw?", "aquaculture:frog_legs_raw?", "aquaculture:turtle_soup?", "artifacts:everlasting_beef?", "atum:camel?", "atum:crunchy_golden_scarab?", "atum:crunchy_scarab?", "atum:quail?", "autumnity:cooked_turkey?", "autumnity:turkey?", "autumnity:turkey_egg?", "bettas:betta_fish?", "betteranimalsplus:blubber?", "betteranimalsplus:calamari_raw?", "betteranimalsplus:crab_meat_raw?", "betteranimalsplus:eel_meat_raw?", "betteranimalsplus:goatcheese?", "betteranimalsplus:goatmilk?", "betteranimalsplus:golden_goose_egg?", "betteranimalsplus:goose_egg?", "betteranimalsplus:pheasant_egg?", "betteranimalsplus:pheasantraw?", "betteranimalsplus:turkey_cooked?", "betteranimalsplus:turkey_egg?", "betteranimalsplus:turkey_leg_raw?", "betteranimalsplus:turkey_raw?", "betteranimalsplus:venisonraw?", "betterdefaultbiomes:duck?", "betterdefaultbiomes:duck_egg?", "betterdefaultbiomes:frog_leg?", "betterdefaultbiomes:frozen_flesh?", "betterendforge:end_fish_raw?", "blue_skies:carabeef?", "blue_skies:fiery_beans?", "blue_skies:monitor_tail?", "blue_skies:solnut?", "blue_skies:venison?", "charcoal_pit:calamari?", "charcoal_pit:cheese?", "charcoal_pit:chestnut?", "charcoal_pit:turtle_raw?", "combustivefishing:cooled_bill?", "combustivefishing:cooled_cod?", "comfortable_nether:baleen_filter?", "comfortable_nether:popped_pummeler_remnant?", "comfortable_nether:remnant_stew?", "comfortable_nether:strider_milk?", "comfortable_nether:weeping_abscess?", "crockpot:bacon_eggs?", "crockpot:bone_soup?", "crockpot:bone_stew?", "crockpot:california_roll?", "crockpot:ceviche?", "crockpot:fish_sticks?", "crockpot:fish_tacos?", "crockpot:frog_legs?", "crockpot:froggle_bunwich?", "crockpot:honey_ham?", "crockpot:honey_nuggets?", "crockpot:hot_chili?", "crockpot:kabobs?", "crockpot:meat_balls?", "crockpot:monster_lasagna?", "crockpot:monster_tartare?", "crockpot:moqueca?", "crockpot:pepper_popper?", "crockpot:perogies?", "crockpot:seafood_gumbo?", "crockpot:surf_n_turf?", "crockpot:tropical_bouillabaisse?", "crockpot:turkey_dinner?", "croptopia:almond?", "croptopia:beef_jerky?", "croptopia:blackbean?", "croptopia:cashew?", "croptopia:cheese_cake?", "croptopia:milk_bottle?", "croptopia:peanut?", "croptopia:pecan?", "croptopia:pork_jerky?", "croptopia:soybean?", "croptopia:tuna_sandwich?", "croptopia:walnut?", "dropthemeat:piglin_porkchop?", "dropthemeat:raw_bat?", "dropthemeat:raw_bear?", "dropthemeat:raw_bee?", "dropthemeat:raw_cat?", "dropthemeat:raw_dolphin?", "dropthemeat:raw_fox?", "dropthemeat:raw_horse?", "dropthemeat:raw_iron_golem?", "dropthemeat:raw_llama?", "dropthemeat:raw_monster_meat?", "dropthemeat:raw_parrot?", "dropthemeat:raw_red_meat?", "dropthemeat:raw_squid?", "dropthemeat:raw_strider?", "dropthemeat:raw_turtle?", "dropthemeat:raw_villager?", "dropthemeat:raw_white_meat?", "dropthemeat:raw_wolf?", "dropthemeat:villager_nose?", "ediblebugs:aphid?", "ediblebugs:camelspider?", "ediblebugs:caphid?", "ediblebugs:carpenterant?", "ediblebugs:centipede?", "ediblebugs:cricket?", "ediblebugs:dungbeetle?", "ediblebugs:fireant?", "ediblebugs:grasshopper?", "ediblebugs:jumilbug?", "ediblebugs:locust?", "ediblebugs:scarab?", "ediblebugs:scorpion?", "ediblebugs:slug?", "ediblebugs:sowbug?", "ediblebugs:termite?", "ediblebugs:witchettygrub?", "ediblebugs:woodtermite?", "endlessoceans:cooked_blue_tang?", "endlessoceans:cooked_bowers_parrotfish?", "endlessoceans:cooked_clown_fish?", "endlessoceans:cooked_coral_goby?", "endlessoceans:cooked_crescent_tail_bigeye?", "endlessoceans:cooked_dusky_batfish?", "endlessoceans:cooked_moorish_idol?", "endlessoceans:cooked_porcupine_fish?", "endlessoceans:cooked_sailfin_tang?", "endlessoceans:cooked_starcks_demoiselle?", "endlessoceans:cooked_yellow_tang?", "endlessoceans:fish_oil?", "environmental:duck?", "environmental:duck_egg?", "environmental:venison?", "evilcraft:flesh_humanoid?", "evilcraft:flesh_werewolf?", "exoticbirds:bluejay_egg?", "exoticbirds:booby_egg?", "exoticbirds:budgerigar_egg?", "exoticbirds:cardinal_egg?", "exoticbirds:cassowary_egg?", "exoticbirds:cockatoo_egg?", "exoticbirds:crane_egg?", "exoticbirds:duck_egg?", "exoticbirds:flamingo_egg?", "exoticbirds:gouldianfinch_egg?", "exoticbirds:gull_egg?", "exoticbirds:heron_egg?", "exoticbirds:hummingbird_egg?", "exoticbirds:kingfisher_egg?", "exoticbirds:kiwi_egg?", "exoticbirds:kookaburra_egg?", "exoticbirds:lyrebird_egg?", "exoticbirds:macaw_egg?", "exoticbirds:magpie_egg?", "exoticbirds:ostrich_egg?", "exoticbirds:owl_egg?", "exoticbirds:peafowl_egg?", "exoticbirds:pelican_egg?", "exoticbirds:penguin_egg?", "exoticbirds:pigeon_egg?", "exoticbirds:raw_birdmeat?", "exoticbirds:roadrunner_egg?", "exoticbirds:robin_egg?", "exoticbirds:swan_egg?", "exoticbirds:toucan_egg?", "exoticbirds:woodpecker_egg?", "farmersdelight:cabbage_rolls?", "farmersdelight:fried_egg?", "farmersdelight:ham?", "farmersdelight:honey_glazed_ham?", "farmersdelight:roast_chicken?", "farmersdelight:shepherds_pie?", "fins:banded_redback_shrimp?", "fins:blu_wee?", "fins:bugmeat?", "fins:cooked_bull_crab_claw?", "fins:flatback_sucker?", "fins:golden_river_ray_wing_fillet?", "fins:high_finned_blue?", "fins:luminous_calamari?", "fins:night_light_squid?", "fins:ornate_bugfish?", "fins:papa_wee?", "fins:pea_wee?", "fins:raw_golden_river_ray_wing?", "fins:swamp_mucker?", "fins:teal_arrowfish?", "fins:vibra_wee?", "fins:wee_wee?", "fins:wherble_fin?", "fluffy_farmer:cold_cuts?", "foodexpansion:bat_wing?", "foodexpansion:horse_meat?", "foodexpansion:llama_meat?", "foodexpansion:ocelot_meat?", "foodexpansion:parrot_meat?", "foodexpansion:polar_bear_meat?", "foodexpansion:squid?", "foodexpansion:wolf_meat?", "forbidden_arcanus:bat_wing?", "forbidden_arcanus:edelwood_suspicious_stew_bucket?", "forbidden_arcanus:tentacle?", "gaiadimension:large_tentacle?", "gaiadimension:luggeroth_chop?", "gaiadimension:lurmorus_meat?", "gaiadimension:small_tentacle?", "glowbats:glow_bat_wing?", "greekfantasy:gorgon_blood?", "iceandfire:cannoli?", "iceandfire:deathworm_egg?", "iceandfire:deathworm_egg_giant?", "iceandfire:fire_dragon_flesh?", "iceandfire:hippogryph_egg?", "iceandfire:ice_dragon_flesh?", "iceandfire:lightning_dragon_flesh?", "iceandfire:myrmex_desert_egg?", "iceandfire:myrmex_jungle_egg?", "immersivecooking:raw_spider_shank?", "infernalexp:blindsight_tongue?", "infernalexp:raw_hogchop?", "krayscandles:soybean?", "minecolonies:raw_pumpkin_pie?", "mowziesmobs:glowing_jelly?", "mysticalworld:raw_squid?", "mysticalworld:venison?", "neapolitan:adzuki_beans?", "nefdecomod:meal_01?", "nefdecomod:meal_02?", "nefdecomod:squid_raw?", "nethers_delight:hoglin_ear?", "nethers_delight:hoglin_loin?", "nethers_delight:propelpearl?", "nethers_delight:roast_hoglin?", "nethers_delight:roast_hoglin_ham?", "nethers_delight:roast_hoglin_snout?", "nethers_delight:strider_slice?", "nethers_delight:stuffed_hoglin_item?", "nourished_nether:raw_hoglin_meat?", "oddwatermobs:crab_leg?", "oddwatermobs:deep_sea_fish?", "oddwatermobs:raw_anglerfish?", "oddwatermobs:raw_coelacanth?", "oddwatermobs:raw_ghost_shark?", "oddwatermobs:raw_isopod?", "oddwatermobs:raw_mudskipper?", "outer_end:stalker_meat?", "pamhc2crops:beanitem?", "pamhc2crops:peanutitem?", "pamhc2crops:soybeanitem?", "pamhc2crops:waterchestnutitem?", "pamhc2foodcore:freshmilkitem?", "pamhc2foodcore:sunflowerseedsitem?", "pamhc2foodextended:bangersandmashitem?", "pamhc2foodextended:bolognaitem?", "pamhc2foodextended:bulgogiitem?", "pamhc2foodextended:cevicheitem?", "pamhc2foodextended:cornedbeefitem?", "pamhc2foodextended:eggsbenedictitem?", "pamhc2foodextended:fishdinneritem?", "pamhc2foodextended:gourmetmuttonpattyitem?", "pamhc2foodextended:honeyglazedhamitem?", "pamhc2foodextended:leafyfishsandwichitem?", "pamhc2foodextended:misopasteitem?", "pamhc2foodextended:padthaiitem?", "pamhc2foodextended:paneeritem?", "pamhc2foodextended:pinkelitem?", "pamhc2foodextended:rawtofaconitem?", "pamhc2foodextended:rawtofishitem?", "pamhc2foodextended:refriedbeansitem?", "pamhc2foodextended:schnitzelitem?", "pamhc2foodextended:seedsoupitem?", "pamhc2foodextended:soymilkitem?", "pamhc2foodextended:springrollitem?", "pamhc2trees:almonditem?", "pamhc2trees:candlenutitem?", "pamhc2trees:cashewitem?", "pamhc2trees:chestnutitem?", "pamhc2trees:hazelnutitem?", "pamhc2trees:pecanitem?", "pamhc2trees:pinenutitem?", "pamhc2trees:pistachioitem?", "pamhc2trees:walnutitem?", "pandoras_creatures:bufflon_beef?", "pandoras_creatures:crab_meat?", "pandoras_creatures:seahorse?", "pneumaticcraft:salmon_tempura?", "projectvibrantjourneys:clam?", "quark:crab_leg?", "quark:frog_leg?", "rankine:aged_cheese?", "rankine:black_walnut?", "rankine:cheese?", "rankine:unaged_cheese?", "rats:blue_cheese?", "rats:contaminated_food?", "rats:nether_cheese?", "rats:plague_leech?", "rats:raw_rat?", "rats:string_cheese?", "silents_mechanisms:beef_jerky?", "silents_mechanisms:chicken_jerky?", "silents_mechanisms:cod_jerky?", "silents_mechanisms:mutton_jerky?", "silents_mechanisms:pork_jerky?", "silents_mechanisms:rabbit_jerky?", "silents_mechanisms:salmon_jerky?", "simplefarming:cheese_block?", "simplefarming:cheese_slice?", "simplefarming:peanut?", "simplefarming:raw_bacon?", "simplefarming:raw_calamari?", "simplefarming:raw_chicken_wings?", "simplefarming:raw_horse_meat?", "simplefarming:soybean?", "survivalplus:cheese_cake?", "tconstruct:bacon?", "tea_kettle:black_latte?", "tea_kettle:green_latte?", "tea_kettle:oolong_latte?", "tea_kettle:white_latte?", "terraincognita:hazelnut?", "thermal:peanut?", "turtlemancy:oyster?", "twilightforest:hydra_chop?", "twilightforest:meef_stroganoff?", "twilightforest:raw_meef?", "twilightforest:raw_venison?", "undergarden:raw_dweller_meat?", "undergarden:raw_gloomper_leg?", "uniquecrops:teriyaki?", "untitledduckmod:duck_egg?", "untitledduckmod:goose_egg?", "untitledduckmod:raw_duck?", "untitledduckmod:raw_goose?", "vanillafoodpantry:acorn_nuts?", "vanillafoodpantry:bat_raw?", "vanillafoodpantry:bear_raw?", "vanillafoodpantry:bear_raw_charred?", "vanillafoodpantry:bread_pocket_fish_salad?", "vanillafoodpantry:carrot_muffin?", "vanillafoodpantry:cave_stew?", "vanillafoodpantry:creamsoup_beet?", "vanillafoodpantry:creamsoup_cactus?", "vanillafoodpantry:creamsoup_carrot?", "vanillafoodpantry:creamsoup_mushroom?", "vanillafoodpantry:creamsoup_potato?", "vanillafoodpantry:creamsoup_pumpkin?", "vanillafoodpantry:cyclops_sandwich?", "vanillafoodpantry:decker_cheesesteak?", "vanillafoodpantry:decker_cuban?", "vanillafoodpantry:decker_fish?", "vanillafoodpantry:decker_mutton?", "vanillafoodpantry:decker_steak?", "vanillafoodpantry:fish_sausage?", "vanillafoodpantry:fish_sausage_mashwrap?", "vanillafoodpantry:fried_eggwhite?", "vanillafoodpantry:guardian_meat_raw?", "vanillafoodpantry:hocks_raw?", "vanillafoodpantry:horse_raw?", "vanillafoodpantry:llama_raw?", "vanillafoodpantry:phantom_meat_raw?", "vanillafoodpantry:pigtail_raw?", "vanillafoodpantry:polar_bear_stew?", "vanillafoodpantry:portion_jerky?", "vanillafoodpantry:potato_chowder?", "vanillafoodpantry:pumpkin_pigtail_stew?", "vanillafoodpantry:pumpkin_pigtail_stew_combo?", "vanillafoodpantry:ravager_meat_charred?", "vanillafoodpantry:ravager_meat_raw?", "vanillafoodpantry:sanitized_flesh_steamed?", "vanillafoodpantry:squidd_raw?", "vanillafoodpantry:teadrink_milky_bushtea?", "vanillafoodpantry:teadrink_milky_dandtea?", "vanillafoodpantry:wolf_raw?", "wyrmroost:desert_wyrm?", "wyrmroost:dragon_egg?", "wyrmroost:raw_apex_meat?", "wyrmroost:raw_behemoth_meat?", "wyrmroost:raw_common_meat?", "wyrmroost:raw_lowtier_meat?", "xercamod:doner_slice?"]
-},
-grains:{
-tag:"diet:grains",
-members:["minecraft:cake", "minecraft:wheat", "alexsmobs:shrimp_fried_rice?", "aoa3:gingerbread_cookie?", "ashenwheat:ash_wheat_sheaf?", "ashenwheat:scintilla_wheat_sheaf?", "atum:emmer_dough?", "autumnity:pancake?", "blueberry:blueberry_muffin?", "create:sweet_roll?", "createaddition:chocolate_cake?", "createaddition:honey_cake?", "crockpot:froggle_bunwich?", "croptopia:apple_pie?", "croptopia:barley?", "croptopia:beer?", "croptopia:cheese_cake?", "croptopia:cherry_pie?", "croptopia:doughnut?", "croptopia:oat?", "croptopia:rice?", "croptopia:scones?", "croptopia:tres_leche_cake?", "croptopia:tuna_sandwich?", "druidcraft:blueberry_muffin?", "extrafood:cupcake?", "extrafood:pancake?", "extrafood:rice?", "extrafoods:chocolate_chip_waffle?", "extrafoods:waffle?", "farmersdelight:honey_glazed_ham?", "farmersdelight:pie_crust?", "farmersdelight:raw_pasta?", "farmersdelight:rice?", "farmersdelight:roast_chicken?", "farmersdelight:stuffed_pumpkin?", "fluffy_farmer:pilaf?", "fluffy_farmer:soaked_rice?", "fluffy_farmer:soul_wheat?", "foodexpansion:chocolate_cake?", "iceandfire:cannoli?", "meetyourfight:aether_glazed_cupcake?", "minecolonies:bread_dough?", "minecolonies:cake_batter?", "minecolonies:chorus_bread?", "minecolonies:cookie_dough?", "minecolonies:golden_bread?", "minecolonies:milky_bread?", "minecolonies:sugary_bread?", "neapolitan:adzuki_cake?", "neapolitan:banana_cake?", "neapolitan:chocolate_cake?", "neapolitan:mint_cake?", "neapolitan:strawberry_cake?", "neapolitan:vanilla_cake?", "pamhc2crops:barleyitem?", "pamhc2crops:chickpeaitem?", "pamhc2crops:oatsitem?", "pamhc2crops:riceitem?", "pamhc2crops:ryeitem?", "pamhc2foodcore:batteritem?", "pamhc2foodcore:flouritem?", "pamhc2foodextended:aebleskiversitem?", "pamhc2foodextended:briochebunitem?", "pamhc2foodextended:cornmealitem?", "pamhc2foodextended:eggsbenedictitem?", "pamhc2foodextended:fishdinneritem?", "pamhc2foodextended:frosteddonutitem?", "pamhc2foodextended:hummusitem?", "pamhc2foodextended:hushpuppiesitem?", "pamhc2foodextended:leafyfishsandwichitem?", "pamhc2foodextended:mochicakeitem?", "pamhc2foodextended:padthaiitem?", "pamhc2foodextended:peachesandcreamoatmealitem?", "pamhc2foodextended:pineappleupsidedowncakeitem?", "pamhc2foodextended:pinkelitem?", "pamhc2foodextended:rivermudcakeitem?", "pamhc2foodextended:schnitzelitem?", "pamhc2foodextended:spicebunitem?", "pamhc2foodextended:springrollitem?", "pamhc2foodextended:sugarcookieitem?", "pamhc2foodextended:timtamitem?", "pamhc2foodextended:tortillachipsitem?", "pamhc2foodextended:vanillaconchasbreaditem?", "peculiars:aloe_cake?", "peculiars:passionfruit_cake?", "peculiars:yucca_cake?", "pneumaticcraft:salmon_tempura?", "pneumaticcraft:sourdough?", "pumpkin_spice_everything:pumpkin_spice_cake?", "rankine:cake_slice?", "rankine:corn_flour?", "rankine:pancake_batter?", "rankine:rice?", "rankine:rice_flour?", "rankine:wheat_flour?", "seasonals:pumpkin_cake?", "seasonals:sweet_berry_cake?", "simpledelights:fruit_tart?", "simpledelights:plum_pudding?", "simpledelights:strawberry_shortcake?", "simplefarming:barley?", "simplefarming:birthday_cake?", "simplefarming:chocolate_cake?", "simplefarming:oat?", "simplefarming:pancakes?", "simplefarming:rice?", "simplefarming:rye?", "supplementaries:pancake?", "survivalplus:cheese_cake?", "survivalplus:sponge_cake?", "thermal:carrot_cake?", "thermal:chocolate_cake?", "thermal:rice?", "thermal:spice_cake?", "turkish_meals:dough_of_lahmacun?", "twilightforest:maze_wafer?", "uniquecrops:goldenrods?", "uniquecrops:waffle?", "vanillacookbook:berry_cake?", "vanillacookbook:berry_pancake?", "vanillacookbook:book_cake?", "vanillacookbook:carrot_cake?", "vanillacookbook:chocolate_cake?", "vanillacookbook:chorus_cake?", "vanillacookbook:honey_pancake?", "vanillacookbook:ice_cream_cake?", "vanillacookbook:mohnkuchen?", "vanillacookbook:pancake?", "vanillacookbook:rose_cake?", "vanillafoodpantry:apple_bread?", "vanillafoodpantry:apple_muffin?", "vanillafoodpantry:beets_bread?", "vanillafoodpantry:bread_pocket_fish_salad?", "vanillafoodpantry:bread_pocket_roast_veg?", "vanillafoodpantry:carrot_muffin?", "vanillafoodpantry:chocolate_sunbutter_sandwich?", "vanillafoodpantry:cookie_apple?", "vanillafoodpantry:cyclops_sandwich?", "vanillafoodpantry:decker_cheesesteak?", "vanillafoodpantry:decker_cuban?", "vanillafoodpantry:decker_fish?", "vanillafoodpantry:decker_mutton?", "vanillafoodpantry:decker_steak?", "vanillafoodpantry:decker_veggie?", "vanillafoodpantry:enriched_pumpkin_pie?", "vanillafoodpantry:fish_sausage_mashwrap?", "vanillafoodpantry:honey_bread?", "vanillafoodpantry:honey_muffin?", "vanillafoodpantry:honey_sunbutter_sandwich?", "vanillafoodpantry:klingon_bread?", "vanillafoodpantry:molasses_bread?", "vanillafoodpantry:mushroom_stew_combo?", "vanillafoodpantry:portion_bread?", "vanillafoodpantry:portion_flour?", "vanillafoodpantry:potato_bread?", "vanillafoodpantry:pumpkin_bread?", "vanillafoodpantry:pumpkin_pigtail_stew_combo?", "vanillafoodpantry:uglifruit_muffin?", "vanillafoodpantry:veggie_stew_combo?", "xercamod:ender_cupcake?", "xercamod:item_apple_cupcake?", "xercamod:item_apple_pie?", "xercamod:item_carrot_cupcake?", "xercamod:item_cocoa_cupcake?", "xercamod:item_donut?", "xercamod:item_fancy_apple_cupcake?", "xercamod:item_fancy_donut?", "xercamod:item_fancy_pumpkin_cupcake?", "xercamod:item_honey_cupcake?", "xercamod:item_melon_cupcake?", "xercamod:item_pumpkin_cupcake?", "xercamod:item_rice_seeds?", "xercamod:sweet_berry_cupcake?", "xercamod:sweet_berry_cupcake_fancy?", "xercamod:sweet_berry_pie?"]
-},
-vegetables:{
-tag:"diet:vegetables",
-members:["minecraft:bamboo", "minecraft:beetroot", "minecraft:beetroot_seeds", "minecraft:birch_leaves", "minecraft:brown_mushroom", "minecraft:cactus", "minecraft:carrot", "minecraft:crimson_fungus", "minecraft:crimson_roots", "minecraft:dried_kelp", "minecraft:golden_carrot", "minecraft:kelp", "minecraft:lily_pad", "minecraft:melon_seeds", "minecraft:nether_wart", "minecraft:poisonous_potato", "minecraft:potato", "minecraft:pumpkin", "minecraft:pumpkin_seeds", "minecraft:red_mushroom", "minecraft:sea_pickle", "minecraft:seagrass", "minecraft:shroomlight", "minecraft:sunflower", "minecraft:warped_fungus", "minecraft:warped_roots", "minecraft:wheat_seeds", "#minecraft:flowers", "#minecraft:leaves", "abundance:lavender?", "alexsmobs:gongylidia?", "aoa3:blue_glowshroom?", "aoa3:green_glowshroom?", "aoa3:mystic_shrooms?", "aoa3:orange_glowshroom?", "aoa3:purple_glowshroom?", "aoa3:yellow_glowshroom?", "aquaculture:algae?", "atmospheric:aloe_leaves?", "betterdefaultbiomes:gray_mushroom?", "betterdefaultbiomes:white_mushroom?", "betterdefaultbiomes:yellow_mushroom?", "betterendforge:amber_root_raw?", "betterendforge:chorus_mushroom_raw?", "blue_skies:cryo_root?", "blue_skies:winter_leaves?", "byg:black_puff?", "byg:death_cap?", "byg:green_mushroom?", "byg:imparius_mushroom?", "byg:soul_shroom?", "byg:sythian_fungus?", "byg:weeping_milkcap?", "byg:wood_blewit?", "charcoal_pit:corn?", "charcoal_pit:leek?", "cnb:lilytad_flower?", "comfortable_nether:dustsprout?", "comfortable_nether:wallcreep_bulb?", "conjurerscookbook:mandrake_root?", "crockpot:asparagus?", "crockpot:asparagus_soup?", "crockpot:california_roll?", "crockpot:cooked_eggplant?", "crockpot:corn?", "crockpot:eggplant?", "crockpot:fish_tacos?", "crockpot:flower_salad?", "crockpot:gazpacho?", "crockpot:hot_chili?", "crockpot:moqueca?", "crockpot:mushy_cake?", "crockpot:onion?", "crockpot:pepper?", "crockpot:pepper_popper?", "crockpot:perogies?", "crockpot:popcorn?", "crockpot:potato_souffle?", "crockpot:potato_tornado?", "crockpot:pumpkin_cookie?", "crockpot:ratatouille?", "crockpot:salsa?", "crockpot:stuffed_eggplant?", "crockpot:tea?", "crockpot:tomato?", "crockpot:tropical_bouillabaisse?", "crockpot:veg_stinger?", "croptopia:artichoke?", "croptopia:asparagus?", "croptopia:basil?", "croptopia:bellpepper?", "croptopia:broccoli?", "croptopia:cabbage?", "croptopia:cauliflower?", "croptopia:celery?", "croptopia:coffee_beans?", "croptopia:corn?", "croptopia:cucumber?", "croptopia:garlic?", "croptopia:greenbean?", "croptopia:greenonion?", "croptopia:kale?", "croptopia:leek?", "croptopia:lettuce?", "croptopia:onion?", "croptopia:radish?", "croptopia:rhubarb?", "croptopia:rutabaga?", "croptopia:spinach?", "croptopia:sweetpotato?", "croptopia:tea?", "croptopia:tomatillo?", "croptopia:tomato?", "croptopia:turnip?", "croptopia:yam?", "croptopia:zucchini?", "eidolon:fungus_sprouts?", "eidolon:warped_sprouts?", "extcaves:mushroom_fluoshroom?", "extcaves:mushroom_goldishroom?", "extcaves:mushroom_lumishroom?", "extcaves:mushroom_rockshroom?", "extcaves:mushroom_shinyshroom?", "extcaves:mushroom_sweetshroom?", "farmersdelight:cabbage?", "farmersdelight:cabbage_rolls?", "farmersdelight:onion?", "farmersdelight:roast_chicken?", "farmersdelight:shepherds_pie?", "farmersdelight:stuffed_pumpkin?", "farmersdelight:tomato?", "fluffy_farmer:cabbage_leaf?", "fluffy_farmer:cinnamon?", "fluffy_farmer:corn?", "fluffy_farmer:cucumber?", "fluffy_farmer:hot_pepper?", "fluffy_farmer:nettle_leaf?", "fluffy_farmer:onion?", "fluffy_farmer:orange_tomato?", "fluffy_farmer:pickle?", "fluffy_farmer:pickled_cabbage?", "fluffy_farmer:pickled_tomato?", "fluffy_farmer:poisonous_corn?", "fluffy_farmer:red_tomato?", "fluffy_farmer:yellow_tomato?", "foodexpansion:roasted_seed?", "foragecraft:leek?", "forbidden_arcanus:strange_root?", "gaiadimension:markuzar_mint?", "gaiadimension:thiscus?", "greekfantasy:pomegranate_seeds?", "habitat:dried_ball_cactus?", "habitat:kabloom_pulp?", "inspirations:heartbeet?", "minecolonies:raw_pumpkin_pie?", "mysticalworld:aubergine?", "mysticalworld:cooked_seeds?", "neapolitan:dried_vanilla_pods?", "neapolitan:mint_leaves?", "nefdecomod:meal_01?", "nefdecomod:meal_02?", "nefdecomod:meal_03?", "nefdecomod:nopal?", "nefdecomod:onions?", "nefdecomod:radish?", "nefdecomod:turnip?", "nefdecomod:veg_stew_food?", "nethers_delight:roast_hoglin?", "nethers_delight:roast_hoglin_ham?", "nethers_delight:roast_hoglin_snout?", "nethers_delight:stuffed_hoglin_item?", "omni:enchanted_golden_carrot?", "pamhc2crops:arrowrootitem?", "pamhc2crops:artichokeitem?", "pamhc2crops:asparagusitem?", "pamhc2crops:bellpepperitem?", "pamhc2crops:broccoliitem?", "pamhc2crops:brusselsproutitem?", "pamhc2crops:cabbageitem?", "pamhc2crops:cassavaitem?", "pamhc2crops:caulifloweritem?", "pamhc2crops:celeryitem?", "pamhc2crops:chilipepperitem?", "pamhc2crops:coffeebeanitem?", "pamhc2crops:cornitem?", "pamhc2crops:cucumberitem?", "pamhc2crops:eggplantitem?", "pamhc2crops:garlicitem?", "pamhc2crops:gingeritem?", "pamhc2crops:jicamaitem?", "pamhc2crops:kaleitem?", "pamhc2crops:kohlrabiitem?", "pamhc2crops:leekitem?", "pamhc2crops:lettuceitem?", "pamhc2crops:okraitem?", "pamhc2crops:onionitem?", "pamhc2crops:parsnipitem?", "pamhc2crops:peasitem?", "pamhc2crops:radishitem?", "pamhc2crops:rhubarbitem?", "pamhc2crops:roastedgarlicitem?", "pamhc2crops:rutabagaitem?", "pamhc2crops:scallionitem?", "pamhc2crops:spiceleafitem?", "pamhc2crops:spinachitem?", "pamhc2crops:sweetpotatoitem?", "pamhc2crops:taroitem?", "pamhc2crops:tealeafitem?", "pamhc2crops:tomatilloitem?", "pamhc2crops:tomatoitem?", "pamhc2crops:turnipitem?", "pamhc2crops:whitemushroomitem?", "pamhc2crops:wintersquashitem?", "pamhc2crops:zucchiniitem?", "pamhc2foodcore:trailmixitem?", "pamhc2foodextended:bangersandmashitem?", "pamhc2foodextended:cevicheitem?", "pamhc2foodextended:cornflakesitem?", "pamhc2foodextended:ediblerootitem?", "pamhc2foodextended:fiestacornsaladitem?", "pamhc2foodextended:honeyglazedcarrotsitem?", "pamhc2foodextended:leafyfishsandwichitem?", "pamhc2foodextended:ovenroastedcaulifloweritem?", "pamhc2foodextended:padthaiitem?", "pamhc2foodextended:peasandceleryitem?", "pamhc2foodextended:salsaitem?", "pamhc2foodextended:seedsoupitem?", "pamhc2foodextended:springrollitem?", "pamhc2foodextended:theatreboxitem?", "pamhc2trees:cinnamonitem?", "peculiars:aloe_cake?", "pneumaticcraft:chips?", "quark:root_item?", "rankine:aloe?", "rankine:asparagus?", "rankine:corn_ear?", "rats:confit_byaldi?", "rats:potato_kinishes?", "rootsclassic:old_root?", "seasonals:pumpkin_cake?", "simplecorn:corncob?", "simplefarming:broccoli?", "simplefarming:cassava?", "simplefarming:chicory_root?", "simplefarming:corn?", "simplefarming:cucumber?", "simplefarming:cumin_seeds?", "simplefarming:eggplant?", "simplefarming:ginger?", "simplefarming:habanero?", "simplefarming:lettuce?", "simplefarming:marshmallow_root?", "simplefarming:onion?", "simplefarming:pea_pod?", "simplefarming:pepper?", "simplefarming:quinoa_seeds?", "simplefarming:radish?", "simplefarming:sorghum?", "simplefarming:spinach?", "simplefarming:squash?", "simplefarming:sweet_potato?", "simplefarming:tomato?", "simplefarming:turnip?", "simplefarming:yam?", "simplefarming:zucchini?", "simplytea:teabag_black?", "simplytea:teabag_chorus?", "simplytea:teabag_floral?", "simplytea:teabag_green?", "survivalplus:raw_onion?", "tea_kettle:bamboo_tea?", "tea_kettle:black_latte?", "tea_kettle:black_tea?", "tea_kettle:green_latte?", "tea_kettle:green_tea?", "tea_kettle:oolong_latte?", "tea_kettle:oolong_tea?", "tea_kettle:rose_tea?", "tea_kettle:white_latte?", "tea_kettle:white_tea?", "terraincognita:clayed_root?", "terraincognita:fiddlehead?", "terraincognita:notch_carrot?", "thermal:bell_pepper?", "thermal:coffee?", "thermal:corn?", "thermal:eggplant?", "thermal:green_bean?", "thermal:onion?", "thermal:radish?", "thermal:spinach?", "thermal:tomato?", "undergarden:blood_mushroom?", "undergarden:indigo_mushroom?", "undergarden:ink_mushroom?", "undergarden:underbeans?", "undergarden:veil_mushroom?", "vanillacookbook:carrot_cake?", "vanillacookbook:mohnkuchen?", "vanillacookbook:rose_cake?", "vanillacookbook:trail_mix?", "vanillafoodpantry:bamboo_shoots_raw?", "vanillafoodpantry:beets_bread?", "vanillafoodpantry:bread_pocket_fish_salad?", "vanillafoodpantry:bread_pocket_roast_veg?", "vanillafoodpantry:carrot_muffin?", "vanillafoodpantry:cave_stew?", "vanillafoodpantry:creamsoup_beet?", "vanillafoodpantry:creamsoup_cactus?", "vanillafoodpantry:creamsoup_carrot?", "vanillafoodpantry:creamsoup_mushroom?", "vanillafoodpantry:creamsoup_potato?", "vanillafoodpantry:creamsoup_pumpkin?", "vanillafoodpantry:cyclops_sandwich?", "vanillafoodpantry:decker_cheesesteak?", "vanillafoodpantry:decker_cuban?", "vanillafoodpantry:decker_fish?", "vanillafoodpantry:decker_mutton?", "vanillafoodpantry:decker_steak?", "vanillafoodpantry:decker_veggie?", "vanillafoodpantry:desert_salad?", "vanillafoodpantry:enriched_pumpkin_pie?", "vanillafoodpantry:fish_sausage_mashwrap?", "vanillafoodpantry:fries_cassava_raw?", "vanillafoodpantry:fries_sweetpotato_raw?", "vanillafoodpantry:juice_cactus?", "vanillafoodpantry:juice_cane?", "vanillafoodpantry:juice_carrot?", "vanillafoodpantry:juice_kelp?", "vanillafoodpantry:juice_potato?", "vanillafoodpantry:klingon_bread?", "vanillafoodpantry:mushroom_stew_combo?", "vanillafoodpantry:oak_acorn?", "vanillafoodpantry:polar_bear_stew?", "vanillafoodpantry:potato_bread?", "vanillafoodpantry:potato_chowder?", "vanillafoodpantry:pumpkin_bread?", "vanillafoodpantry:pumpkin_pigtail_stew?", "vanillafoodpantry:pumpkin_pigtail_stew_combo?", "vanillafoodpantry:raw_vegetables?", "vanillafoodpantry:roast_corn?", "vanillafoodpantry:roasted_eggplant?", "vanillafoodpantry:special_salad?", "vanillafoodpantry:spruce_tips?", "vanillafoodpantry:teadrink_bushtea?", "vanillafoodpantry:teadrink_milky_bushtea?", "vanillafoodpantry:teadrink_milky_dandtea?", "vanillafoodpantry:teadrink_sprucetips_tea?", "vanillafoodpantry:veggie_stew?", "vanillafoodpantry:veggie_stew_combo?", "xercamod:item_tomato?"]
-},
-ingredients:{
-tag:"diet:ingredients",
-members:["#forge:dyes", "minecraft:water_bucket", "croptopia:butter?", "croptopia:olive_oil?", "croptopia:soy_sauce?", "croptopia:whipping_cream?", "fluffy_farmer:cinnamon?", "mysticalworld:vinegar?", "neapolitan:dried_vanilla_pods?", "neapolitan:mint_leaves?", "pamhc2crops:garlicitem?", "pamhc2crops:hotcoffeeitem?", "pamhc2crops:hotteaitem?", "pamhc2crops:spiceleafitem?", "pamhc2foodcore:butteritem?", "pamhc2foodcore:cookingoilitem?", "pamhc2foodcore:creamitem?", "pamhc2foodcore:mayonaiseitem?", "pamhc2foodcore:vinegaritem?", "pamhc2foodextended:bbqsauceitem?", "pamhc2foodextended:groundcinnamonitem?", "pamhc2foodextended:hoisinsauceitem?", "pamhc2foodextended:hotsauceitem?", "pamhc2foodextended:ketchupitem?", "pamhc2foodextended:mushroomoilitem?", "pamhc2foodextended:mustarditem?", "pamhc2foodextended:oystersauceitem?", "pamhc2foodextended:relishitem?", "pamhc2foodextended:saladdressingitem?", "pamhc2foodextended:saltandpepperitem?", "pamhc2foodextended:sesameoilitem?", "pamhc2foodextended:soysauceitem?", "pamhc2foodextended:vegemiteitem?", "simplefarming:ginger?", "simplefarming:vinegar?", "simplytea:cup?", "vanillafoodpantry:drying_agent?", "vanillafoodpantry:egg_white?", "vanillafoodpantry:enzyme_extractor_agent?", "vanillafoodpantry:foodpowder_jerky_mix?", "vanillafoodpantry:foodpowder_potato_starch?", "vanillafoodpantry:leavening_agent?", "vanillafoodpantry:portion_butter?", "vanillafoodpantry:portion_milk?", "vanillafoodpantry:rennet?", "vanillafoodpantry:salt?", "vanillafoodpantry:seedoil_jar?", "vanillafoodpantry:sunbutter_jar?"]
-},
-fruits:{
-tag:"diet:fruits",
-members:["minecraft:apple", "minecraft:chorus_fruit", "minecraft:enchanted_golden_apple", "minecraft:glow_berries", "minecraft:golden_apple", "minecraft:melon", "minecraft:melon_slice", "minecraft:sweet_berries", "alexsmobs:banana?", "alexsmobs:banana_peel?", "aoa3:heart_fruit?", "aoa3:magic_marang?", "aoa3:nature_melon_slice?", "ars_nouveau:mana_berry?", "atmospheric:passionfruit?", "atmospheric:yucca_fruit?", "atum:date?", "autumnity:foul_berries?", "bayou_blues:gooseberries?", "betterendforge:blossom_berry?", "betterendforge:shadow_berry_raw?", "betterendforge:umbrella_cluster_juice?", "bloom_and_gloom:kabloom_fruit?", "blue_skies:black_brewberry?", "blue_skies:brewberry?", "blue_skies:cherry?", "blue_skies:crescent_fruit?", "blue_skies:pine_fruit?", "blue_skies:pink_brewberry?", "blue_skies:scalefruit?", "blueberry:blueberry?", "blueberry:blueberry_muffin?", "byg:baobab_fruit?", "byg:blueberries?", "byg:crimson_berries?", "byg:green_apple?", "byg:holly_berries?", "byg:joshua_fruit?", "byg:nightshade_berries?", "caves_and_cliffs_mod:glow_berry?", "cavesandcliffs:glow_berries?", "charcoal_pit:banana?", "charcoal_pit:cherry?", "charcoal_pit:coconut?", "charcoal_pit:dragon_fruit?", "create:chocolate_glazed_berries?", "create:honeyed_apple?", "create_confectionery:black_chocolate_glazed_berries?", "create_confectionery:caramel_glazed_berries?", "create_confectionery:ruby_chocolate_glazed_berries?", "create_confectionery:white_chocolate_glazed_berries?", "crockpot:fruit_medley?", "crockpot:jammy_preserves?", "crockpot:watermelon_icle?", "croptopia:apple_pie?", "croptopia:apricot?", "croptopia:avocado?", "croptopia:banana?", "croptopia:blackberry?", "croptopia:blueberry?", "croptopia:cantaloupe?", "croptopia:cherry?", "croptopia:cherry_pie?", "croptopia:coconut?", "croptopia:cranberry?", "croptopia:currant?", "croptopia:date?", "croptopia:dragonfruit?", "croptopia:eggplant?", "croptopia:elderberry?", "croptopia:eton_mess?", "croptopia:fig?", "croptopia:figgy_pudding?", "croptopia:grape?", "croptopia:grapefruit?", "croptopia:honeydew?", "croptopia:kiwi?", "croptopia:kumquat?", "croptopia:lemon?", "croptopia:lime?", "croptopia:mango?", "croptopia:nectarine?", "croptopia:nutmeg?", "croptopia:olive?", "croptopia:orange?", "croptopia:peach?", "croptopia:pear?", "croptopia:persimmon?", "croptopia:pineapple?", "croptopia:plum?", "croptopia:raspberry?", "croptopia:saguaro?", "croptopia:scones?", "croptopia:squash?", "croptopia:starfruit?", "croptopia:strawberry?", "cyclic:apple_diamond?", "cyclic:apple_emerald?", "druidcraft:blueberries?", "druidcraft:blueberry_muffin?", "druidcraft:elderberries?", "endergetic:bolloom_fruit?", "environmental:cherries?", "extrafood:dried_fruit?", "extrafood:pancake?", "farmersdelight:honey_glazed_ham?", "farmersdelight:stuffed_pumpkin?", "fluffy_farmer:juicy_berries?", "fluffy_farmer:pickled_watermelon?", "fluffy_farmer:rotten_apple?", "forbidden_arcanus:cherry_peach?", "fruittrees:cherry?", "fruittrees:citron?", "fruittrees:empowered_citron?", "fruittrees:grapefruit?", "fruittrees:lemon?", "fruittrees:lime?", "fruittrees:mandarin?", "fruittrees:orange?", "fruittrees:pomelo?", "fruittrees:redlove?", "gildedingot:shroom_fruit?", "good_nights_sleep:rainbow_berries?", "integrateddynamics:menril_berries?", "neapolitan:banana?", "neapolitan:banana_cake?", "neapolitan:strawberries?", "neapolitan:strawberry_cake?", "neapolitan:white_strawberries?", "nefdecomod:banana?", "nefdecomod:cantaloupe_slice?", "nefdecomod:meal_04?", "nourished_end:chorus_bulb_slice?", "outer_end:azure_berries?", "pamhc2crops:blackberryitem?", "pamhc2crops:blueberryitem?", "pamhc2crops:cactusfruititem?", "pamhc2crops:candleberryitem?", "pamhc2crops:cantaloupeitem?", "pamhc2crops:cranberryitem?", "pamhc2crops:elderberryitem?", "pamhc2crops:grapeitem?", "pamhc2crops:greengrapeitem?", "pamhc2crops:huckleberryitem?", "pamhc2crops:juniperberryitem?", "pamhc2crops:kiwiitem?", "pamhc2crops:mulberryitem?", "pamhc2crops:pineappleitem?", "pamhc2crops:raspberryitem?", "pamhc2crops:strawberryitem?", "pamhc2foodcore:trailmixitem?", "pamhc2foodextended:holidaycakeitem?", "pamhc2foodextended:pavlovaitem?", "pamhc2foodextended:peachesandcreamoatmealitem?", "pamhc2foodextended:pineappleupsidedowncakeitem?", "pamhc2foodextended:raspberrytrifleitem?", "pamhc2foodextended:spicebunitem?", "pamhc2trees:apricotitem?", "pamhc2trees:avocadoitem?", "pamhc2trees:bananaitem?", "pamhc2trees:breadfruititem?", "pamhc2trees:cherryitem?", "pamhc2trees:coconutitem?", "pamhc2trees:dateitem?", "pamhc2trees:dragonfruititem?", "pamhc2trees:durianitem?", "pamhc2trees:figitem?", "pamhc2trees:gooseberryitem?", "pamhc2trees:grapefruititem?", "pamhc2trees:guavaitem?", "pamhc2trees:jackfruititem?", "pamhc2trees:lemonitem?", "pamhc2trees:limeitem?", "pamhc2trees:lycheeitem?", "pamhc2trees:mangoitem?", "pamhc2trees:oliveitem?", "pamhc2trees:orangeitem?", "pamhc2trees:papayaitem?", "pamhc2trees:passionfruititem?", "pamhc2trees:pawpawitem?", "pamhc2trees:peachitem?", "pamhc2trees:pearitem?", "pamhc2trees:persimmonitem?", "pamhc2trees:plumitem?", "pamhc2trees:pomegranateitem?", "pamhc2trees:rambutanitem?", "pamhc2trees:soursopitem?", "pamhc2trees:starfruititem?", "pamhc2trees:tamarinditem?", "peculiars:passionfruit_cake?", "peculiars:yucca_cake?", "projectvibrantjourneys:cracked_coconut?", "projectvibrantjourneys:juniper_berries?", "rankine:banana_yucca?", "rankine:blackberries?", "rankine:blueberries?", "rankine:coconut?", "rankine:cranberries?", "rankine:elderberries?", "rankine:juniper_berries?", "rankine:pineapple?", "rankine:raspberries?", "rankine:snowberries?", "rankine:strawberries?", "rootsclassic:blackcurrant?", "rootsclassic:elderberry?", "rootsclassic:nightshade?", "rootsclassic:redcurrant?", "rootsclassic:whitecurrant?", "roses:rose_hips?", "seasonals:sweet_berry_cake?", "silentgear:nether_banana?", "simpledelights:creamcicle?", "simpledelights:fruit_tart?", "simpledelights:plum_pudding?", "simpledelights:strawberry_shortcake?", "simplefarming:apricot?", "simplefarming:banana?", "simplefarming:blackberries?", "simplefarming:blueberries?", "simplefarming:cactus_fruit?", "simplefarming:cantaloupe?", "simplefarming:cherries?", "simplefarming:grapes?", "simplefarming:honeydew?", "simplefarming:jaffa_cake?", "simplefarming:mango?", "simplefarming:olives?", "simplefarming:orange?", "simplefarming:pear?", "simplefarming:plum?", "simplefarming:raspberries?", "simplefarming:strawberries?", "terraincognita:sour_berries?", "thermal:frost_melon_slice?", "thermal:strawberry?", "undergarden:blisterberry?", "undergarden:droopvine_item?", "uniquecrops:large_plum?", "upgrade_aquatic:boiled_blue_pickerelweed?", "upgrade_aquatic:boiled_purple_pickerelweed?", "upgrade_aquatic:mulberry?", "vanillacookbook:berry_brownie?", "vanillacookbook:berry_cake?", "vanillacookbook:chorus_cake?", "vanillacookbook:netherite_apple?", "vanillafoodpantry:apple_bread?", "vanillafoodpantry:apple_muffin?", "vanillafoodpantry:juice_apple?", "vanillafoodpantry:juice_berries?", "vanillafoodpantry:juice_melon?", "vanillafoodpantry:juice_raftugli?", "vanillafoodpantry:raftugli_fruit?", "vanillafoodpantry:uglifruit_muffin?", "watersource:coconut_piece?", "xercamod:item_apple_pie?", "xercamod:sweet_berry_pie?"]
-}
-},
-c:{
-storage_blocks:{
-tag:"c:storage_blocks",
-members:["byg:ametrine_block", "byg:pendorite_block", "byg:anthracite_block", "byg:lignite_block"]
-},
-storage_blocks_lignite:{
-tag:"c:storage_blocks/lignite",
-members:["byg:lignite_block"]
-},
-sand_purple:{
-tag:"c:sand/purple",
-members:["byg:purple_sand"]
-},
-sand_white:{
-tag:"c:sand/white",
-members:["byg:white_sand"]
-},
-sand_blue:{
-tag:"c:sand/blue",
-members:["byg:blue_sand"]
-},
-workbench:{
-tag:"c:workbench",
-members:["byg:aspen_crafting_table", "byg:baobab_crafting_table", "byg:blue_enchanted_crafting_table", "byg:cherry_crafting_table", "byg:cika_crafting_table", "byg:cypress_crafting_table", "byg:ebony_crafting_table", "byg:fir_crafting_table", "byg:green_enchanted_crafting_table", "byg:holly_crafting_table", "byg:jacaranda_crafting_table", "byg:mahogany_crafting_table", "byg:mangrove_crafting_table", "byg:maple_crafting_table", "byg:pine_crafting_table", "byg:rainbow_eucalyptus_crafting_table", "byg:redwood_crafting_table", "byg:skyris_crafting_table", "byg:willow_crafting_table", "byg:witch_hazel_crafting_table", "byg:zelkova_crafting_table", "byg:sythian_crafting_table", "byg:embur_crafting_table", "byg:palm_crafting_table", "byg:lament_crafting_table", "byg:ether_crafting_table", "byg:bulbis_crafting_table", "byg:nightshade_crafting_table", "byg:imparius_crafting_table"]
-},
-ores_lignite:{
-tag:"c:ores/lignite",
-members:["byg:lignite_ore"]
-},
-sand:{
-tag:"c:sand",
-members:["byg:white_sand", "byg:black_sand", "byg:blue_sand", "byg:pink_sand", "byg:purple_sand", "byg:end_sand", "byg:windswept_sand"]
-},
-swords:{
-tag:"c:swords",
-members:["byg:pendorite_sword", "byg:pendorite_battleaxe"]
-},
-ores_redstone:{
-tag:"c:ores/redstone",
-members:["byg:cryptic_redstone_ore"]
-},
-pickaxes:{
-tag:"c:pickaxes",
-members:["byg:pendorite_pickaxe"]
-},
-gems_ametrine:{
-tag:"c:gems/ametrine",
-members:["byg:ametrine_gems"]
-},
-sandstone:{
-tag:"c:sandstone",
-members:["byg:black_sandstone", "byg:black_chiseled_sandstone", "byg:black_cut_sandstone", "byg:blue_sandstone", "byg:blue_chiseled_sandstone", "byg:blue_cut_sandstone", "byg:white_sandstone", "byg:white_chiseled_sandstone", "byg:white_cut_sandstone", "byg:purple_sandstone", "byg:purple_chiseled_sandstone", "byg:purple_cut_sandstone", "byg:pink_sandstone", "byg:pink_chiseled_sandstone", "byg:pink_cut_sandstone", "byg:windswept_sandstone", "byg:chiseled_windswept_sandstone", "byg:cut_windswept_sandstone", "byg:smooth_windswept_sandstone", "byg:windswept_sandstone_pillar"]
-},
-blue_sand:{
-tag:"c:blue_sand",
-members:["byg:blue_sand"]
-},
-mushrooms:{
-tag:"c:mushrooms",
-members:["byg:green_mushroom", "byg:wood_blewit", "byg:weeping_milkcap", "byg:white_puffball_cap", "byg:sythian_fungus", "byg:imparius_mushroom"]
-},
-ores_anthracite:{
-tag:"c:ores/anthracite",
-members:["byg:anthracite_ore"]
-},
-helmets:{
-tag:"c:helmets",
-members:["byg:ametrine_helmet"]
-},
-white_sand:{
-tag:"c:white_sand",
-members:["byg:white_sand"]
-},
-cobblestone:{
-tag:"c:cobblestone",
-members:["byg:red_rock", "byg:dacite_cobblestone", "byg:scoria_cobblestone", "byg:soapstone", "byg:cobbled_ether_stone"]
-},
-pink_sand:{
-tag:"c:pink_sand",
-members:["byg:pink_sand"]
-},
-ores_pendorite:{
-tag:"c:ores/pendorite",
-members:["byg:pendorite_ore"]
-},
-ores_ametrine:{
-tag:"c:ores/ametrine",
-members:["byg:ametrine_ore", "byg:budding_ametrine_ore"]
-},
-ores:{
-tag:"c:ores",
-members:["byg:ametrine_ore", "byg:anthracite_ore", "byg:budding_ametrine_ore", "byg:cryptic_redstone_ore", "byg:lignite_ore", "byg:pendorite_ore", "byg:blue_nether_gold_ore", "byg:blue_nether_quartz_ore", "byg:brimstone_nether_gold_ore", "byg:brimstone_nether_quartz_ore"]
-},
-sand_colorless:{
-tag:"c:sand/colorless",
-members:["byg:end_sand"]
-},
-boots:{
-tag:"c:boots",
-members:["byg:ametrine_boots"]
-},
-saplings:{
-tag:"c:saplings",
-members:["byg:aspen_sapling", "byg:baobab_sapling", "byg:blue_enchanted_sapling", "byg:blue_spruce_sapling", "byg:brown_birch_sapling", "byg:brown_oak_sapling", "byg:cika_sapling", "byg:cypress_sapling", "byg:ebony_sapling", "byg:fir_sapling", "byg:green_enchanted_sapling", "byg:holly_sapling", "byg:jacaranda_sapling", "byg:indigo_jacaranda_sapling", "byg:mahogany_sapling", "byg:mangrove_sapling", "byg:maple_sapling", "byg:orange_birch_sapling", "byg:orange_oak_sapling", "byg:orange_spruce_sapling", "byg:orchard_sapling", "byg:palo_verde_sapling", "byg:joshua_sapling", "byg:yellow_spruce_sapling", "byg:pine_sapling", "byg:pink_cherry_sapling", "byg:rainbow_eucalyptus_sapling", "byg:red_birch_sapling", "byg:red_maple_sapling", "byg:red_oak_sapling", "byg:red_spruce_sapling", "byg:redwood_sapling", "byg:silver_maple_sapling", "byg:white_cherry_sapling", "byg:willow_sapling", "byg:witch_hazel_sapling", "byg:yellow_birch_sapling", "byg:zelkova_sapling", "byg:skyris_sapling", "byg:palm_sapling", "byg:araucaria_sapling", "byg:brown_zelkova_sapling", "byg:lament_sapling", "byg:withering_oak_sapling", "byg:ether_sapling", "byg:nightshade_sapling"]
-},
-crops:{
-tag:"c:crops",
-members:["byg:blueberries", "byg:green_apple", "byg:crimson_berries"]
-},
-fence_gates_wooden:{
-tag:"c:fence_gates/wooden",
-members:["byg:aspen_fence_gate", "byg:baobab_fence_gate", "byg:blue_enchanted_fence_gate", "byg:cherry_fence_gate", "byg:cika_fence_gate", "byg:cypress_fence_gate", "byg:ebony_fence_gate", "byg:fir_fence_gate", "byg:green_enchanted_fence_gate", "byg:holly_fence_gate", "byg:jacaranda_fence_gate", "byg:mahogany_fence_gate", "byg:mangrove_fence_gate", "byg:maple_fence_gate", "byg:pine_fence_gate", "byg:rainbow_eucalyptus_fence_gate", "byg:redwood_fence_gate", "byg:skyris_fence_gate", "byg:willow_fence_gate", "byg:witch_hazel_fence_gate", "byg:zelkova_fence_gate", "byg:sythian_fence_gate", "byg:embur_fence_gate", "byg:palm_fence_gate", "byg:lament_fence_gate", "byg:ether_fence_gate", "byg:bulbis_fence_gate", "byg:nightshade_fence_gate", "byg:imparius_fence_gate"]
-},
-fruits:{
-tag:"c:fruits",
-members:["byg:blueberries", "byg:green_apple", "byg:crimson_berries", "byg:baobab_fruit", "byg:joshua_fruit"]
-},
-black_sand:{
-tag:"c:black_sand",
-members:["byg:black_sand"]
-},
-purple_sand:{
-tag:"c:purple_sand",
-members:["byg:purple_sand"]
-},
-chestplates:{
-tag:"c:chestplates",
-members:["byg:ametrine_chestplate"]
-},
-stone:{
-tag:"c:stone",
-members:["byg:soapstone", "byg:scoria_stone", "byg:dacite", "byg:rocky_stone", "byg:mossy_stone", "byg:overgrown_stone", "byg:overgrown_dacite", "byg:sythian_nylium", "byg:podzol_dacite", "byg:red_rock", "byg:ether_stone"]
-},
-storage_blocks_ametrine:{
-tag:"c:storage_blocks/ametrine",
-members:["byg:ametrine_block"]
-},
-axes:{
-tag:"c:axes",
-members:["byg:pendorite_axe", "byg:pendorite_battleaxe"]
-},
-leggings:{
-tag:"c:leggings",
-members:["byg:ametrine_leggings"]
-},
-shovels:{
-tag:"c:shovels",
-members:["byg:pendorite_shovel"]
-},
-fence_gates:{
-tag:"c:fence_gates",
-members:["byg:aspen_fence_gate", "byg:baobab_fence_gate", "byg:blue_enchanted_fence_gate", "byg:cherry_fence_gate", "byg:cika_fence_gate", "byg:cypress_fence_gate", "byg:ebony_fence_gate", "byg:fir_fence_gate", "byg:green_enchanted_fence_gate", "byg:holly_fence_gate", "byg:jacaranda_fence_gate", "byg:mahogany_fence_gate", "byg:mangrove_fence_gate", "byg:maple_fence_gate", "byg:pine_fence_gate", "byg:rainbow_eucalyptus_fence_gate", "byg:redwood_fence_gate", "byg:skyris_fence_gate", "byg:willow_fence_gate", "byg:witch_hazel_fence_gate", "byg:zelkova_fence_gate", "byg:sythian_fence_gate", "byg:embur_fence_gate", "byg:palm_fence_gate", "byg:lament_fence_gate", "byg:ether_fence_gate", "byg:bulbis_fence_gate", "byg:nightshade_fence_gate", "byg:imparius_fence_gate"]
-},
-gems:{
-tag:"c:gems",
-members:["byg:ametrine_gems"]
-},
-storage_blocks_pendorite:{
-tag:"c:storage_blocks/pendorite",
-members:["byg:pendorite_block"]
-},
-sand_pink:{
-tag:"c:sand/pink",
-members:["byg:pink_sand", "byg:windswept_sand"]
-},
-bookshelves:{
-tag:"c:bookshelves",
-members:["byg:aspen_bookshelf", "byg:baobab_bookshelf", "byg:blue_enchanted_bookshelf", "byg:cherry_bookshelf", "byg:cika_bookshelf", "byg:cypress_bookshelf", "byg:ebony_bookshelf", "byg:fir_bookshelf", "byg:green_enchanted_bookshelf", "byg:holly_bookshelf", "byg:jacaranda_bookshelf", "byg:mahogany_bookshelf", "byg:mangrove_bookshelf", "byg:maple_bookshelf", "byg:pine_bookshelf", "byg:rainbow_eucalyptus_bookshelf", "byg:redwood_bookshelf", "byg:skyris_bookshelf", "byg:willow_bookshelf", "byg:witch_hazel_bookshelf", "byg:zelkova_bookshelf", "byg:sythian_bookshelf", "byg:embur_bookshelf", "byg:palm_bookshelf", "byg:lament_bookshelf", "byg:bulbis_bookshelf", "byg:ether_bookshelf", "byg:nightshade_bookshelf", "byg:imparius_bookshelf"]
-},
-hoes:{
-tag:"c:hoes",
-members:["byg:pendorite_hoe"]
-},
-storage_blocks_anthracite:{
-tag:"c:storage_blocks/anthracite",
-members:["byg:anthracite_block"]
-},
-sand_black:{
-tag:"c:sand/black",
-members:["byg:black_sand"]
-},
-netherrack:{
-tag:"c:netherrack",
-members:["byg:overgrown_netherrack", "byg:overgrown_crimson_blackstone", "byg:blue_netherrack", "byg:brimstone", "byg:embur_nylium", "byg:sythian_nylium"]
-}
-},
-ftbchunks:{
-right_click_whitelist:{
-tag:"ftbchunks:right_click_whitelist",
-members:["minecraft:shield", "minecraft:firework_rocket", "minecraft:map"]
-},
-right_click_blacklist:{
-tag:"ftbchunks:right_click_blacklist",
-members:["minecraft:bucket", "minecraft:water_bucket", "minecraft:lava_bucket", "minecraft:lead", "minecraft:name_tag", "minecraft:splash_potion", "minecraft:lingering_potion"]
-}
-},
-kubejs:{
-ores_nether_gold:{
-tag:"kubejs:ores/nether_gold",
-members:["minecraft:nether_gold_ore"]
-}
-},
-sereneseasons:{
-summer_crops:{
-tag:"sereneseasons:summer_crops",
-members:["farmersdelight:tomato_seeds", "farmersdelight:rice"]
-},
-autumn_crops:{
-tag:"sereneseasons:autumn_crops",
-members:["farmersdelight:cabbage_seeds", "farmersdelight:onion", "farmersdelight:rice"]
-},
-winter_crops:{
-tag:"sereneseasons:winter_crops",
-members:["farmersdelight:cabbage_seeds"]
-},
-spring_crops:{
-tag:"sereneseasons:spring_crops",
-members:["farmersdelight:onion"]
-}
-},
-farmersdelight:{
-cabbage_roll_ingredients:{
-tag:"farmersdelight:cabbage_roll_ingredients",
-members:["#forge:raw_pork", "#forge:raw_fishes", "#forge:raw_chicken", "#forge:raw_beef", "#forge:raw_mutton", "#forge:eggs", "#forge:mushrooms", "minecraft:carrot", "minecraft:potato", "minecraft:beetroot"]
-},
-canvas_signs:{
-tag:"farmersdelight:canvas_signs",
-members:["farmersdelight:canvas_sign", "farmersdelight:white_canvas_sign", "farmersdelight:orange_canvas_sign", "farmersdelight:magenta_canvas_sign", "farmersdelight:light_blue_canvas_sign", "farmersdelight:yellow_canvas_sign", "farmersdelight:lime_canvas_sign", "farmersdelight:pink_canvas_sign", "farmersdelight:gray_canvas_sign", "farmersdelight:light_gray_canvas_sign", "farmersdelight:cyan_canvas_sign", "farmersdelight:purple_canvas_sign", "farmersdelight:blue_canvas_sign", "farmersdelight:brown_canvas_sign", "farmersdelight:green_canvas_sign", "farmersdelight:red_canvas_sign", "farmersdelight:black_canvas_sign"]
-},
-offhand_equipment:{
-tag:"farmersdelight:offhand_equipment",
-members:["minecraft:shield", "create:extendo_grip?"]
-},
-wild_crops:{
-tag:"farmersdelight:wild_crops",
-members:["farmersdelight:wild_carrots", "farmersdelight:wild_potatoes", "farmersdelight:wild_beetroots", "farmersdelight:wild_cabbages", "farmersdelight:wild_tomatoes", "farmersdelight:wild_onions", "farmersdelight:wild_rice"]
-},
-straw_harvesters:{
-tag:"farmersdelight:straw_harvesters",
-members:["#farmersdelight:tools/knives"]
-},
-tools_knives:{
-tag:"farmersdelight:tools/knives",
-members:["farmersdelight:flint_knife", "farmersdelight:iron_knife", "farmersdelight:diamond_knife", "farmersdelight:golden_knife", "farmersdelight:netherite_knife"]
-},
-wolf_prey:{
-tag:"farmersdelight:wolf_prey",
-members:["#forge:raw_chicken", "#forge:raw_mutton", "minecraft:rabbit"]
-}
-},
-fruittrees:{
-citrus_logs:{
-tag:"fruittrees:citrus_logs",
-members:["fruittrees:citrus_log", "fruittrees:citrus_wood", "fruittrees:stripped_citrus_log", "fruittrees:stripped_citrus_wood"]
-},
-cherry_logs:{
-tag:"fruittrees:cherry_logs",
-members:["fruittrees:cherry_log?", "fruittrees:cherry_wood?", "fruittrees:stripped_cherry_log?", "fruittrees:stripped_cherry_wood?"]
-}
-},
-storagedrawers:{
-drawers:{
-tag:"storagedrawers:drawers",
-members:["storagedrawers:oak_full_drawers_1", "storagedrawers:oak_full_drawers_2", "storagedrawers:oak_full_drawers_4", "storagedrawers:oak_half_drawers_1", "storagedrawers:oak_half_drawers_2", "storagedrawers:oak_half_drawers_4", "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "storagedrawers:spruce_half_drawers_1", "storagedrawers:spruce_half_drawers_2", "storagedrawers:spruce_half_drawers_4", "storagedrawers:birch_full_drawers_1", "storagedrawers:birch_full_drawers_2", "storagedrawers:birch_full_drawers_4", "storagedrawers:birch_half_drawers_1", "storagedrawers:birch_half_drawers_2", "storagedrawers:birch_half_drawers_4", "storagedrawers:jungle_full_drawers_1", "storagedrawers:jungle_full_drawers_2", "storagedrawers:jungle_full_drawers_4", "storagedrawers:jungle_half_drawers_1", "storagedrawers:jungle_half_drawers_2", "storagedrawers:jungle_half_drawers_4", "storagedrawers:acacia_full_drawers_1", "storagedrawers:acacia_full_drawers_2", "storagedrawers:acacia_full_drawers_4", "storagedrawers:acacia_half_drawers_1", "storagedrawers:acacia_half_drawers_2", "storagedrawers:acacia_half_drawers_4", "storagedrawers:dark_oak_full_drawers_1", "storagedrawers:dark_oak_full_drawers_2", "storagedrawers:dark_oak_full_drawers_4", "storagedrawers:dark_oak_half_drawers_1", "storagedrawers:dark_oak_half_drawers_2", "storagedrawers:dark_oak_half_drawers_4", "storagedrawers:crimson_full_drawers_1", "storagedrawers:crimson_full_drawers_2", "storagedrawers:crimson_full_drawers_4", "storagedrawers:crimson_half_drawers_1", "storagedrawers:crimson_half_drawers_2", "storagedrawers:crimson_half_drawers_4", "storagedrawers:warped_full_drawers_1", "storagedrawers:warped_full_drawers_2", "storagedrawers:warped_full_drawers_4", "storagedrawers:warped_half_drawers_1", "storagedrawers:warped_half_drawers_2", "storagedrawers:warped_half_drawers_4"]
 }
 }
 },
@@ -7018,7 +4902,7 @@ members:["minecraft:ice", "minecraft:packed_ice", "minecraft:blue_ice", "minecra
 },
 crops:{
 tag:"minecraft:crops",
-members:["minecraft:beetroots", "minecraft:carrots", "minecraft:potatoes", "minecraft:wheat", "minecraft:melon_stem", "minecraft:pumpkin_stem", "farmersdelight:cabbages", "farmersdelight:onions", "farmersdelight:rice_panicles", "farmersdelight:tomatoes"]
+members:["minecraft:beetroots", "minecraft:carrots", "minecraft:potatoes", "minecraft:wheat", "minecraft:melon_stem", "minecraft:pumpkin_stem", "farmersdelight:cabbages", "farmersdelight:onions", "farmersdelight:rice_panicles", "farmersdelight:tomatoes", "corn_delight:corn_crop"]
 },
 crystal_sound_blocks:{
 tag:"minecraft:crystal_sound_blocks",
@@ -7162,7 +5046,7 @@ members:["minecraft:oak_slab", "minecraft:spruce_slab", "minecraft:birch_slab", 
 },
 small_flowers:{
 tag:"minecraft:small_flowers",
-members:["minecraft:dandelion", "minecraft:poppy", "minecraft:blue_orchid", "minecraft:allium", "minecraft:azure_bluet", "minecraft:red_tulip", "minecraft:orange_tulip", "minecraft:white_tulip", "minecraft:pink_tulip", "minecraft:oxeye_daisy", "minecraft:cornflower", "minecraft:lily_of_the_valley", "minecraft:wither_rose", "farmersdelight:wild_carrots", "farmersdelight:wild_potatoes", "farmersdelight:wild_beetroots", "farmersdelight:wild_cabbages", "farmersdelight:wild_tomatoes", "farmersdelight:wild_onions", "byg:allium_flower_bush", "byg:alpine_bellflower", "byg:amaranth", "byg:angelica", "byg:hydrangea_bush", "byg:begonia", "byg:bistort", "byg:blue_sage", "byg:black_rose", "byg:california_poppy", "byg:crocus", "byg:cyan_amaranth", "byg:cyan_rose", "byg:cyan_tulip", "byg:daffodil", "byg:delphinium", "byg:fairy_slipper", "byg:firecracker_flower_bush", "byg:foxglove", "byg:golden_spined_cactus", "byg:green_tulip", "byg:guzmania", "byg:incan_lily", "byg:iris", "byg:japanese_orchid", "byg:kovan_flower", "byg:lazarus_bellflower", "byg:lolipop_flower", "byg:magenta_amaranth", "byg:magenta_tulip", "byg:orange_amaranth", "byg:orange_daisy", "byg:osiria_rose", "byg:peach_leather_flower", "byg:pink_allium", "byg:pink_allium_flower_bush", "byg:pink_anemone", "byg:pink_daffodil", "byg:prairie_grass", "byg:protea_flower", "byg:purple_amaranth", "byg:purple_sage", "byg:purple_tulip", "byg:richea", "byg:rose", "byg:snowdrops", "byg:silver_vase_flower", "byg:torch_ginger", "byg:violet_leather_flower", "byg:white_anemone", "byg:white_sage", "byg:winter_rose", "byg:winter_cyclamen", "byg:winter_scilla", "byg:yellow_daffodil", "byg:yellow_tulip", "byg:pollen_block", "byg:tall_allium", "byg:tall_pink_allium", "byg:thereal_bellflower"]
+members:["minecraft:dandelion", "minecraft:poppy", "minecraft:blue_orchid", "minecraft:allium", "minecraft:azure_bluet", "minecraft:red_tulip", "minecraft:orange_tulip", "minecraft:white_tulip", "minecraft:pink_tulip", "minecraft:oxeye_daisy", "minecraft:cornflower", "minecraft:lily_of_the_valley", "minecraft:wither_rose", "farmersdelight:wild_carrots", "farmersdelight:wild_potatoes", "farmersdelight:wild_beetroots", "farmersdelight:wild_cabbages", "farmersdelight:wild_tomatoes", "farmersdelight:wild_onions", "byg:allium_flower_bush", "byg:alpine_bellflower", "byg:amaranth", "byg:angelica", "byg:hydrangea_bush", "byg:begonia", "byg:bistort", "byg:blue_sage", "byg:black_rose", "byg:california_poppy", "byg:crocus", "byg:cyan_amaranth", "byg:cyan_rose", "byg:cyan_tulip", "byg:daffodil", "byg:delphinium", "byg:fairy_slipper", "byg:firecracker_flower_bush", "byg:foxglove", "byg:golden_spined_cactus", "byg:green_tulip", "byg:guzmania", "byg:incan_lily", "byg:iris", "byg:japanese_orchid", "byg:kovan_flower", "byg:lazarus_bellflower", "byg:lolipop_flower", "byg:magenta_amaranth", "byg:magenta_tulip", "byg:orange_amaranth", "byg:orange_daisy", "byg:osiria_rose", "byg:peach_leather_flower", "byg:pink_allium", "byg:pink_allium_flower_bush", "byg:pink_anemone", "byg:pink_daffodil", "byg:prairie_grass", "byg:protea_flower", "byg:purple_amaranth", "byg:purple_sage", "byg:purple_tulip", "byg:richea", "byg:rose", "byg:snowdrops", "byg:silver_vase_flower", "byg:torch_ginger", "byg:violet_leather_flower", "byg:white_anemone", "byg:white_sage", "byg:winter_rose", "byg:winter_cyclamen", "byg:winter_scilla", "byg:yellow_daffodil", "byg:yellow_tulip", "byg:pollen_block", "byg:tall_allium", "byg:tall_pink_allium", "byg:thereal_bellflower", "corn_delight:wild_corn"]
 },
 replaceable_plants:{
 tag:"minecraft:replaceable_plants",
@@ -7446,7 +5330,7 @@ members:["minecraft:lava", "#minecraft:campfires", "#minecraft:fire"]
 },
 wild_crops:{
 tag:"farmersdelight:wild_crops",
-members:["farmersdelight:wild_carrots", "farmersdelight:wild_potatoes", "farmersdelight:wild_beetroots", "farmersdelight:wild_cabbages", "farmersdelight:wild_tomatoes", "farmersdelight:wild_onions", "farmersdelight:wild_rice"]
+members:["farmersdelight:wild_carrots", "farmersdelight:wild_potatoes", "farmersdelight:wild_beetroots", "farmersdelight:wild_cabbages", "farmersdelight:wild_tomatoes", "farmersdelight:wild_onions", "farmersdelight:wild_rice", "corn_delight:wild_corn"]
 },
 heat_conductors:{
 tag:"farmersdelight:heat_conductors",
@@ -7553,6 +5437,2184 @@ members:["fruittrees:cherry_log?", "fruittrees:cherry_wood?", "fruittrees:stripp
 cherry_logs:{
 tag:"fruittrees:cherry_logs",
 members:["fruittrees:citrus_log", "fruittrees:citrus_wood", "fruittrees:stripped_citrus_log", "fruittrees:stripped_citrus_wood"]
+}
+},
+storagedrawers:{
+drawers:{
+tag:"storagedrawers:drawers",
+members:["storagedrawers:oak_full_drawers_1", "storagedrawers:oak_full_drawers_2", "storagedrawers:oak_full_drawers_4", "storagedrawers:oak_half_drawers_1", "storagedrawers:oak_half_drawers_2", "storagedrawers:oak_half_drawers_4", "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "storagedrawers:spruce_half_drawers_1", "storagedrawers:spruce_half_drawers_2", "storagedrawers:spruce_half_drawers_4", "storagedrawers:birch_full_drawers_1", "storagedrawers:birch_full_drawers_2", "storagedrawers:birch_full_drawers_4", "storagedrawers:birch_half_drawers_1", "storagedrawers:birch_half_drawers_2", "storagedrawers:birch_half_drawers_4", "storagedrawers:jungle_full_drawers_1", "storagedrawers:jungle_full_drawers_2", "storagedrawers:jungle_full_drawers_4", "storagedrawers:jungle_half_drawers_1", "storagedrawers:jungle_half_drawers_2", "storagedrawers:jungle_half_drawers_4", "storagedrawers:acacia_full_drawers_1", "storagedrawers:acacia_full_drawers_2", "storagedrawers:acacia_full_drawers_4", "storagedrawers:acacia_half_drawers_1", "storagedrawers:acacia_half_drawers_2", "storagedrawers:acacia_half_drawers_4", "storagedrawers:dark_oak_full_drawers_1", "storagedrawers:dark_oak_full_drawers_2", "storagedrawers:dark_oak_full_drawers_4", "storagedrawers:dark_oak_half_drawers_1", "storagedrawers:dark_oak_half_drawers_2", "storagedrawers:dark_oak_half_drawers_4", "storagedrawers:crimson_full_drawers_1", "storagedrawers:crimson_full_drawers_2", "storagedrawers:crimson_full_drawers_4", "storagedrawers:crimson_half_drawers_1", "storagedrawers:crimson_half_drawers_2", "storagedrawers:crimson_half_drawers_4", "storagedrawers:warped_full_drawers_1", "storagedrawers:warped_full_drawers_2", "storagedrawers:warped_full_drawers_4", "storagedrawers:warped_half_drawers_1", "storagedrawers:warped_half_drawers_2", "storagedrawers:warped_half_drawers_4"]
+}
+}
+},
+items:{
+byg:{
+pine_logs:{
+tag:"byg:pine_logs",
+members:["byg:pine_log", "byg:stripped_pine_log", "byg:pine_wood", "byg:stripped_pine_wood"]
+},
+maple_logs:{
+tag:"byg:maple_logs",
+members:["byg:maple_log", "byg:stripped_maple_log", "byg:maple_wood", "byg:stripped_maple_wood"]
+},
+blue_sand:{
+tag:"byg:blue_sand",
+members:["byg:blue_sand"]
+},
+willow_logs:{
+tag:"byg:willow_logs",
+members:["byg:willow_log", "byg:stripped_willow_log", "byg:willow_wood", "byg:stripped_willow_wood"]
+},
+red_dye:{
+tag:"byg:red_dye",
+members:["byg:amaranth", "byg:begonia", "byg:kovan_flower", "byg:rose", "byg:torch_ginger"]
+},
+palo_verde_logs:{
+tag:"byg:palo_verde_logs",
+members:["byg:palo_verde_log", "byg:stripped_palo_verde_log", "byg:palo_verde_wood", "byg:stripped_palo_verde_wood"]
+},
+fir_logs:{
+tag:"byg:fir_logs",
+members:["byg:fir_log", "byg:stripped_fir_log", "byg:fir_wood", "byg:stripped_fir_wood"]
+},
+orange_dye:{
+tag:"byg:orange_dye",
+members:["byg:orange_amaranth", "byg:orange_daisy", "byg:guzmania", "byg:incan_lily", "byg:california_poppy"]
+},
+pink_sand:{
+tag:"byg:pink_sand",
+members:["byg:pink_sand"]
+},
+double_purple_dye:{
+tag:"byg:double_purple_dye",
+members:["byg:tall_allium"]
+},
+imparius_stems:{
+tag:"byg:imparius_stems",
+members:["byg:imparius_stem", "byg:imparius_hyphae", "byg:fungal_imparius_stem", "byg:fungal_imparius_hyphae"]
+},
+yellow_dye:{
+tag:"byg:yellow_dye",
+members:["byg:lolipop_flower", "byg:yellow_daffodil", "byg:yellow_tulip"]
+},
+withering_oak_logs:{
+tag:"byg:withering_oak_logs",
+members:["byg:withering_oak_log", "byg:withering_oak_wood"]
+},
+green_dye:{
+tag:"byg:green_dye",
+members:["byg:golden_spined_cactus", "byg:horseweed", "byg:mini_cactus", "byg:prickly_pear_cactus"]
+},
+embur_pedus:{
+tag:"byg:embur_pedus",
+members:["byg:embur_pedu", "byg:stripped_embur_pedu", "byg:embur_hyphae", "byg:stripped_embur_hyphae"]
+},
+black_sand:{
+tag:"byg:black_sand",
+members:["byg:purple_sand"]
+},
+light_blue_dye:{
+tag:"byg:light_blue_dye",
+members:["byg:winter_scilla", "byg:thereal_bellflower"]
+},
+double_pink_dye:{
+tag:"byg:double_pink_dye",
+members:["byg:japanese_orchid", "byg:tall_pink_allium"]
+},
+cherry_logs:{
+tag:"byg:cherry_logs",
+members:["byg:cherry_log", "byg:stripped_cherry_log", "byg:cherry_wood", "byg:stripped_cherry_wood"]
+},
+cypress_logs:{
+tag:"byg:cypress_logs",
+members:["byg:cypress_log", "byg:stripped_cypress_log", "byg:cypress_wood", "byg:stripped_cypress_wood"]
+},
+green_enchanted_logs:{
+tag:"byg:green_enchanted_logs",
+members:["byg:green_enchanted_log", "byg:stripped_green_enchanted_log", "byg:green_enchanted_wood", "byg:stripped_green_enchanted_wood"]
+},
+pink_dye:{
+tag:"byg:pink_dye",
+members:["byg:osiria_rose", "byg:japanese_orchid", "byg:silver_vase_flower", "byg:daffodil", "byg:bistort", "byg:firecracker_flower_bush", "byg:peach_leather_flower", "byg:pink_allium", "byg:pink_allium_flower_bush", "byg:pink_anemone", "byg:pink_daffodil", "byg:tall_pink_allium"]
+},
+bulbis_stems:{
+tag:"byg:bulbis_stems",
+members:["byg:bulbis_stem", "byg:stripped_bulbis_stem", "byg:bulbis_wood", "byg:stripped_bulbis_wood"]
+},
+sythian_stems:{
+tag:"byg:sythian_stems",
+members:["byg:sythian_stem", "byg:stripped_sythian_stem", "byg:sythian_hyphae", "byg:stripped_sythian_hyphae"]
+},
+white_dye:{
+tag:"byg:white_dye",
+members:["byg:white_anemone", "byg:white_sage", "byg:winter_rose", "byg:snowdrops", "byg:angelica"]
+},
+zelkova_logs:{
+tag:"byg:zelkova_logs",
+members:["byg:zelkova_log", "byg:stripped_zelkova_log", "byg:zelkova_wood", "byg:stripped_zelkova_wood"]
+},
+double_blue_dye:{
+tag:"byg:double_blue_dye",
+members:["byg:hydrangea_bush", "byg:delphinium"]
+},
+nightshade_logs:{
+tag:"byg:nightshade_logs",
+members:["byg:nightshade_log", "byg:stripped_nightshade_log", "byg:nightshade_wood", "byg:stripped_nightshade_wood"]
+},
+skyris_logs:{
+tag:"byg:skyris_logs",
+members:["byg:skyris_log", "byg:stripped_skyris_log", "byg:skyris_wood", "byg:stripped_skyris_wood"]
+},
+white_sand:{
+tag:"byg:white_sand",
+members:["byg:white_sand"]
+},
+light_gray_dye:{
+tag:"byg:light_gray_dye",
+members:["byg:richea"]
+},
+cyan_dye:{
+tag:"byg:cyan_dye",
+members:["byg:cyan_amaranth", "byg:cyan_rose", "byg:cyan_tulip", "byg:winter_cyclamen"]
+},
+baobab_logs:{
+tag:"byg:baobab_logs",
+members:["byg:baobab_log", "byg:stripped_baobab_log", "byg:baobab_wood", "byg:stripped_baobab_wood"]
+},
+black_dye:{
+tag:"byg:black_dye",
+members:["byg:black_rose"]
+},
+mangrove_logs:{
+tag:"byg:mangrove_logs",
+members:["byg:mangrove_log", "byg:stripped_mangrove_log", "byg:mangrove_wood", "byg:stripped_mangrove_wood"]
+},
+witch_hazel_logs:{
+tag:"byg:witch_hazel_logs",
+members:["byg:witch_hazel_log", "byg:stripped_witch_hazel_log", "byg:witch_hazel_wood", "byg:stripped_witch_hazel_wood"]
+},
+purple_dye:{
+tag:"byg:purple_dye",
+members:["byg:allium_flower_bush", "byg:alpine_bellflower", "byg:iris", "byg:purple_sage", "byg:purple_tulip", "byg:purple_amaranth", "byg:crocus", "byg:tall_allium"]
+},
+mahogany_logs:{
+tag:"byg:mahogany_logs",
+members:["byg:mahogany_log", "byg:stripped_mahogany_log", "byg:mahogany_wood", "byg:stripped_mahogany_wood"]
+},
+lament_logs:{
+tag:"byg:lament_logs",
+members:["byg:lament_log", "byg:stripped_lament_log", "byg:lament_wood", "byg:stripped_lament_wood"]
+},
+blue_dye:{
+tag:"byg:blue_dye",
+members:["byg:blue_sage", "byg:violet_leather_flower", "byg:blueberries"]
+},
+redwood_logs:{
+tag:"byg:redwood_logs",
+members:["byg:redwood_log", "byg:stripped_redwood_log", "byg:redwood_wood", "byg:stripped_redwood_wood"]
+},
+brown_dye:{
+tag:"byg:brown_dye",
+members:["byg:mud_ball"]
+},
+ether_logs:{
+tag:"byg:ether_logs",
+members:["byg:ether_log", "byg:stripped_ether_log", "byg:ether_wood", "byg:stripped_ether_wood"]
+},
+rainbow_eucalyptus_logs:{
+tag:"byg:rainbow_eucalyptus_logs",
+members:["byg:rainbow_eucalyptus_log", "byg:stripped_rainbow_eucalyptus_log", "byg:rainbow_eucalyptus_wood", "byg:stripped_rainbow_eucalyptus_wood"]
+},
+lime_dye:{
+tag:"byg:lime_dye",
+members:["byg:green_tulip"]
+},
+blue_enchanted_logs:{
+tag:"byg:blue_enchanted_logs",
+members:["byg:blue_enchanted_log", "byg:stripped_blue_enchanted_log", "byg:blue_enchanted_wood", "byg:stripped_blue_enchanted_wood"]
+},
+palm_logs:{
+tag:"byg:palm_logs",
+members:["byg:palm_log", "byg:stripped_palm_log", "byg:palm_wood", "byg:stripped_palm_wood"]
+},
+double_cyan_dye:{
+tag:"byg:double_cyan_dye",
+members:["byg:foxglove"]
+},
+aspen_logs:{
+tag:"byg:aspen_logs",
+members:["byg:aspen_log", "byg:stripped_aspen_log", "byg:aspen_wood", "byg:stripped_aspen_wood"]
+},
+purple_sand:{
+tag:"byg:purple_sand",
+members:["byg:purple_sand"]
+},
+jacaranda_logs:{
+tag:"byg:jacaranda_logs",
+members:["byg:jacaranda_log", "byg:stripped_jacaranda_log", "byg:jacaranda_wood", "byg:stripped_jacaranda_wood"]
+},
+cika_logs:{
+tag:"byg:cika_logs",
+members:["byg:cika_log", "byg:stripped_cika_log", "byg:cika_wood", "byg:stripped_cika_wood"]
+},
+magenta_dye:{
+tag:"byg:magenta_dye",
+members:["byg:magenta_amaranth", "byg:magenta_tulip", "byg:lazarus_bellflower", "byg:protea_flower", "byg:fairy_slipper"]
+},
+ebony_logs:{
+tag:"byg:ebony_logs",
+members:["byg:ebony_log", "byg:stripped_ebony_log", "byg:ebony_wood", "byg:stripped_ebony_wood"]
+},
+holly_logs:{
+tag:"byg:holly_logs",
+members:["byg:holly_log", "byg:stripped_holly_log", "byg:holly_wood", "byg:stripped_holly_wood"]
+}
+},
+forge:{
+cobblestone_mossy:{
+tag:"forge:cobblestone/mossy",
+members:["minecraft:mossy_cobblestone"]
+},
+glass_panes_magenta:{
+tag:"forge:glass_panes/magenta",
+members:["minecraft:magenta_stained_glass_pane"]
+},
+nuggets:{
+tag:"forge:nuggets",
+members:["create:copper_nugget", "create:zinc_nugget", "create:brass_nugget", "create:experience_nugget", "#forge:nuggets/iron", "#forge:nuggets/gold"]
+},
+glass_tinted:{
+tag:"forge:glass/tinted",
+members:["minecraft:tinted_glass"]
+},
+plates:{
+tag:"forge:plates",
+members:["create:copper_sheet", "create:brass_sheet", "create:iron_sheet", "create:golden_sheet", "createaddition:zinc_sheet"]
+},
+dyes_gray:{
+tag:"forge:dyes/gray",
+members:["minecraft:gray_dye"]
+},
+plates_zinc:{
+tag:"forge:plates/zinc",
+members:["createaddition:zinc_sheet"]
+},
+wires_gold:{
+tag:"forge:wires/gold",
+members:["createaddition:gold_wire"]
+},
+flour:{
+tag:"forge:flour",
+members:["farmers_extra_foods:flour?"]
+},
+rods_gold:{
+tag:"forge:rods/gold",
+members:["createaddition:gold_rod"]
+},
+axes:{
+tag:"forge:axes",
+members:["byg:pendorite_axe", "byg:pendorite_battleaxe"]
+},
+rods_blaze:{
+tag:"forge:rods/blaze",
+members:["minecraft:blaze_rod"]
+},
+storage_blocks_netherite:{
+tag:"forge:storage_blocks/netherite",
+members:["minecraft:netherite_block"]
+},
+glass_panes_white:{
+tag:"forge:glass_panes/white",
+members:["minecraft:white_stained_glass_pane"]
+},
+glass_panes_light_gray:{
+tag:"forge:glass_panes/light_gray",
+members:["minecraft:light_gray_stained_glass_pane"]
+},
+beacon_payment:{
+tag:"forge:beacon_payment",
+members:["#create:create_ingots"]
+},
+vegetables_carrot:{
+tag:"forge:vegetables/carrot",
+members:["minecraft:carrot"]
+},
+storage_blocks_ametrine:{
+tag:"forge:storage_blocks/ametrine",
+members:["byg:ametrine_block"]
+},
+crushed_kubejs:{
+tag:"forge:crushed_kubejs",
+members:["kubejs:crushed_zinc_ore", "kubejs:crushed_ametrine_ore", "kubejs:crushed_anthracite_ore", "kubejs:crushed_budding_ametrine_ore", "kubejs:crushed_cryptic_redstone_ore", "kubejs:crushed_lignite_ore", "kubejs:crushed_pendorite_ore", "kubejs:crushed_blue_nether_gold_ore", "kubejs:crushed_blue_nether_quartz_ore", "kubejs:crushed_brimstone_nether_gold_ore", "kubejs:crushed_brimstone_nether_quartz_ore", "kubejs:crushed_coal", "kubejs:crushed_copper", "kubejs:crushed_diamond", "kubejs:crushed_emerald", "kubejs:crushed_gold", "kubejs:crushed_iron", "kubejs:crushed_lapis", "kubejs:crushed_redstone", "kubejs:crushed_quartz", "kubejs:crushed_netherite_scrap", "kubejs:crushed_nether_gold"]
+},
+glass_pink:{
+tag:"forge:glass/pink",
+members:["minecraft:pink_stained_glass"]
+},
+chests:{
+tag:"forge:chests",
+members:["#forge:chests/ender", "#forge:chests/trapped", "#forge:chests/wooden"]
+},
+storage_blocks_emerald:{
+tag:"forge:storage_blocks/emerald",
+members:["minecraft:emerald_block"]
+},
+ores_redstone:{
+tag:"forge:ores/redstone",
+members:["#minecraft:redstone_ores", "byg:cryptic_redstone_ore", "#minecraft:redstone_ores"]
+},
+salad_ingredients:{
+tag:"forge:salad_ingredients",
+members:["#forge:salad_ingredients/cabbage"]
+},
+glass_red:{
+tag:"forge:glass/red",
+members:["minecraft:red_stained_glass"]
+},
+ender_pearls:{
+tag:"forge:ender_pearls",
+members:["minecraft:ender_pearl"]
+},
+cobblestone_deepslate:{
+tag:"forge:cobblestone/deepslate",
+members:["minecraft:cobbled_deepslate"]
+},
+glass_panes_green:{
+tag:"forge:glass_panes/green",
+members:["minecraft:green_stained_glass_pane"]
+},
+chests_trapped:{
+tag:"forge:chests/trapped",
+members:["minecraft:trapped_chest"]
+},
+fence_gates:{
+tag:"forge:fence_gates",
+members:["byg:aspen_fence_gate", "byg:baobab_fence_gate", "byg:blue_enchanted_fence_gate", "byg:cherry_fence_gate", "byg:cika_fence_gate", "byg:cypress_fence_gate", "byg:ebony_fence_gate", "byg:fir_fence_gate", "byg:green_enchanted_fence_gate", "byg:holly_fence_gate", "byg:jacaranda_fence_gate", "byg:mahogany_fence_gate", "byg:mangrove_fence_gate", "byg:maple_fence_gate", "byg:pine_fence_gate", "byg:rainbow_eucalyptus_fence_gate", "byg:redwood_fence_gate", "byg:skyris_fence_gate", "byg:willow_fence_gate", "byg:witch_hazel_fence_gate", "byg:zelkova_fence_gate", "byg:sythian_fence_gate", "byg:embur_fence_gate", "byg:palm_fence_gate", "byg:lament_fence_gate", "byg:ether_fence_gate", "byg:bulbis_fence_gate", "byg:nightshade_fence_gate", "byg:imparius_fence_gate", "#forge:fence_gates/wooden"]
+},
+ingots:{
+tag:"forge:ingots",
+members:["#create:create_ingots", "#forge:ingots/brick", "#forge:ingots/copper", "#forge:ingots/gold", "#forge:ingots/iron", "#forge:ingots/netherite", "#forge:ingots/nether_brick"]
+},
+fruits_lime:{
+tag:"forge:fruits/lime",
+members:["fruittrees:lime"]
+},
+crops_nether_wart:{
+tag:"forge:crops/nether_wart",
+members:["minecraft:nether_wart"]
+},
+sandstone:{
+tag:"forge:sandstone",
+members:["byg:black_sandstone", "byg:black_chiseled_sandstone", "byg:black_cut_sandstone", "byg:blue_sandstone", "byg:blue_chiseled_sandstone", "byg:blue_cut_sandstone", "byg:white_sandstone", "byg:white_chiseled_sandstone", "byg:white_cut_sandstone", "byg:purple_sandstone", "byg:purple_chiseled_sandstone", "byg:purple_cut_sandstone", "byg:pink_sandstone", "byg:pink_chiseled_sandstone", "byg:pink_cut_sandstone", "byg:windswept_sandstone", "byg:chiseled_windswept_sandstone", "byg:cut_windswept_sandstone", "byg:smooth_windswept_sandstone", "byg:windswept_sandstone_pillar", "minecraft:sandstone", "minecraft:cut_sandstone", "minecraft:chiseled_sandstone", "minecraft:smooth_sandstone", "minecraft:red_sandstone", "minecraft:cut_red_sandstone", "minecraft:chiseled_red_sandstone", "minecraft:smooth_red_sandstone"]
+},
+storage_blocks_copper:{
+tag:"forge:storage_blocks/copper",
+members:["minecraft:copper_block", "minecraft:cut_copper"]
+},
+milk_milk:{
+tag:"forge:milk/milk",
+members:["minecraft:milk_bucket"]
+},
+glass_panes_colorless:{
+tag:"forge:glass_panes/colorless",
+members:["minecraft:glass_pane"]
+},
+bread_wheat:{
+tag:"forge:bread/wheat",
+members:["minecraft:bread"]
+},
+raw_fishes:{
+tag:"forge:raw_fishes",
+members:["#forge:raw_fishes/cod", "#forge:raw_fishes/salmon", "#forge:raw_fishes/tropical_fish"]
+},
+ingots_nether_brick:{
+tag:"forge:ingots/nether_brick",
+members:["minecraft:nether_brick"]
+},
+pickaxes:{
+tag:"forge:pickaxes",
+members:["byg:pendorite_pickaxe"]
+},
+cobblestone_infested:{
+tag:"forge:cobblestone/infested",
+members:["minecraft:infested_cobblestone"]
+},
+storage_blocks_lapis:{
+tag:"forge:storage_blocks/lapis",
+members:["minecraft:lapis_block"]
+},
+ores_diamond:{
+tag:"forge:ores/diamond",
+members:["#minecraft:diamond_ores", "#minecraft:diamond_ores"]
+},
+black_sand:{
+tag:"forge:black_sand",
+members:["byg:black_sand"]
+},
+ore_rates_dense:{
+tag:"forge:ore_rates/dense",
+members:["minecraft:copper_ore", "minecraft:deepslate_copper_ore", "minecraft:deepslate_lapis_ore", "minecraft:deepslate_redstone_ore", "minecraft:lapis_ore", "minecraft:redstone_ore"]
+},
+fruits_melon:{
+tag:"forge:fruits/melon",
+members:["minecraft:melon_slice"]
+},
+dyes_orange:{
+tag:"forge:dyes/orange",
+members:["minecraft:orange_dye"]
+},
+rods_iron:{
+tag:"forge:rods/iron",
+members:["createaddition:iron_rod"]
+},
+fruits_sweet_berries:{
+tag:"forge:fruits/sweet_berries",
+members:["minecraft:sweet_berries"]
+},
+pasta_raw_pasta:{
+tag:"forge:pasta/raw_pasta",
+members:["farmersdelight:raw_pasta"]
+},
+glass_white:{
+tag:"forge:glass/white",
+members:["minecraft:white_stained_glass"]
+},
+glass_panes_red:{
+tag:"forge:glass_panes/red",
+members:["minecraft:red_stained_glass_pane"]
+},
+cooked_beef:{
+tag:"forge:cooked_beef",
+members:["minecraft:cooked_beef", "farmersdelight:beef_patty"]
+},
+tools_knives:{
+tag:"forge:tools/knives",
+members:["farmersdelight:flint_knife", "farmersdelight:iron_knife", "farmersdelight:diamond_knife", "farmersdelight:golden_knife", "farmersdelight:netherite_knife"]
+},
+bread_corn:{
+tag:"forge:bread/corn",
+members:["corn_delight:cornbread"]
+},
+fruits:{
+tag:"forge:fruits",
+members:["integrateddynamics:menril_berries", "fruittrees:cherry?", "fruittrees:redlove?", "minecraft:apple", "minecraft:melon_slice", "minecraft:sweet_berries", "minecraft:chorus_fruit", "minecraft:glow_berries", "fruittrees:citron", "fruittrees:grapefruit", "fruittrees:lemon", "fruittrees:lime", "fruittrees:mandarin", "fruittrees:orange", "fruittrees:pomelo", "byg:blueberries", "byg:green_apple", "byg:crimson_berries", "byg:baobab_fruit", "byg:joshua_fruit"]
+},
+cobblestone_normal:{
+tag:"forge:cobblestone/normal",
+members:["minecraft:cobblestone"]
+},
+sand_colorless:{
+tag:"forge:sand/colorless",
+members:["byg:end_sand", "minecraft:sand"]
+},
+raw_materials_iron:{
+tag:"forge:raw_materials/iron",
+members:["minecraft:raw_iron", "minecraft:raw_iron"]
+},
+boots:{
+tag:"forge:boots",
+members:["byg:ametrine_boots"]
+},
+crops_cabbage:{
+tag:"forge:crops/cabbage",
+members:["farmersdelight:cabbage", "farmersdelight:cabbage_leaf"]
+},
+nuggets_brass:{
+tag:"forge:nuggets/brass",
+members:["create:brass_nugget"]
+},
+swords:{
+tag:"forge:swords",
+members:["byg:pendorite_sword", "byg:pendorite_battleaxe"]
+},
+gems_diamond:{
+tag:"forge:gems/diamond",
+members:["minecraft:diamond"]
+},
+glass_green:{
+tag:"forge:glass/green",
+members:["minecraft:green_stained_glass"]
+},
+gems:{
+tag:"forge:gems",
+members:["byg:ametrine_gems", "#forge:gems/amethyst", "#forge:gems/diamond", "#forge:gems/emerald", "#forge:gems/lapis", "#forge:gems/prismarine", "#forge:gems/quartz"]
+},
+end_stones:{
+tag:"forge:end_stones",
+members:["minecraft:end_stone"]
+},
+raw_chicken:{
+tag:"forge:raw_chicken",
+members:["minecraft:chicken", "farmersdelight:chicken_cuts"]
+},
+chocolatebar:{
+tag:"forge:chocolatebar",
+members:["create:bar_of_chocolate?", "neapolitan:chocolate_bar?"]
+},
+fences_wooden:{
+tag:"forge:fences/wooden",
+members:["#minecraft:wooden_fences"]
+},
+flowers_lavender:{
+tag:"forge:flowers/lavender",
+members:["biomesoplenty:lavender?", "druidcraft:lavender?"]
+},
+dyes_light_gray:{
+tag:"forge:dyes/light_gray",
+members:["minecraft:light_gray_dye"]
+},
+storage_blocks:{
+tag:"forge:storage_blocks",
+members:["create:raw_zinc_block", "create:zinc_block", "create:brass_block", "integrateddynamics:crystalized_chorus_block", "integrateddynamics:crystalized_menril_block", "byg:ametrine_block", "byg:pendorite_block", "byg:anthracite_block", "byg:lignite_block", "#forge:storage_blocks/amethyst", "#forge:storage_blocks/coal", "#forge:storage_blocks/copper", "#forge:storage_blocks/diamond", "#forge:storage_blocks/emerald", "#forge:storage_blocks/gold", "#forge:storage_blocks/iron", "#forge:storage_blocks/lapis", "#forge:storage_blocks/quartz", "#forge:storage_blocks/raw_copper", "#forge:storage_blocks/raw_gold", "#forge:storage_blocks/raw_iron", "#forge:storage_blocks/redstone", "#forge:storage_blocks/netherite"]
+},
+glass_panes_orange:{
+tag:"forge:glass_panes/orange",
+members:["minecraft:orange_stained_glass_pane"]
+},
+milk:{
+tag:"forge:milk",
+members:["#forge:milk/milk", "#forge:milk/milk_bottle", "minecraft:milk_bucket"]
+},
+ingots_copper:{
+tag:"forge:ingots/copper",
+members:["minecraft:copper_ingot"]
+},
+ores_quartz:{
+tag:"forge:ores/quartz",
+members:["minecraft:nether_quartz_ore", "minecraft:nether_quartz_ore"]
+},
+ingots_brick:{
+tag:"forge:ingots/brick",
+members:["minecraft:brick"]
+},
+glass_blue:{
+tag:"forge:glass/blue",
+members:["minecraft:blue_stained_glass"]
+},
+raw_beef:{
+tag:"forge:raw_beef",
+members:["minecraft:beef", "farmersdelight:minced_beef"]
+},
+saplings:{
+tag:"forge:saplings",
+members:["byg:aspen_sapling", "byg:baobab_sapling", "byg:blue_enchanted_sapling", "byg:blue_spruce_sapling", "byg:brown_birch_sapling", "byg:brown_oak_sapling", "byg:cika_sapling", "byg:cypress_sapling", "byg:ebony_sapling", "byg:fir_sapling", "byg:green_enchanted_sapling", "byg:holly_sapling", "byg:jacaranda_sapling", "byg:indigo_jacaranda_sapling", "byg:mahogany_sapling", "byg:mangrove_sapling", "byg:maple_sapling", "byg:orange_birch_sapling", "byg:orange_oak_sapling", "byg:orange_spruce_sapling", "byg:orchard_sapling", "byg:palo_verde_sapling", "byg:joshua_sapling", "byg:yellow_spruce_sapling", "byg:pine_sapling", "byg:pink_cherry_sapling", "byg:rainbow_eucalyptus_sapling", "byg:red_birch_sapling", "byg:red_maple_sapling", "byg:red_oak_sapling", "byg:red_spruce_sapling", "byg:redwood_sapling", "byg:silver_maple_sapling", "byg:white_cherry_sapling", "byg:willow_sapling", "byg:witch_hazel_sapling", "byg:yellow_birch_sapling", "byg:zelkova_sapling", "byg:skyris_sapling", "byg:palm_sapling", "byg:araucaria_sapling", "byg:brown_zelkova_sapling", "byg:lament_sapling", "byg:withering_oak_sapling", "byg:ether_sapling", "byg:nightshade_sapling"]
+},
+cooked_pork:{
+tag:"forge:cooked_pork",
+members:["minecraft:cooked_porkchop", "farmersdelight:cooked_bacon"]
+},
+storage_blocks_coal:{
+tag:"forge:storage_blocks/coal",
+members:["minecraft:coal_block"]
+},
+glass_light_blue:{
+tag:"forge:glass/light_blue",
+members:["minecraft:light_blue_stained_glass"]
+},
+wires:{
+tag:"forge:wires",
+members:["createaddition:copper_wire", "createaddition:iron_wire", "createaddition:gold_wire"]
+},
+ingots_brass:{
+tag:"forge:ingots/brass",
+members:["create:brass_ingot"]
+},
+storage_blocks_redstone:{
+tag:"forge:storage_blocks/redstone",
+members:["minecraft:redstone_block"]
+},
+storage_blocks_amethyst:{
+tag:"forge:storage_blocks/amethyst",
+members:["minecraft:amethyst_block"]
+},
+cooked_mutton:{
+tag:"forge:cooked_mutton",
+members:["minecraft:cooked_mutton", "farmersdelight:cooked_mutton_chops"]
+},
+vegetables_tomato:{
+tag:"forge:vegetables/tomato",
+members:["farmersdelight:tomato"]
+},
+cooked_bacon:{
+tag:"forge:cooked_bacon",
+members:["farmersdelight:cooked_bacon"]
+},
+raw_materials_gold:{
+tag:"forge:raw_materials/gold",
+members:["minecraft:raw_gold", "minecraft:raw_gold"]
+},
+seeds_rice:{
+tag:"forge:seeds/rice",
+members:["farmersdelight:rice"]
+},
+fruits_chorusfruit:{
+tag:"forge:fruits/chorusfruit",
+members:["minecraft:chorus_fruit"]
+},
+glass_purple:{
+tag:"forge:glass/purple",
+members:["minecraft:purple_stained_glass"]
+},
+tools_shovels:{
+tag:"forge:tools/shovels",
+members:["minecraft:wooden_shovel", "minecraft:stone_shovel", "minecraft:iron_shovel", "minecraft:diamond_shovel", "minecraft:golden_shovel", "minecraft:netherite_shovel"]
+},
+dyes_magenta:{
+tag:"forge:dyes/magenta",
+members:["minecraft:magenta_dye"]
+},
+purple_sand:{
+tag:"forge:purple_sand",
+members:["byg:purple_sand"]
+},
+dyes_cyan:{
+tag:"forge:dyes/cyan",
+members:["minecraft:cyan_dye"]
+},
+raw_fishes_salmon:{
+tag:"forge:raw_fishes/salmon",
+members:["minecraft:salmon", "farmersdelight:salmon_slice"]
+},
+fruits_lemon:{
+tag:"forge:fruits/lemon",
+members:["fruittrees:lemon"]
+},
+seeds_wheat:{
+tag:"forge:seeds/wheat",
+members:["minecraft:wheat_seeds"]
+},
+ingots_iron:{
+tag:"forge:ingots/iron",
+members:["minecraft:iron_ingot"]
+},
+crops_rice:{
+tag:"forge:crops/rice",
+members:["farmersdelight:rice"]
+},
+dyes_purple:{
+tag:"forge:dyes/purple",
+members:["minecraft:purple_dye"]
+},
+ores_in_ground_deepslate:{
+tag:"forge:ores_in_ground/deepslate",
+members:["create:deepslate_zinc_ore", "minecraft:deepslate_coal_ore", "minecraft:deepslate_copper_ore", "minecraft:deepslate_diamond_ore", "minecraft:deepslate_emerald_ore", "minecraft:deepslate_gold_ore", "minecraft:deepslate_iron_ore", "minecraft:deepslate_lapis_ore", "minecraft:deepslate_redstone_ore"]
+},
+sand:{
+tag:"forge:sand",
+members:["byg:white_sand", "byg:black_sand", "byg:blue_sand", "byg:pink_sand", "byg:purple_sand", "byg:end_sand", "byg:windswept_sand", "#forge:sand/colorless", "#forge:sand/red"]
+},
+dyes_yellow:{
+tag:"forge:dyes/yellow",
+members:["minecraft:yellow_dye"]
+},
+storage_blocks_raw_gold:{
+tag:"forge:storage_blocks/raw_gold",
+members:["minecraft:raw_gold_block"]
+},
+sand_purple:{
+tag:"forge:sand/purple",
+members:["byg:purple_sand"]
+},
+gems_prismarine:{
+tag:"forge:gems/prismarine",
+members:["minecraft:prismarine_crystals"]
+},
+ores_gold:{
+tag:"forge:ores/gold",
+members:["#minecraft:gold_ores", "#minecraft:gold_ores"]
+},
+raw_materials:{
+tag:"forge:raw_materials",
+members:["create:raw_zinc", "#forge:raw_materials/copper", "#forge:raw_materials/gold", "#forge:raw_materials/iron"]
+},
+ingots_zinc:{
+tag:"forge:ingots/zinc",
+members:["create:zinc_ingot"]
+},
+cooked_eggs:{
+tag:"forge:cooked_eggs",
+members:["farmersdelight:fried_egg"]
+},
+nuggets_zinc:{
+tag:"forge:nuggets/zinc",
+members:["create:zinc_nugget"]
+},
+glass_black:{
+tag:"forge:glass/black",
+members:["minecraft:black_stained_glass"]
+},
+grain_wheat:{
+tag:"forge:grain/wheat",
+members:["minecraft:wheat"]
+},
+fences_nether_brick:{
+tag:"forge:fences/nether_brick",
+members:["minecraft:nether_brick_fence"]
+},
+rods:{
+tag:"forge:rods",
+members:["#forge:rods/blaze", "#forge:rods/wooden", "createaddition:iron_rod", "createaddition:copper_rod", "createaddition:gold_rod", "createaddition:brass_rod"]
+},
+glass_lime:{
+tag:"forge:glass/lime",
+members:["minecraft:lime_stained_glass"]
+},
+chests_wooden:{
+tag:"forge:chests/wooden",
+members:["minecraft:chest", "minecraft:trapped_chest"]
+},
+ores_iron:{
+tag:"forge:ores/iron",
+members:["#minecraft:iron_ores", "#minecraft:iron_ores"]
+},
+tortilla:{
+tag:"forge:tortilla",
+members:["corn_delight:tortilla"]
+},
+wires_iron:{
+tag:"forge:wires/iron",
+members:["createaddition:iron_wire"]
+},
+gems_emerald:{
+tag:"forge:gems/emerald",
+members:["minecraft:emerald"]
+},
+tools:{
+tag:"forge:tools",
+members:["#forge:tools/axes", "#forge:tools/knives", "#forge:tools/pickaxes", "#forge:tools/shovels"]
+},
+storage_blocks_anthracite:{
+tag:"forge:storage_blocks/anthracite",
+members:["byg:anthracite_block"]
+},
+storage_blocks_quartz:{
+tag:"forge:storage_blocks/quartz",
+members:["minecraft:quartz_block"]
+},
+glass_orange:{
+tag:"forge:glass/orange",
+members:["minecraft:orange_stained_glass"]
+},
+storage_blocks_raw_zinc:{
+tag:"forge:storage_blocks/raw_zinc",
+members:["create:raw_zinc_block"]
+},
+dyes_green:{
+tag:"forge:dyes/green",
+members:["minecraft:green_dye"]
+},
+raw_mutton:{
+tag:"forge:raw_mutton",
+members:["minecraft:mutton", "farmersdelight:mutton_chops"]
+},
+plates_gold:{
+tag:"forge:plates/gold",
+members:["create:golden_sheet"]
+},
+crops_onion:{
+tag:"forge:crops/onion",
+members:["farmersdelight:onion"]
+},
+ores_emerald:{
+tag:"forge:ores/emerald",
+members:["#minecraft:emerald_ores", "#minecraft:emerald_ores"]
+},
+dyes_lime:{
+tag:"forge:dyes/lime",
+members:["minecraft:lime_dye"]
+},
+dusts_diamond:{
+tag:"forge:dusts/diamond",
+members:["createaddition:diamond_grit"]
+},
+plates_iron:{
+tag:"forge:plates/iron",
+members:["create:iron_sheet"]
+},
+raw_pork:{
+tag:"forge:raw_pork",
+members:["minecraft:porkchop", "farmersdelight:bacon"]
+},
+barrels_wooden:{
+tag:"forge:barrels/wooden",
+members:["minecraft:barrel"]
+},
+storage_blocks_raw_iron:{
+tag:"forge:storage_blocks/raw_iron",
+members:["minecraft:raw_iron_block"]
+},
+seeds_cabbage:{
+tag:"forge:seeds/cabbage",
+members:["farmersdelight:cabbage_seeds"]
+},
+sand_black:{
+tag:"forge:sand/black",
+members:["byg:black_sand"]
+},
+bookshelves:{
+tag:"forge:bookshelves",
+members:["byg:aspen_bookshelf", "byg:baobab_bookshelf", "byg:blue_enchanted_bookshelf", "byg:cherry_bookshelf", "byg:cika_bookshelf", "byg:cypress_bookshelf", "byg:ebony_bookshelf", "byg:fir_bookshelf", "byg:green_enchanted_bookshelf", "byg:holly_bookshelf", "byg:jacaranda_bookshelf", "byg:mahogany_bookshelf", "byg:mangrove_bookshelf", "byg:maple_bookshelf", "byg:pine_bookshelf", "byg:rainbow_eucalyptus_bookshelf", "byg:redwood_bookshelf", "byg:skyris_bookshelf", "byg:willow_bookshelf", "byg:witch_hazel_bookshelf", "byg:zelkova_bookshelf", "byg:sythian_bookshelf", "byg:embur_bookshelf", "byg:palm_bookshelf", "byg:lament_bookshelf", "byg:bulbis_bookshelf", "byg:ether_bookshelf", "byg:nightshade_bookshelf", "byg:imparius_bookshelf", "minecraft:bookshelf"]
+},
+ores_in_ground_stone:{
+tag:"forge:ores_in_ground/stone",
+members:["create:zinc_ore", "minecraft:coal_ore", "minecraft:copper_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:gold_ore", "minecraft:iron_ore", "minecraft:lapis_ore", "minecraft:redstone_ore"]
+},
+dyes:{
+tag:"forge:dyes",
+members:["#forge:dyes/white", "#forge:dyes/orange", "#forge:dyes/magenta", "#forge:dyes/light_blue", "#forge:dyes/yellow", "#forge:dyes/lime", "#forge:dyes/pink", "#forge:dyes/gray", "#forge:dyes/light_gray", "#forge:dyes/cyan", "#forge:dyes/purple", "#forge:dyes/blue", "#forge:dyes/brown", "#forge:dyes/green", "#forge:dyes/red", "#forge:dyes/black"]
+},
+glass_panes_pink:{
+tag:"forge:glass_panes/pink",
+members:["minecraft:pink_stained_glass_pane"]
+},
+fruits_mandarin:{
+tag:"forge:fruits/mandarin",
+members:["fruittrees:mandarin"]
+},
+dusts_obsidian:{
+tag:"forge:dusts/obsidian",
+members:["create:powdered_obsidian"]
+},
+netherrack:{
+tag:"forge:netherrack",
+members:["byg:overgrown_netherrack", "byg:overgrown_crimson_blackstone", "byg:blue_netherrack", "byg:brimstone", "byg:embur_nylium", "byg:sythian_nylium", "minecraft:netherrack"]
+},
+fruits_grapefruit:{
+tag:"forge:fruits/grapefruit",
+members:["fruittrees:grapefruit"]
+},
+hoes:{
+tag:"forge:hoes",
+members:["byg:pendorite_hoe"]
+},
+rods_copper:{
+tag:"forge:rods/copper",
+members:["createaddition:copper_rod"]
+},
+eggs:{
+tag:"forge:eggs",
+members:["minecraft:egg", "minecraft:egg"]
+},
+wires_copper:{
+tag:"forge:wires/copper",
+members:["createaddition:copper_wire"]
+},
+dyes_red:{
+tag:"forge:dyes/red",
+members:["minecraft:red_dye"]
+},
+gravel:{
+tag:"forge:gravel",
+members:["minecraft:gravel"]
+},
+glass_panes_cyan:{
+tag:"forge:glass_panes/cyan",
+members:["minecraft:cyan_stained_glass_pane"]
+},
+dyes_black:{
+tag:"forge:dyes/black",
+members:["minecraft:black_dye"]
+},
+raw_fishes_tropical_fish:{
+tag:"forge:raw_fishes/tropical_fish",
+members:["minecraft:tropical_fish"]
+},
+dusts_glowstone:{
+tag:"forge:dusts/glowstone",
+members:["minecraft:glowstone_dust"]
+},
+glass_colorless:{
+tag:"forge:glass/colorless",
+members:["create:tiled_glass", "create:framed_glass", "create:horizontal_framed_glass", "create:vertical_framed_glass", "minecraft:glass"]
+},
+cooked_fishes_cod:{
+tag:"forge:cooked_fishes/cod",
+members:["minecraft:cooked_cod", "farmersdelight:cooked_cod_slice"]
+},
+vegetables_beetroot:{
+tag:"forge:vegetables/beetroot",
+members:["minecraft:beetroot"]
+},
+glass_panes_light_blue:{
+tag:"forge:glass_panes/light_blue",
+members:["minecraft:light_blue_stained_glass_pane"]
+},
+popcorn:{
+tag:"forge:popcorn",
+members:["corn_delight:popcorn"]
+},
+ores_zinc:{
+tag:"forge:ores/zinc",
+members:["create:zinc_ore", "create:deepslate_zinc_ore"]
+},
+ores_netherite_scrap:{
+tag:"forge:ores/netherite_scrap",
+members:["minecraft:ancient_debris"]
+},
+nuggets_copper:{
+tag:"forge:nuggets/copper",
+members:["create:copper_nugget"]
+},
+stained_glass:{
+tag:"forge:stained_glass",
+members:["minecraft:white_stained_glass", "minecraft:orange_stained_glass", "minecraft:magenta_stained_glass", "minecraft:light_blue_stained_glass", "minecraft:yellow_stained_glass", "minecraft:lime_stained_glass", "minecraft:pink_stained_glass", "minecraft:gray_stained_glass", "minecraft:light_gray_stained_glass", "minecraft:cyan_stained_glass", "minecraft:purple_stained_glass", "minecraft:blue_stained_glass", "minecraft:brown_stained_glass", "minecraft:green_stained_glass", "minecraft:red_stained_glass", "minecraft:black_stained_glass"]
+},
+crops_carrot:{
+tag:"forge:crops/carrot",
+members:["minecraft:carrot"]
+},
+salad_ingredients_cabbage:{
+tag:"forge:salad_ingredients/cabbage",
+members:["farmersdelight:cabbage", "farmersdelight:cabbage_leaf"]
+},
+nuggets_gold:{
+tag:"forge:nuggets/gold",
+members:["minecraft:gold_nugget"]
+},
+leggings:{
+tag:"forge:leggings",
+members:["byg:ametrine_leggings"]
+},
+nether_stars:{
+tag:"forge:nether_stars",
+members:["minecraft:nether_star"]
+},
+shovels:{
+tag:"forge:shovels",
+members:["byg:pendorite_shovel"]
+},
+dyes_blue:{
+tag:"forge:dyes/blue",
+members:["minecraft:blue_dye"]
+},
+storage_blocks_iron:{
+tag:"forge:storage_blocks/iron",
+members:["minecraft:iron_block"]
+},
+tools_pickaxes:{
+tag:"forge:tools/pickaxes",
+members:["minecraft:wooden_pickaxe", "minecraft:stone_pickaxe", "minecraft:iron_pickaxe", "minecraft:diamond_pickaxe", "minecraft:golden_pickaxe", "minecraft:netherite_pickaxe"]
+},
+glass_panes_brown:{
+tag:"forge:glass_panes/brown",
+members:["minecraft:brown_stained_glass_pane"]
+},
+heads:{
+tag:"forge:heads",
+members:["minecraft:creeper_head", "minecraft:dragon_head", "minecraft:player_head", "minecraft:skeleton_skull", "minecraft:wither_skeleton_skull", "minecraft:zombie_head"]
+},
+ores_lignite:{
+tag:"forge:ores/lignite",
+members:["byg:lignite_ore"]
+},
+tools_axes:{
+tag:"forge:tools/axes",
+members:["minecraft:wooden_axe", "minecraft:stone_axe", "minecraft:iron_axe", "minecraft:diamond_axe", "minecraft:golden_axe", "minecraft:netherite_axe"]
+},
+bones:{
+tag:"forge:bones",
+members:["minecraft:bone"]
+},
+crops_corn:{
+tag:"forge:crops/corn",
+members:["corn_delight:corn"]
+},
+glass_panes:{
+tag:"forge:glass_panes",
+members:["create:tiled_glass_pane", "create:framed_glass_pane", "create:horizontal_framed_glass_pane", "create:vertical_framed_glass_pane", "create:oak_window_pane", "create:spruce_window_pane", "create:birch_window_pane", "create:jungle_window_pane", "create:acacia_window_pane", "create:dark_oak_window_pane", "create:crimson_window_pane", "create:warped_window_pane", "create:ornate_iron_window_pane", "#forge:glass_panes/colorless", "#forge:stained_glass_panes"]
+},
+enchanting_fuels:{
+tag:"forge:enchanting_fuels",
+members:["#forge:gems/lapis"]
+},
+sand_pink:{
+tag:"forge:sand/pink",
+members:["byg:pink_sand", "byg:windswept_sand"]
+},
+blue_sand:{
+tag:"forge:blue_sand",
+members:["byg:blue_sand"]
+},
+raw_bacon:{
+tag:"forge:raw_bacon",
+members:["farmersdelight:bacon"]
+},
+fruits_citron:{
+tag:"forge:fruits/citron",
+members:["fruittrees:citron"]
+},
+mushrooms:{
+tag:"forge:mushrooms",
+members:["byg:green_mushroom", "byg:wood_blewit", "byg:weeping_milkcap", "byg:white_puffball_cap", "byg:sythian_fungus", "byg:imparius_mushroom", "minecraft:brown_mushroom", "minecraft:red_mushroom"]
+},
+vegetables_onion:{
+tag:"forge:vegetables/onion",
+members:["farmersdelight:onion"]
+},
+recrystallized_kubejs:{
+tag:"forge:recrystallized_kubejs",
+members:["kubejs:recrystallized_zinc_ore", "kubejs:recrystallized_ametrine_ore", "kubejs:recrystallized_anthracite_ore", "kubejs:recrystallized_budding_ametrine_ore", "kubejs:recrystallized_cryptic_redstone_ore", "kubejs:recrystallized_lignite_ore", "kubejs:recrystallized_pendorite_ore", "kubejs:recrystallized_blue_nether_gold_ore", "kubejs:recrystallized_blue_nether_quartz_ore", "kubejs:recrystallized_brimstone_nether_gold_ore", "kubejs:recrystallized_brimstone_nether_quartz_ore", "kubejs:recrystallized_coal", "kubejs:recrystallized_copper", "kubejs:recrystallized_diamond", "kubejs:recrystallized_emerald", "kubejs:recrystallized_gold", "kubejs:recrystallized_iron", "kubejs:recrystallized_lapis", "kubejs:recrystallized_redstone", "kubejs:recrystallized_quartz", "kubejs:recrystallized_netherite_scrap", "kubejs:recrystallized_nether_gold"]
+},
+dust_kubejs:{
+tag:"forge:dust_kubejs",
+members:["kubejs:dust_zinc_ore", "kubejs:dust_ametrine_ore", "kubejs:dust_anthracite_ore", "kubejs:dust_budding_ametrine_ore", "kubejs:dust_cryptic_redstone_ore", "kubejs:dust_lignite_ore", "kubejs:dust_pendorite_ore", "kubejs:dust_blue_nether_gold_ore", "kubejs:dust_blue_nether_quartz_ore", "kubejs:dust_brimstone_nether_gold_ore", "kubejs:dust_brimstone_nether_quartz_ore", "kubejs:dust_coal", "kubejs:dust_copper", "kubejs:dust_diamond", "kubejs:dust_emerald", "kubejs:dust_gold", "kubejs:dust_iron", "kubejs:dust_lapis", "kubejs:dust_redstone", "kubejs:dust_quartz", "kubejs:dust_netherite_scrap", "kubejs:dust_nether_gold"]
+},
+ingots_netherite:{
+tag:"forge:ingots/netherite",
+members:["minecraft:netherite_ingot"]
+},
+rods_all_metal:{
+tag:"forge:rods/all_metal",
+members:["createaddition:iron_rod", "createaddition:copper_rod", "createaddition:gold_rod", "createaddition:brass_rod"]
+},
+fruits_apple:{
+tag:"forge:fruits/apple",
+members:["minecraft:apple", "fruittrees:redlove?"]
+},
+foods_apples:{
+tag:"forge:foods/apples",
+members:["#forge:fruits/apple"]
+},
+ores_copper:{
+tag:"forge:ores/copper",
+members:["#minecraft:copper_ores", "#minecraft:copper_ores"]
+},
+seeds_beetroot:{
+tag:"forge:seeds/beetroot",
+members:["minecraft:beetroot_seeds"]
+},
+chestplates:{
+tag:"forge:chestplates",
+members:["byg:ametrine_chestplate"]
+},
+cooked_fishes:{
+tag:"forge:cooked_fishes",
+members:["#forge:cooked_fishes/cod", "#forge:cooked_fishes/salmon"]
+},
+obsidian:{
+tag:"forge:obsidian",
+members:["minecraft:obsidian"]
+},
+ore_rates_singular:{
+tag:"forge:ore_rates/singular",
+members:["minecraft:ancient_debris", "minecraft:coal_ore", "minecraft:deepslate_coal_ore", "minecraft:deepslate_diamond_ore", "minecraft:deepslate_emerald_ore", "minecraft:deepslate_gold_ore", "minecraft:deepslate_iron_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:gold_ore", "minecraft:iron_ore", "minecraft:nether_quartz_ore"]
+},
+rods_brass:{
+tag:"forge:rods/brass",
+members:["createaddition:brass_rod"]
+},
+cooked_chicken:{
+tag:"forge:cooked_chicken",
+members:["minecraft:cooked_chicken", "farmersdelight:cooked_chicken_cuts"]
+},
+buckets_honey:{
+tag:"forge:buckets/honey",
+members:["create:honey_bucket"]
+},
+raw_materials_copper:{
+tag:"forge:raw_materials/copper",
+members:["minecraft:raw_copper", "minecraft:raw_copper"]
+},
+glass_magenta:{
+tag:"forge:glass/magenta",
+members:["minecraft:magenta_stained_glass"]
+},
+ores_coal:{
+tag:"forge:ores/coal",
+members:["#minecraft:coal_ores"]
+},
+feathers:{
+tag:"forge:feathers",
+members:["minecraft:feather"]
+},
+pasta:{
+tag:"forge:pasta",
+members:["#forge:pasta/raw_pasta"]
+},
+sand_white:{
+tag:"forge:sand/white",
+members:["byg:white_sand"]
+},
+workbench:{
+tag:"forge:workbench",
+members:["byg:aspen_crafting_table", "byg:baobab_crafting_table", "byg:blue_enchanted_crafting_table", "byg:cherry_crafting_table", "byg:cika_crafting_table", "byg:cypress_crafting_table", "byg:ebony_crafting_table", "byg:fir_crafting_table", "byg:green_enchanted_crafting_table", "byg:holly_crafting_table", "byg:jacaranda_crafting_table", "byg:mahogany_crafting_table", "byg:mangrove_crafting_table", "byg:maple_crafting_table", "byg:pine_crafting_table", "byg:rainbow_eucalyptus_crafting_table", "byg:redwood_crafting_table", "byg:skyris_crafting_table", "byg:willow_crafting_table", "byg:witch_hazel_crafting_table", "byg:zelkova_crafting_table", "byg:sythian_crafting_table", "byg:embur_crafting_table", "byg:palm_crafting_table", "byg:lament_crafting_table", "byg:ether_crafting_table", "byg:bulbis_crafting_table", "byg:nightshade_crafting_table", "byg:imparius_crafting_table"]
+},
+storage_blocks_pendorite:{
+tag:"forge:storage_blocks/pendorite",
+members:["byg:pendorite_block"]
+},
+string:{
+tag:"forge:string",
+members:["minecraft:string"]
+},
+grain_rice:{
+tag:"forge:grain/rice",
+members:["farmersdelight:rice"]
+},
+ingots_gold:{
+tag:"forge:ingots/gold",
+members:["minecraft:gold_ingot"]
+},
+glass_cyan:{
+tag:"forge:glass/cyan",
+members:["minecraft:cyan_stained_glass"]
+},
+leather:{
+tag:"forge:leather",
+members:["minecraft:leather"]
+},
+cooked_fishes_salmon:{
+tag:"forge:cooked_fishes/salmon",
+members:["minecraft:cooked_salmon", "farmersdelight:cooked_salmon_slice"]
+},
+glass:{
+tag:"forge:glass",
+members:["#forge:glass/colorless", "#forge:stained_glass", "#forge:glass/tinted"]
+},
+gems_ametrine:{
+tag:"forge:gems/ametrine",
+members:["byg:ametrine_gems"]
+},
+nuggets_iron:{
+tag:"forge:nuggets/iron",
+members:["minecraft:iron_nugget"]
+},
+vegetables_corn:{
+tag:"forge:vegetables/corn",
+members:["corn_delight:corn"]
+},
+storage_blocks_lignite:{
+tag:"forge:storage_blocks/lignite",
+members:["byg:lignite_block"]
+},
+ores_in_ground_netherrack:{
+tag:"forge:ores_in_ground/netherrack",
+members:["minecraft:nether_gold_ore", "minecraft:nether_quartz_ore"]
+},
+storage_blocks_brass:{
+tag:"forge:storage_blocks/brass",
+members:["create:brass_block"]
+},
+crops_potato:{
+tag:"forge:crops/potato",
+members:["minecraft:potato"]
+},
+fruits_cherry:{
+tag:"forge:fruits/cherry",
+members:["fruittrees:cherry?"]
+},
+glass_panes_gray:{
+tag:"forge:glass_panes/gray",
+members:["minecraft:gray_stained_glass_pane"]
+},
+tools_wrench:{
+tag:"forge:tools/wrench",
+members:["integrateddynamics:wrench"]
+},
+stained_glass_panes:{
+tag:"forge:stained_glass_panes",
+members:["minecraft:white_stained_glass_pane", "minecraft:orange_stained_glass_pane", "minecraft:magenta_stained_glass_pane", "minecraft:light_blue_stained_glass_pane", "minecraft:yellow_stained_glass_pane", "minecraft:lime_stained_glass_pane", "minecraft:pink_stained_glass_pane", "minecraft:gray_stained_glass_pane", "minecraft:light_gray_stained_glass_pane", "minecraft:cyan_stained_glass_pane", "minecraft:purple_stained_glass_pane", "minecraft:blue_stained_glass_pane", "minecraft:brown_stained_glass_pane", "minecraft:green_stained_glass_pane", "minecraft:red_stained_glass_pane", "minecraft:black_stained_glass_pane"]
+},
+storage_blocks_zinc:{
+tag:"forge:storage_blocks/zinc",
+members:["create:zinc_block"]
+},
+sand_red:{
+tag:"forge:sand/red",
+members:["minecraft:red_sand"]
+},
+glass_brown:{
+tag:"forge:glass/brown",
+members:["minecraft:brown_stained_glass"]
+},
+vegetables:{
+tag:"forge:vegetables",
+members:["#forge:vegetables/beetroot", "#forge:vegetables/carrot", "#forge:vegetables/onion", "#forge:vegetables/potato", "#forge:vegetables/tomato", "corn_delight:corn"]
+},
+glass_gray:{
+tag:"forge:glass/gray",
+members:["minecraft:gray_stained_glass"]
+},
+purified_dust_kubejs:{
+tag:"forge:purified_dust_kubejs",
+members:["kubejs:purified_dust_zinc_ore", "kubejs:purified_dust_ametrine_ore", "kubejs:purified_dust_anthracite_ore", "kubejs:purified_dust_budding_ametrine_ore", "kubejs:purified_dust_cryptic_redstone_ore", "kubejs:purified_dust_lignite_ore", "kubejs:purified_dust_pendorite_ore", "kubejs:purified_dust_blue_nether_gold_ore", "kubejs:purified_dust_blue_nether_quartz_ore", "kubejs:purified_dust_brimstone_nether_gold_ore", "kubejs:purified_dust_brimstone_nether_quartz_ore", "kubejs:purified_dust_coal", "kubejs:purified_dust_copper", "kubejs:purified_dust_diamond", "kubejs:purified_dust_emerald", "kubejs:purified_dust_gold", "kubejs:purified_dust_iron", "kubejs:purified_dust_lapis", "kubejs:purified_dust_redstone", "kubejs:purified_dust_quartz", "kubejs:purified_dust_netherite_scrap", "kubejs:purified_dust_nether_gold"]
+},
+glass_light_gray:{
+tag:"forge:glass/light_gray",
+members:["minecraft:light_gray_stained_glass"]
+},
+dyes_light_blue:{
+tag:"forge:dyes/light_blue",
+members:["minecraft:light_blue_dye"]
+},
+milk_milk_bottle:{
+tag:"forge:milk/milk_bottle",
+members:["farmersdelight:milk_bottle"]
+},
+dyes_white:{
+tag:"forge:dyes/white",
+members:["minecraft:white_dye"]
+},
+seeds_pumpkin:{
+tag:"forge:seeds/pumpkin",
+members:["minecraft:pumpkin_seeds"]
+},
+ore_bearing_ground_stone:{
+tag:"forge:ore_bearing_ground/stone",
+members:["minecraft:stone"]
+},
+glass_panes_black:{
+tag:"forge:glass_panes/black",
+members:["minecraft:black_stained_glass_pane"]
+},
+dusts_redstone:{
+tag:"forge:dusts/redstone",
+members:["minecraft:redstone"]
+},
+dyes_pink:{
+tag:"forge:dyes/pink",
+members:["minecraft:pink_dye"]
+},
+gems_quartz:{
+tag:"forge:gems/quartz",
+members:["minecraft:quartz"]
+},
+crops_beetroot:{
+tag:"forge:crops/beetroot",
+members:["minecraft:beetroot"]
+},
+glass_panes_blue:{
+tag:"forge:glass_panes/blue",
+members:["minecraft:blue_stained_glass_pane"]
+},
+seeds_melon:{
+tag:"forge:seeds/melon",
+members:["minecraft:melon_seeds"]
+},
+crops_wheat:{
+tag:"forge:crops/wheat",
+members:["minecraft:wheat"]
+},
+stone:{
+tag:"forge:stone",
+members:["byg:soapstone", "byg:scoria_stone", "byg:dacite", "byg:rocky_stone", "byg:mossy_stone", "byg:overgrown_stone", "byg:overgrown_dacite", "byg:sythian_nylium", "byg:podzol_dacite", "byg:red_rock", "byg:ether_stone", "minecraft:andesite", "minecraft:diorite", "minecraft:granite", "minecraft:infested_stone", "minecraft:stone", "minecraft:polished_andesite", "minecraft:polished_diorite", "minecraft:polished_granite", "minecraft:deepslate", "minecraft:polished_deepslate", "minecraft:infested_deepslate", "minecraft:tuff"]
+},
+glass_panes_yellow:{
+tag:"forge:glass_panes/yellow",
+members:["minecraft:yellow_stained_glass_pane"]
+},
+gems_lapis:{
+tag:"forge:gems/lapis",
+members:["minecraft:lapis_lazuli"]
+},
+gunpowder:{
+tag:"forge:gunpowder",
+members:["minecraft:gunpowder"]
+},
+plates_brass:{
+tag:"forge:plates/brass",
+members:["create:brass_sheet"]
+},
+crops_tomato:{
+tag:"forge:crops/tomato",
+members:["farmersdelight:tomato"]
+},
+ore_rates_sparse:{
+tag:"forge:ore_rates/sparse",
+members:["minecraft:nether_gold_ore"]
+},
+crops:{
+tag:"forge:crops",
+members:["#forge:crops/cabbage", "#forge:crops/onion", "#forge:crops/rice", "#forge:crops/tomato", "byg:blueberries", "byg:green_apple", "byg:crimson_berries", "#forge:crops/beetroot", "#forge:crops/carrot", "#forge:crops/nether_wart", "#forge:crops/potato", "#forge:crops/wheat", "corn_delight:corn"]
+},
+ore_bearing_ground_netherrack:{
+tag:"forge:ore_bearing_ground/netherrack",
+members:["minecraft:netherrack"]
+},
+glass_panes_purple:{
+tag:"forge:glass_panes/purple",
+members:["minecraft:purple_stained_glass_pane"]
+},
+dusts:{
+tag:"forge:dusts",
+members:["#forge:dusts/glowstone", "#forge:dusts/prismarine", "#forge:dusts/redstone", "createaddition:diamond_grit", "create:powdered_obsidian"]
+},
+glass_yellow:{
+tag:"forge:glass/yellow",
+members:["minecraft:yellow_stained_glass"]
+},
+fruits_pomelo:{
+tag:"forge:fruits/pomelo",
+members:["fruittrees:pomelo"]
+},
+fruits_orange:{
+tag:"forge:fruits/orange",
+members:["fruittrees:orange"]
+},
+seeds:{
+tag:"forge:seeds",
+members:["#forge:seeds/cabbage", "#forge:seeds/rice", "#forge:seeds/tomato", "#forge:seeds/beetroot", "#forge:seeds/melon", "#forge:seeds/pumpkin", "#forge:seeds/wheat", "corn_delight:corn_seeds"]
+},
+helmets:{
+tag:"forge:helmets",
+members:["byg:ametrine_helmet"]
+},
+ores_anthracite:{
+tag:"forge:ores/anthracite",
+members:["byg:anthracite_ore"]
+},
+barrels:{
+tag:"forge:barrels",
+members:["#forge:barrels/wooden"]
+},
+pink_sand:{
+tag:"forge:pink_sand",
+members:["byg:pink_sand"]
+},
+ores_lapis:{
+tag:"forge:ores/lapis",
+members:["#minecraft:lapis_ores", "#minecraft:lapis_ores"]
+},
+bread:{
+tag:"forge:bread",
+members:["#forge:bread/wheat", "corn_delight:cornbread"]
+},
+slimeballs:{
+tag:"forge:slimeballs",
+members:["minecraft:slime_ball"]
+},
+grain_corn:{
+tag:"forge:grain/corn",
+members:["corn_delight:corn"]
+},
+raw_materials_zinc:{
+tag:"forge:raw_materials/zinc",
+members:["create:raw_zinc"]
+},
+chests_ender:{
+tag:"forge:chests/ender",
+members:["minecraft:ender_chest"]
+},
+white_sand:{
+tag:"forge:white_sand",
+members:["byg:white_sand"]
+},
+fence_gates_wooden:{
+tag:"forge:fence_gates/wooden",
+members:["fruittrees:cherry_fence_gate?", "fruittrees:citrus_fence_gate", "byg:aspen_fence_gate", "byg:baobab_fence_gate", "byg:blue_enchanted_fence_gate", "byg:cherry_fence_gate", "byg:cika_fence_gate", "byg:cypress_fence_gate", "byg:ebony_fence_gate", "byg:fir_fence_gate", "byg:green_enchanted_fence_gate", "byg:holly_fence_gate", "byg:jacaranda_fence_gate", "byg:mahogany_fence_gate", "byg:mangrove_fence_gate", "byg:maple_fence_gate", "byg:pine_fence_gate", "byg:rainbow_eucalyptus_fence_gate", "byg:redwood_fence_gate", "byg:skyris_fence_gate", "byg:willow_fence_gate", "byg:witch_hazel_fence_gate", "byg:zelkova_fence_gate", "byg:sythian_fence_gate", "byg:embur_fence_gate", "byg:palm_fence_gate", "byg:lament_fence_gate", "byg:ether_fence_gate", "byg:bulbis_fence_gate", "byg:nightshade_fence_gate", "byg:imparius_fence_gate", "minecraft:oak_fence_gate", "minecraft:spruce_fence_gate", "minecraft:birch_fence_gate", "minecraft:jungle_fence_gate", "minecraft:acacia_fence_gate", "minecraft:dark_oak_fence_gate", "minecraft:crimson_fence_gate", "minecraft:warped_fence_gate"]
+},
+storage_blocks_raw_copper:{
+tag:"forge:storage_blocks/raw_copper",
+members:["minecraft:raw_copper_block"]
+},
+glass_panes_lime:{
+tag:"forge:glass_panes/lime",
+members:["minecraft:lime_stained_glass_pane"]
+},
+shears:{
+tag:"forge:shears",
+members:["minecraft:shears"]
+},
+torches:{
+tag:"forge:torches",
+members:["integrateddynamics:menril_torch", "integrateddynamics:menril_torch_stone"]
+},
+grain:{
+tag:"forge:grain",
+members:["#forge:grain/wheat", "#forge:grain/rice"]
+},
+sand_blue:{
+tag:"forge:sand/blue",
+members:["byg:blue_sand"]
+},
+purified_kubejs:{
+tag:"forge:purified_kubejs",
+members:["kubejs:purified_zinc_ore", "kubejs:purified_ametrine_ore", "kubejs:purified_anthracite_ore", "kubejs:purified_budding_ametrine_ore", "kubejs:purified_cryptic_redstone_ore", "kubejs:purified_lignite_ore", "kubejs:purified_pendorite_ore", "kubejs:purified_blue_nether_gold_ore", "kubejs:purified_blue_nether_quartz_ore", "kubejs:purified_brimstone_nether_gold_ore", "kubejs:purified_brimstone_nether_quartz_ore", "kubejs:purified_coal", "kubejs:purified_copper", "kubejs:purified_diamond", "kubejs:purified_emerald", "kubejs:purified_gold", "kubejs:purified_iron", "kubejs:purified_lapis", "kubejs:purified_redstone", "kubejs:purified_quartz", "kubejs:purified_netherite_scrap", "kubejs:purified_nether_gold"]
+},
+recrystallized_shard_kubejs:{
+tag:"forge:recrystallized_shard_kubejs",
+members:["kubejs:recrystallized_shard_zinc_ore", "kubejs:recrystallized_shard_ametrine_ore", "kubejs:recrystallized_shard_anthracite_ore", "kubejs:recrystallized_shard_budding_ametrine_ore", "kubejs:recrystallized_shard_cryptic_redstone_ore", "kubejs:recrystallized_shard_lignite_ore", "kubejs:recrystallized_shard_pendorite_ore", "kubejs:recrystallized_shard_blue_nether_gold_ore", "kubejs:recrystallized_shard_blue_nether_quartz_ore", "kubejs:recrystallized_shard_brimstone_nether_gold_ore", "kubejs:recrystallized_shard_brimstone_nether_quartz_ore", "kubejs:recrystallized_shard_coal", "kubejs:recrystallized_shard_copper", "kubejs:recrystallized_shard_diamond", "kubejs:recrystallized_shard_emerald", "kubejs:recrystallized_shard_gold", "kubejs:recrystallized_shard_iron", "kubejs:recrystallized_shard_lapis", "kubejs:recrystallized_shard_redstone", "kubejs:recrystallized_shard_quartz", "kubejs:recrystallized_shard_netherite_scrap", "kubejs:recrystallized_shard_nether_gold"]
+},
+vegetables_potato:{
+tag:"forge:vegetables/potato",
+members:["minecraft:potato"]
+},
+seeds_corn:{
+tag:"forge:seeds/corn",
+members:["corn_delight:corn_seeds"]
+},
+cobblestone:{
+tag:"forge:cobblestone",
+members:["byg:red_rock", "byg:dacite_cobblestone", "byg:scoria_cobblestone", "byg:soapstone", "byg:cobbled_ether_stone", "#forge:cobblestone/normal", "#forge:cobblestone/infested", "#forge:cobblestone/mossy", "#forge:cobblestone/deepslate"]
+},
+gems_amethyst:{
+tag:"forge:gems/amethyst",
+members:["minecraft:amethyst_shard"]
+},
+glass_silica:{
+tag:"forge:glass/silica",
+members:["minecraft:glass", "minecraft:black_stained_glass", "minecraft:blue_stained_glass", "minecraft:brown_stained_glass", "minecraft:cyan_stained_glass", "minecraft:gray_stained_glass", "minecraft:green_stained_glass", "minecraft:light_blue_stained_glass", "minecraft:light_gray_stained_glass", "minecraft:lime_stained_glass", "minecraft:magenta_stained_glass", "minecraft:orange_stained_glass", "minecraft:pink_stained_glass", "minecraft:purple_stained_glass", "minecraft:red_stained_glass", "minecraft:white_stained_glass", "minecraft:yellow_stained_glass"]
+},
+dyes_brown:{
+tag:"forge:dyes/brown",
+members:["minecraft:brown_dye"]
+},
+seeds_tomato:{
+tag:"forge:seeds/tomato",
+members:["farmersdelight:tomato_seeds"]
+},
+storage_blocks_gold:{
+tag:"forge:storage_blocks/gold",
+members:["minecraft:gold_block"]
+},
+raw_fishes_cod:{
+tag:"forge:raw_fishes/cod",
+members:["minecraft:cod", "farmersdelight:cod_slice"]
+},
+ores_pendorite:{
+tag:"forge:ores/pendorite",
+members:["byg:pendorite_ore"]
+},
+ores_ametrine:{
+tag:"forge:ores/ametrine",
+members:["byg:ametrine_ore", "byg:budding_ametrine_ore"]
+},
+ores:{
+tag:"forge:ores",
+members:["create:zinc_ore", "create:deepslate_zinc_ore", "byg:ametrine_ore", "byg:anthracite_ore", "byg:budding_ametrine_ore", "byg:cryptic_redstone_ore", "byg:lignite_ore", "byg:pendorite_ore", "byg:blue_nether_gold_ore", "byg:blue_nether_quartz_ore", "byg:brimstone_nether_gold_ore", "byg:brimstone_nether_quartz_ore", "#forge:ores/coal", "#forge:ores/copper", "#forge:ores/diamond", "#forge:ores/emerald", "#forge:ores/gold", "#forge:ores/iron", "#forge:ores/lapis", "#forge:ores/redstone", "#forge:ores/quartz", "#forge:ores/netherite_scrap", "#kubejs:ores/nether_gold"]
+},
+rods_wooden:{
+tag:"forge:rods/wooden",
+members:["minecraft:stick"]
+},
+dusts_prismarine:{
+tag:"forge:dusts/prismarine",
+members:["minecraft:prismarine_shard"]
+},
+fences:{
+tag:"forge:fences",
+members:["#forge:fences/nether_brick", "#forge:fences/wooden"]
+},
+storage_blocks_diamond:{
+tag:"forge:storage_blocks/diamond",
+members:["minecraft:diamond_block"]
+},
+plates_copper:{
+tag:"forge:plates/copper",
+members:["create:copper_sheet"]
+},
+ore_bearing_ground_deepslate:{
+tag:"forge:ore_bearing_ground/deepslate",
+members:["minecraft:deepslate"]
+}
+},
+create:{
+stone_types_veridium:{
+tag:"create:stone_types/veridium",
+members:["create:cut_veridium", "create:cut_veridium_stairs", "create:cut_veridium_wall", "create:polished_cut_veridium", "create:polished_cut_veridium_stairs", "create:polished_cut_veridium_wall", "create:cut_veridium_bricks", "create:cut_veridium_brick_stairs", "create:cut_veridium_brick_wall", "create:small_veridium_bricks", "create:small_veridium_brick_stairs", "create:small_veridium_brick_wall", "create:layered_veridium", "create:veridium_pillar"]
+},
+upright_on_belt:{
+tag:"create:upright_on_belt",
+members:["farmersdelight:milk_bottle", "farmersdelight:hot_cocoa", "farmersdelight:pie_crust", "farmersdelight:apple_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:chocolate_pie", "create:blaze_cake_base", "create:blaze_cake", "create:creative_blaze_cake", "create:builders_tea", "minecraft:glass_bottle", "minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion", "minecraft:honey_bottle", "minecraft:cake", "fruittrees:honey_pomelo_tea?", "fruittrees:grapefruit_panna_cotta?", "createaddition:cake_base", "createaddition:cake_base_baked", "createaddition:chocolate_cake", "createaddition:honey_cake", "minecraft:cake", "createaddition:seed_oil_bucket"]
+},
+stone_types_granite:{
+tag:"create:stone_types/granite",
+members:["create:cut_granite", "create:cut_granite_stairs", "create:cut_granite_wall", "create:polished_cut_granite", "create:polished_cut_granite_stairs", "create:polished_cut_granite_wall", "create:cut_granite_bricks", "create:cut_granite_brick_stairs", "create:cut_granite_brick_wall", "create:small_granite_bricks", "create:small_granite_brick_stairs", "create:small_granite_brick_wall", "create:layered_granite", "create:granite_pillar"]
+},
+stone_types_diorite:{
+tag:"create:stone_types/diorite",
+members:["create:cut_diorite", "create:cut_diorite_stairs", "create:cut_diorite_wall", "create:polished_cut_diorite", "create:polished_cut_diorite_stairs", "create:polished_cut_diorite_wall", "create:cut_diorite_bricks", "create:cut_diorite_brick_stairs", "create:cut_diorite_brick_wall", "create:small_diorite_bricks", "create:small_diorite_brick_stairs", "create:small_diorite_brick_wall", "create:layered_diorite", "create:diorite_pillar"]
+},
+stone_types_scorchia:{
+tag:"create:stone_types/scorchia",
+members:["create:cut_scorchia", "create:cut_scorchia_stairs", "create:cut_scorchia_wall", "create:polished_cut_scorchia", "create:polished_cut_scorchia_stairs", "create:polished_cut_scorchia_wall", "create:cut_scorchia_bricks", "create:cut_scorchia_brick_stairs", "create:cut_scorchia_brick_wall", "create:small_scorchia_bricks", "create:small_scorchia_brick_stairs", "create:small_scorchia_brick_wall", "create:layered_scorchia", "create:scorchia_pillar"]
+},
+valve_handles:{
+tag:"create:valve_handles",
+members:["create:copper_valve_handle", "create:white_valve_handle", "create:orange_valve_handle", "create:magenta_valve_handle", "create:light_blue_valve_handle", "create:yellow_valve_handle", "create:lime_valve_handle", "create:pink_valve_handle", "create:gray_valve_handle", "create:light_gray_valve_handle", "create:cyan_valve_handle", "create:purple_valve_handle", "create:blue_valve_handle", "create:brown_valve_handle", "create:green_valve_handle", "create:red_valve_handle", "create:black_valve_handle"]
+},
+stone_types_andesite:{
+tag:"create:stone_types/andesite",
+members:["create:cut_andesite", "create:cut_andesite_stairs", "create:cut_andesite_wall", "create:polished_cut_andesite", "create:polished_cut_andesite_stairs", "create:polished_cut_andesite_wall", "create:cut_andesite_bricks", "create:cut_andesite_brick_stairs", "create:cut_andesite_brick_wall", "create:small_andesite_bricks", "create:small_andesite_brick_stairs", "create:small_andesite_brick_wall", "create:layered_andesite", "create:andesite_pillar"]
+},
+stone_types_deepslate:{
+tag:"create:stone_types/deepslate",
+members:["create:cut_deepslate", "create:cut_deepslate_stairs", "create:cut_deepslate_wall", "create:polished_cut_deepslate", "create:polished_cut_deepslate_stairs", "create:polished_cut_deepslate_wall", "create:cut_deepslate_bricks", "create:cut_deepslate_brick_stairs", "create:cut_deepslate_brick_wall", "create:small_deepslate_bricks", "create:small_deepslate_brick_stairs", "create:small_deepslate_brick_wall", "create:layered_deepslate", "create:deepslate_pillar"]
+},
+stone_types_scoria:{
+tag:"create:stone_types/scoria",
+members:["create:cut_scoria", "create:cut_scoria_stairs", "create:cut_scoria_wall", "create:polished_cut_scoria", "create:polished_cut_scoria_stairs", "create:polished_cut_scoria_wall", "create:cut_scoria_bricks", "create:cut_scoria_brick_stairs", "create:cut_scoria_brick_wall", "create:small_scoria_bricks", "create:small_scoria_brick_stairs", "create:small_scoria_brick_wall", "create:layered_scoria", "create:scoria_pillar"]
+},
+stone_types_tuff:{
+tag:"create:stone_types/tuff",
+members:["create:cut_tuff", "create:cut_tuff_stairs", "create:cut_tuff_wall", "create:polished_cut_tuff", "create:polished_cut_tuff_stairs", "create:polished_cut_tuff_wall", "create:cut_tuff_bricks", "create:cut_tuff_brick_stairs", "create:cut_tuff_brick_wall", "create:small_tuff_bricks", "create:small_tuff_brick_stairs", "create:small_tuff_brick_wall", "create:layered_tuff", "create:tuff_pillar"]
+},
+create_ingots:{
+tag:"create:create_ingots",
+members:["create:zinc_ingot", "create:brass_ingot"]
+},
+stone_types_calcite:{
+tag:"create:stone_types/calcite",
+members:["create:cut_calcite", "create:cut_calcite_stairs", "create:cut_calcite_wall", "create:polished_cut_calcite", "create:polished_cut_calcite_stairs", "create:polished_cut_calcite_wall", "create:cut_calcite_bricks", "create:cut_calcite_brick_stairs", "create:cut_calcite_brick_wall", "create:small_calcite_bricks", "create:small_calcite_brick_stairs", "create:small_calcite_brick_wall", "create:layered_calcite", "create:calcite_pillar"]
+},
+seats:{
+tag:"create:seats",
+members:["create:white_seat", "create:orange_seat", "create:magenta_seat", "create:light_blue_seat", "create:yellow_seat", "create:lime_seat", "create:pink_seat", "create:gray_seat", "create:light_gray_seat", "create:cyan_seat", "create:purple_seat", "create:blue_seat", "create:brown_seat", "create:green_seat", "create:red_seat", "create:black_seat"]
+},
+sandpaper:{
+tag:"create:sandpaper",
+members:["create:sand_paper", "create:red_sand_paper", "createaddition:diamond_grit_sandpaper"]
+},
+stone_types_limestone:{
+tag:"create:stone_types/limestone",
+members:["create:cut_limestone", "create:cut_limestone_stairs", "create:cut_limestone_wall", "create:polished_cut_limestone", "create:polished_cut_limestone_stairs", "create:polished_cut_limestone_wall", "create:cut_limestone_bricks", "create:cut_limestone_brick_stairs", "create:cut_limestone_brick_wall", "create:small_limestone_bricks", "create:small_limestone_brick_stairs", "create:small_limestone_brick_wall", "create:layered_limestone", "create:limestone_pillar"]
+},
+toolboxes:{
+tag:"create:toolboxes",
+members:["create:white_toolbox", "create:orange_toolbox", "create:magenta_toolbox", "create:light_blue_toolbox", "create:yellow_toolbox", "create:lime_toolbox", "create:pink_toolbox", "create:gray_toolbox", "create:light_gray_toolbox", "create:cyan_toolbox", "create:purple_toolbox", "create:blue_toolbox", "create:brown_toolbox", "create:green_toolbox", "create:red_toolbox", "create:black_toolbox"]
+},
+crushed_ores:{
+tag:"create:crushed_ores",
+members:["create:crushed_iron_ore", "create:crushed_gold_ore", "create:crushed_copper_ore", "create:crushed_zinc_ore", "create:crushed_osmium_ore", "create:crushed_platinum_ore", "create:crushed_silver_ore", "create:crushed_tin_ore", "create:crushed_lead_ore", "create:crushed_quicksilver_ore", "create:crushed_aluminum_ore", "create:crushed_uranium_ore", "create:crushed_nickel_ore"]
+},
+stone_types_crimsite:{
+tag:"create:stone_types/crimsite",
+members:["create:cut_crimsite", "create:cut_crimsite_stairs", "create:cut_crimsite_wall", "create:polished_cut_crimsite", "create:polished_cut_crimsite_stairs", "create:polished_cut_crimsite_wall", "create:cut_crimsite_bricks", "create:cut_crimsite_brick_stairs", "create:cut_crimsite_brick_wall", "create:small_crimsite_bricks", "create:small_crimsite_brick_stairs", "create:small_crimsite_brick_wall", "create:layered_crimsite", "create:crimsite_pillar"]
+},
+stone_types_asurine:{
+tag:"create:stone_types/asurine",
+members:["create:cut_asurine", "create:cut_asurine_stairs", "create:cut_asurine_wall", "create:polished_cut_asurine", "create:polished_cut_asurine_stairs", "create:polished_cut_asurine_wall", "create:cut_asurine_bricks", "create:cut_asurine_brick_stairs", "create:cut_asurine_brick_wall", "create:small_asurine_bricks", "create:small_asurine_brick_stairs", "create:small_asurine_brick_wall", "create:layered_asurine", "create:asurine_pillar"]
+},
+stone_types_ochrum:{
+tag:"create:stone_types/ochrum",
+members:["create:cut_ochrum", "create:cut_ochrum_stairs", "create:cut_ochrum_wall", "create:polished_cut_ochrum", "create:polished_cut_ochrum_stairs", "create:polished_cut_ochrum_wall", "create:cut_ochrum_bricks", "create:cut_ochrum_brick_stairs", "create:cut_ochrum_brick_wall", "create:small_ochrum_bricks", "create:small_ochrum_brick_stairs", "create:small_ochrum_brick_wall", "create:layered_ochrum", "create:ochrum_pillar"]
+},
+stone_types_dripstone:{
+tag:"create:stone_types/dripstone",
+members:["create:cut_dripstone", "create:cut_dripstone_stairs", "create:cut_dripstone_wall", "create:polished_cut_dripstone", "create:polished_cut_dripstone_stairs", "create:polished_cut_dripstone_wall", "create:cut_dripstone_bricks", "create:cut_dripstone_brick_stairs", "create:cut_dripstone_brick_wall", "create:small_dripstone_bricks", "create:small_dripstone_brick_stairs", "create:small_dripstone_brick_wall", "create:layered_dripstone", "create:dripstone_pillar"]
+}
+},
+minecraft:{
+occludes_vibration_signals:{
+tag:"minecraft:occludes_vibration_signals",
+members:["#minecraft:wool"]
+},
+coals:{
+tag:"minecraft:coals",
+members:["minecraft:coal", "minecraft:charcoal", "byg:lignite", "byg:anthracite"]
+},
+piglin_food:{
+tag:"minecraft:piglin_food",
+members:["minecraft:porkchop", "minecraft:cooked_porkchop"]
+},
+beds:{
+tag:"minecraft:beds",
+members:["minecraft:red_bed", "minecraft:black_bed", "minecraft:blue_bed", "minecraft:brown_bed", "minecraft:cyan_bed", "minecraft:gray_bed", "minecraft:green_bed", "minecraft:light_blue_bed", "minecraft:light_gray_bed", "minecraft:lime_bed", "minecraft:magenta_bed", "minecraft:orange_bed", "minecraft:pink_bed", "minecraft:purple_bed", "minecraft:white_bed", "minecraft:yellow_bed"]
+},
+doors:{
+tag:"minecraft:doors",
+members:["#minecraft:wooden_doors", "minecraft:iron_door", "integrateddynamics:menril_door"]
+},
+signs:{
+tag:"minecraft:signs",
+members:["minecraft:oak_sign", "minecraft:spruce_sign", "minecraft:birch_sign", "minecraft:acacia_sign", "minecraft:jungle_sign", "minecraft:dark_oak_sign", "minecraft:crimson_sign", "minecraft:warped_sign", "fruittrees:cherry_sign?", "fruittrees:citrus_sign"]
+},
+fishes:{
+tag:"minecraft:fishes",
+members:["minecraft:cod", "minecraft:cooked_cod", "minecraft:salmon", "minecraft:cooked_salmon", "minecraft:pufferfish", "minecraft:tropical_fish"]
+},
+redstone_ores:{
+tag:"minecraft:redstone_ores",
+members:["minecraft:redstone_ore", "minecraft:deepslate_redstone_ore"]
+},
+walls:{
+tag:"minecraft:walls",
+members:["minecraft:cobblestone_wall", "minecraft:mossy_cobblestone_wall", "minecraft:brick_wall", "minecraft:prismarine_wall", "minecraft:red_sandstone_wall", "minecraft:mossy_stone_brick_wall", "minecraft:granite_wall", "minecraft:stone_brick_wall", "minecraft:nether_brick_wall", "minecraft:andesite_wall", "minecraft:red_nether_brick_wall", "minecraft:sandstone_wall", "minecraft:end_stone_brick_wall", "minecraft:diorite_wall", "minecraft:blackstone_wall", "minecraft:polished_blackstone_brick_wall", "minecraft:polished_blackstone_wall", "minecraft:cobbled_deepslate_wall", "minecraft:polished_deepslate_wall", "minecraft:deepslate_tile_wall", "minecraft:deepslate_brick_wall", "create:cut_granite_wall", "create:polished_cut_granite_wall", "create:cut_granite_brick_wall", "create:small_granite_brick_wall", "create:cut_diorite_wall", "create:polished_cut_diorite_wall", "create:cut_diorite_brick_wall", "create:small_diorite_brick_wall", "create:cut_andesite_wall", "create:polished_cut_andesite_wall", "create:cut_andesite_brick_wall", "create:small_andesite_brick_wall", "create:cut_calcite_wall", "create:polished_cut_calcite_wall", "create:cut_calcite_brick_wall", "create:small_calcite_brick_wall", "create:cut_dripstone_wall", "create:polished_cut_dripstone_wall", "create:cut_dripstone_brick_wall", "create:small_dripstone_brick_wall", "create:cut_deepslate_wall", "create:polished_cut_deepslate_wall", "create:cut_deepslate_brick_wall", "create:small_deepslate_brick_wall", "create:cut_tuff_wall", "create:polished_cut_tuff_wall", "create:cut_tuff_brick_wall", "create:small_tuff_brick_wall", "create:cut_asurine_wall", "create:polished_cut_asurine_wall", "create:cut_asurine_brick_wall", "create:small_asurine_brick_wall", "create:cut_crimsite_wall", "create:polished_cut_crimsite_wall", "create:cut_crimsite_brick_wall", "create:small_crimsite_brick_wall", "create:cut_limestone_wall", "create:polished_cut_limestone_wall", "create:cut_limestone_brick_wall", "create:small_limestone_brick_wall", "create:cut_ochrum_wall", "create:polished_cut_ochrum_wall", "create:cut_ochrum_brick_wall", "create:small_ochrum_brick_wall", "create:cut_scoria_wall", "create:polished_cut_scoria_wall", "create:cut_scoria_brick_wall", "create:small_scoria_brick_wall", "create:cut_scorchia_wall", "create:polished_cut_scorchia_wall", "create:cut_scorchia_brick_wall", "create:small_scorchia_brick_wall", "create:cut_veridium_wall", "create:polished_cut_veridium_wall", "create:cut_veridium_brick_wall", "create:small_veridium_brick_wall", "byg:dacite_cobblestone_wall", "byg:dacite_wall", "byg:dacite_tile_wall", "byg:dacite_brick_wall", "byg:mossy_stone_wall", "byg:rocky_stone_wall", "byg:scoria_stone_wall", "byg:scoria_cobblestone_wall", "byg:scoria_stonebrick_wall", "byg:soapstone_wall", "byg:polished_soapstone_wall", "byg:soapstone_brick_wall", "byg:soapstone_tile_wall", "byg:red_rock_wall", "byg:red_rock_brick_wall", "byg:mossy_red_rock_brick_wall", "byg:cracked_red_rock_brick_wall", "byg:chiseled_red_rock_brick_wall", "byg:ether_stone_wall", "byg:purpur_stone_wall", "byg:cryptic_stone_wall", "byg:chiseled_therium_wall", "byg:shiny_chiseled_therium_wall", "byg:cobbled_ether_stone_wall", "byg:carved_ether_stone_wall", "byg:travertine_wall", "byg:polished_travertine_wall", "byg:chiseled_travertine_wall", "byg:chiseled_fungal_imparius_wall", "byg:windswept_sandstone_wall", "byg:cut_windswept_sandstone_wall", "byg:chiseled_windswept_sandstone_wall", "byg:smooth_windswept_sandstone_wall"]
+},
+music_discs:{
+tag:"minecraft:music_discs",
+members:["#minecraft:creeper_drop_music_discs", "minecraft:music_disc_pigstep", "minecraft:music_disc_otherside"]
+},
+sand:{
+tag:"minecraft:sand",
+members:["minecraft:sand", "minecraft:red_sand", "byg:white_sand", "byg:black_sand", "byg:blue_sand", "byg:pink_sand", "byg:purple_sand", "byg:end_sand", "byg:windswept_sand"]
+},
+beacon_payment_items:{
+tag:"minecraft:beacon_payment_items",
+members:["minecraft:netherite_ingot", "minecraft:emerald", "minecraft:diamond", "minecraft:gold_ingot", "minecraft:iron_ingot", "byg:ametrine_gems", "byg:pendorite_scraps"]
+},
+coal_ores:{
+tag:"minecraft:coal_ores",
+members:["minecraft:coal_ore", "minecraft:deepslate_coal_ore"]
+},
+wooden_trapdoors:{
+tag:"minecraft:wooden_trapdoors",
+members:["minecraft:acacia_trapdoor", "minecraft:birch_trapdoor", "minecraft:dark_oak_trapdoor", "minecraft:jungle_trapdoor", "minecraft:oak_trapdoor", "minecraft:spruce_trapdoor", "minecraft:crimson_trapdoor", "minecraft:warped_trapdoor", "byg:aspen_trapdoor", "byg:baobab_trapdoor", "byg:blue_enchanted_trapdoor", "byg:cherry_trapdoor", "byg:cika_trapdoor", "byg:cypress_trapdoor", "byg:ebony_trapdoor", "byg:fir_trapdoor", "byg:green_enchanted_trapdoor", "byg:holly_trapdoor", "byg:jacaranda_trapdoor", "byg:mahogany_trapdoor", "byg:mangrove_trapdoor", "byg:maple_trapdoor", "byg:pine_trapdoor", "byg:rainbow_eucalyptus_trapdoor", "byg:redwood_trapdoor", "byg:skyris_trapdoor", "byg:willow_trapdoor", "byg:witch_hazel_trapdoor", "byg:zelkova_trapdoor", "byg:sythian_trapdoor", "byg:embur_trapdoor", "byg:palm_trapdoor", "byg:lament_trapdoor", "byg:ether_trapdoor", "byg:bulbis_trapdoor", "byg:nightshade_trapdoor", "byg:imparius_trapdoor"]
+},
+stairs:{
+tag:"minecraft:stairs",
+members:["#minecraft:wooden_stairs", "minecraft:cobblestone_stairs", "minecraft:sandstone_stairs", "minecraft:nether_brick_stairs", "minecraft:stone_brick_stairs", "minecraft:brick_stairs", "minecraft:purpur_stairs", "minecraft:quartz_stairs", "minecraft:red_sandstone_stairs", "minecraft:prismarine_brick_stairs", "minecraft:prismarine_stairs", "minecraft:dark_prismarine_stairs", "minecraft:polished_granite_stairs", "minecraft:smooth_red_sandstone_stairs", "minecraft:mossy_stone_brick_stairs", "minecraft:polished_diorite_stairs", "minecraft:mossy_cobblestone_stairs", "minecraft:end_stone_brick_stairs", "minecraft:stone_stairs", "minecraft:smooth_sandstone_stairs", "minecraft:smooth_quartz_stairs", "minecraft:granite_stairs", "minecraft:andesite_stairs", "minecraft:red_nether_brick_stairs", "minecraft:polished_andesite_stairs", "minecraft:diorite_stairs", "minecraft:blackstone_stairs", "minecraft:polished_blackstone_brick_stairs", "minecraft:polished_blackstone_stairs", "minecraft:cobbled_deepslate_stairs", "minecraft:polished_deepslate_stairs", "minecraft:deepslate_tile_stairs", "minecraft:deepslate_brick_stairs", "minecraft:oxidized_cut_copper_stairs", "minecraft:weathered_cut_copper_stairs", "minecraft:exposed_cut_copper_stairs", "minecraft:cut_copper_stairs", "minecraft:waxed_weathered_cut_copper_stairs", "minecraft:waxed_exposed_cut_copper_stairs", "minecraft:waxed_cut_copper_stairs", "minecraft:waxed_oxidized_cut_copper_stairs", "create:cut_granite_stairs", "create:polished_cut_granite_stairs", "create:cut_granite_brick_stairs", "create:small_granite_brick_stairs", "create:cut_diorite_stairs", "create:polished_cut_diorite_stairs", "create:cut_diorite_brick_stairs", "create:small_diorite_brick_stairs", "create:cut_andesite_stairs", "create:polished_cut_andesite_stairs", "create:cut_andesite_brick_stairs", "create:small_andesite_brick_stairs", "create:cut_calcite_stairs", "create:polished_cut_calcite_stairs", "create:cut_calcite_brick_stairs", "create:small_calcite_brick_stairs", "create:cut_dripstone_stairs", "create:polished_cut_dripstone_stairs", "create:cut_dripstone_brick_stairs", "create:small_dripstone_brick_stairs", "create:cut_deepslate_stairs", "create:polished_cut_deepslate_stairs", "create:cut_deepslate_brick_stairs", "create:small_deepslate_brick_stairs", "create:cut_tuff_stairs", "create:polished_cut_tuff_stairs", "create:cut_tuff_brick_stairs", "create:small_tuff_brick_stairs", "create:cut_asurine_stairs", "create:polished_cut_asurine_stairs", "create:cut_asurine_brick_stairs", "create:small_asurine_brick_stairs", "create:cut_crimsite_stairs", "create:polished_cut_crimsite_stairs", "create:cut_crimsite_brick_stairs", "create:small_crimsite_brick_stairs", "create:cut_limestone_stairs", "create:polished_cut_limestone_stairs", "create:cut_limestone_brick_stairs", "create:small_limestone_brick_stairs", "create:cut_ochrum_stairs", "create:polished_cut_ochrum_stairs", "create:cut_ochrum_brick_stairs", "create:small_ochrum_brick_stairs", "create:cut_scoria_stairs", "create:polished_cut_scoria_stairs", "create:cut_scoria_brick_stairs", "create:small_scoria_brick_stairs", "create:cut_scorchia_stairs", "create:polished_cut_scorchia_stairs", "create:cut_scorchia_brick_stairs", "create:small_scorchia_brick_stairs", "create:cut_veridium_stairs", "create:polished_cut_veridium_stairs", "create:cut_veridium_brick_stairs", "create:small_veridium_brick_stairs", "integrateddynamics:crystalized_chorus_block_stairs", "integrateddynamics:crystalized_chorus_brick_stairs", "integrateddynamics:crystalized_menril_block_stairs", "integrateddynamics:crystalized_menril_brick_stairs", "integrateddynamics:menril_planks_stairs", "byg:aspen_stairs", "byg:baobab_stairs", "byg:blue_enchanted_stairs", "byg:cherry_stairs", "byg:cika_stairs", "byg:cypress_stairs", "byg:ebony_stairs", "byg:fir_stairs", "byg:green_enchanted_stairs", "byg:holly_stairs", "byg:jacaranda_stairs", "byg:mahogany_stairs", "byg:mangrove_stairs", "byg:maple_stairs", "byg:pine_stairs", "byg:rainbow_eucalyptus_stairs", "byg:redwood_stairs", "byg:skyris_stairs", "byg:willow_stairs", "byg:witch_hazel_stairs", "byg:zelkova_stairs", "byg:dacite_cobblestone_stairs", "byg:mossy_stone_stairs", "byg:rocky_stone_stairs", "byg:scoria_stone_stairs", "byg:scoria_cobblestone_stairs", "byg:scoria_stonebrick_stairs", "byg:soapstone_stairs", "byg:polished_soapstone_stairs", "byg:soapstone_brick_stairs", "byg:soapstone_tile_stairs", "byg:red_rock_stairs", "byg:red_rock_brick_stairs", "byg:mossy_red_rock_brick_stairs", "byg:cracked_red_rock_brick_stairs", "byg:chiseled_red_rock_brick_stairs", "byg:sythian_stairs", "byg:embur_stairs", "byg:palm_stairs", "byg:lament_stairs", "byg:ether_stairs", "byg:bulbis_stairs", "byg:nightshade_stairs", "byg:ether_stone_stairs", "byg:carved_ether_stone_stairs", "byg:cobbled_ether_stone_stairs", "byg:purpur_stone_stairs", "byg:imparius_stairs", "byg:chiseled_fungal_imparius_stairs", "byg:windswept_sandstone_stairs", "byg:cut_windswept_sandstone_stairs", "byg:chiseled_windswept_sandstone_stairs", "byg:smooth_windswept_sandstone_stairs"]
+},
+logs:{
+tag:"minecraft:logs",
+members:["#minecraft:logs_that_burn", "#minecraft:crimson_stems", "#minecraft:warped_stems", "#byg:aspen_logs", "#byg:baobab_logs", "#byg:blue_enchanted_logs", "#byg:cherry_logs", "#byg:cika_logs", "#byg:cypress_logs", "#byg:ebony_logs", "#byg:fir_logs", "#byg:green_enchanted_logs", "#byg:holly_logs", "#byg:jacaranda_logs", "#byg:mahogany_logs", "#byg:mangrove_logs", "#byg:maple_logs", "#byg:palo_verde_logs", "#byg:pine_logs", "#byg:rainbow_eucalyptus_logs", "#byg:redwood_logs", "#byg:skyris_logs", "#byg:willow_logs", "#byg:witch_hazel_logs", "#byg:zelkova_logs", "#byg:sythian_stems", "#byg:embur_pedus", "#byg:palm_logs", "#byg:lament_logs", "#byg:bulbis_stems", "#byg:ether_logs", "#byg:nightshade_logs", "#byg:withering_oak_logs", "byg:imbued_nightshade_log", "#byg:imparius_stems"]
+},
+arrows:{
+tag:"minecraft:arrows",
+members:["minecraft:arrow", "minecraft:tipped_arrow", "minecraft:spectral_arrow"]
+},
+wooden_doors:{
+tag:"minecraft:wooden_doors",
+members:["minecraft:oak_door", "minecraft:spruce_door", "minecraft:birch_door", "minecraft:jungle_door", "minecraft:acacia_door", "minecraft:dark_oak_door", "minecraft:crimson_door", "minecraft:warped_door", "integrateddynamics:menril_door", "fruittrees:cherry_door?", "fruittrees:cherry_sliding_door?", "fruittrees:citrus_door", "byg:aspen_door", "byg:baobab_door", "byg:blue_enchanted_door", "byg:cherry_door", "byg:cika_door", "byg:cypress_door", "byg:ebony_door", "byg:fir_door", "byg:green_enchanted_door", "byg:holly_door", "byg:jacaranda_door", "byg:mahogany_door", "byg:mangrove_door", "byg:maple_door", "byg:pine_door", "byg:rainbow_eucalyptus_door", "byg:redwood_door", "byg:skyris_door", "byg:willow_door", "byg:witch_hazel_door", "byg:zelkova_door", "byg:sythian_door", "byg:embur_door", "byg:palm_door", "byg:lament_door", "byg:ether_door", "byg:bulbis_door", "byg:nightshade_door", "byg:imparius_door"]
+},
+emerald_ores:{
+tag:"minecraft:emerald_ores",
+members:["minecraft:emerald_ore", "minecraft:deepslate_emerald_ore"]
+},
+crimson_stems:{
+tag:"minecraft:crimson_stems",
+members:["minecraft:crimson_stem", "minecraft:stripped_crimson_stem", "minecraft:crimson_hyphae", "minecraft:stripped_crimson_hyphae"]
+},
+ignored_by_piglin_babies:{
+tag:"minecraft:ignored_by_piglin_babies",
+members:["minecraft:leather"]
+},
+stone_tool_materials:{
+tag:"minecraft:stone_tool_materials",
+members:["minecraft:cobblestone", "minecraft:blackstone", "minecraft:cobbled_deepslate", "byg:red_rock", "byg:dacite_cobblestone", "byg:scoria_cobblestone", "byg:soapstone", "byg:cobbled_ether_stone"]
+},
+terracotta:{
+tag:"minecraft:terracotta",
+members:["minecraft:terracotta", "minecraft:white_terracotta", "minecraft:orange_terracotta", "minecraft:magenta_terracotta", "minecraft:light_blue_terracotta", "minecraft:yellow_terracotta", "minecraft:lime_terracotta", "minecraft:pink_terracotta", "minecraft:gray_terracotta", "minecraft:light_gray_terracotta", "minecraft:cyan_terracotta", "minecraft:purple_terracotta", "minecraft:blue_terracotta", "minecraft:brown_terracotta", "minecraft:green_terracotta", "minecraft:red_terracotta", "minecraft:black_terracotta"]
+},
+anvil:{
+tag:"minecraft:anvil",
+members:["minecraft:anvil", "minecraft:chipped_anvil", "minecraft:damaged_anvil"]
+},
+iron_ores:{
+tag:"minecraft:iron_ores",
+members:["minecraft:iron_ore", "minecraft:deepslate_iron_ore"]
+},
+stone_crafting_materials:{
+tag:"minecraft:stone_crafting_materials",
+members:["minecraft:cobblestone", "minecraft:blackstone", "minecraft:cobbled_deepslate", "byg:red_rock", "byg:dacite_cobblestone", "byg:scoria_cobblestone", "byg:soapstone", "byg:cobbled_ether_stone"]
+},
+piglin_repellents:{
+tag:"minecraft:piglin_repellents",
+members:["minecraft:soul_torch", "minecraft:soul_lantern", "minecraft:soul_campfire"]
+},
+wooden_stairs:{
+tag:"minecraft:wooden_stairs",
+members:["minecraft:oak_stairs", "minecraft:spruce_stairs", "minecraft:birch_stairs", "minecraft:jungle_stairs", "minecraft:acacia_stairs", "minecraft:dark_oak_stairs", "minecraft:crimson_stairs", "minecraft:warped_stairs", "integrateddynamics:menril_planks_stairs", "fruittrees:cherry_stairs?", "fruittrees:citrus_stairs", "byg:aspen_stairs", "byg:baobab_stairs", "byg:blue_enchanted_stairs", "byg:cherry_stairs", "byg:cika_stairs", "byg:cypress_stairs", "byg:ebony_stairs", "byg:fir_stairs", "byg:green_enchanted_stairs", "byg:holly_stairs", "byg:jacaranda_stairs", "byg:mahogany_stairs", "byg:mangrove_stairs", "byg:maple_stairs", "byg:pine_stairs", "byg:rainbow_eucalyptus_stairs", "byg:redwood_stairs", "byg:skyris_stairs", "byg:willow_stairs", "byg:witch_hazel_stairs", "byg:zelkova_stairs", "byg:sythian_stairs", "byg:embur_stairs", "byg:palm_stairs", "byg:lament_stairs", "byg:ether_stairs", "byg:bulbis_stairs", "byg:nightshade_stairs", "byg:imparius_stairs"]
+},
+carpets:{
+tag:"minecraft:carpets",
+members:["minecraft:white_carpet", "minecraft:orange_carpet", "minecraft:magenta_carpet", "minecraft:light_blue_carpet", "minecraft:yellow_carpet", "minecraft:lime_carpet", "minecraft:pink_carpet", "minecraft:gray_carpet", "minecraft:light_gray_carpet", "minecraft:cyan_carpet", "minecraft:purple_carpet", "minecraft:blue_carpet", "minecraft:brown_carpet", "minecraft:green_carpet", "minecraft:red_carpet", "minecraft:black_carpet", "farmersdelight:full_tatami_mat", "farmersdelight:half_tatami_mat"]
+},
+wooden_buttons:{
+tag:"minecraft:wooden_buttons",
+members:["minecraft:oak_button", "minecraft:spruce_button", "minecraft:birch_button", "minecraft:jungle_button", "minecraft:acacia_button", "minecraft:dark_oak_button", "minecraft:crimson_button", "minecraft:warped_button", "fruittrees:cherry_button?", "fruittrees:citrus_button", "byg:aspen_button", "byg:baobab_button", "byg:blue_enchanted_button", "byg:cherry_button", "byg:cika_button", "byg:cypress_button", "byg:ebony_button", "byg:fir_button", "byg:green_enchanted_button", "byg:holly_button", "byg:jacaranda_button", "byg:mahogany_button", "byg:mangrove_button", "byg:maple_button", "byg:pine_button", "byg:rainbow_eucalyptus_button", "byg:redwood_button", "byg:skyris_button", "byg:willow_button", "byg:witch_hazel_button", "byg:zelkova_button", "byg:sythian_button", "byg:embur_button", "byg:palm_button", "byg:lament_button", "byg:ether_button", "byg:bulbis_button", "byg:nightshade_button", "byg:imparius_button"]
+},
+stone_bricks:{
+tag:"minecraft:stone_bricks",
+members:["minecraft:stone_bricks", "minecraft:mossy_stone_bricks", "minecraft:cracked_stone_bricks", "minecraft:chiseled_stone_bricks", "byg:soapstone_bricks", "byg:scoria_stonebricks", "byg:red_rock_bricks", "byg:carved_ether_stone", "byg:chiseled_therium", "byg:shiny_chiseled_therium"]
+},
+slabs:{
+tag:"minecraft:slabs",
+members:["#minecraft:wooden_slabs", "minecraft:stone_slab", "minecraft:smooth_stone_slab", "minecraft:stone_brick_slab", "minecraft:sandstone_slab", "minecraft:purpur_slab", "minecraft:quartz_slab", "minecraft:red_sandstone_slab", "minecraft:brick_slab", "minecraft:cobblestone_slab", "minecraft:nether_brick_slab", "minecraft:petrified_oak_slab", "minecraft:prismarine_slab", "minecraft:prismarine_brick_slab", "minecraft:dark_prismarine_slab", "minecraft:polished_granite_slab", "minecraft:smooth_red_sandstone_slab", "minecraft:mossy_stone_brick_slab", "minecraft:polished_diorite_slab", "minecraft:mossy_cobblestone_slab", "minecraft:end_stone_brick_slab", "minecraft:smooth_sandstone_slab", "minecraft:smooth_quartz_slab", "minecraft:granite_slab", "minecraft:andesite_slab", "minecraft:red_nether_brick_slab", "minecraft:polished_andesite_slab", "minecraft:diorite_slab", "minecraft:cut_sandstone_slab", "minecraft:cut_red_sandstone_slab", "minecraft:blackstone_slab", "minecraft:polished_blackstone_brick_slab", "minecraft:polished_blackstone_slab", "minecraft:cobbled_deepslate_slab", "minecraft:polished_deepslate_slab", "minecraft:deepslate_tile_slab", "minecraft:deepslate_brick_slab", "minecraft:waxed_weathered_cut_copper_slab", "minecraft:waxed_exposed_cut_copper_slab", "minecraft:waxed_cut_copper_slab", "minecraft:oxidized_cut_copper_slab", "minecraft:weathered_cut_copper_slab", "minecraft:exposed_cut_copper_slab", "minecraft:cut_copper_slab", "minecraft:waxed_oxidized_cut_copper_slab", "create:cut_granite_slab", "create:polished_cut_granite_slab", "create:cut_granite_brick_slab", "create:small_granite_brick_slab", "create:cut_diorite_slab", "create:polished_cut_diorite_slab", "create:cut_diorite_brick_slab", "create:small_diorite_brick_slab", "create:cut_andesite_slab", "create:polished_cut_andesite_slab", "create:cut_andesite_brick_slab", "create:small_andesite_brick_slab", "create:cut_calcite_slab", "create:polished_cut_calcite_slab", "create:cut_calcite_brick_slab", "create:small_calcite_brick_slab", "create:cut_dripstone_slab", "create:polished_cut_dripstone_slab", "create:cut_dripstone_brick_slab", "create:small_dripstone_brick_slab", "create:cut_deepslate_slab", "create:polished_cut_deepslate_slab", "create:cut_deepslate_brick_slab", "create:small_deepslate_brick_slab", "create:cut_tuff_slab", "create:polished_cut_tuff_slab", "create:cut_tuff_brick_slab", "create:small_tuff_brick_slab", "create:cut_asurine_slab", "create:polished_cut_asurine_slab", "create:cut_asurine_brick_slab", "create:small_asurine_brick_slab", "create:cut_crimsite_slab", "create:polished_cut_crimsite_slab", "create:cut_crimsite_brick_slab", "create:small_crimsite_brick_slab", "create:cut_limestone_slab", "create:polished_cut_limestone_slab", "create:cut_limestone_brick_slab", "create:small_limestone_brick_slab", "create:cut_ochrum_slab", "create:polished_cut_ochrum_slab", "create:cut_ochrum_brick_slab", "create:small_ochrum_brick_slab", "create:cut_scoria_slab", "create:polished_cut_scoria_slab", "create:cut_scoria_brick_slab", "create:small_scoria_brick_slab", "create:cut_scorchia_slab", "create:polished_cut_scorchia_slab", "create:cut_scorchia_brick_slab", "create:small_scorchia_brick_slab", "create:cut_veridium_slab", "create:polished_cut_veridium_slab", "create:cut_veridium_brick_slab", "create:small_veridium_brick_slab", "byg:aspen_slab", "byg:baobab_slab", "byg:blue_enchanted_slab", "byg:cherry_slab", "byg:cika_slab", "byg:cypress_slab", "byg:ebony_slab", "byg:fir_slab", "byg:green_enchanted_slab", "byg:holly_slab", "byg:jacaranda_slab", "byg:mahogany_slab", "byg:mangrove_slab", "byg:maple_slab", "byg:pine_slab", "byg:rainbow_eucalyptus_slab", "byg:redwood_slab", "byg:skyris_slab", "byg:willow_slab", "byg:witch_hazel_slab", "byg:zelkova_slab", "byg:dacite_cobblestone_slab", "byg:mossy_stone_slab", "byg:rocky_stone_slab", "byg:scoria_stone_slab", "byg:scoria_cobblestone_slab", "byg:scoria_stonebrick_slab", "byg:soapstone_slab", "byg:polished_soapstone_slab", "byg:soapstone_brick_slab", "byg:soapstone_tile_slab", "byg:red_rock_slab", "byg:red_rock_brick_slab", "byg:mossy_red_rock_brick_slab", "byg:cracked_red_rock_brick_slab", "byg:chiseled_red_rock_brick_slab", "byg:sythian_slab", "byg:embur_slab", "byg:palm_slab", "byg:lament_slab", "byg:ether_slab", "byg:bulbis_slab", "byg:nightshade_slab", "byg:ether_stone_slab", "byg:cobbled_ether_stone_slab", "byg:carved_ether_stone_slab", "byg:purpur_stone_slab", "byg:imparius_slab", "byg:chiseled_fungal_imparius_slab", "byg:windswept_sandstone_slab", "byg:cut_windswept_sandstone_slab", "byg:chiseled_windswept_sandstone_slab", "byg:smooth_windswept_sandstone_slab"]
+},
+buttons:{
+tag:"minecraft:buttons",
+members:["#minecraft:wooden_buttons", "minecraft:stone_button", "minecraft:polished_blackstone_button", "byg:aspen_button", "byg:baobab_button", "byg:blue_enchanted_button", "byg:cherry_button", "byg:cika_button", "byg:cypress_button", "byg:ebony_button", "byg:fir_button", "byg:green_enchanted_button", "byg:holly_button", "byg:jacaranda_button", "byg:mahogany_button", "byg:mangrove_button", "byg:maple_button", "byg:pine_button", "byg:rainbow_eucalyptus_button", "byg:redwood_button", "byg:skyris_button", "byg:willow_button", "byg:witch_hazel_button", "byg:zelkova_button", "byg:sythian_button", "byg:embur_button", "byg:palm_button", "byg:lament_button", "byg:ether_button", "byg:bulbis_button", "byg:nightshade_button", "byg:imparius_button"]
+},
+rails:{
+tag:"minecraft:rails",
+members:["minecraft:rail", "minecraft:powered_rail", "minecraft:detector_rail", "minecraft:activator_rail"]
+},
+wooden_pressure_plates:{
+tag:"minecraft:wooden_pressure_plates",
+members:["minecraft:oak_pressure_plate", "minecraft:spruce_pressure_plate", "minecraft:birch_pressure_plate", "minecraft:jungle_pressure_plate", "minecraft:acacia_pressure_plate", "minecraft:dark_oak_pressure_plate", "minecraft:crimson_pressure_plate", "minecraft:warped_pressure_plate", "fruittrees:cherry_stairs?", "fruittrees:citrus_stairs", "byg:aspen_pressure_plate", "byg:baobab_pressure_plate", "byg:blue_enchanted_pressure_plate", "byg:cherry_pressure_plate", "byg:cika_pressure_plate", "byg:cypress_pressure_plate", "byg:ebony_pressure_plate", "byg:fir_pressure_plate", "byg:green_enchanted_pressure_plate", "byg:holly_pressure_plate", "byg:jacaranda_pressure_plate", "byg:mahogany_pressure_plate", "byg:mangrove_pressure_plate", "byg:maple_pressure_plate", "byg:pine_pressure_plate", "byg:rainbow_eucalyptus_pressure_plate", "byg:redwood_pressure_plate", "byg:skyris_pressure_plate", "byg:willow_pressure_plate", "byg:witch_hazel_pressure_plate", "byg:zelkova_pressure_plate", "byg:sythian_pressure_plate", "byg:embur_pressure_plate", "byg:palm_pressure_plate", "byg:lament_pressure_plate", "byg:ether_pressure_plate", "byg:bulbis_pressure_plate", "byg:nightshade_pressure_plate", "byg:imparius_pressure_plate"]
+},
+tall_flowers:{
+tag:"minecraft:tall_flowers",
+members:["minecraft:sunflower", "minecraft:lilac", "minecraft:peony", "minecraft:rose_bush", "farmersdelight:wild_rice", "byg:foxglove", "byg:delphinium", "byg:japanese_orchid", "byg:hydrangea_bush", "byg:tall_allium", "byg:tall_pink_allium"]
+},
+gold_ores:{
+tag:"minecraft:gold_ores",
+members:["minecraft:gold_ore", "minecraft:nether_gold_ore", "minecraft:deepslate_gold_ore"]
+},
+dirt:{
+tag:"minecraft:dirt",
+members:["minecraft:dirt", "minecraft:grass_block", "minecraft:podzol", "minecraft:coarse_dirt", "minecraft:mycelium", "minecraft:rooted_dirt", "minecraft:moss_block"]
+},
+cluster_max_harvestables:{
+tag:"minecraft:cluster_max_harvestables",
+members:["minecraft:diamond_pickaxe", "minecraft:golden_pickaxe", "minecraft:iron_pickaxe", "minecraft:netherite_pickaxe", "minecraft:stone_pickaxe", "minecraft:wooden_pickaxe"]
+},
+soul_fire_base_blocks:{
+tag:"minecraft:soul_fire_base_blocks",
+members:["minecraft:soul_sand", "minecraft:soul_soil"]
+},
+wool:{
+tag:"minecraft:wool",
+members:["minecraft:white_wool", "minecraft:orange_wool", "minecraft:magenta_wool", "minecraft:light_blue_wool", "minecraft:yellow_wool", "minecraft:lime_wool", "minecraft:pink_wool", "minecraft:gray_wool", "minecraft:light_gray_wool", "minecraft:cyan_wool", "minecraft:purple_wool", "minecraft:blue_wool", "minecraft:brown_wool", "minecraft:green_wool", "minecraft:red_wool", "minecraft:black_wool"]
+},
+warped_stems:{
+tag:"minecraft:warped_stems",
+members:["minecraft:warped_stem", "minecraft:stripped_warped_stem", "minecraft:warped_hyphae", "minecraft:stripped_warped_hyphae"]
+},
+dark_oak_logs:{
+tag:"minecraft:dark_oak_logs",
+members:["minecraft:dark_oak_log", "minecraft:dark_oak_wood", "minecraft:stripped_dark_oak_log", "minecraft:stripped_dark_oak_wood"]
+},
+non_flammable_wood:{
+tag:"minecraft:non_flammable_wood",
+members:["minecraft:warped_stem", "minecraft:stripped_warped_stem", "minecraft:warped_hyphae", "minecraft:stripped_warped_hyphae", "minecraft:crimson_stem", "minecraft:stripped_crimson_stem", "minecraft:crimson_hyphae", "minecraft:stripped_crimson_hyphae", "minecraft:crimson_planks", "minecraft:warped_planks", "minecraft:crimson_slab", "minecraft:warped_slab", "minecraft:crimson_pressure_plate", "minecraft:warped_pressure_plate", "minecraft:crimson_fence", "minecraft:warped_fence", "minecraft:crimson_trapdoor", "minecraft:warped_trapdoor", "minecraft:crimson_fence_gate", "minecraft:warped_fence_gate", "minecraft:crimson_stairs", "minecraft:warped_stairs", "minecraft:crimson_button", "minecraft:warped_button", "minecraft:crimson_door", "minecraft:warped_door", "minecraft:crimson_sign", "minecraft:warped_sign"]
+},
+lapis_ores:{
+tag:"minecraft:lapis_ores",
+members:["minecraft:lapis_ore", "minecraft:deepslate_lapis_ore"]
+},
+fences:{
+tag:"minecraft:fences",
+members:["#minecraft:wooden_fences", "minecraft:nether_brick_fence"]
+},
+saplings:{
+tag:"minecraft:saplings",
+members:["minecraft:oak_sapling", "minecraft:spruce_sapling", "minecraft:birch_sapling", "minecraft:jungle_sapling", "minecraft:acacia_sapling", "minecraft:dark_oak_sapling", "minecraft:azalea", "minecraft:flowering_azalea", "integrateddynamics:menril_sapling", "fruittrees:cherry_sapling?", "fruittrees:redlove_sapling?", "fruittrees:apple_sapling", "fruittrees:citron_sapling", "fruittrees:grapefruit_sapling", "fruittrees:lemon_sapling", "fruittrees:lime_sapling", "fruittrees:mandarin_sapling", "fruittrees:orange_sapling", "fruittrees:pomelo_sapling", "byg:aspen_sapling", "byg:baobab_sapling", "byg:blue_enchanted_sapling", "byg:blue_spruce_sapling", "byg:brown_birch_sapling", "byg:brown_oak_sapling", "byg:cika_sapling", "byg:cypress_sapling", "byg:ebony_sapling", "byg:fir_sapling", "byg:green_enchanted_sapling", "byg:holly_sapling", "byg:jacaranda_sapling", "byg:indigo_jacaranda_sapling", "byg:mahogany_sapling", "byg:mangrove_sapling", "byg:maple_sapling", "byg:orange_birch_sapling", "byg:orange_oak_sapling", "byg:orange_spruce_sapling", "byg:orchard_sapling", "byg:palo_verde_sapling", "byg:pine_sapling", "byg:pink_cherry_sapling", "byg:rainbow_eucalyptus_sapling", "byg:red_birch_sapling", "byg:red_maple_sapling", "byg:red_oak_sapling", "byg:red_spruce_sapling", "byg:redwood_sapling", "byg:silver_maple_sapling", "byg:white_cherry_sapling", "byg:willow_sapling", "byg:witch_hazel_sapling", "byg:yellow_birch_sapling", "byg:zelkova_sapling", "byg:skyris_sapling", "byg:palm_sapling", "byg:araucaria_sapling", "byg:brown_zelkova_sapling", "byg:lament_sapling", "byg:withering_oak_sapling", "byg:ether_sapling", "byg:nightshade_sapling"]
+},
+banners:{
+tag:"minecraft:banners",
+members:["minecraft:white_banner", "minecraft:orange_banner", "minecraft:magenta_banner", "minecraft:light_blue_banner", "minecraft:yellow_banner", "minecraft:lime_banner", "minecraft:pink_banner", "minecraft:gray_banner", "minecraft:light_gray_banner", "minecraft:cyan_banner", "minecraft:purple_banner", "minecraft:blue_banner", "minecraft:brown_banner", "minecraft:green_banner", "minecraft:red_banner", "minecraft:black_banner"]
+},
+wooden_fences:{
+tag:"minecraft:wooden_fences",
+members:["minecraft:oak_fence", "minecraft:acacia_fence", "minecraft:dark_oak_fence", "minecraft:spruce_fence", "minecraft:birch_fence", "minecraft:jungle_fence", "minecraft:crimson_fence", "minecraft:warped_fence", "integrateddynamics:menril_fence", "fruittrees:cherry_fence?", "fruittrees:citrus_fence", "byg:aspen_fence", "byg:baobab_fence", "byg:blue_enchanted_fence", "byg:cherry_fence", "byg:cika_fence", "byg:cypress_fence", "byg:ebony_fence", "byg:fir_fence", "byg:green_enchanted_fence", "byg:holly_fence", "byg:jacaranda_fence", "byg:mahogany_fence", "byg:mangrove_fence", "byg:maple_fence", "byg:pine_fence", "byg:rainbow_eucalyptus_fence", "byg:redwood_fence", "byg:skyris_fence", "byg:willow_fence", "byg:witch_hazel_fence", "byg:zelkova_fence", "byg:sythian_fence", "byg:embur_fence", "byg:palm_fence", "byg:lament_fence", "byg:ether_fence", "byg:bulbis_fence", "byg:nightshade_fence", "byg:imparius_fence"]
+},
+trapdoors:{
+tag:"minecraft:trapdoors",
+members:["#minecraft:wooden_trapdoors", "minecraft:iron_trapdoor", "byg:aspen_trapdoor", "byg:baobab_trapdoor", "byg:blue_enchanted_trapdoor", "byg:cherry_trapdoor", "byg:cika_trapdoor", "byg:cypress_trapdoor", "byg:ebony_trapdoor", "byg:fir_trapdoor", "byg:green_enchanted_trapdoor", "byg:holly_trapdoor", "byg:jacaranda_trapdoor", "byg:mahogany_trapdoor", "byg:mangrove_trapdoor", "byg:maple_trapdoor", "byg:pine_trapdoor", "byg:rainbow_eucalyptus_trapdoor", "byg:redwood_trapdoor", "byg:skyris_trapdoor", "byg:willow_trapdoor", "byg:witch_hazel_trapdoor", "byg:zelkova_trapdoor", "byg:sythian_trapdoor", "byg:embur_trapdoor", "byg:palm_trapdoor", "byg:lament_trapdoor", "byg:ether_trapdoor", "byg:bulbis_trapdoor", "byg:nightshade_trapdoor", "byg:imparius_trapdoor"]
+},
+boats:{
+tag:"minecraft:boats",
+members:["minecraft:oak_boat", "minecraft:spruce_boat", "minecraft:birch_boat", "minecraft:jungle_boat", "minecraft:acacia_boat", "minecraft:dark_oak_boat"]
+},
+leaves:{
+tag:"minecraft:leaves",
+members:["minecraft:jungle_leaves", "minecraft:oak_leaves", "minecraft:spruce_leaves", "minecraft:dark_oak_leaves", "minecraft:acacia_leaves", "minecraft:birch_leaves", "minecraft:azalea_leaves", "minecraft:flowering_azalea_leaves", "integrateddynamics:menril_leaves", "fruittrees:cherry_leaves?", "fruittrees:redlove_leaves?", "fruittrees:apple_leaves", "fruittrees:citron_leaves", "fruittrees:grapefruit_leaves", "fruittrees:lemon_leaves", "fruittrees:lime_leaves", "fruittrees:mandarin_leaves", "fruittrees:orange_leaves", "fruittrees:pomelo_leaves", "byg:baobab_leaves", "byg:blooming_witch_hazel_leaves", "byg:blue_enchanted_leaves", "byg:blue_spruce_leaves", "byg:brown_birch_leaves", "byg:brown_oak_leaves", "byg:cika_leaves", "byg:cypress_leaves", "byg:ebony_leaves", "byg:fir_leaves", "byg:flowering_orchard_leaves", "byg:flowering_palo_verde_leaves", "byg:green_enchanted_leaves", "byg:holly_berry_leaves", "byg:holly_leaves", "byg:jacaranda_leaves", "byg:joshua_leaves", "byg:ripe_joshua_leaves", "byg:indigo_jacaranda_leaves", "byg:mahogany_leaves", "byg:mangrove_leaves", "byg:maple_leaves", "byg:orange_birch_leaves", "byg:orange_oak_leaves", "byg:orange_spruce_leaves", "byg:orchard_leaves", "byg:palo_verde_leaves", "byg:pine_leaves", "byg:pink_cherry_leaves", "byg:rainbow_eucalyptus_leaves", "byg:red_birch_leaves", "byg:red_maple_leaves", "byg:red_oak_leaves", "byg:red_spruce_leaves", "byg:redwood_leaves", "byg:ripe_orchard_leaves", "byg:silver_maple_leaves", "byg:skyris_leaves", "byg:green_apple_skyris_leaves", "byg:white_cherry_leaves", "byg:willow_leaves", "byg:witch_hazel_leaves", "byg:yellow_birch_leaves", "byg:yellow_spruce_leaves", "byg:aspen_leaves", "byg:zelkova_leaves", "byg:palm_leaves", "byg:araucaria_leaves", "byg:brown_zelkova_leaves", "byg:lament_leaves", "byg:withering_oak_leaves", "byg:ether_leaves", "byg:nightshade_leaves", "byg:flowering_nightshade_leaves", "byg:flowering_jacaranda_leaves", "byg:flowering_indigo_jacaranda_leaves"]
+},
+acacia_logs:{
+tag:"minecraft:acacia_logs",
+members:["minecraft:acacia_log", "minecraft:acacia_wood", "minecraft:stripped_acacia_log", "minecraft:stripped_acacia_wood"]
+},
+piglin_loved:{
+tag:"minecraft:piglin_loved",
+members:["#minecraft:gold_ores", "minecraft:gold_block", "minecraft:gilded_blackstone", "minecraft:light_weighted_pressure_plate", "minecraft:gold_ingot", "minecraft:bell", "minecraft:clock", "minecraft:golden_carrot", "minecraft:glistering_melon_slice", "minecraft:golden_apple", "minecraft:enchanted_golden_apple", "minecraft:golden_helmet", "minecraft:golden_chestplate", "minecraft:golden_leggings", "minecraft:golden_boots", "minecraft:golden_horse_armor", "minecraft:golden_sword", "minecraft:golden_pickaxe", "minecraft:golden_shovel", "minecraft:golden_axe", "minecraft:golden_hoe", "minecraft:raw_gold", "minecraft:raw_gold_block", "farmersdelight:golden_knife", "create:golden_sheet", "create:crushed_gold_ore", "byg:sythian_stalk_block"]
+},
+copper_ores:{
+tag:"minecraft:copper_ores",
+members:["minecraft:copper_ore", "minecraft:deepslate_copper_ore"]
+},
+logs_that_burn:{
+tag:"minecraft:logs_that_burn",
+members:["#minecraft:dark_oak_logs", "#minecraft:oak_logs", "#minecraft:acacia_logs", "#minecraft:birch_logs", "#minecraft:jungle_logs", "#minecraft:spruce_logs", "integrateddynamics:menril_log", "integrateddynamics:menril_log_filled", "#fruittrees:cherry_logs", "#fruittrees:citrus_logs", "#byg:aspen_logs", "#byg:baobab_logs", "#byg:blue_enchanted_logs", "#byg:cherry_logs", "#byg:cika_logs", "#byg:cypress_logs", "#byg:ebony_logs", "#byg:fir_logs", "#byg:green_enchanted_logs", "#byg:holly_logs", "#byg:jacaranda_logs", "#byg:mahogany_logs", "#byg:mangrove_logs", "#byg:maple_logs", "#byg:palo_verde_logs", "#byg:pine_logs", "#byg:rainbow_eucalyptus_logs", "#byg:redwood_logs", "#byg:skyris_logs", "#byg:willow_logs", "#byg:witch_hazel_logs", "#byg:zelkova_logs", "#byg:palm_logs", "#byg:bulbis_stems", "#byg:ether_logs", "#byg:nightshade_logs", "#byg:withering_oak_logs", "#byg:imparius_stems"]
+},
+wooden_slabs:{
+tag:"minecraft:wooden_slabs",
+members:["minecraft:oak_slab", "minecraft:spruce_slab", "minecraft:birch_slab", "minecraft:jungle_slab", "minecraft:acacia_slab", "minecraft:dark_oak_slab", "minecraft:crimson_slab", "minecraft:warped_slab", "integrateddynamics:menril_slab", "fruittrees:cherry_slab?", "fruittrees:citrus_slab", "byg:aspen_slab", "byg:baobab_slab", "byg:blue_enchanted_slab", "byg:cherry_slab", "byg:cika_slab", "byg:cypress_slab", "byg:ebony_slab", "byg:fir_slab", "byg:green_enchanted_slab", "byg:holly_slab", "byg:jacaranda_slab", "byg:mahogany_slab", "byg:mangrove_slab", "byg:maple_slab", "byg:pine_slab", "byg:rainbow_eucalyptus_slab", "byg:redwood_slab", "byg:skyris_slab", "byg:willow_slab", "byg:witch_hazel_slab", "byg:zelkova_slab", "byg:sythian_slab", "byg:embur_slab", "byg:palm_slab", "byg:lament_slab", "byg:ether_slab", "byg:bulbis_slab", "byg:nightshade_slab", "byg:imparius_slab"]
+},
+small_flowers:{
+tag:"minecraft:small_flowers",
+members:["minecraft:dandelion", "minecraft:poppy", "minecraft:blue_orchid", "minecraft:allium", "minecraft:azure_bluet", "minecraft:red_tulip", "minecraft:orange_tulip", "minecraft:white_tulip", "minecraft:pink_tulip", "minecraft:oxeye_daisy", "minecraft:cornflower", "minecraft:lily_of_the_valley", "minecraft:wither_rose", "farmersdelight:wild_carrots", "farmersdelight:wild_potatoes", "farmersdelight:wild_beetroots", "farmersdelight:wild_cabbages", "farmersdelight:wild_tomatoes", "farmersdelight:wild_onions", "byg:allium_flower_bush", "byg:alpine_bellflower", "byg:amaranth", "byg:angelica", "byg:hydrangea_bush", "byg:begonia", "byg:bistort", "byg:blue_sage", "byg:black_rose", "byg:california_poppy", "byg:crocus", "byg:cyan_amaranth", "byg:cyan_rose", "byg:cyan_tulip", "byg:daffodil", "byg:delphinium", "byg:fairy_slipper", "byg:firecracker_flower_bush", "byg:foxglove", "byg:golden_spined_cactus", "byg:green_tulip", "byg:guzmania", "byg:incan_lily", "byg:iris", "byg:japanese_orchid", "byg:kovan_flower", "byg:lazarus_bellflower", "byg:lolipop_flower", "byg:magenta_amaranth", "byg:magenta_tulip", "byg:orange_amaranth", "byg:orange_daisy", "byg:osiria_rose", "byg:peach_leather_flower", "byg:pink_allium", "byg:pink_allium_flower_bush", "byg:pink_anemone", "byg:pink_daffodil", "byg:prairie_grass", "byg:protea_flower", "byg:purple_amaranth", "byg:purple_sage", "byg:purple_tulip", "byg:richea", "byg:rose", "byg:snowdrops", "byg:silver_vase_flower", "byg:torch_ginger", "byg:violet_leather_flower", "byg:white_anemone", "byg:white_sage", "byg:winter_rose", "byg:winter_cyclamen", "byg:winter_scilla", "byg:yellow_daffodil", "byg:yellow_tulip", "byg:pollen_block", "byg:tall_allium", "byg:tall_pink_allium", "byg:thereal_bellflower"]
+},
+axolotl_tempt_items:{
+tag:"minecraft:axolotl_tempt_items",
+members:["minecraft:tropical_fish_bucket"]
+},
+creeper_drop_music_discs:{
+tag:"minecraft:creeper_drop_music_discs",
+members:["minecraft:music_disc_13", "minecraft:music_disc_cat", "minecraft:music_disc_blocks", "minecraft:music_disc_chirp", "minecraft:music_disc_far", "minecraft:music_disc_mall", "minecraft:music_disc_mellohi", "minecraft:music_disc_stal", "minecraft:music_disc_strad", "minecraft:music_disc_ward", "minecraft:music_disc_11", "minecraft:music_disc_wait"]
+},
+birch_logs:{
+tag:"minecraft:birch_logs",
+members:["minecraft:birch_log", "minecraft:birch_wood", "minecraft:stripped_birch_log", "minecraft:stripped_birch_wood"]
+},
+oak_logs:{
+tag:"minecraft:oak_logs",
+members:["minecraft:oak_log", "minecraft:oak_wood", "minecraft:stripped_oak_log", "minecraft:stripped_oak_wood", "byg:withering_oak_log", "byg:withering_oak_wood"]
+},
+jungle_logs:{
+tag:"minecraft:jungle_logs",
+members:["minecraft:jungle_log", "minecraft:jungle_wood", "minecraft:stripped_jungle_log", "minecraft:stripped_jungle_wood"]
+},
+lectern_books:{
+tag:"minecraft:lectern_books",
+members:["minecraft:written_book", "minecraft:writable_book", "patchouli:guide_book"]
+},
+spruce_logs:{
+tag:"minecraft:spruce_logs",
+members:["minecraft:spruce_log", "minecraft:spruce_wood", "minecraft:stripped_spruce_log", "minecraft:stripped_spruce_wood"]
+},
+flowers:{
+tag:"minecraft:flowers",
+members:["#minecraft:small_flowers", "#minecraft:tall_flowers", "minecraft:flowering_azalea_leaves", "minecraft:flowering_azalea", "byg:flowering_indigo_jacaranda_bush", "byg:flowering_jacaranda_bush", "byg:flowering_indigo_jacaranda_leaves", "byg:flowering_jacaranda_leaves", "byg:flowering_orchard_leaves", "byg:flowering_palo_verde_leaves", "byg:flowering_nightshade_leaves"]
+},
+planks:{
+tag:"minecraft:planks",
+members:["minecraft:oak_planks", "minecraft:spruce_planks", "minecraft:birch_planks", "minecraft:jungle_planks", "minecraft:acacia_planks", "minecraft:dark_oak_planks", "minecraft:crimson_planks", "minecraft:warped_planks", "integrateddynamics:menril_planks", "fruittrees:cherry_planks?", "fruittrees:citrus_planks", "byg:aspen_planks", "byg:baobab_planks", "byg:blue_enchanted_planks", "byg:cherry_planks", "byg:cika_planks", "byg:cypress_planks", "byg:ebony_planks", "byg:fir_planks", "byg:green_enchanted_planks", "byg:holly_planks", "byg:jacaranda_planks", "byg:mahogany_planks", "byg:mangrove_planks", "byg:maple_planks", "byg:pine_planks", "byg:rainbow_eucalyptus_planks", "byg:redwood_planks", "byg:skyris_planks", "byg:willow_planks", "byg:witch_hazel_planks", "byg:zelkova_planks", "byg:sythian_planks", "byg:embur_planks", "byg:palm_planks", "byg:lament_planks", "byg:ether_planks", "byg:bulbis_planks", "byg:nightshade_planks", "byg:imparius_planks"]
+},
+fox_food:{
+tag:"minecraft:fox_food",
+members:["minecraft:sweet_berries", "minecraft:glow_berries", "#forge:fruits"]
+},
+diamond_ores:{
+tag:"minecraft:diamond_ores",
+members:["minecraft:diamond_ore", "minecraft:deepslate_diamond_ore"]
+},
+candles:{
+tag:"minecraft:candles",
+members:["minecraft:candle", "minecraft:white_candle", "minecraft:orange_candle", "minecraft:magenta_candle", "minecraft:light_blue_candle", "minecraft:yellow_candle", "minecraft:lime_candle", "minecraft:pink_candle", "minecraft:gray_candle", "minecraft:light_gray_candle", "minecraft:cyan_candle", "minecraft:purple_candle", "minecraft:blue_candle", "minecraft:brown_candle", "minecraft:green_candle", "minecraft:red_candle", "minecraft:black_candle"]
+},
+freeze_immune_wearables:{
+tag:"minecraft:freeze_immune_wearables",
+members:["minecraft:leather_boots", "minecraft:leather_leggings", "minecraft:leather_chestplate", "minecraft:leather_helmet", "minecraft:leather_horse_armor"]
+}
+},
+fabric:{
+pickaxes:{
+tag:"fabric:pickaxes",
+members:["byg:pendorite_pickaxe"]
+},
+axes:{
+tag:"fabric:axes",
+members:["byg:pendorite_axe", "byg:pendorite_battleaxe"]
+},
+hoes:{
+tag:"fabric:hoes",
+members:["byg:pendorite_hoe"]
+},
+chestplates:{
+tag:"fabric:chestplates",
+members:["byg:ametrine_chestplate"]
+},
+leggings:{
+tag:"fabric:leggings",
+members:["byg:ametrine_leggings"]
+},
+shovels:{
+tag:"fabric:shovels",
+members:["byg:pendorite_shovel"]
+},
+helmets:{
+tag:"fabric:helmets",
+members:["byg:ametrine_helmet"]
+},
+boots:{
+tag:"fabric:boots",
+members:["byg:ametrine_boots"]
+},
+swords:{
+tag:"fabric:swords",
+members:["byg:pendorite_sword", "byg:pendorite_battleaxe"]
+}
+},
+integrateddynamics:{
+parts:{
+tag:"integrateddynamics:parts",
+members:["integratedterminals:part_terminal_storage", "integratedterminals:part_terminal_crafting_job", "integrateddynamics:part_audio_reader", "integrateddynamics:part_audio_writer", "integrateddynamics:part_block_reader", "integrateddynamics:part_connector_mono_directional", "integrateddynamics:part_connector_omni_directional", "integrateddynamics:part_display_panel", "integrateddynamics:part_dynamic_light_panel", "integrateddynamics:part_effect_writer", "integrateddynamics:part_entity_reader", "integrateddynamics:part_entity_writer", "integrateddynamics:part_extradimensional_reader", "integrateddynamics:part_fluid_reader", "integrateddynamics:part_inventory_reader", "integrateddynamics:part_inventory_writer", "integrateddynamics:part_machine_reader", "integrateddynamics:part_machine_writer", "integrateddynamics:part_network_reader", "integrateddynamics:part_redstone_reader", "integrateddynamics:part_redstone_writer", "integrateddynamics:part_static_light_panel", "integrateddynamics:part_world_reader", "integratedtunnels:part_interface_energy", "integratedtunnels:part_interface_filter_energy", "integratedtunnels:part_importer_energy", "integratedtunnels:part_exporter_energy", "integratedtunnels:part_importer_world_energy", "integratedtunnels:part_exporter_world_energy", "integratedtunnels:part_interface_item", "integratedtunnels:part_interface_filter_item", "integratedtunnels:part_importer_item", "integratedtunnels:part_exporter_item", "integratedtunnels:part_importer_world_item", "integratedtunnels:part_exporter_world_item", "integratedtunnels:part_interface_fluid", "integratedtunnels:part_interface_filter_fluid", "integratedtunnels:part_importer_fluid", "integratedtunnels:part_exporter_fluid", "integratedtunnels:part_importer_world_fluid", "integratedtunnels:part_exporter_world_fluid", "integratedtunnels:part_importer_world_block", "integratedtunnels:part_exporter_world_block", "integratedtunnels:part_player_simulator"]
+},
+menril_logs:{
+tag:"integrateddynamics:menril_logs",
+members:["integrateddynamics:menril_log", "integrateddynamics:menril_log_filled", "integrateddynamics:menril_log_stripped", "integrateddynamics:menril_wood", "integrateddynamics:menril_wood_stripped"]
+}
+},
+diet:{
+sugars:{
+tag:"diet:sugars",
+members:["minecraft:cake", "minecraft:cocoa_beans", "minecraft:honey_bottle", "minecraft:honeycomb", "minecraft:sugar", "aoa3:candy_cane?", "aoa3:candy_corn?", "aoa3:gingerbread_cookie?", "aoa3:gingerbread_wing?", "aoa3:peppermint_candy?", "aoa3:sour_candy?", "aoa3:sour_gummy?", "aoa3:sour_pop?", "aoa3:spearmint_candy?", "autumnity:pancake?", "autumnity:syrup_bottle?", "blueberry:blueberry_muffin?", "buzzier_bees:sticky_honey_wand?", "charcoal_pit:choco_powder?", "charcoal_pit:chocolate?", "create:bar_of_chocolate?", "create:chocolate_glazed_berries?", "create:honeyed_apple?", "create:sweet_roll?", "create_confectionery:bar_of_black_chocolate?", "create_confectionery:bar_of_caramel?", "create_confectionery:bar_of_ruby_chocolate?", "create_confectionery:bar_of_white_chocolate?", "create_confectionery:black_chocolate_glazed_berries?", "create_confectionery:caramel_glazed_berries?", "create_confectionery:hot_chocolate_bottle?", "create_confectionery:marshmallow?", "create_confectionery:ruby_chocolate_glazed_berries?", "create_confectionery:white_chocolate_glazed_berries?", "createaddition:chocolate_cake?", "createaddition:honey_cake?", "crockpot:avaj?", "crockpot:candy?", "crockpot:honey_ham?", "crockpot:honey_nuggets?", "crockpot:hot_cocoa?", "crockpot:ice_cream?", "crockpot:iced_tea?", "crockpot:pow_cake?", "crockpot:pumpkin_cookie?", "crockpot:syrup?", "crockpot:taffy?", "croptopia:apple_pie?", "croptopia:brownies?", "croptopia:cheese_cake?", "croptopia:cherry_pie?", "croptopia:churros?", "croptopia:doughnut?", "croptopia:eton_mess?", "croptopia:figgy_pudding?", "croptopia:molasses?", "croptopia:scones?", "croptopia:tres_leche_cake?", "druidcraft:blueberry_muffin?", "environmental:truffle?", "extrafood:cupcake?", "extrafood:pancake?", "extrafoods:chocolate_chip_waffle?", "extrafoods:waffle?", "farmersdelight:honey_glazed_ham?", "fluffy_farmer:carmel?", "fluffy_farmer:chocolate_bar?", "fluffy_farmer:melted_carmel?", "foodexpansion:chocolate_cake?", "frozenup:truffle?", "gaiadimension:blue_geode_slice?", "gaiadimension:green_geode_slice?", "gaiadimension:pink_geode_slice?", "gaiadimension:purple_geode_slice?", "good_nights_sleep:candy?", "iceandfire:cannoli?", "iceandfire:pixie_dust?", "meetyourfight:aether_glazed_cupcake?", "minecolonies:cake_batter?", "minecolonies:cookie_dough?", "minecolonies:raw_pumpkin_pie?", "neapolitan:adzuki_cake?", "neapolitan:banana_cake?", "neapolitan:chocolate_bar?", "neapolitan:chocolate_cake?", "neapolitan:mint_cake?", "neapolitan:strawberry_cake?", "neapolitan:vanilla_cake?", "pamhc2foodcore:caramelitem?", "pamhc2foodcore:trailmixitem?", "pamhc2foodextended:aebleskiversitem?", "pamhc2foodextended:brownieitem?", "pamhc2foodextended:candycornitem?", "pamhc2foodextended:cherrysodaitem?", "pamhc2foodextended:colasodaitem?", "pamhc2foodextended:frosteddonutitem?", "pamhc2foodextended:gingersodaitem?", "pamhc2foodextended:grapefruitsodaitem?", "pamhc2foodextended:grapesodaitem?", "pamhc2foodextended:holidaycakeitem?", "pamhc2foodextended:honeyglazedcarrotsitem?", "pamhc2foodextended:honeyglazedhamitem?", "pamhc2foodextended:lemonlimesodaitem?", "pamhc2foodextended:meringuebrownieitem?", "pamhc2foodextended:meringueitem?", "pamhc2foodextended:mochicakeitem?", "pamhc2foodextended:orangesodaitem?", "pamhc2foodextended:pavlovaitem?", "pamhc2foodextended:rivermudcakeitem?", "pamhc2foodextended:rootbeersodaitem?", "pamhc2foodextended:strawberrysodaitem?", "pamhc2foodextended:sugarcookieitem?", "pamhc2foodextended:theatreboxitem?", "pamhc2foodextended:timtamitem?", "pamhc2trees:maplesyrupitem?", "peculiars:aloe_cake?", "peculiars:passionfruit_cake?", "peculiars:yucca_cake?", "pumpkin_spice_everything:pumpkin_spice?", "pumpkin_spice_everything:pumpkin_spice_cake?", "rankine:cake_slice?", "rankine:maple_syrup?", "rats:treacle?", "resourcefulbees:catnip_honey_bottle?", "resourcefulbees:oreo_cookie?", "resourcefulbees:rainbow_honey_bottle?", "seasonals:pumpkin_cake?", "seasonals:sweet_berry_cake?", "simpledelights:creamcicle?", "simpledelights:fruit_tart?", "simpledelights:plum_pudding?", "simpledelights:strawberry_shortcake?", "simplefarming:birthday_cake?", "simplefarming:chocolate?", "simplefarming:chocolate_cake?", "simplefarming:jaffa_cake?", "simplefarming:marshmallow?", "simplefarming:pancakes?", "supplementaries:pancake?", "survivalplus:cheese_cake?", "survivalplus:sponge_cake?", "tconstruct:blood_cake?", "tconstruct:earth_cake?", "tconstruct:ender_cake?", "tconstruct:magma_cake?", "tconstruct:sky_cake?", "tea_kettle:half_honey_bottle?", "terraincognita:taffy?", "the_bumblezone:honey_crystal_shards?", "the_bumblezone:sugar_water_bottle?", "thermal:carrot_cake?", "thermal:chocolate_cake?", "thermal:potion_cake?", "thermal:spice_cake?", "thermal:syrup_bottle?", "trickcreeps:treat_powder?", "twilightforest:experiment_115?", "vanillacookbook:berry_brownie?", "vanillacookbook:berry_cake?", "vanillacookbook:berry_pancake?", "vanillacookbook:book_cake?", "vanillacookbook:brownie?", "vanillacookbook:carrot_cake?", "vanillacookbook:chocolate?", "vanillacookbook:chocolate_cake?", "vanillacookbook:chocolate_egg?", "vanillacookbook:chorus_cake?", "vanillacookbook:honey_pancake?", "vanillacookbook:ice_cream_cake?", "vanillacookbook:mohnkuchen?", "vanillacookbook:pancake?", "vanillacookbook:rose_cake?", "vanillafoodpantry:apple_bread?", "vanillafoodpantry:apple_muffin?", "vanillafoodpantry:bottle_syrup_base?", "vanillafoodpantry:carrot_muffin?", "vanillafoodpantry:chocolate_sunbutter_sandwich?", "vanillafoodpantry:cookie_apple?", "vanillafoodpantry:enriched_pumpkin_pie?", "vanillafoodpantry:fizzing_agent?", "vanillafoodpantry:fizzydrink_apple?", "vanillafoodpantry:fizzydrink_klingon?", "vanillafoodpantry:fizzydrink_melon?", "vanillafoodpantry:fizzydrink_milk?", "vanillafoodpantry:gelo_apple?", "vanillafoodpantry:gelo_berry_mix?", "vanillafoodpantry:gelo_chorusfruit?", "vanillafoodpantry:gelo_cocoa?", "vanillafoodpantry:gelo_dandy?", "vanillafoodpantry:gelo_honey?", "vanillafoodpantry:gelo_klingon?", "vanillafoodpantry:gelo_melon?", "vanillafoodpantry:gelo_midnight?", "vanillafoodpantry:gelo_orange?", "vanillafoodpantry:gelo_poppy?", "vanillafoodpantry:gelo_sugarbomb?", "vanillafoodpantry:gelo_ugli?", "vanillafoodpantry:hardened_sugar?", "vanillafoodpantry:honey_bread?", "vanillafoodpantry:honey_muffin?", "vanillafoodpantry:honey_sunbutter_sandwich?", "vanillafoodpantry:molasses_bread?", "vanillafoodpantry:pumpkin_bread?", "vanillafoodpantry:snocone_apple?", "vanillafoodpantry:snocone_melon?", "vanillafoodpantry:teadrink_bushtea?", "vanillafoodpantry:teadrink_milky_bushtea?", "vanillafoodpantry:teadrink_milky_dandtea?", "vanillafoodpantry:uglifruit_muffin?", "xercamod:ender_cupcake?", "xercamod:item_apple_cupcake?", "xercamod:item_apple_pie?", "xercamod:item_carrot_cupcake?", "xercamod:item_chocolate?", "xercamod:item_cocoa_cupcake?", "xercamod:item_donut?", "xercamod:item_fancy_apple_cupcake?", "xercamod:item_fancy_donut?", "xercamod:item_fancy_pumpkin_cupcake?", "xercamod:item_honey_cupcake?", "xercamod:item_melon_cupcake?", "xercamod:item_pumpkin_cupcake?", "xercamod:sweet_berry_cupcake?", "xercamod:sweet_berry_cupcake_fancy?", "xercamod:sweet_berry_pie?"]
+},
+special_food:{
+tag:"diet:special_food",
+members:["minecraft:cake", "atmospheric:yucca_gateau?", "autumnity:cooked_turkey?", "autumnity:pancake?", "autumnity:turkey?", "betteranimalsplus:turkey_cooked?", "betteranimalsplus:turkey_raw?", "createaddition:chocolate_cake?", "createaddition:honey_cake?", "farmersdelight:apple_pie?", "farmersdelight:chocolate_pie?", "farmersdelight:sweet_berry_cheesecake?", "foodexpansion:chocolate_cake?", "neapolitan:adzuki_cake?", "neapolitan:banana_cake?", "neapolitan:chocolate_cake?", "neapolitan:mint_cake?", "neapolitan:strawberry_cake?", "neapolitan:vanilla_cake?", "nefdecomod:meal_01?", "nefdecomod:meal_02?", "nefdecomod:meal_03?", "nefdecomod:meal_04?", "nethers_delight:stuffed_hoglin_item?", "peculiars:aloe_cake?", "peculiars:passionfruit_cake?", "peculiars:yucca_cake?", "pumpkin_spice_everything:pumpkin_spice_cake?", "rankine:aged_cheese?", "rankine:unaged_cheese?", "seasonals:pumpkin_cake?", "seasonals:sweet_berry_cake?", "simplefarming:birthday_cake?", "simplefarming:cheese_block?", "simplefarming:chocolate_cake?", "supplementaries:pancake?", "survivalplus:cheese_cake?", "survivalplus:sponge_cake?", "tconstruct:blood_cake?", "tconstruct:earth_cake?", "tconstruct:ender_cake?", "tconstruct:magma_cake?", "tconstruct:sky_cake?", "thermal:carrot_cake?", "thermal:cheese_wheel?", "thermal:chocolate_cake?", "thermal:potion_cake?", "thermal:spice_cake?", "thermal:stuffed_pumpkin?", "vanillacookbook:berry_cake?", "vanillacookbook:book_cake?", "vanillacookbook:brownie_tray?", "vanillacookbook:carrot_cake?", "vanillacookbook:cheesecake?", "vanillacookbook:chocolate_cake?", "vanillacookbook:chorus_cake?", "vanillacookbook:ice_cream_cake?", "vanillacookbook:mohnkuchen?", "vanillacookbook:pancake_stack?", "vanillacookbook:rose_cake?", "xercamod:item_apple_pie?", "xercamod:sweet_berry_pie?"]
+},
+proteins:{
+tag:"diet:proteins",
+members:["#minecraft:fishes", "minecraft:beef", "minecraft:bone", "minecraft:chicken", "minecraft:egg", "minecraft:fermented_spider_eye", "minecraft:ink_sac", "minecraft:milk_bucket", "minecraft:mutton", "minecraft:porkchop", "minecraft:rabbit", "minecraft:rotten_flesh", "minecraft:spider_eye", "minecraft:suspicious_stew", "minecraft:turtle_egg", "alexsmobs:blobfish?", "alexsmobs:emu_egg?", "alexsmobs:kangaroo_meat?", "alexsmobs:lobster_tail?", "alexsmobs:maggot?", "alexsmobs:moose_ribs?", "alexsmobs:shrimp_fried_rice?", "animalium:bear_meat?", "animalium:piranha_steak?", "animalium:rat_meat?", "aoa3:eye_bulb?", "aoa3:fiery_chops?", "aoa3:halycon_milk?", "aoa3:raw_charger_shank?", "aoa3:raw_chimera_chop?", "aoa3:raw_furlion_chop?", "aoa3:raw_halycon_beef?", "aquaculture:fish_fillet_raw?", "aquaculture:frog_legs_raw?", "aquaculture:turtle_soup?", "artifacts:everlasting_beef?", "atum:camel?", "atum:crunchy_golden_scarab?", "atum:crunchy_scarab?", "atum:quail?", "autumnity:cooked_turkey?", "autumnity:turkey?", "autumnity:turkey_egg?", "bettas:betta_fish?", "betteranimalsplus:blubber?", "betteranimalsplus:calamari_raw?", "betteranimalsplus:crab_meat_raw?", "betteranimalsplus:eel_meat_raw?", "betteranimalsplus:goatcheese?", "betteranimalsplus:goatmilk?", "betteranimalsplus:golden_goose_egg?", "betteranimalsplus:goose_egg?", "betteranimalsplus:pheasant_egg?", "betteranimalsplus:pheasantraw?", "betteranimalsplus:turkey_cooked?", "betteranimalsplus:turkey_egg?", "betteranimalsplus:turkey_leg_raw?", "betteranimalsplus:turkey_raw?", "betteranimalsplus:venisonraw?", "betterdefaultbiomes:duck?", "betterdefaultbiomes:duck_egg?", "betterdefaultbiomes:frog_leg?", "betterdefaultbiomes:frozen_flesh?", "betterendforge:end_fish_raw?", "blue_skies:carabeef?", "blue_skies:fiery_beans?", "blue_skies:monitor_tail?", "blue_skies:solnut?", "blue_skies:venison?", "charcoal_pit:calamari?", "charcoal_pit:cheese?", "charcoal_pit:chestnut?", "charcoal_pit:turtle_raw?", "combustivefishing:cooled_bill?", "combustivefishing:cooled_cod?", "comfortable_nether:baleen_filter?", "comfortable_nether:popped_pummeler_remnant?", "comfortable_nether:remnant_stew?", "comfortable_nether:strider_milk?", "comfortable_nether:weeping_abscess?", "crockpot:bacon_eggs?", "crockpot:bone_soup?", "crockpot:bone_stew?", "crockpot:california_roll?", "crockpot:ceviche?", "crockpot:fish_sticks?", "crockpot:fish_tacos?", "crockpot:frog_legs?", "crockpot:froggle_bunwich?", "crockpot:honey_ham?", "crockpot:honey_nuggets?", "crockpot:hot_chili?", "crockpot:kabobs?", "crockpot:meat_balls?", "crockpot:monster_lasagna?", "crockpot:monster_tartare?", "crockpot:moqueca?", "crockpot:pepper_popper?", "crockpot:perogies?", "crockpot:seafood_gumbo?", "crockpot:surf_n_turf?", "crockpot:tropical_bouillabaisse?", "crockpot:turkey_dinner?", "croptopia:almond?", "croptopia:beef_jerky?", "croptopia:blackbean?", "croptopia:cashew?", "croptopia:cheese_cake?", "croptopia:milk_bottle?", "croptopia:peanut?", "croptopia:pecan?", "croptopia:pork_jerky?", "croptopia:soybean?", "croptopia:tuna_sandwich?", "croptopia:walnut?", "dropthemeat:piglin_porkchop?", "dropthemeat:raw_bat?", "dropthemeat:raw_bear?", "dropthemeat:raw_bee?", "dropthemeat:raw_cat?", "dropthemeat:raw_dolphin?", "dropthemeat:raw_fox?", "dropthemeat:raw_horse?", "dropthemeat:raw_iron_golem?", "dropthemeat:raw_llama?", "dropthemeat:raw_monster_meat?", "dropthemeat:raw_parrot?", "dropthemeat:raw_red_meat?", "dropthemeat:raw_squid?", "dropthemeat:raw_strider?", "dropthemeat:raw_turtle?", "dropthemeat:raw_villager?", "dropthemeat:raw_white_meat?", "dropthemeat:raw_wolf?", "dropthemeat:villager_nose?", "ediblebugs:aphid?", "ediblebugs:camelspider?", "ediblebugs:caphid?", "ediblebugs:carpenterant?", "ediblebugs:centipede?", "ediblebugs:cricket?", "ediblebugs:dungbeetle?", "ediblebugs:fireant?", "ediblebugs:grasshopper?", "ediblebugs:jumilbug?", "ediblebugs:locust?", "ediblebugs:scarab?", "ediblebugs:scorpion?", "ediblebugs:slug?", "ediblebugs:sowbug?", "ediblebugs:termite?", "ediblebugs:witchettygrub?", "ediblebugs:woodtermite?", "endlessoceans:cooked_blue_tang?", "endlessoceans:cooked_bowers_parrotfish?", "endlessoceans:cooked_clown_fish?", "endlessoceans:cooked_coral_goby?", "endlessoceans:cooked_crescent_tail_bigeye?", "endlessoceans:cooked_dusky_batfish?", "endlessoceans:cooked_moorish_idol?", "endlessoceans:cooked_porcupine_fish?", "endlessoceans:cooked_sailfin_tang?", "endlessoceans:cooked_starcks_demoiselle?", "endlessoceans:cooked_yellow_tang?", "endlessoceans:fish_oil?", "environmental:duck?", "environmental:duck_egg?", "environmental:venison?", "evilcraft:flesh_humanoid?", "evilcraft:flesh_werewolf?", "exoticbirds:bluejay_egg?", "exoticbirds:booby_egg?", "exoticbirds:budgerigar_egg?", "exoticbirds:cardinal_egg?", "exoticbirds:cassowary_egg?", "exoticbirds:cockatoo_egg?", "exoticbirds:crane_egg?", "exoticbirds:duck_egg?", "exoticbirds:flamingo_egg?", "exoticbirds:gouldianfinch_egg?", "exoticbirds:gull_egg?", "exoticbirds:heron_egg?", "exoticbirds:hummingbird_egg?", "exoticbirds:kingfisher_egg?", "exoticbirds:kiwi_egg?", "exoticbirds:kookaburra_egg?", "exoticbirds:lyrebird_egg?", "exoticbirds:macaw_egg?", "exoticbirds:magpie_egg?", "exoticbirds:ostrich_egg?", "exoticbirds:owl_egg?", "exoticbirds:peafowl_egg?", "exoticbirds:pelican_egg?", "exoticbirds:penguin_egg?", "exoticbirds:pigeon_egg?", "exoticbirds:raw_birdmeat?", "exoticbirds:roadrunner_egg?", "exoticbirds:robin_egg?", "exoticbirds:swan_egg?", "exoticbirds:toucan_egg?", "exoticbirds:woodpecker_egg?", "farmersdelight:cabbage_rolls?", "farmersdelight:fried_egg?", "farmersdelight:ham?", "farmersdelight:honey_glazed_ham?", "farmersdelight:roast_chicken?", "farmersdelight:shepherds_pie?", "fins:banded_redback_shrimp?", "fins:blu_wee?", "fins:bugmeat?", "fins:cooked_bull_crab_claw?", "fins:flatback_sucker?", "fins:golden_river_ray_wing_fillet?", "fins:high_finned_blue?", "fins:luminous_calamari?", "fins:night_light_squid?", "fins:ornate_bugfish?", "fins:papa_wee?", "fins:pea_wee?", "fins:raw_golden_river_ray_wing?", "fins:swamp_mucker?", "fins:teal_arrowfish?", "fins:vibra_wee?", "fins:wee_wee?", "fins:wherble_fin?", "fluffy_farmer:cold_cuts?", "foodexpansion:bat_wing?", "foodexpansion:horse_meat?", "foodexpansion:llama_meat?", "foodexpansion:ocelot_meat?", "foodexpansion:parrot_meat?", "foodexpansion:polar_bear_meat?", "foodexpansion:squid?", "foodexpansion:wolf_meat?", "forbidden_arcanus:bat_wing?", "forbidden_arcanus:edelwood_suspicious_stew_bucket?", "forbidden_arcanus:tentacle?", "gaiadimension:large_tentacle?", "gaiadimension:luggeroth_chop?", "gaiadimension:lurmorus_meat?", "gaiadimension:small_tentacle?", "glowbats:glow_bat_wing?", "greekfantasy:gorgon_blood?", "iceandfire:cannoli?", "iceandfire:deathworm_egg?", "iceandfire:deathworm_egg_giant?", "iceandfire:fire_dragon_flesh?", "iceandfire:hippogryph_egg?", "iceandfire:ice_dragon_flesh?", "iceandfire:lightning_dragon_flesh?", "iceandfire:myrmex_desert_egg?", "iceandfire:myrmex_jungle_egg?", "immersivecooking:raw_spider_shank?", "infernalexp:blindsight_tongue?", "infernalexp:raw_hogchop?", "krayscandles:soybean?", "minecolonies:raw_pumpkin_pie?", "mowziesmobs:glowing_jelly?", "mysticalworld:raw_squid?", "mysticalworld:venison?", "neapolitan:adzuki_beans?", "nefdecomod:meal_01?", "nefdecomod:meal_02?", "nefdecomod:squid_raw?", "nethers_delight:hoglin_ear?", "nethers_delight:hoglin_loin?", "nethers_delight:propelpearl?", "nethers_delight:roast_hoglin?", "nethers_delight:roast_hoglin_ham?", "nethers_delight:roast_hoglin_snout?", "nethers_delight:strider_slice?", "nethers_delight:stuffed_hoglin_item?", "nourished_nether:raw_hoglin_meat?", "oddwatermobs:crab_leg?", "oddwatermobs:deep_sea_fish?", "oddwatermobs:raw_anglerfish?", "oddwatermobs:raw_coelacanth?", "oddwatermobs:raw_ghost_shark?", "oddwatermobs:raw_isopod?", "oddwatermobs:raw_mudskipper?", "outer_end:stalker_meat?", "pamhc2crops:beanitem?", "pamhc2crops:peanutitem?", "pamhc2crops:soybeanitem?", "pamhc2crops:waterchestnutitem?", "pamhc2foodcore:freshmilkitem?", "pamhc2foodcore:sunflowerseedsitem?", "pamhc2foodextended:bangersandmashitem?", "pamhc2foodextended:bolognaitem?", "pamhc2foodextended:bulgogiitem?", "pamhc2foodextended:cevicheitem?", "pamhc2foodextended:cornedbeefitem?", "pamhc2foodextended:eggsbenedictitem?", "pamhc2foodextended:fishdinneritem?", "pamhc2foodextended:gourmetmuttonpattyitem?", "pamhc2foodextended:honeyglazedhamitem?", "pamhc2foodextended:leafyfishsandwichitem?", "pamhc2foodextended:misopasteitem?", "pamhc2foodextended:padthaiitem?", "pamhc2foodextended:paneeritem?", "pamhc2foodextended:pinkelitem?", "pamhc2foodextended:rawtofaconitem?", "pamhc2foodextended:rawtofishitem?", "pamhc2foodextended:refriedbeansitem?", "pamhc2foodextended:schnitzelitem?", "pamhc2foodextended:seedsoupitem?", "pamhc2foodextended:soymilkitem?", "pamhc2foodextended:springrollitem?", "pamhc2trees:almonditem?", "pamhc2trees:candlenutitem?", "pamhc2trees:cashewitem?", "pamhc2trees:chestnutitem?", "pamhc2trees:hazelnutitem?", "pamhc2trees:pecanitem?", "pamhc2trees:pinenutitem?", "pamhc2trees:pistachioitem?", "pamhc2trees:walnutitem?", "pandoras_creatures:bufflon_beef?", "pandoras_creatures:crab_meat?", "pandoras_creatures:seahorse?", "pneumaticcraft:salmon_tempura?", "projectvibrantjourneys:clam?", "quark:crab_leg?", "quark:frog_leg?", "rankine:aged_cheese?", "rankine:black_walnut?", "rankine:cheese?", "rankine:unaged_cheese?", "rats:blue_cheese?", "rats:contaminated_food?", "rats:nether_cheese?", "rats:plague_leech?", "rats:raw_rat?", "rats:string_cheese?", "silents_mechanisms:beef_jerky?", "silents_mechanisms:chicken_jerky?", "silents_mechanisms:cod_jerky?", "silents_mechanisms:mutton_jerky?", "silents_mechanisms:pork_jerky?", "silents_mechanisms:rabbit_jerky?", "silents_mechanisms:salmon_jerky?", "simplefarming:cheese_block?", "simplefarming:cheese_slice?", "simplefarming:peanut?", "simplefarming:raw_bacon?", "simplefarming:raw_calamari?", "simplefarming:raw_chicken_wings?", "simplefarming:raw_horse_meat?", "simplefarming:soybean?", "survivalplus:cheese_cake?", "tconstruct:bacon?", "tea_kettle:black_latte?", "tea_kettle:green_latte?", "tea_kettle:oolong_latte?", "tea_kettle:white_latte?", "terraincognita:hazelnut?", "thermal:peanut?", "turtlemancy:oyster?", "twilightforest:hydra_chop?", "twilightforest:meef_stroganoff?", "twilightforest:raw_meef?", "twilightforest:raw_venison?", "undergarden:raw_dweller_meat?", "undergarden:raw_gloomper_leg?", "uniquecrops:teriyaki?", "untitledduckmod:duck_egg?", "untitledduckmod:goose_egg?", "untitledduckmod:raw_duck?", "untitledduckmod:raw_goose?", "vanillafoodpantry:acorn_nuts?", "vanillafoodpantry:bat_raw?", "vanillafoodpantry:bear_raw?", "vanillafoodpantry:bear_raw_charred?", "vanillafoodpantry:bread_pocket_fish_salad?", "vanillafoodpantry:carrot_muffin?", "vanillafoodpantry:cave_stew?", "vanillafoodpantry:creamsoup_beet?", "vanillafoodpantry:creamsoup_cactus?", "vanillafoodpantry:creamsoup_carrot?", "vanillafoodpantry:creamsoup_mushroom?", "vanillafoodpantry:creamsoup_potato?", "vanillafoodpantry:creamsoup_pumpkin?", "vanillafoodpantry:cyclops_sandwich?", "vanillafoodpantry:decker_cheesesteak?", "vanillafoodpantry:decker_cuban?", "vanillafoodpantry:decker_fish?", "vanillafoodpantry:decker_mutton?", "vanillafoodpantry:decker_steak?", "vanillafoodpantry:fish_sausage?", "vanillafoodpantry:fish_sausage_mashwrap?", "vanillafoodpantry:fried_eggwhite?", "vanillafoodpantry:guardian_meat_raw?", "vanillafoodpantry:hocks_raw?", "vanillafoodpantry:horse_raw?", "vanillafoodpantry:llama_raw?", "vanillafoodpantry:phantom_meat_raw?", "vanillafoodpantry:pigtail_raw?", "vanillafoodpantry:polar_bear_stew?", "vanillafoodpantry:portion_jerky?", "vanillafoodpantry:potato_chowder?", "vanillafoodpantry:pumpkin_pigtail_stew?", "vanillafoodpantry:pumpkin_pigtail_stew_combo?", "vanillafoodpantry:ravager_meat_charred?", "vanillafoodpantry:ravager_meat_raw?", "vanillafoodpantry:sanitized_flesh_steamed?", "vanillafoodpantry:squidd_raw?", "vanillafoodpantry:teadrink_milky_bushtea?", "vanillafoodpantry:teadrink_milky_dandtea?", "vanillafoodpantry:wolf_raw?", "wyrmroost:desert_wyrm?", "wyrmroost:dragon_egg?", "wyrmroost:raw_apex_meat?", "wyrmroost:raw_behemoth_meat?", "wyrmroost:raw_common_meat?", "wyrmroost:raw_lowtier_meat?", "xercamod:doner_slice?"]
+},
+grains:{
+tag:"diet:grains",
+members:["minecraft:cake", "minecraft:wheat", "alexsmobs:shrimp_fried_rice?", "aoa3:gingerbread_cookie?", "ashenwheat:ash_wheat_sheaf?", "ashenwheat:scintilla_wheat_sheaf?", "atum:emmer_dough?", "autumnity:pancake?", "blueberry:blueberry_muffin?", "create:sweet_roll?", "createaddition:chocolate_cake?", "createaddition:honey_cake?", "crockpot:froggle_bunwich?", "croptopia:apple_pie?", "croptopia:barley?", "croptopia:beer?", "croptopia:cheese_cake?", "croptopia:cherry_pie?", "croptopia:doughnut?", "croptopia:oat?", "croptopia:rice?", "croptopia:scones?", "croptopia:tres_leche_cake?", "croptopia:tuna_sandwich?", "druidcraft:blueberry_muffin?", "extrafood:cupcake?", "extrafood:pancake?", "extrafood:rice?", "extrafoods:chocolate_chip_waffle?", "extrafoods:waffle?", "farmersdelight:honey_glazed_ham?", "farmersdelight:pie_crust?", "farmersdelight:raw_pasta?", "farmersdelight:rice?", "farmersdelight:roast_chicken?", "farmersdelight:stuffed_pumpkin?", "fluffy_farmer:pilaf?", "fluffy_farmer:soaked_rice?", "fluffy_farmer:soul_wheat?", "foodexpansion:chocolate_cake?", "iceandfire:cannoli?", "meetyourfight:aether_glazed_cupcake?", "minecolonies:bread_dough?", "minecolonies:cake_batter?", "minecolonies:chorus_bread?", "minecolonies:cookie_dough?", "minecolonies:golden_bread?", "minecolonies:milky_bread?", "minecolonies:sugary_bread?", "neapolitan:adzuki_cake?", "neapolitan:banana_cake?", "neapolitan:chocolate_cake?", "neapolitan:mint_cake?", "neapolitan:strawberry_cake?", "neapolitan:vanilla_cake?", "pamhc2crops:barleyitem?", "pamhc2crops:chickpeaitem?", "pamhc2crops:oatsitem?", "pamhc2crops:riceitem?", "pamhc2crops:ryeitem?", "pamhc2foodcore:batteritem?", "pamhc2foodcore:flouritem?", "pamhc2foodextended:aebleskiversitem?", "pamhc2foodextended:briochebunitem?", "pamhc2foodextended:cornmealitem?", "pamhc2foodextended:eggsbenedictitem?", "pamhc2foodextended:fishdinneritem?", "pamhc2foodextended:frosteddonutitem?", "pamhc2foodextended:hummusitem?", "pamhc2foodextended:hushpuppiesitem?", "pamhc2foodextended:leafyfishsandwichitem?", "pamhc2foodextended:mochicakeitem?", "pamhc2foodextended:padthaiitem?", "pamhc2foodextended:peachesandcreamoatmealitem?", "pamhc2foodextended:pineappleupsidedowncakeitem?", "pamhc2foodextended:pinkelitem?", "pamhc2foodextended:rivermudcakeitem?", "pamhc2foodextended:schnitzelitem?", "pamhc2foodextended:spicebunitem?", "pamhc2foodextended:springrollitem?", "pamhc2foodextended:sugarcookieitem?", "pamhc2foodextended:timtamitem?", "pamhc2foodextended:tortillachipsitem?", "pamhc2foodextended:vanillaconchasbreaditem?", "peculiars:aloe_cake?", "peculiars:passionfruit_cake?", "peculiars:yucca_cake?", "pneumaticcraft:salmon_tempura?", "pneumaticcraft:sourdough?", "pumpkin_spice_everything:pumpkin_spice_cake?", "rankine:cake_slice?", "rankine:corn_flour?", "rankine:pancake_batter?", "rankine:rice?", "rankine:rice_flour?", "rankine:wheat_flour?", "seasonals:pumpkin_cake?", "seasonals:sweet_berry_cake?", "simpledelights:fruit_tart?", "simpledelights:plum_pudding?", "simpledelights:strawberry_shortcake?", "simplefarming:barley?", "simplefarming:birthday_cake?", "simplefarming:chocolate_cake?", "simplefarming:oat?", "simplefarming:pancakes?", "simplefarming:rice?", "simplefarming:rye?", "supplementaries:pancake?", "survivalplus:cheese_cake?", "survivalplus:sponge_cake?", "thermal:carrot_cake?", "thermal:chocolate_cake?", "thermal:rice?", "thermal:spice_cake?", "turkish_meals:dough_of_lahmacun?", "twilightforest:maze_wafer?", "uniquecrops:goldenrods?", "uniquecrops:waffle?", "vanillacookbook:berry_cake?", "vanillacookbook:berry_pancake?", "vanillacookbook:book_cake?", "vanillacookbook:carrot_cake?", "vanillacookbook:chocolate_cake?", "vanillacookbook:chorus_cake?", "vanillacookbook:honey_pancake?", "vanillacookbook:ice_cream_cake?", "vanillacookbook:mohnkuchen?", "vanillacookbook:pancake?", "vanillacookbook:rose_cake?", "vanillafoodpantry:apple_bread?", "vanillafoodpantry:apple_muffin?", "vanillafoodpantry:beets_bread?", "vanillafoodpantry:bread_pocket_fish_salad?", "vanillafoodpantry:bread_pocket_roast_veg?", "vanillafoodpantry:carrot_muffin?", "vanillafoodpantry:chocolate_sunbutter_sandwich?", "vanillafoodpantry:cookie_apple?", "vanillafoodpantry:cyclops_sandwich?", "vanillafoodpantry:decker_cheesesteak?", "vanillafoodpantry:decker_cuban?", "vanillafoodpantry:decker_fish?", "vanillafoodpantry:decker_mutton?", "vanillafoodpantry:decker_steak?", "vanillafoodpantry:decker_veggie?", "vanillafoodpantry:enriched_pumpkin_pie?", "vanillafoodpantry:fish_sausage_mashwrap?", "vanillafoodpantry:honey_bread?", "vanillafoodpantry:honey_muffin?", "vanillafoodpantry:honey_sunbutter_sandwich?", "vanillafoodpantry:klingon_bread?", "vanillafoodpantry:molasses_bread?", "vanillafoodpantry:mushroom_stew_combo?", "vanillafoodpantry:portion_bread?", "vanillafoodpantry:portion_flour?", "vanillafoodpantry:potato_bread?", "vanillafoodpantry:pumpkin_bread?", "vanillafoodpantry:pumpkin_pigtail_stew_combo?", "vanillafoodpantry:uglifruit_muffin?", "vanillafoodpantry:veggie_stew_combo?", "xercamod:ender_cupcake?", "xercamod:item_apple_cupcake?", "xercamod:item_apple_pie?", "xercamod:item_carrot_cupcake?", "xercamod:item_cocoa_cupcake?", "xercamod:item_donut?", "xercamod:item_fancy_apple_cupcake?", "xercamod:item_fancy_donut?", "xercamod:item_fancy_pumpkin_cupcake?", "xercamod:item_honey_cupcake?", "xercamod:item_melon_cupcake?", "xercamod:item_pumpkin_cupcake?", "xercamod:item_rice_seeds?", "xercamod:sweet_berry_cupcake?", "xercamod:sweet_berry_cupcake_fancy?", "xercamod:sweet_berry_pie?"]
+},
+vegetables:{
+tag:"diet:vegetables",
+members:["minecraft:bamboo", "minecraft:beetroot", "minecraft:beetroot_seeds", "minecraft:birch_leaves", "minecraft:brown_mushroom", "minecraft:cactus", "minecraft:carrot", "minecraft:crimson_fungus", "minecraft:crimson_roots", "minecraft:dried_kelp", "minecraft:golden_carrot", "minecraft:kelp", "minecraft:lily_pad", "minecraft:melon_seeds", "minecraft:nether_wart", "minecraft:poisonous_potato", "minecraft:potato", "minecraft:pumpkin", "minecraft:pumpkin_seeds", "minecraft:red_mushroom", "minecraft:sea_pickle", "minecraft:seagrass", "minecraft:shroomlight", "minecraft:sunflower", "minecraft:warped_fungus", "minecraft:warped_roots", "minecraft:wheat_seeds", "#minecraft:flowers", "#minecraft:leaves", "abundance:lavender?", "alexsmobs:gongylidia?", "aoa3:blue_glowshroom?", "aoa3:green_glowshroom?", "aoa3:mystic_shrooms?", "aoa3:orange_glowshroom?", "aoa3:purple_glowshroom?", "aoa3:yellow_glowshroom?", "aquaculture:algae?", "atmospheric:aloe_leaves?", "betterdefaultbiomes:gray_mushroom?", "betterdefaultbiomes:white_mushroom?", "betterdefaultbiomes:yellow_mushroom?", "betterendforge:amber_root_raw?", "betterendforge:chorus_mushroom_raw?", "blue_skies:cryo_root?", "blue_skies:winter_leaves?", "byg:black_puff?", "byg:death_cap?", "byg:green_mushroom?", "byg:imparius_mushroom?", "byg:soul_shroom?", "byg:sythian_fungus?", "byg:weeping_milkcap?", "byg:wood_blewit?", "charcoal_pit:corn?", "charcoal_pit:leek?", "cnb:lilytad_flower?", "comfortable_nether:dustsprout?", "comfortable_nether:wallcreep_bulb?", "conjurerscookbook:mandrake_root?", "crockpot:asparagus?", "crockpot:asparagus_soup?", "crockpot:california_roll?", "crockpot:cooked_eggplant?", "crockpot:corn?", "crockpot:eggplant?", "crockpot:fish_tacos?", "crockpot:flower_salad?", "crockpot:gazpacho?", "crockpot:hot_chili?", "crockpot:moqueca?", "crockpot:mushy_cake?", "crockpot:onion?", "crockpot:pepper?", "crockpot:pepper_popper?", "crockpot:perogies?", "crockpot:popcorn?", "crockpot:potato_souffle?", "crockpot:potato_tornado?", "crockpot:pumpkin_cookie?", "crockpot:ratatouille?", "crockpot:salsa?", "crockpot:stuffed_eggplant?", "crockpot:tea?", "crockpot:tomato?", "crockpot:tropical_bouillabaisse?", "crockpot:veg_stinger?", "croptopia:artichoke?", "croptopia:asparagus?", "croptopia:basil?", "croptopia:bellpepper?", "croptopia:broccoli?", "croptopia:cabbage?", "croptopia:cauliflower?", "croptopia:celery?", "croptopia:coffee_beans?", "croptopia:corn?", "croptopia:cucumber?", "croptopia:garlic?", "croptopia:greenbean?", "croptopia:greenonion?", "croptopia:kale?", "croptopia:leek?", "croptopia:lettuce?", "croptopia:onion?", "croptopia:radish?", "croptopia:rhubarb?", "croptopia:rutabaga?", "croptopia:spinach?", "croptopia:sweetpotato?", "croptopia:tea?", "croptopia:tomatillo?", "croptopia:tomato?", "croptopia:turnip?", "croptopia:yam?", "croptopia:zucchini?", "eidolon:fungus_sprouts?", "eidolon:warped_sprouts?", "extcaves:mushroom_fluoshroom?", "extcaves:mushroom_goldishroom?", "extcaves:mushroom_lumishroom?", "extcaves:mushroom_rockshroom?", "extcaves:mushroom_shinyshroom?", "extcaves:mushroom_sweetshroom?", "farmersdelight:cabbage?", "farmersdelight:cabbage_rolls?", "farmersdelight:onion?", "farmersdelight:roast_chicken?", "farmersdelight:shepherds_pie?", "farmersdelight:stuffed_pumpkin?", "farmersdelight:tomato?", "fluffy_farmer:cabbage_leaf?", "fluffy_farmer:cinnamon?", "fluffy_farmer:corn?", "fluffy_farmer:cucumber?", "fluffy_farmer:hot_pepper?", "fluffy_farmer:nettle_leaf?", "fluffy_farmer:onion?", "fluffy_farmer:orange_tomato?", "fluffy_farmer:pickle?", "fluffy_farmer:pickled_cabbage?", "fluffy_farmer:pickled_tomato?", "fluffy_farmer:poisonous_corn?", "fluffy_farmer:red_tomato?", "fluffy_farmer:yellow_tomato?", "foodexpansion:roasted_seed?", "foragecraft:leek?", "forbidden_arcanus:strange_root?", "gaiadimension:markuzar_mint?", "gaiadimension:thiscus?", "greekfantasy:pomegranate_seeds?", "habitat:dried_ball_cactus?", "habitat:kabloom_pulp?", "inspirations:heartbeet?", "minecolonies:raw_pumpkin_pie?", "mysticalworld:aubergine?", "mysticalworld:cooked_seeds?", "neapolitan:dried_vanilla_pods?", "neapolitan:mint_leaves?", "nefdecomod:meal_01?", "nefdecomod:meal_02?", "nefdecomod:meal_03?", "nefdecomod:nopal?", "nefdecomod:onions?", "nefdecomod:radish?", "nefdecomod:turnip?", "nefdecomod:veg_stew_food?", "nethers_delight:roast_hoglin?", "nethers_delight:roast_hoglin_ham?", "nethers_delight:roast_hoglin_snout?", "nethers_delight:stuffed_hoglin_item?", "omni:enchanted_golden_carrot?", "pamhc2crops:arrowrootitem?", "pamhc2crops:artichokeitem?", "pamhc2crops:asparagusitem?", "pamhc2crops:bellpepperitem?", "pamhc2crops:broccoliitem?", "pamhc2crops:brusselsproutitem?", "pamhc2crops:cabbageitem?", "pamhc2crops:cassavaitem?", "pamhc2crops:caulifloweritem?", "pamhc2crops:celeryitem?", "pamhc2crops:chilipepperitem?", "pamhc2crops:coffeebeanitem?", "pamhc2crops:cornitem?", "pamhc2crops:cucumberitem?", "pamhc2crops:eggplantitem?", "pamhc2crops:garlicitem?", "pamhc2crops:gingeritem?", "pamhc2crops:jicamaitem?", "pamhc2crops:kaleitem?", "pamhc2crops:kohlrabiitem?", "pamhc2crops:leekitem?", "pamhc2crops:lettuceitem?", "pamhc2crops:okraitem?", "pamhc2crops:onionitem?", "pamhc2crops:parsnipitem?", "pamhc2crops:peasitem?", "pamhc2crops:radishitem?", "pamhc2crops:rhubarbitem?", "pamhc2crops:roastedgarlicitem?", "pamhc2crops:rutabagaitem?", "pamhc2crops:scallionitem?", "pamhc2crops:spiceleafitem?", "pamhc2crops:spinachitem?", "pamhc2crops:sweetpotatoitem?", "pamhc2crops:taroitem?", "pamhc2crops:tealeafitem?", "pamhc2crops:tomatilloitem?", "pamhc2crops:tomatoitem?", "pamhc2crops:turnipitem?", "pamhc2crops:whitemushroomitem?", "pamhc2crops:wintersquashitem?", "pamhc2crops:zucchiniitem?", "pamhc2foodcore:trailmixitem?", "pamhc2foodextended:bangersandmashitem?", "pamhc2foodextended:cevicheitem?", "pamhc2foodextended:cornflakesitem?", "pamhc2foodextended:ediblerootitem?", "pamhc2foodextended:fiestacornsaladitem?", "pamhc2foodextended:honeyglazedcarrotsitem?", "pamhc2foodextended:leafyfishsandwichitem?", "pamhc2foodextended:ovenroastedcaulifloweritem?", "pamhc2foodextended:padthaiitem?", "pamhc2foodextended:peasandceleryitem?", "pamhc2foodextended:salsaitem?", "pamhc2foodextended:seedsoupitem?", "pamhc2foodextended:springrollitem?", "pamhc2foodextended:theatreboxitem?", "pamhc2trees:cinnamonitem?", "peculiars:aloe_cake?", "pneumaticcraft:chips?", "quark:root_item?", "rankine:aloe?", "rankine:asparagus?", "rankine:corn_ear?", "rats:confit_byaldi?", "rats:potato_kinishes?", "rootsclassic:old_root?", "seasonals:pumpkin_cake?", "simplecorn:corncob?", "simplefarming:broccoli?", "simplefarming:cassava?", "simplefarming:chicory_root?", "simplefarming:corn?", "simplefarming:cucumber?", "simplefarming:cumin_seeds?", "simplefarming:eggplant?", "simplefarming:ginger?", "simplefarming:habanero?", "simplefarming:lettuce?", "simplefarming:marshmallow_root?", "simplefarming:onion?", "simplefarming:pea_pod?", "simplefarming:pepper?", "simplefarming:quinoa_seeds?", "simplefarming:radish?", "simplefarming:sorghum?", "simplefarming:spinach?", "simplefarming:squash?", "simplefarming:sweet_potato?", "simplefarming:tomato?", "simplefarming:turnip?", "simplefarming:yam?", "simplefarming:zucchini?", "simplytea:teabag_black?", "simplytea:teabag_chorus?", "simplytea:teabag_floral?", "simplytea:teabag_green?", "survivalplus:raw_onion?", "tea_kettle:bamboo_tea?", "tea_kettle:black_latte?", "tea_kettle:black_tea?", "tea_kettle:green_latte?", "tea_kettle:green_tea?", "tea_kettle:oolong_latte?", "tea_kettle:oolong_tea?", "tea_kettle:rose_tea?", "tea_kettle:white_latte?", "tea_kettle:white_tea?", "terraincognita:clayed_root?", "terraincognita:fiddlehead?", "terraincognita:notch_carrot?", "thermal:bell_pepper?", "thermal:coffee?", "thermal:corn?", "thermal:eggplant?", "thermal:green_bean?", "thermal:onion?", "thermal:radish?", "thermal:spinach?", "thermal:tomato?", "undergarden:blood_mushroom?", "undergarden:indigo_mushroom?", "undergarden:ink_mushroom?", "undergarden:underbeans?", "undergarden:veil_mushroom?", "vanillacookbook:carrot_cake?", "vanillacookbook:mohnkuchen?", "vanillacookbook:rose_cake?", "vanillacookbook:trail_mix?", "vanillafoodpantry:bamboo_shoots_raw?", "vanillafoodpantry:beets_bread?", "vanillafoodpantry:bread_pocket_fish_salad?", "vanillafoodpantry:bread_pocket_roast_veg?", "vanillafoodpantry:carrot_muffin?", "vanillafoodpantry:cave_stew?", "vanillafoodpantry:creamsoup_beet?", "vanillafoodpantry:creamsoup_cactus?", "vanillafoodpantry:creamsoup_carrot?", "vanillafoodpantry:creamsoup_mushroom?", "vanillafoodpantry:creamsoup_potato?", "vanillafoodpantry:creamsoup_pumpkin?", "vanillafoodpantry:cyclops_sandwich?", "vanillafoodpantry:decker_cheesesteak?", "vanillafoodpantry:decker_cuban?", "vanillafoodpantry:decker_fish?", "vanillafoodpantry:decker_mutton?", "vanillafoodpantry:decker_steak?", "vanillafoodpantry:decker_veggie?", "vanillafoodpantry:desert_salad?", "vanillafoodpantry:enriched_pumpkin_pie?", "vanillafoodpantry:fish_sausage_mashwrap?", "vanillafoodpantry:fries_cassava_raw?", "vanillafoodpantry:fries_sweetpotato_raw?", "vanillafoodpantry:juice_cactus?", "vanillafoodpantry:juice_cane?", "vanillafoodpantry:juice_carrot?", "vanillafoodpantry:juice_kelp?", "vanillafoodpantry:juice_potato?", "vanillafoodpantry:klingon_bread?", "vanillafoodpantry:mushroom_stew_combo?", "vanillafoodpantry:oak_acorn?", "vanillafoodpantry:polar_bear_stew?", "vanillafoodpantry:potato_bread?", "vanillafoodpantry:potato_chowder?", "vanillafoodpantry:pumpkin_bread?", "vanillafoodpantry:pumpkin_pigtail_stew?", "vanillafoodpantry:pumpkin_pigtail_stew_combo?", "vanillafoodpantry:raw_vegetables?", "vanillafoodpantry:roast_corn?", "vanillafoodpantry:roasted_eggplant?", "vanillafoodpantry:special_salad?", "vanillafoodpantry:spruce_tips?", "vanillafoodpantry:teadrink_bushtea?", "vanillafoodpantry:teadrink_milky_bushtea?", "vanillafoodpantry:teadrink_milky_dandtea?", "vanillafoodpantry:teadrink_sprucetips_tea?", "vanillafoodpantry:veggie_stew?", "vanillafoodpantry:veggie_stew_combo?", "xercamod:item_tomato?"]
+},
+ingredients:{
+tag:"diet:ingredients",
+members:["#forge:dyes", "minecraft:water_bucket", "croptopia:butter?", "croptopia:olive_oil?", "croptopia:soy_sauce?", "croptopia:whipping_cream?", "fluffy_farmer:cinnamon?", "mysticalworld:vinegar?", "neapolitan:dried_vanilla_pods?", "neapolitan:mint_leaves?", "pamhc2crops:garlicitem?", "pamhc2crops:hotcoffeeitem?", "pamhc2crops:hotteaitem?", "pamhc2crops:spiceleafitem?", "pamhc2foodcore:butteritem?", "pamhc2foodcore:cookingoilitem?", "pamhc2foodcore:creamitem?", "pamhc2foodcore:mayonaiseitem?", "pamhc2foodcore:vinegaritem?", "pamhc2foodextended:bbqsauceitem?", "pamhc2foodextended:groundcinnamonitem?", "pamhc2foodextended:hoisinsauceitem?", "pamhc2foodextended:hotsauceitem?", "pamhc2foodextended:ketchupitem?", "pamhc2foodextended:mushroomoilitem?", "pamhc2foodextended:mustarditem?", "pamhc2foodextended:oystersauceitem?", "pamhc2foodextended:relishitem?", "pamhc2foodextended:saladdressingitem?", "pamhc2foodextended:saltandpepperitem?", "pamhc2foodextended:sesameoilitem?", "pamhc2foodextended:soysauceitem?", "pamhc2foodextended:vegemiteitem?", "simplefarming:ginger?", "simplefarming:vinegar?", "simplytea:cup?", "vanillafoodpantry:drying_agent?", "vanillafoodpantry:egg_white?", "vanillafoodpantry:enzyme_extractor_agent?", "vanillafoodpantry:foodpowder_jerky_mix?", "vanillafoodpantry:foodpowder_potato_starch?", "vanillafoodpantry:leavening_agent?", "vanillafoodpantry:portion_butter?", "vanillafoodpantry:portion_milk?", "vanillafoodpantry:rennet?", "vanillafoodpantry:salt?", "vanillafoodpantry:seedoil_jar?", "vanillafoodpantry:sunbutter_jar?"]
+},
+fruits:{
+tag:"diet:fruits",
+members:["minecraft:apple", "minecraft:chorus_fruit", "minecraft:enchanted_golden_apple", "minecraft:glow_berries", "minecraft:golden_apple", "minecraft:melon", "minecraft:melon_slice", "minecraft:sweet_berries", "alexsmobs:banana?", "alexsmobs:banana_peel?", "aoa3:heart_fruit?", "aoa3:magic_marang?", "aoa3:nature_melon_slice?", "ars_nouveau:mana_berry?", "atmospheric:passionfruit?", "atmospheric:yucca_fruit?", "atum:date?", "autumnity:foul_berries?", "bayou_blues:gooseberries?", "betterendforge:blossom_berry?", "betterendforge:shadow_berry_raw?", "betterendforge:umbrella_cluster_juice?", "bloom_and_gloom:kabloom_fruit?", "blue_skies:black_brewberry?", "blue_skies:brewberry?", "blue_skies:cherry?", "blue_skies:crescent_fruit?", "blue_skies:pine_fruit?", "blue_skies:pink_brewberry?", "blue_skies:scalefruit?", "blueberry:blueberry?", "blueberry:blueberry_muffin?", "byg:baobab_fruit?", "byg:blueberries?", "byg:crimson_berries?", "byg:green_apple?", "byg:holly_berries?", "byg:joshua_fruit?", "byg:nightshade_berries?", "caves_and_cliffs_mod:glow_berry?", "cavesandcliffs:glow_berries?", "charcoal_pit:banana?", "charcoal_pit:cherry?", "charcoal_pit:coconut?", "charcoal_pit:dragon_fruit?", "create:chocolate_glazed_berries?", "create:honeyed_apple?", "create_confectionery:black_chocolate_glazed_berries?", "create_confectionery:caramel_glazed_berries?", "create_confectionery:ruby_chocolate_glazed_berries?", "create_confectionery:white_chocolate_glazed_berries?", "crockpot:fruit_medley?", "crockpot:jammy_preserves?", "crockpot:watermelon_icle?", "croptopia:apple_pie?", "croptopia:apricot?", "croptopia:avocado?", "croptopia:banana?", "croptopia:blackberry?", "croptopia:blueberry?", "croptopia:cantaloupe?", "croptopia:cherry?", "croptopia:cherry_pie?", "croptopia:coconut?", "croptopia:cranberry?", "croptopia:currant?", "croptopia:date?", "croptopia:dragonfruit?", "croptopia:eggplant?", "croptopia:elderberry?", "croptopia:eton_mess?", "croptopia:fig?", "croptopia:figgy_pudding?", "croptopia:grape?", "croptopia:grapefruit?", "croptopia:honeydew?", "croptopia:kiwi?", "croptopia:kumquat?", "croptopia:lemon?", "croptopia:lime?", "croptopia:mango?", "croptopia:nectarine?", "croptopia:nutmeg?", "croptopia:olive?", "croptopia:orange?", "croptopia:peach?", "croptopia:pear?", "croptopia:persimmon?", "croptopia:pineapple?", "croptopia:plum?", "croptopia:raspberry?", "croptopia:saguaro?", "croptopia:scones?", "croptopia:squash?", "croptopia:starfruit?", "croptopia:strawberry?", "cyclic:apple_diamond?", "cyclic:apple_emerald?", "druidcraft:blueberries?", "druidcraft:blueberry_muffin?", "druidcraft:elderberries?", "endergetic:bolloom_fruit?", "environmental:cherries?", "extrafood:dried_fruit?", "extrafood:pancake?", "farmersdelight:honey_glazed_ham?", "farmersdelight:stuffed_pumpkin?", "fluffy_farmer:juicy_berries?", "fluffy_farmer:pickled_watermelon?", "fluffy_farmer:rotten_apple?", "forbidden_arcanus:cherry_peach?", "fruittrees:cherry?", "fruittrees:citron?", "fruittrees:empowered_citron?", "fruittrees:grapefruit?", "fruittrees:lemon?", "fruittrees:lime?", "fruittrees:mandarin?", "fruittrees:orange?", "fruittrees:pomelo?", "fruittrees:redlove?", "gildedingot:shroom_fruit?", "good_nights_sleep:rainbow_berries?", "integrateddynamics:menril_berries?", "neapolitan:banana?", "neapolitan:banana_cake?", "neapolitan:strawberries?", "neapolitan:strawberry_cake?", "neapolitan:white_strawberries?", "nefdecomod:banana?", "nefdecomod:cantaloupe_slice?", "nefdecomod:meal_04?", "nourished_end:chorus_bulb_slice?", "outer_end:azure_berries?", "pamhc2crops:blackberryitem?", "pamhc2crops:blueberryitem?", "pamhc2crops:cactusfruititem?", "pamhc2crops:candleberryitem?", "pamhc2crops:cantaloupeitem?", "pamhc2crops:cranberryitem?", "pamhc2crops:elderberryitem?", "pamhc2crops:grapeitem?", "pamhc2crops:greengrapeitem?", "pamhc2crops:huckleberryitem?", "pamhc2crops:juniperberryitem?", "pamhc2crops:kiwiitem?", "pamhc2crops:mulberryitem?", "pamhc2crops:pineappleitem?", "pamhc2crops:raspberryitem?", "pamhc2crops:strawberryitem?", "pamhc2foodcore:trailmixitem?", "pamhc2foodextended:holidaycakeitem?", "pamhc2foodextended:pavlovaitem?", "pamhc2foodextended:peachesandcreamoatmealitem?", "pamhc2foodextended:pineappleupsidedowncakeitem?", "pamhc2foodextended:raspberrytrifleitem?", "pamhc2foodextended:spicebunitem?", "pamhc2trees:apricotitem?", "pamhc2trees:avocadoitem?", "pamhc2trees:bananaitem?", "pamhc2trees:breadfruititem?", "pamhc2trees:cherryitem?", "pamhc2trees:coconutitem?", "pamhc2trees:dateitem?", "pamhc2trees:dragonfruititem?", "pamhc2trees:durianitem?", "pamhc2trees:figitem?", "pamhc2trees:gooseberryitem?", "pamhc2trees:grapefruititem?", "pamhc2trees:guavaitem?", "pamhc2trees:jackfruititem?", "pamhc2trees:lemonitem?", "pamhc2trees:limeitem?", "pamhc2trees:lycheeitem?", "pamhc2trees:mangoitem?", "pamhc2trees:oliveitem?", "pamhc2trees:orangeitem?", "pamhc2trees:papayaitem?", "pamhc2trees:passionfruititem?", "pamhc2trees:pawpawitem?", "pamhc2trees:peachitem?", "pamhc2trees:pearitem?", "pamhc2trees:persimmonitem?", "pamhc2trees:plumitem?", "pamhc2trees:pomegranateitem?", "pamhc2trees:rambutanitem?", "pamhc2trees:soursopitem?", "pamhc2trees:starfruititem?", "pamhc2trees:tamarinditem?", "peculiars:passionfruit_cake?", "peculiars:yucca_cake?", "projectvibrantjourneys:cracked_coconut?", "projectvibrantjourneys:juniper_berries?", "rankine:banana_yucca?", "rankine:blackberries?", "rankine:blueberries?", "rankine:coconut?", "rankine:cranberries?", "rankine:elderberries?", "rankine:juniper_berries?", "rankine:pineapple?", "rankine:raspberries?", "rankine:snowberries?", "rankine:strawberries?", "rootsclassic:blackcurrant?", "rootsclassic:elderberry?", "rootsclassic:nightshade?", "rootsclassic:redcurrant?", "rootsclassic:whitecurrant?", "roses:rose_hips?", "seasonals:sweet_berry_cake?", "silentgear:nether_banana?", "simpledelights:creamcicle?", "simpledelights:fruit_tart?", "simpledelights:plum_pudding?", "simpledelights:strawberry_shortcake?", "simplefarming:apricot?", "simplefarming:banana?", "simplefarming:blackberries?", "simplefarming:blueberries?", "simplefarming:cactus_fruit?", "simplefarming:cantaloupe?", "simplefarming:cherries?", "simplefarming:grapes?", "simplefarming:honeydew?", "simplefarming:jaffa_cake?", "simplefarming:mango?", "simplefarming:olives?", "simplefarming:orange?", "simplefarming:pear?", "simplefarming:plum?", "simplefarming:raspberries?", "simplefarming:strawberries?", "terraincognita:sour_berries?", "thermal:frost_melon_slice?", "thermal:strawberry?", "undergarden:blisterberry?", "undergarden:droopvine_item?", "uniquecrops:large_plum?", "upgrade_aquatic:boiled_blue_pickerelweed?", "upgrade_aquatic:boiled_purple_pickerelweed?", "upgrade_aquatic:mulberry?", "vanillacookbook:berry_brownie?", "vanillacookbook:berry_cake?", "vanillacookbook:chorus_cake?", "vanillacookbook:netherite_apple?", "vanillafoodpantry:apple_bread?", "vanillafoodpantry:apple_muffin?", "vanillafoodpantry:juice_apple?", "vanillafoodpantry:juice_berries?", "vanillafoodpantry:juice_melon?", "vanillafoodpantry:juice_raftugli?", "vanillafoodpantry:raftugli_fruit?", "vanillafoodpantry:uglifruit_muffin?", "watersource:coconut_piece?", "xercamod:item_apple_pie?", "xercamod:sweet_berry_pie?"]
+}
+},
+c:{
+storage_blocks:{
+tag:"c:storage_blocks",
+members:["byg:ametrine_block", "byg:pendorite_block", "byg:anthracite_block", "byg:lignite_block"]
+},
+storage_blocks_lignite:{
+tag:"c:storage_blocks/lignite",
+members:["byg:lignite_block"]
+},
+sand_purple:{
+tag:"c:sand/purple",
+members:["byg:purple_sand"]
+},
+sand_white:{
+tag:"c:sand/white",
+members:["byg:white_sand"]
+},
+sand_blue:{
+tag:"c:sand/blue",
+members:["byg:blue_sand"]
+},
+workbench:{
+tag:"c:workbench",
+members:["byg:aspen_crafting_table", "byg:baobab_crafting_table", "byg:blue_enchanted_crafting_table", "byg:cherry_crafting_table", "byg:cika_crafting_table", "byg:cypress_crafting_table", "byg:ebony_crafting_table", "byg:fir_crafting_table", "byg:green_enchanted_crafting_table", "byg:holly_crafting_table", "byg:jacaranda_crafting_table", "byg:mahogany_crafting_table", "byg:mangrove_crafting_table", "byg:maple_crafting_table", "byg:pine_crafting_table", "byg:rainbow_eucalyptus_crafting_table", "byg:redwood_crafting_table", "byg:skyris_crafting_table", "byg:willow_crafting_table", "byg:witch_hazel_crafting_table", "byg:zelkova_crafting_table", "byg:sythian_crafting_table", "byg:embur_crafting_table", "byg:palm_crafting_table", "byg:lament_crafting_table", "byg:ether_crafting_table", "byg:bulbis_crafting_table", "byg:nightshade_crafting_table", "byg:imparius_crafting_table"]
+},
+ores_lignite:{
+tag:"c:ores/lignite",
+members:["byg:lignite_ore"]
+},
+sand:{
+tag:"c:sand",
+members:["byg:white_sand", "byg:black_sand", "byg:blue_sand", "byg:pink_sand", "byg:purple_sand", "byg:end_sand", "byg:windswept_sand"]
+},
+swords:{
+tag:"c:swords",
+members:["byg:pendorite_sword", "byg:pendorite_battleaxe"]
+},
+ores_redstone:{
+tag:"c:ores/redstone",
+members:["byg:cryptic_redstone_ore"]
+},
+pickaxes:{
+tag:"c:pickaxes",
+members:["byg:pendorite_pickaxe"]
+},
+gems_ametrine:{
+tag:"c:gems/ametrine",
+members:["byg:ametrine_gems"]
+},
+sandstone:{
+tag:"c:sandstone",
+members:["byg:black_sandstone", "byg:black_chiseled_sandstone", "byg:black_cut_sandstone", "byg:blue_sandstone", "byg:blue_chiseled_sandstone", "byg:blue_cut_sandstone", "byg:white_sandstone", "byg:white_chiseled_sandstone", "byg:white_cut_sandstone", "byg:purple_sandstone", "byg:purple_chiseled_sandstone", "byg:purple_cut_sandstone", "byg:pink_sandstone", "byg:pink_chiseled_sandstone", "byg:pink_cut_sandstone", "byg:windswept_sandstone", "byg:chiseled_windswept_sandstone", "byg:cut_windswept_sandstone", "byg:smooth_windswept_sandstone", "byg:windswept_sandstone_pillar"]
+},
+blue_sand:{
+tag:"c:blue_sand",
+members:["byg:blue_sand"]
+},
+mushrooms:{
+tag:"c:mushrooms",
+members:["byg:green_mushroom", "byg:wood_blewit", "byg:weeping_milkcap", "byg:white_puffball_cap", "byg:sythian_fungus", "byg:imparius_mushroom"]
+},
+ores_anthracite:{
+tag:"c:ores/anthracite",
+members:["byg:anthracite_ore"]
+},
+helmets:{
+tag:"c:helmets",
+members:["byg:ametrine_helmet"]
+},
+white_sand:{
+tag:"c:white_sand",
+members:["byg:white_sand"]
+},
+cobblestone:{
+tag:"c:cobblestone",
+members:["byg:red_rock", "byg:dacite_cobblestone", "byg:scoria_cobblestone", "byg:soapstone", "byg:cobbled_ether_stone"]
+},
+pink_sand:{
+tag:"c:pink_sand",
+members:["byg:pink_sand"]
+},
+ores_pendorite:{
+tag:"c:ores/pendorite",
+members:["byg:pendorite_ore"]
+},
+ores_ametrine:{
+tag:"c:ores/ametrine",
+members:["byg:ametrine_ore", "byg:budding_ametrine_ore"]
+},
+ores:{
+tag:"c:ores",
+members:["byg:ametrine_ore", "byg:anthracite_ore", "byg:budding_ametrine_ore", "byg:cryptic_redstone_ore", "byg:lignite_ore", "byg:pendorite_ore", "byg:blue_nether_gold_ore", "byg:blue_nether_quartz_ore", "byg:brimstone_nether_gold_ore", "byg:brimstone_nether_quartz_ore"]
+},
+sand_colorless:{
+tag:"c:sand/colorless",
+members:["byg:end_sand"]
+},
+boots:{
+tag:"c:boots",
+members:["byg:ametrine_boots"]
+},
+saplings:{
+tag:"c:saplings",
+members:["byg:aspen_sapling", "byg:baobab_sapling", "byg:blue_enchanted_sapling", "byg:blue_spruce_sapling", "byg:brown_birch_sapling", "byg:brown_oak_sapling", "byg:cika_sapling", "byg:cypress_sapling", "byg:ebony_sapling", "byg:fir_sapling", "byg:green_enchanted_sapling", "byg:holly_sapling", "byg:jacaranda_sapling", "byg:indigo_jacaranda_sapling", "byg:mahogany_sapling", "byg:mangrove_sapling", "byg:maple_sapling", "byg:orange_birch_sapling", "byg:orange_oak_sapling", "byg:orange_spruce_sapling", "byg:orchard_sapling", "byg:palo_verde_sapling", "byg:joshua_sapling", "byg:yellow_spruce_sapling", "byg:pine_sapling", "byg:pink_cherry_sapling", "byg:rainbow_eucalyptus_sapling", "byg:red_birch_sapling", "byg:red_maple_sapling", "byg:red_oak_sapling", "byg:red_spruce_sapling", "byg:redwood_sapling", "byg:silver_maple_sapling", "byg:white_cherry_sapling", "byg:willow_sapling", "byg:witch_hazel_sapling", "byg:yellow_birch_sapling", "byg:zelkova_sapling", "byg:skyris_sapling", "byg:palm_sapling", "byg:araucaria_sapling", "byg:brown_zelkova_sapling", "byg:lament_sapling", "byg:withering_oak_sapling", "byg:ether_sapling", "byg:nightshade_sapling"]
+},
+crops:{
+tag:"c:crops",
+members:["byg:blueberries", "byg:green_apple", "byg:crimson_berries"]
+},
+fence_gates_wooden:{
+tag:"c:fence_gates/wooden",
+members:["byg:aspen_fence_gate", "byg:baobab_fence_gate", "byg:blue_enchanted_fence_gate", "byg:cherry_fence_gate", "byg:cika_fence_gate", "byg:cypress_fence_gate", "byg:ebony_fence_gate", "byg:fir_fence_gate", "byg:green_enchanted_fence_gate", "byg:holly_fence_gate", "byg:jacaranda_fence_gate", "byg:mahogany_fence_gate", "byg:mangrove_fence_gate", "byg:maple_fence_gate", "byg:pine_fence_gate", "byg:rainbow_eucalyptus_fence_gate", "byg:redwood_fence_gate", "byg:skyris_fence_gate", "byg:willow_fence_gate", "byg:witch_hazel_fence_gate", "byg:zelkova_fence_gate", "byg:sythian_fence_gate", "byg:embur_fence_gate", "byg:palm_fence_gate", "byg:lament_fence_gate", "byg:ether_fence_gate", "byg:bulbis_fence_gate", "byg:nightshade_fence_gate", "byg:imparius_fence_gate"]
+},
+fruits:{
+tag:"c:fruits",
+members:["byg:blueberries", "byg:green_apple", "byg:crimson_berries", "byg:baobab_fruit", "byg:joshua_fruit"]
+},
+black_sand:{
+tag:"c:black_sand",
+members:["byg:black_sand"]
+},
+purple_sand:{
+tag:"c:purple_sand",
+members:["byg:purple_sand"]
+},
+chestplates:{
+tag:"c:chestplates",
+members:["byg:ametrine_chestplate"]
+},
+stone:{
+tag:"c:stone",
+members:["byg:soapstone", "byg:scoria_stone", "byg:dacite", "byg:rocky_stone", "byg:mossy_stone", "byg:overgrown_stone", "byg:overgrown_dacite", "byg:sythian_nylium", "byg:podzol_dacite", "byg:red_rock", "byg:ether_stone"]
+},
+storage_blocks_ametrine:{
+tag:"c:storage_blocks/ametrine",
+members:["byg:ametrine_block"]
+},
+axes:{
+tag:"c:axes",
+members:["byg:pendorite_axe", "byg:pendorite_battleaxe"]
+},
+leggings:{
+tag:"c:leggings",
+members:["byg:ametrine_leggings"]
+},
+shovels:{
+tag:"c:shovels",
+members:["byg:pendorite_shovel"]
+},
+fence_gates:{
+tag:"c:fence_gates",
+members:["byg:aspen_fence_gate", "byg:baobab_fence_gate", "byg:blue_enchanted_fence_gate", "byg:cherry_fence_gate", "byg:cika_fence_gate", "byg:cypress_fence_gate", "byg:ebony_fence_gate", "byg:fir_fence_gate", "byg:green_enchanted_fence_gate", "byg:holly_fence_gate", "byg:jacaranda_fence_gate", "byg:mahogany_fence_gate", "byg:mangrove_fence_gate", "byg:maple_fence_gate", "byg:pine_fence_gate", "byg:rainbow_eucalyptus_fence_gate", "byg:redwood_fence_gate", "byg:skyris_fence_gate", "byg:willow_fence_gate", "byg:witch_hazel_fence_gate", "byg:zelkova_fence_gate", "byg:sythian_fence_gate", "byg:embur_fence_gate", "byg:palm_fence_gate", "byg:lament_fence_gate", "byg:ether_fence_gate", "byg:bulbis_fence_gate", "byg:nightshade_fence_gate", "byg:imparius_fence_gate"]
+},
+gems:{
+tag:"c:gems",
+members:["byg:ametrine_gems"]
+},
+storage_blocks_pendorite:{
+tag:"c:storage_blocks/pendorite",
+members:["byg:pendorite_block"]
+},
+sand_pink:{
+tag:"c:sand/pink",
+members:["byg:pink_sand", "byg:windswept_sand"]
+},
+bookshelves:{
+tag:"c:bookshelves",
+members:["byg:aspen_bookshelf", "byg:baobab_bookshelf", "byg:blue_enchanted_bookshelf", "byg:cherry_bookshelf", "byg:cika_bookshelf", "byg:cypress_bookshelf", "byg:ebony_bookshelf", "byg:fir_bookshelf", "byg:green_enchanted_bookshelf", "byg:holly_bookshelf", "byg:jacaranda_bookshelf", "byg:mahogany_bookshelf", "byg:mangrove_bookshelf", "byg:maple_bookshelf", "byg:pine_bookshelf", "byg:rainbow_eucalyptus_bookshelf", "byg:redwood_bookshelf", "byg:skyris_bookshelf", "byg:willow_bookshelf", "byg:witch_hazel_bookshelf", "byg:zelkova_bookshelf", "byg:sythian_bookshelf", "byg:embur_bookshelf", "byg:palm_bookshelf", "byg:lament_bookshelf", "byg:bulbis_bookshelf", "byg:ether_bookshelf", "byg:nightshade_bookshelf", "byg:imparius_bookshelf"]
+},
+hoes:{
+tag:"c:hoes",
+members:["byg:pendorite_hoe"]
+},
+storage_blocks_anthracite:{
+tag:"c:storage_blocks/anthracite",
+members:["byg:anthracite_block"]
+},
+sand_black:{
+tag:"c:sand/black",
+members:["byg:black_sand"]
+},
+netherrack:{
+tag:"c:netherrack",
+members:["byg:overgrown_netherrack", "byg:overgrown_crimson_blackstone", "byg:blue_netherrack", "byg:brimstone", "byg:embur_nylium", "byg:sythian_nylium"]
+}
+},
+ftbchunks:{
+right_click_whitelist:{
+tag:"ftbchunks:right_click_whitelist",
+members:["minecraft:shield", "minecraft:firework_rocket", "minecraft:map"]
+},
+right_click_blacklist:{
+tag:"ftbchunks:right_click_blacklist",
+members:["minecraft:bucket", "minecraft:water_bucket", "minecraft:lava_bucket", "minecraft:lead", "minecraft:name_tag", "minecraft:splash_potion", "minecraft:lingering_potion"]
+}
+},
+kubejs:{
+ores_nether_gold:{
+tag:"kubejs:ores/nether_gold",
+members:["minecraft:nether_gold_ore"]
+}
+},
+sereneseasons:{
+summer_crops:{
+tag:"sereneseasons:summer_crops",
+members:["farmersdelight:tomato_seeds", "farmersdelight:rice"]
+},
+autumn_crops:{
+tag:"sereneseasons:autumn_crops",
+members:["farmersdelight:cabbage_seeds", "farmersdelight:onion", "farmersdelight:rice"]
+},
+winter_crops:{
+tag:"sereneseasons:winter_crops",
+members:["farmersdelight:cabbage_seeds"]
+},
+spring_crops:{
+tag:"sereneseasons:spring_crops",
+members:["farmersdelight:onion"]
+}
+},
+farmersdelight:{
+cabbage_roll_ingredients:{
+tag:"farmersdelight:cabbage_roll_ingredients",
+members:["#forge:raw_pork", "#forge:raw_fishes", "#forge:raw_chicken", "#forge:raw_beef", "#forge:raw_mutton", "#forge:eggs", "#forge:mushrooms", "minecraft:carrot", "minecraft:potato", "minecraft:beetroot"]
+},
+canvas_signs:{
+tag:"farmersdelight:canvas_signs",
+members:["farmersdelight:canvas_sign", "farmersdelight:white_canvas_sign", "farmersdelight:orange_canvas_sign", "farmersdelight:magenta_canvas_sign", "farmersdelight:light_blue_canvas_sign", "farmersdelight:yellow_canvas_sign", "farmersdelight:lime_canvas_sign", "farmersdelight:pink_canvas_sign", "farmersdelight:gray_canvas_sign", "farmersdelight:light_gray_canvas_sign", "farmersdelight:cyan_canvas_sign", "farmersdelight:purple_canvas_sign", "farmersdelight:blue_canvas_sign", "farmersdelight:brown_canvas_sign", "farmersdelight:green_canvas_sign", "farmersdelight:red_canvas_sign", "farmersdelight:black_canvas_sign"]
+},
+offhand_equipment:{
+tag:"farmersdelight:offhand_equipment",
+members:["minecraft:shield", "create:extendo_grip?"]
+},
+wild_crops:{
+tag:"farmersdelight:wild_crops",
+members:["farmersdelight:wild_carrots", "farmersdelight:wild_potatoes", "farmersdelight:wild_beetroots", "farmersdelight:wild_cabbages", "farmersdelight:wild_tomatoes", "farmersdelight:wild_onions", "farmersdelight:wild_rice", "corn_delight:wild_corn"]
+},
+straw_harvesters:{
+tag:"farmersdelight:straw_harvesters",
+members:["#farmersdelight:tools/knives"]
+},
+tools_knives:{
+tag:"farmersdelight:tools/knives",
+members:["farmersdelight:flint_knife", "farmersdelight:iron_knife", "farmersdelight:diamond_knife", "farmersdelight:golden_knife", "farmersdelight:netherite_knife"]
+},
+wolf_prey:{
+tag:"farmersdelight:wolf_prey",
+members:["#forge:raw_chicken", "#forge:raw_mutton", "minecraft:rabbit"]
+}
+},
+fruittrees:{
+citrus_logs:{
+tag:"fruittrees:citrus_logs",
+members:["fruittrees:citrus_log", "fruittrees:citrus_wood", "fruittrees:stripped_citrus_log", "fruittrees:stripped_citrus_wood"]
+},
+cherry_logs:{
+tag:"fruittrees:cherry_logs",
+members:["fruittrees:cherry_log?", "fruittrees:cherry_wood?", "fruittrees:stripped_cherry_log?", "fruittrees:stripped_cherry_wood?"]
 }
 },
 storagedrawers:{

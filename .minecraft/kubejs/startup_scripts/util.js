@@ -29,3 +29,18 @@ function PrefixedColoredItems(prefix) {
         return this
     }
 }
+
+
+/**
+ * 
+ * @param {string} food 
+ * @param {number} hunger 
+ * @param {number} saturation 
+ */
+ function PlainFood(food, hunger, saturation) {
+    this.food = food
+    this.hunger = hunger
+    this.saturation = saturation
+    this._always = false
+    this.always = () => { this._always = true; return this }
+}
