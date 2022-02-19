@@ -82,3 +82,20 @@ function CuttingRecipe(output, input, tool) {
         })
     }
 }
+
+function RollingRecipe(output, input) {
+    this.input = input
+    this.output = output
+
+    /**
+     * 
+     * @param {dev.latvian.mods.kubejs.recipe.RecipeEventJS} event 
+     */
+    this.create = function (event) {
+        event.custom({
+            type: "createaddition:rolling",
+            input: this.input.toJson(),
+            result: this.output.toResultJson()
+        })
+    }
+}

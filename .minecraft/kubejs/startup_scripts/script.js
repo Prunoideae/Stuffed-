@@ -2,6 +2,7 @@
 
 const namedOnlyItems = [
     "cheese",
+    "butter",
     "dough_berry",
     "dough_cocoa",
     "raw_wrap_bread",
@@ -31,12 +32,24 @@ const coloredItems = [
     new PrefixedColoredItems("powder")
         .addItem("salt", Color.rgba(255, 255, 255, 1.0))
         .addItem("sulfur", Color.rgba(255, 255, 255, 1.0)),
-    //TODO: Give it a texture
     new PrefixedColoredItems("flour")
         .addItem("corn", Color.rgba(255, 255, 255, 1.0)),
     //Doughs, remade and expanded
     new PrefixedColoredItems("dough")
         .addItem("sweet", Color.rgba(255, 255, 255, 1.0)),
+    new PrefixedColoredItems("sigil")
+        // The basis of Minecraft, ingots and gems
+        .addItem("mountain", Color.rgba(255, 255, 255, 1.0))
+        // Creatures, mostly food
+        .addItem("animalia", Color.rgba(255, 255, 255, 1.0))
+        // Crops, mostly food
+        .addItem("plantae", Color.rgba(255, 255, 255, 1.0))
+        // Something not friendly
+        .addItem("conquer", Color.rgba(255, 255, 255, 1.0))
+        // Things created by things, not food, potions etc
+        .addItem("artifact", Color.rgba(255, 255, 255, 1.0))
+        // Everything
+        .addItem("essentia", Color.rgba(255, 255, 255, 1.0))
 ]
 
 const oreColorMappings = {
@@ -86,14 +99,6 @@ captureEvent("item.registry", event => {
             .translationKey("white_hair_wolf_ear_loli");
     });
 
-    for (let idx = 0; idx < 8; idx++) {
-        event.create("singularity_" + (idx + 1), builder => {
-            builder.tooltip(Text.translate("item.kubejs.singularity_" + (idx + 1) + "_desc").gray())
-                .translationKey("singularity_" + (idx + 1))
-
-        })
-    }
-
     event.create("sodium_chloride", builder => {
         builder.tooltip(
             Text.translate("item.kubejs.sodium_chloride_desc").gray())
@@ -131,7 +136,7 @@ captureEvent("item.registry", event => {
         oreItemIntermediates.forEach((state, i, a) => {
             createColoredOre(state, ore_name)
         })
-    })
+    })   
 
 });
 
