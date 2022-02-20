@@ -47,3 +47,7 @@ captureEvent("tags.blocks", event => {
     Object.keys(blocks.integratedterminals).forEach((s, i, a) => { event.add(tags.blocks.create.non_movable.tag, blocks.integratedterminals[s]) })
     Object.keys(blocks.integratedtunnels).forEach((s, i, a) => { event.add(tags.blocks.create.non_movable.tag, blocks.integratedtunnels[s]) })
 })
+
+captureEvent("tags.fluids", event => {
+
+})

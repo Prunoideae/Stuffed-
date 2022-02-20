@@ -358,7 +358,7 @@ const oreProductProcessings = [
         [new WeightedName("lapis", 0.1)],
         "dust",
         "redstone")
-        .addOre(items.minecraft.redstone, 8, ore_base.overworld)
+        .addOre(items.minecraft.redstone_ore, 8, ore_base.overworld)
         .addOre(items.minecraft.deepslate_redstone_ore, 16, ore_base.deepslate),
     new OreProcessing(
         Item.of(items.minecraft.redstone),

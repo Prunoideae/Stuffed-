@@ -83,6 +83,54 @@ function CuttingRecipe(output, input, tool) {
     }
 }
 
+function CookingRecipe(output, inputs) {
+    this.output = output
+    this.inputs = inputs
+    this._bowl = undefined
+    this._xp = 0
+    this._duration = 200
+
+    /**
+     * 
+     * @param {any} bowl 
+     * @returns {CookingRecipe}
+     */
+    this.bowl = function (bowl) {
+        this.bowl = bowl
+        return this
+    }
+
+    this.xp = function (xp) {
+        this._xp = xp
+        return this
+    }
+
+    this.duration = function (duration) {
+        this._duration = duration
+        return this
+    }
+
+    /**
+     * 
+     * @param {dev.latvian.mods.kubejs.recipe.RecipeEventJS} event 
+     */
+    this.create = function (event) {
+        var transformed_inputs = []
+        this.inputs.forEach((v, i, a) => { transformed_inputs.push(v.toJson()) })
+        var recipeJson = {
+            type: "farmersdelight:cooking",
+            ingredients: transformed_inputs,
+            result: this.output.toResultJson(),
+            experience: this.xp,
+            cookingtime: this.duration
+        }
+        if (this._bowl != undefined) {
+            recipeJson.container = this._bowl.toJson()
+        }
+        event.custom(recipeJson)
+    }
+}
+
 function RollingRecipe(output, input) {
     this.input = input
     this.output = output

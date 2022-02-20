@@ -3,7 +3,7 @@
 const flours = {
     wheat: items.create.wheat_flour,
     nether: items.create.cinder_flour,
-    corn: items.kubejs.flour_corn
+    corn: items.kubejs.flour_corn,
 }
 
 const doughs = {
@@ -63,6 +63,12 @@ onEvent("recipes", event => {
     event.recipes.create.mixing(Fluid.of(fluids.kubejs.cream, 750), [items.kubejs.powder_salt, Fluid.of(fluids.minecraft.milk, 1000)]).heated()
     //250mB cream -> butter 
     event.recipes.create.mixing(items.kubejs.butter, [Fluid.of(fluids.kubejs.cream, 250), items.kubejs.powder_salt])
+    //Tomato Sauce needs some salt
+    event.remove({ "output": items.farmersdelight.tomato_sauce })
+    new CookingRecipe(Item.of(items.farmersdelight.tomato_sauce), [
+        Item.of(items.farmersdelight.tomato), Item.of(items.farmersdelight.tomato),
+        Item.of(items.kubejs.powder_salt)
+    ]).bowl(Item.of(items.minecraft.bowl)).create(event)
 
     //Doughs unified and expanded
     function cutting(output, input, basic, advanced) {
@@ -87,6 +93,9 @@ onEvent("recipes", event => {
     foodSmelting(items.kubejs.wraped_bread, doughs.wrap)
 
     //Sweet Dough -> Plain Cookies -> Honey Cookies
+    event.remove({ "output": items.farmersdelight.honey_cookie })
+    event.remove({ "output": items.farmersdelight.sweet_berry_cookie })
+    event.remove({ "output": items.minecraft.cookie })
     addMilkShapeless(doughs.sweet, [flours.wheat, flours.wheat, items.minecraft.sugar])
     event.recipes.create.mixing(doughs.sweet, [flours.wheat, items.minecraft.sugar, Fluid.of(fluids.minecraft.milk, 100)])
     cookieCutting(cookies.raw_plain, doughs.sweet)
@@ -129,5 +138,75 @@ onEvent("recipes", event => {
     cutting(items.farmersdelight.raw_pasta, doughs.wheat, 2, 3)
 
     //Butter and cheese for everyone
+    event.remove({ "output": items.farmersdelight.stuffed_potato })
+    event.recipes.minecraft.crafting_shapeless(items.farmersdelight.stuffed_potato, [
+        items.minecraft.baked_potato, tags.items.forge.cooked_beef,
+        items.minecraft.carrot, items.kubejs.cheese
+    ])
+
+    //Creamed Corn
+    event.remove({ "output": items.corn_delight.creamed_corn })
+    new CookingRecipe(Item.of(items.corn_delight.creamed_corn), [
+        Item.of(items.kubejs.cream_bucket), Item.of(items.corn_delight.corn_seeds), Item.of(items.corn_delight.corn_seeds)
+    ]).bowl(Item.of(items.minecraft.bowl)).create(event)
+
+    //Corn Soup
+    event.remove({ "output": items.corn_delight.corn_soup })
+    let cornSoupRecipes = [
+        new CookingRecipe(Item.of(items.corn_delight.corn_soup), [
+            Item.of(items.kubejs.cream_bucket), Item.of(items.corn_delight.corn),
+            Ingredient.of("#forge:salad_ingredients"), Ingredient.of("#forge:raw_chicken")]),
+        new CookingRecipe(Item.of(items.corn_delight.corn_soup), [
+            Item.of(items.kubejs.cream_bucket), Item.of(items.corn_delight.corn),
+            Ingredient.of("#forge:salad_ingredients"), Item.of(items.minecraft.brown_mushroom)]),
+        new CookingRecipe(Item.of(items.corn_delight.corn_soup), [
+            Item.of(items.kubejs.cream_bucket), Item.of(items.corn_delight.corn),
+            Ingredient.of("#forge:salad_ingredients"), Ingredient.of("#forge:raw_beef")]),
+        new CookingRecipe(Item.of(items.corn_delight.corn_soup), [
+            Item.of(items.kubejs.cream_bucket), Item.of(items.corn_delight.corn),
+            Ingredient.of("#forge:salad_ingredients"), Ingredient.of("#forge:raw_pork")])
+    ]
+    cornSoupRecipes.forEach((v, i, a) => v.bowl(Item.of(items.minecraft.bowl)).create(event))
+
+    //Pumpkin Soup
+    event.remove({ "output": items.farmersdelight.pumpkin_soup })
+    new CookingRecipe(Item.of(items.farmersdelight.pumpkin_soup), [
+        Item.of(items.farmersdelight.pumpkin_slice), Ingredient.of("#forge:salad_ingredients"),
+        Ingredient.of("#forge:raw_pork"), Item.of(items.kubejs.cream_bucket)
+    ]).bowl(items.minecraft.bowl).create(event)
+
+    //Creamy Corn Drink 
+    event.remove({ "output": items.corn_delight.creamy_corn_drink })
+    new CookingRecipe(Item.of(items.corn_delight.creamy_corn_drink), [
+        Item.of(flours.corn), Item.of(items.kubejs.cream_bucket), Item.of(items.minecraft.sugar)
+    ]).bowl(items.minecraft.glass_bottle).create(event)
+
+    //Shepherd's pie
+    event.remove({ "output": items.farmersdelight.shepherds_pie_block })
+    event.recipes.minecraft.crafting_shaped(items.farmersdelight.shepherds_pie_block, [
+        'PCP',
+        'MMM',
+        'OBO'
+    ], {
+        P: items.minecraft.baked_potato,
+        C: items.kubejs.cheese,
+        M: "#forge:cooked_mutton",
+        O: items.farmersdelight.onion,
+        B: items.minecraft.bowl
+    })
+
+    //Mutton Wrap 
+    event.remove({ "output": items.farmersdelight.mutton_wrap })
+    event.recipes.minecraft.crafting_shapeless(items.farmersdelight.mutton_wrap, [
+        items.kubejs.wraped_bread, "#forge:cooked_mutton",
+        "#forge:salad_ingredients", items.farmersdelight.onion
+    ])
+
+    //Dumplings, how dare you call this dumplings
+    event.remove({ "output": items.farmersdelight.dumplings })
+    new CookingRecipe(Item.of(items.farmersdelight.dumplings, 4), [
+        Item.of(doughs.wrap), Ingredient.of("#forge:salad_ingredients"),
+        Item.of(items.minecraft.porkchop), Item.of(items.farmersdelight.onion)
+    ])
 
 })

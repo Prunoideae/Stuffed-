@@ -23,7 +23,7 @@ const namedOnlyFluids = [
     new NameColorHolder("purifying_agent", Color.rgba(255, 255, 255, 1.0)),
     new NameColorHolder("crystallizing_fluid", Color.rgba(255, 255, 255, 1.0)),
     //Milk
-    new NameColorHolder("cream", Color.rgba(255, 255, 240, 1.0))
+    new NameColorHolder("cream", Color.rgba(255, 255, 240, 1.0)),
 ];
 
 //TODO: fix item colors
@@ -33,23 +33,26 @@ const coloredItems = [
         .addItem("salt", Color.rgba(255, 255, 255, 1.0))
         .addItem("sulfur", Color.rgba(255, 255, 255, 1.0)),
     new PrefixedColoredItems("flour")
-        .addItem("corn", Color.rgba(255, 255, 255, 1.0)),
+        .addItem("corn", Color.rgba(252, 189, 18, 1.0)),
+    new PrefixedColoredItems("nether_flour")
+        .addItem("blue", Color.rgba(255, 255, 255, 1.0))
+        .addItem("brim", Color.rgba(255, 255, 255, 1.0)),
     //Doughs, remade and expanded
     new PrefixedColoredItems("dough")
         .addItem("sweet", Color.rgba(255, 255, 255, 1.0)),
     new PrefixedColoredItems("sigil")
         // The basis of Minecraft, ingots and gems
-        .addItem("mountain", Color.rgba(255, 255, 255, 1.0))
+        .addItem("terra", Color.rgba(255, 255, 255, 1.0))
         // Creatures, mostly food
         .addItem("animalia", Color.rgba(255, 255, 255, 1.0))
         // Crops, mostly food
         .addItem("plantae", Color.rgba(255, 255, 255, 1.0))
         // Something not friendly
-        .addItem("conquer", Color.rgba(255, 255, 255, 1.0))
+        .addItem("victoris", Color.rgba(255, 255, 255, 1.0))
         // Things created by things, not food, potions etc
-        .addItem("artifact", Color.rgba(255, 255, 255, 1.0))
+        .addItem("artifex", Color.rgba(255, 255, 255, 1.0))
         // Everything
-        .addItem("essentia", Color.rgba(255, 255, 255, 1.0))
+        .addItem("mundus", Color.rgba(255, 255, 255, 1.0))
 ]
 
 const oreColorMappings = {
@@ -136,7 +139,7 @@ captureEvent("item.registry", event => {
         oreItemIntermediates.forEach((state, i, a) => {
             createColoredOre(state, ore_name)
         })
-    })   
+    })
 
 });
 
@@ -163,6 +166,13 @@ captureEvent('item.modification', event => {
     ]
     raw_meat.forEach((v, i, a) => event.modify(v, giveRawFoodNausea))
 
+    let giveContainer = function (item, remainder) {
+        event.modify(item, prop => {
+            prop.setCraftingRemainder(remainder)
+        })
+    }
+
+    giveContainer(items.kubejs.cream_bucket, items.minecraft.bucket)
 })
 
 captureEvent("fluid.registry", event => {
@@ -177,6 +187,7 @@ captureEvent("fluid.registry", event => {
                 .textureFlowing("kubejs:block/" + prefix + "_flow")
                 .textureStill("kubejs:block/" + prefix + "_still")
                 .translationKey(prefix + "_" + name)
+            builder.bucketItem
         })
     }
 
