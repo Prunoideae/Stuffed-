@@ -19,11 +19,7 @@ const oreFluidIntermediates = [
     "solution"
 ]
 
-captureEvent("recipes", event => {
-    event.recipes.integrateddynamics.squeezer(
-        [Item.of(items.farmersdelight.rice, 9)],
-        items.farmersdelight.rice_bag).duration(200);
-});
+captureEvent("recipes", event => { });
 
 
 captureEvent("tags.items", event => {
@@ -47,6 +43,4 @@ captureEvent("tags.blocks", event => {
     Object.keys(blocks.integratedtunnels).forEach((s, i, a) => { event.add(tags.blocks.create.non_movable.tag, blocks.integratedtunnels[s]) })
 })
 
-captureEvent("tags.fluids", event => {
-
-})
+captureEvent("tags.fluids", event => { })
