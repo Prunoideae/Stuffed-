@@ -85,8 +85,8 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
                 event.recipes.create.crushing([Item.of(this.withState("crushed")).withChance(v.value), Item.of(items.create.experience_nugget).withChance(0.4 * v.value)].concat(v.addi), v.name)
                 let weakened_output = [Item.of(this.withState("crushed")).withChance(v.value / 2)]
                 event.recipes.create.milling(weakened_output, v.name)
-                event.recipes.integrateddynamics.squeezer(weakened_output, v.name)
-                event.recipes.integrateddynamics.mechanical_squeezer(weakened_output, v.name).duration(100)
+                event.recipes.integrateddynamics.squeezer([Item.of(this.withState("crushed"))], v.name)
+                event.recipes.integrateddynamics.mechanical_squeezer([Item.of(this.withState("crushed"))], v.name).duration(100)
             } else if (v.value >= 1.0) {
                 let base_ore = Math.floor(v.value)
                 let base_exp = Math.floor(v.value * 0.4)
@@ -103,6 +103,8 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
                     }
                 }
                 event.recipes.create.crushing(outputs.concat(v.addi), v.name)
+                event.recipes.integrateddynamics.squeezer([Item.of(this.withState("crushed"))], v.name)
+                event.recipes.integrateddynamics.mechanical_squeezer([Item.of(this.withState("crushed"))], v.name).duration(500)
             }
         })
 
@@ -272,14 +274,14 @@ const oreProductProcessings = [
         .addOre(items.minecraft.emerald_ore, 1.5, ore_base.overworld)
         .addOre(items.minecraft.deepslate_emerald_ore, 3.0, ore_base.deepslate),
     new OreProcessing(
-        Item.of(items.minecraft.lapis_lazuli),
+        Item.of(items.minecraft.lapis_lazuli, 4),
         [new WeightedName("copper", 0.02)],
         [new WeightedName("redstone", 0.02)],
         [Item.of(items.minecraft.gold_nugget).withChance(0.02)],
         "crystal",
         "lapis")
-        .addOre(items.minecraft.lapis_ore, 8, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_lapis_ore, 16, ore_base.overworld),
+        .addOre(items.minecraft.lapis_ore, 2, ore_base.overworld)
+        .addOre(items.minecraft.deepslate_lapis_ore, 4, ore_base.overworld),
     //End crystals
     new OreProcessing(
         Item.of(items.byg.ametrine_gems),
@@ -352,41 +354,41 @@ const oreProductProcessings = [
         .addOre(items.byg.anthracite_ore, 2, ore_base.nether_brim),
     // Dusts
     new OreProcessing(
-        Item.of(items.minecraft.redstone),
+        Item.of(items.minecraft.redstone, 4),
         [],
         [new WeightedName("redstone", 0.1)],
         [new WeightedName("lapis", 0.1)],
         "dust",
         "redstone")
-        .addOre(items.minecraft.redstone_ore, 8, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_redstone_ore, 16, ore_base.deepslate),
+        .addOre(items.minecraft.redstone_ore, 2, ore_base.overworld)
+        .addOre(items.minecraft.deepslate_redstone_ore, 4, ore_base.deepslate),
     new OreProcessing(
-        Item.of(items.minecraft.redstone),
+        Item.of(items.minecraft.redstone, 4),
         [],
         [new WeightedName("cryptic_redstone_ore", 0.1)],
         [],
         'dust',
         'cryptic_redstone_ore',
         true)
-        .addOre(items.byg.cryptic_redstone_ore, 12, ore_base.end_cryptic),
+        .addOre(items.byg.cryptic_redstone_ore, 3, ore_base.end_cryptic),
     // Others
     new OreProcessing(
-        Item.of(items.minecraft.coal),
+        Item.of(items.minecraft.coal, 2),
         [],
         [new WeightedName("coal", 0.1)],
         [new WeightedName("diamond", 0.005)],
         "other",
         "coal")
-        .addOre(items.minecraft.coal_ore, 3, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_coal_ore, 6, ore_base.deepslate),
+        .addOre(items.minecraft.coal_ore, 2, ore_base.overworld)
+        .addOre(items.minecraft.deepslate_coal_ore, 4, ore_base.deepslate),
     new OreProcessing(
-        Item.of(items.byg.lignite),
+        Item.of(items.byg.lignite, 2),
         [],
         [new WeightedName("lignite_ore", 0.1)],
         [new WeightedName("coal", 0.1)],
         "other",
         "lignite_ore")
-        .addOre(items.byg.lignite_ore, 4, ore_base.end_ether)
+        .addOre(items.byg.lignite_ore, 2, ore_base.end_ether)
 ];
 
 onEvent("recipes", event => {
@@ -402,4 +404,12 @@ onEvent("recipes", event => {
         processing.addCrushingRecipe(event)
         processing.addTransitionRecipe(event)
     });
+
+    //Early game
+    event.recipes.minecraft.smelting(Item.of(items.minecraft.iron_nugget, 5), items.minecraft.iron_ore)
+    event.recipes.minecraft.blasting(Item.of(items.minecraft.iron_nugget, 5), items.minecraft.iron_ore).cookingTime(100)
+});
+
+captureEvent("block.loot_tables", event => {
+    tags.items.forge.ores.members.forEach((v, i, a) => event.addSimpleBlock(v))
 });

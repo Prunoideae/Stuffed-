@@ -25,7 +25,6 @@ captureEvent("recipes", event => {
         items.farmersdelight.rice_bag).duration(200);
 });
 
-captureEvent("block.loot_tables", event => { });
 
 captureEvent("tags.items", event => {
     event.add("kubejs:ores/nether_gold", items.minecraft.nether_gold_ore)
