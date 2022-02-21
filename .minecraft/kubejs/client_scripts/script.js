@@ -5,7 +5,15 @@ captureEvent("jei.hide.items", event => {
 		event.hide(v)
 	})
 
-	event.hide(items.create.dough)
+	let items_to_hide = [
+		items.create.dough,
+		items.integratedterminals.part_terminal_crafting_job,
+		items.integrateddynamics.part_entity_writer,
+		items.integrateddynamics.part_machine_writer,
+		items.integrateddynamics.part_inventory_writer,
+		items.byg.brim_powder
+	]
+	items_to_hide.forEach((v, i, a) => event.hide(v))
 })
 
 captureEvent("item.tooltip", event => {

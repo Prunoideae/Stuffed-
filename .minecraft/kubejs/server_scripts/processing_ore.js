@@ -60,7 +60,7 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
             event.recipes.minecraft.blasting(this.mainProduct, this.withState("recrystallized_shard")).cookingTime(50);
         } else if (this.material == "crystal") {
             // Dusts can be crystallized into crystals
-            event.recipes.create.mixing(this.mainProduct, [this.withState("purified_dust"), Fluid.water().withAmount(1000)]).heated();
+            event.recipes.create.mixing(this.mainProduct.withCount(1), [this.withState("purified_dust"), Fluid.water().withAmount(1000)]).heated();
         }
         else if (this.material == "dust") {
             /* Just dust already */
@@ -68,12 +68,14 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
         }
         else if (this.material == "other") {/* Can do nothing :((*/ }
 
-        if (this.material != "dust" && !this.isSub) {
-            event.recipes.create.crushing([this.withState("purified_dust")], this.mainProduct);
-            event.recipes.create.milling([this.withState("purified_dust")], this.mainProduct);
-            event.recipes.integrateddynamics.squeezer([this.withState("purified_dust")], this.mainProduct);
-            event.recipes.integrateddynamics.mechanical_squeezer([this.withState("purified_dust")], this.mainProduct).duration(40);
-        }
+        if (!this.isSub)
+            if ((this.material == "metal" && Ingredient.of("#forge:ingots").test(this.mainProduct))
+                || (this.material != "metal" && this.material != "dust")) {
+                event.recipes.create.crushing([this.withState("purified_dust")], this.mainProduct.withCount(1));
+                event.recipes.create.milling([this.withState("purified_dust")], this.mainProduct.withCount(1));
+                event.recipes.integrateddynamics.squeezer([this.withState("purified_dust")], this.mainProduct.withCount(1));
+                event.recipes.integrateddynamics.mechanical_squeezer([this.withState("purified_dust")], this.mainProduct.withCount(1)).duration(40);
+            }
 
         event.recipes.create.splashing([this.withState("purified_dust")], this.withState("dust"));
     }
@@ -301,15 +303,15 @@ const oreProductProcessings = [
         .addOre(items.byg.budding_ametrine_ore, 2, ore_base.end_ether),
     //Nether crystals
     new OreProcessing(
-        Item.of(items.minecraft.quartz),
+        Item.of(items.minecraft.quartz, 2),
         [],
-        [Item.of(items.minecraft.glowstone).withChance(0.1)],
+        [Item.of(items.minecraft.glowstone_dust).withChance(0.1)],
         [Item.of(items.minecraft.gold_nugget, 2).withChance(0.2)],
         "crystal",
         "quartz")
         .addOre(items.minecraft.nether_quartz_ore, 2, ore_base.nether),
     new OreProcessing(
-        Item.of(items.minecraft.quartz),
+        Item.of(items.minecraft.quartz, 2),
         [],
         [new WeightedName("pendorite_ore", 0.02)],
         [Item.of(items.minecraft.gold_nugget, 2).withChance(0.2)],
@@ -318,7 +320,7 @@ const oreProductProcessings = [
         true)
         .addOre(items.byg.blue_nether_quartz_ore, 1.2, ore_base.nether_blue),
     new OreProcessing(
-        Item.of(items.minecraft.quartz),
+        Item.of(items.minecraft.quartz, 2),
         [],
         [new WeightedName("anthracite_ore", 0.02)],
         [Item.of(items.minecraft.gold_nugget, 2).withChance(0.2)],

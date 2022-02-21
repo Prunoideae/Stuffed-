@@ -147,3 +147,82 @@ function RollingRecipe(output, input) {
         })
     }
 }
+
+/**
+ * 
+ * @param {object[]} outputs 
+ */
+function AssemblyRecipe(outputs) {
+    this._outputs = outputs
+    this._input = undefined
+    this._intermediate = undefined
+    this._steps = []
+    this._loops = 1
+
+    /**
+     * 
+     * @param {number} loops 
+     * @returns {AssemblyRecipe}
+     */
+    this.loops = function (loops) {
+        this._loops = loops
+        return this
+    }
+
+    /**
+     * 
+     * @param {dev.latvian.mods.kubejs.item.ingredient.IngredientJS} intermediate 
+     * @returns {AssemblyRecipe}
+     */
+    this.intermediate = function (intermediate) {
+        this._intermediate = intermediate
+        return this
+    }
+
+    /**
+     * 
+     * @param {dev.latvian.mods.kubejs.item.ingredient.IngredientJS} input 
+     * @returns {AssemblyRecipe}
+     */
+    this.input = function (input) {
+        this._input = input
+        return this
+    }
+
+    /**
+     * 
+     * @param {function (dev.latvian.mods.kubejs.item.ingredient.IngredientJS, dev.latvian.mods.kubejs.item.ingredient.IngredientJS):dev.latvian.mods.kubejs.recipe.RecipeJS} method 
+     * @param {dev.latvian.mods.kubejs.item.ingredient.IngredientJS} ingredient 
+     * @returns {AssemblyRecipe}
+     */
+    this.addStep = function (method, ingredient) {
+        this._steps.push(method(this._intermediate, [this._intermediate, ingredient]))
+        return this
+    }
+
+    /**
+     * 
+     * @param {function (dev.latvian.mods.kubejs.item.ingredient.IngredientJS):dev.latvian.mods.kubejs.recipe.RecipeJS} method 
+     * @param {dev.latvian.mods.kubejs.item.ingredient.IngredientJS} ingredient 
+     * @returns {AssemblyRecipe}
+     */
+    this.addProcess = function (method) {
+        this._steps.push(method(this._intermediate, this._intermediate))
+        return this
+    }
+
+    /**
+     * 
+     * @param {dev.latvian.mods.kubejs.recipe.RecipeEventJS} event 
+     * @returns {AssemblyRecipe}
+     */
+    this.create = function (event) {
+        event.recipes.create.sequenced_assembly(
+            this._outputs,
+            this._input,
+            this._steps)
+            .transitionalItem(this._intermediate)
+            .loops(this._loops)
+        return this
+    }
+}

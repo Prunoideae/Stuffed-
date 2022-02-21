@@ -143,6 +143,7 @@
         [
           "minecraft:plains",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "byg:autumnal_valley",
           "minecraft:old_growth_spruce_taiga"

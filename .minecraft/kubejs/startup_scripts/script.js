@@ -3,6 +3,7 @@
 const namedOnlyItems = [
     "cheese",
     "butter",
+    "dough_sweet",
     "dough_berry",
     "dough_cocoa",
     "raw_wrap_bread",
@@ -26,7 +27,7 @@ const namedOnlyFluids = [
     new NameColorHolder("cream", Color.rgba(255, 255, 240, 1.0)),
 ];
 
-//TODO: fix item colors
+//TODO: fix sigil textures
 const coloredItems = [
     // This dust and that dust
     new PrefixedColoredItems("powder")
@@ -38,8 +39,6 @@ const coloredItems = [
         .addItem("blue", Color.rgba(82, 125, 165, 1.0))
         .addItem("brim", Color.rgba(210, 210, 70, 1.0)),
     //Doughs, remade and expanded
-    new PrefixedColoredItems("dough")
-        .addItem("sweet", Color.rgba(247, 247, 200, 1.0)),
     new PrefixedColoredItems("sigil")
         // The basis of Minecraft, ingots and gems
         .addItem("terra", Color.rgba(255, 255, 255, 1.0))
