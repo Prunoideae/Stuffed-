@@ -21,7 +21,7 @@ const namedOnlyFluids = [
     //Ore processing
     new NameColorHolder("dissolvent", Color.rgba(198, 198, 32, 1.0)),
     new NameColorHolder("purifying_agent", Color.rgba(255, 255, 255, 1.0)),
-    new NameColorHolder("crystallizing_fluid", Color.rgba(255, 255, 255, 1.0)),
+    new NameColorHolder("crystallizing_fluid", Color.rgba(76, 120, 200, 1.0)),
     //Milk
     new NameColorHolder("cream", Color.rgba(255, 255, 240, 1.0)),
 ];
@@ -31,15 +31,15 @@ const coloredItems = [
     // This dust and that dust
     new PrefixedColoredItems("powder")
         .addItem("salt", Color.rgba(255, 255, 255, 1.0))
-        .addItem("sulfur", Color.rgba(255, 255, 255, 1.0)),
+        .addItem("sulfur", Color.rgba(202, 144, 17, 1.0)),
     new PrefixedColoredItems("flour")
         .addItem("corn", Color.rgba(252, 189, 18, 1.0)),
     new PrefixedColoredItems("nether_flour")
-        .addItem("blue", Color.rgba(255, 255, 255, 1.0))
-        .addItem("brim", Color.rgba(255, 255, 255, 1.0)),
+        .addItem("blue", Color.rgba(82, 125, 165, 1.0))
+        .addItem("brim", Color.rgba(210, 210, 70, 1.0)),
     //Doughs, remade and expanded
     new PrefixedColoredItems("dough")
-        .addItem("sweet", Color.rgba(255, 255, 255, 1.0)),
+        .addItem("sweet", Color.rgba(247, 247, 200, 1.0)),
     new PrefixedColoredItems("sigil")
         // The basis of Minecraft, ingots and gems
         .addItem("terra", Color.rgba(255, 255, 255, 1.0))
