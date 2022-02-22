@@ -75,9 +75,7 @@ function CuttingRecipe(output, input, tool) {
         event.custom({
             type: "farmersdelight:cutting",
             ingredients: this.input,
-            tool: {
-                "tag": this.tool
-            },
+            tool: this.tool,
             result: this.output
         })
     }

@@ -20,6 +20,7 @@ natives/
 
 # Tweaking workspace
 *.py
+*.code-snippets
 __pycache__/
 compiler/
 exported/
@@ -29,3 +30,4 @@ tsconfig.json
 raw_en_us.json
 package.json
 package-lock.json
+

@@ -130,8 +130,8 @@ captureEvent("item.registry", event => {
 
     // Unifies the ore processing intermediates
     // Mainly the raw line, purified line and recrystallized line
-    tags.items.forge.ores.members.forEach((ore, index, array) => {
-        if (tags.items.forge.ores_in_ground_deepslate.members.indexOf(ore) > -1) {
+    tags.items.forge.ores.forEach((ore, index, array) => {
+        if (tags.items.forge.ores_in_ground_deepslate.indexOf(ore) > -1) {
             return;
         }
         let ore_name = ore.startsWith("#") ? ore.split(":")[1].split("/")[1] : ore.split(":")[1];
@@ -143,10 +143,10 @@ captureEvent("item.registry", event => {
 });
 
 captureEvent('item.modification', event => {
-    event.modify(items.kubejs.purified_dust_coal, prop => {
+    event.modify("kubejs:purified_dust_coal", prop => {
         prop.setBurnTime(1600)
     })
-    event.modify(items.kubejs.purified_dust_lignite_ore, prop => {
+    event.modify("kubejs:purified_dust_lignite_ore", prop => {
         prop.setBurnTime(1400)
     })
 
@@ -155,13 +155,13 @@ captureEvent('item.modification', event => {
     }
 
     let raw_meat = [
-        items.minecraft.porkchop,
-        items.minecraft.beef,
-        items.minecraft.chicken,
-        items.minecraft.mutton,
-        items.farmersdelight.mutton_chops,
-        items.farmersdelight.minced_beef,
-        items.farmersdelight.chicken_cuts
+        "minecraft:porkchop",
+        "minecraft:beef",
+        "minecraft:chicken",
+        "minecraft:mutton",
+        "farmersdelight:mutton_chops",
+        "farmersdelight:minced_beef",
+        "farmersdelight:chicken_cuts"
     ]
     raw_meat.forEach((v, i, a) => event.modify(v, giveRawFoodNausea))
 
@@ -171,7 +171,7 @@ captureEvent('item.modification', event => {
         })
     }
 
-    giveContainer(items.kubejs.cream_bucket, items.minecraft.bucket)
+    giveContainer("kubejs:cream_bucket", "minecraft:bucket")
 })
 
 captureEvent("fluid.registry", event => {
@@ -202,8 +202,8 @@ captureEvent("fluid.registry", event => {
 
     // Unifies the ore processing intermediates
     // Mainly recrystallized line
-    tags.items.forge.ores.members.forEach((ore, index, array) => {
-        if (tags.items.forge.ores_in_ground_deepslate.members.indexOf(ore) > -1) {
+    tags.items.forge.ores.forEach((ore, index, array) => {
+        if (tags.items.forge.ores_in_ground_deepslate.indexOf(ore) > -1) {
             return;
         }
         let ore_name = ore.startsWith("#") ? ore.split(":")[1].split("/")[1] : ore.split(":")[1];

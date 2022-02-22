@@ -23,11 +23,11 @@ captureEvent("recipes", event => { });
 
 
 captureEvent("tags.items", event => {
-    event.add("kubejs:ores/nether_gold", items.minecraft.nether_gold_ore)
+    event.add("kubejs:ores/nether_gold", "minecraft:nether_gold_ore")
     event.add("forge:ores", "#kubejs:ores/nether_gold")
-    tags.items.forge.ores.members.forEach((ore, index, array) => {
+    tags.items.forge.ores.forEach((ore, index, array) => {
         oreItemIntermediates.forEach((state, i, a) => {
-            if (tags.items.forge.ores_in_ground_deepslate.members.indexOf(ore) > -1) {
+            if (tags.items.forge.ores_in_ground_deepslate.indexOf(ore) > -1) {
                 return;
             }
             let ore_name = ore.startsWith("#") ? ore.split(":")[1].split("/")[1] : ore.split(":")[1];
@@ -38,9 +38,9 @@ captureEvent("tags.items", event => {
 
 
 captureEvent("tags.blocks", event => {
-    Object.keys(blocks.integrateddynamics).forEach((s, i, a) => { event.add(tags.blocks.create.non_movable.tag, blocks.integrateddynamics[s]) })
-    Object.keys(blocks.integratedterminals).forEach((s, i, a) => { event.add(tags.blocks.create.non_movable.tag, blocks.integratedterminals[s]) })
-    Object.keys(blocks.integratedtunnels).forEach((s, i, a) => { event.add(tags.blocks.create.non_movable.tag, blocks.integratedtunnels[s]) })
+    event.add("create:non_movable", /integrateddynamics:.*/)
+    event.add("create:non_movable", /integratedterminals:.*/)
+    event.add("create:non_movable", /integratedtunnels:.*/)
 })
 
 captureEvent("tags.fluids", event => { })

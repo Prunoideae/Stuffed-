@@ -84,7 +84,7 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
         // Adds ores -> raws by their value
         this.oreValues.forEach((v, i, a) => {
             if (v.value < 1.0) {
-                event.recipes.create.crushing([Item.of(this.withState("crushed")).withChance(v.value), Item.of(items.create.experience_nugget).withChance(0.4 * v.value)].concat(v.addi), v.name)
+                event.recipes.create.crushing([Item.of(this.withState("crushed")).withChance(v.value), Item.of("create:experience_nugget").withChance(0.4 * v.value)].concat(v.addi), v.name)
                 let weakened_output = [Item.of(this.withState("crushed")).withChance(v.value / 2)]
                 event.recipes.create.milling(weakened_output, v.name)
                 event.recipes.integrateddynamics.squeezer([Item.of(this.withState("crushed"))], v.name)
@@ -97,11 +97,11 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
                     outputs.push(Item.of(this.withState("crushed")).withChance(v.value - base_ore))
                 }
                 if (base_exp == 0) {
-                    outputs.push(Item.of(items.create.experience_nugget).withChance(v.value * 0.4))
+                    outputs.push(Item.of("create:experience_nugget").withChance(v.value * 0.4))
                 } else {
-                    outputs.push(Item.of(items.create.experience_nugget).withCount(base_exp))
+                    outputs.push(Item.of("create:experience_nugget").withCount(base_exp))
                     if (v.value * 0.4 - base_exp > 0) {
-                        outputs.push(Item.of(items.create.experience_nugget).withChance(v.value * 0.4 - base_exp))
+                        outputs.push(Item.of("create:experience_nugget").withChance(v.value * 0.4 - base_exp))
                     }
                 }
                 event.recipes.create.crushing(outputs.concat(v.addi), v.name)
@@ -152,15 +152,15 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
         //Dissolve
         event.recipes.create.mixing(
             Fluid.of(this.withState("slurry")).withAmount(1000),
-            [Fluid.of(fluids.kubejs.dissolvent).withAmount(100), this.withState("purified")]
+            [Fluid.of("kubejs:dissolvent").withAmount(100), this.withState("purified")]
         ).superheated();
         event.recipes.create.mixing(
             Fluid.of(this.withState("solution")).withAmount(1000),
-            [Fluid.of(this.withState("slurry")).withAmount(1000), Fluid.of(fluids.kubejs.purifying_agent).withAmount(100)]
+            [Fluid.of(this.withState("slurry")).withAmount(1000), Fluid.of("kubejs:purifying_agent").withAmount(100)]
         ).heated();
         event.recipes.create.compacting(
             this.withState("recrystallized"),
-            [Fluid.of(this.withState("solution")).withAmount(500), Fluid.of(fluids.kubejs.crystallizing_fluid).withAmount(10)]
+            [Fluid.of(this.withState("solution")).withAmount(500), Fluid.of("kubejs:crystallizing_fluid").withAmount(10)]
         );
     }
 
@@ -171,226 +171,226 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
 }
 
 const ore_base = {
-    overworld: [Item.of(items.minecraft.cobblestone).withChance(0.4)],
-    deepslate: [Item.of(items.minecraft.cobbled_deepslate).withChance(0.4)],
-    nether: [Item.of(items.minecraft.netherrack).withChance(0.2)],
-    nether_blue: [Item.of(items.byg.blue_netherrack).withChance(0.2)],
-    nether_brim: [Item.of(items.byg.brimstone).withChance(0.2)],
-    end_ether: [Item.of(items.byg.ether_stone).withChance(0.2)],
-    end_cryptic: [Item.of(items.byg.cryptic_stone).withChance(0.2)]
+    overworld: [Item.of("minecraft:cobblestone").withChance(0.4)],
+    deepslate: [Item.of("minecraft:cobbled_deepslate").withChance(0.4)],
+    nether: [Item.of("minecraft:netherrack").withChance(0.2)],
+    nether_blue: [Item.of("byg:blue_netherrack").withChance(0.2)],
+    nether_brim: [Item.of("byg:brimstone").withChance(0.2)],
+    end_ether: [Item.of("byg:ether_stone").withChance(0.2)],
+    end_cryptic: [Item.of("byg:cryptic_stone").withChance(0.2)]
 }
 
 const oreProductProcessings = [
     //Metals
     new OreProcessing(
-        Item.of(items.minecraft.iron_ingot),
+        Item.of("minecraft:iron_ingot"),
         [new WeightedName("copper", 0.2)],
         [new WeightedName("gold", 0.4)],
-        [Item.of(items.minecraft.redstone).withChance(0.4)],
+        [Item.of("minecraft:redstone").withChance(0.4)],
         "metal",
         "iron")
-        .addOre(items.minecraft.iron_ore, 1, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_iron_ore, 2, ore_base.deepslate)
-        .addOre(items.minecraft.raw_iron, 0.7, [])
-        .addOre(items.minecraft.raw_iron_block, 2.7, [])
-        .addOre(items.create.crimsite, 0.4, []),
+        .addOre("minecraft:iron_ore", 1, ore_base.overworld)
+        .addOre("minecraft:deepslate_iron_ore", 2, ore_base.deepslate)
+        .addOre("minecraft:raw_iron", 0.7, [])
+        .addOre("minecraft:raw_iron_block", 6.3, [])
+        .addOre("create:crimsite", 0.4, []),
     new OreProcessing(
-        Item.of(items.minecraft.copper_ingot),
-        [Item.of(items.kubejs.powder_salt).withChance(0.2)],
+        Item.of("minecraft:copper_ingot"),
+        [Item.of("kubejs:powder_salt").withChance(0.2)],
         [new WeightedName("zinc_ore", 0.2)],
         [new WeightedName("gold", 0.2)],
         "metal",
         "copper")
-        .addOre(items.minecraft.copper_ore, 1, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_copper_ore, 2, ore_base.deepslate)
-        .addOre(items.minecraft.raw_copper, 0.7, [])
-        .addOre(items.minecraft.raw_copper_block, 6.3, [])
-        .addOre(items.create.veridium, 0.7, [])
+        .addOre("minecraft:copper_ore", 1, ore_base.overworld)
+        .addOre("minecraft:deepslate_copper_ore", 2, ore_base.deepslate)
+        .addOre("minecraft:raw_copper", 0.7, [])
+        .addOre("minecraft:raw_copper_block", 6.3, [])
+        .addOre("create:veridium", 0.7, [])
         .addOre("#create:stone_types/veridium", 0.7, []),
     new OreProcessing(
-        Item.of(items.minecraft.gold_ingot),
+        Item.of("minecraft:gold_ingot"),
         [new WeightedName("diamond", 0.05)],
         [new WeightedName("iron", 0.4)],
-        [Item.of(items.minecraft.glowstone_dust).withChance(0.2)],
+        [Item.of("minecraft:glowstone_dust").withChance(0.2)],
         "metal",
         "gold")
-        .addOre(items.minecraft.gold_ore, 1, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_gold_ore, 2, ore_base.deepslate)
-        .addOre(items.minecraft.raw_gold, 0.7, [])
-        .addOre(items.minecraft.raw_gold_block, 6.3, []),
+        .addOre("minecraft:gold_ore", 1, ore_base.overworld)
+        .addOre("minecraft:deepslate_gold_ore", 2, ore_base.deepslate)
+        .addOre("minecraft:raw_gold", 0.7, [])
+        .addOre("minecraft:raw_gold_block", 6.3, []),
     new OreProcessing(
-        Item.of(items.create.zinc_ingot),
+        Item.of("create:zinc_ingot"),
         [new WeightedName("copper", 0.2)],
         [new WeightedName("iron", 0.2)],
         [new WeightedName("gold", 0.1)],
         "metal",
         "zinc_ore")
-        .addOre(items.create.zinc_ore, 1, ore_base.overworld)
-        .addOre(items.create.deepslate_zinc_ore, 2, ore_base.deepslate)
-        .addOre(items.create.raw_zinc, 0.7, [])
-        .addOre(items.create.raw_zinc_block, 6.3, []),
+        .addOre("create:zinc_ore", 1, ore_base.overworld)
+        .addOre("create:deepslate_zinc_ore", 2, ore_base.deepslate)
+        .addOre("create:raw_zinc", 0.7, [])
+        .addOre("create:raw_zinc_block", 6.3, []),
     // Nether Metals
     new OreProcessing(
-        Item.of(items.minecraft.gold_nugget).withCount(4),
+        Item.of("minecraft:gold_nugget").withCount(4),
         [new WeightedName("coal", 0.1)],
         [new WeightedName("quartz", 0.1)],
-        [Item.of(items.minecraft.gold_nugget).withChance(0.2)],
+        [Item.of("minecraft:gold_nugget").withChance(0.2)],
         "metal",
         "nether_gold")
-        .addOre(items.minecraft.nether_gold_ore, 0.7, ore_base.nether),
+        .addOre("minecraft:nether_gold_ore", 0.7, ore_base.nether),
     new OreProcessing(
-        Item.of(items.minecraft.gold_ingot),
+        Item.of("minecraft:gold_ingot"),
         [new WeightedName("pendorite_ore", 0.05)],
         [new WeightedName("quartz", 0.1)],
-        [Item.of(items.minecraft.gold_nugget).withChance(0.2)],
+        [Item.of("minecraft:gold_nugget").withChance(0.2)],
         "metal",
         "blue_nether_gold_ore",
         true)
-        .addOre(items.byg.blue_nether_gold_ore, 0.7, ore_base.nether_blue),
+        .addOre("byg:blue_nether_gold_ore", 0.7, ore_base.nether_blue),
     new OreProcessing(
-        Item.of(items.minecraft.gold_ingot),
+        Item.of("minecraft:gold_ingot"),
         [new WeightedName("anthracite_ore", 0.02)],
         [new WeightedName("quartz", 0.1)],
-        [Item.of(items.minecraft.gold_nugget).withChance(0.2)],
+        [Item.of("minecraft:gold_nugget").withChance(0.2)],
         "metal",
         "brimstone_nether_gold_ore",
         true)
-        .addOre(items.byg.brimstone_nether_gold_ore, 0.7, ore_base.nether_brim),
+        .addOre("byg:brimstone_nether_gold_ore", 0.7, ore_base.nether_brim),
     //Crystals
     new OreProcessing(
-        Item.of(items.minecraft.diamond),
+        Item.of("minecraft:diamond"),
         [new WeightedName("coal", 0.3)],
         [new WeightedName("emerald", 0.1)],
         [new WeightedName("coal", 0.2)],
         "crystal",
         "diamond")
-        .addOre(items.minecraft.diamond_ore, 1.3, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_diamond_ore, 2.6, ore_base.deepslate),
+        .addOre("minecraft:diamond_ore", 1.3, ore_base.overworld)
+        .addOre("minecraft:deepslate_diamond_ore", 2.6, ore_base.deepslate),
     new OreProcessing(
-        Item.of(items.minecraft.emerald),
+        Item.of("minecraft:emerald"),
         [new WeightedName("copper", 0.2)],
         [new WeightedName("lapis", 0.4)],
         [new WeightedName("diamond", 0.1)],
         "crystal",
         "emerald")
-        .addOre(items.minecraft.emerald_ore, 1.5, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_emerald_ore, 3.0, ore_base.deepslate),
+        .addOre("minecraft:emerald_ore", 1.5, ore_base.overworld)
+        .addOre("minecraft:deepslate_emerald_ore", 3.0, ore_base.deepslate),
     new OreProcessing(
-        Item.of(items.minecraft.lapis_lazuli, 4),
+        Item.of("minecraft:lapis_lazuli", 4),
         [new WeightedName("copper", 0.02)],
         [new WeightedName("redstone", 0.02)],
-        [Item.of(items.minecraft.gold_nugget).withChance(0.02)],
+        [Item.of("minecraft:gold_nugget").withChance(0.02)],
         "crystal",
         "lapis")
-        .addOre(items.minecraft.lapis_ore, 2, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_lapis_ore, 4, ore_base.overworld),
+        .addOre("minecraft:lapis_ore", 2, ore_base.overworld)
+        .addOre("minecraft:deepslate_lapis_ore", 4, ore_base.overworld),
     //End crystals
     new OreProcessing(
-        Item.of(items.byg.ametrine_gems),
+        Item.of("byg:ametrine_gems"),
         [new WeightedName("lignite_ore", 0.2)],
-        [Item.of(items.byg.therium_shard).withChance(0.2)],
+        [Item.of("byg:therium_shard").withChance(0.2)],
         [new WeightedName("budding_ametrine_ore", 0.1)],
         "crystal",
         "ametrine_ore")
-        .addOre(items.byg.ametrine_ore, 2, ore_base.end_ether),
+        .addOre("byg:ametrine_ore", 2, ore_base.end_ether),
     new OreProcessing(
-        Item.of(items.byg.ametrine_gems),
+        Item.of("byg:ametrine_gems"),
         [new WeightedName("lignite_ore", 0.1)],
-        [Item.of(items.byg.therium_shard).withChance(0.1)],
+        [Item.of("byg:therium_shard").withChance(0.1)],
         [new WeightedName("ametrine_ore", 0.2)],
         "crystal",
         "budding_ametrine_ore")
-        .addOre(items.byg.budding_ametrine_ore, 2, ore_base.end_ether),
+        .addOre("byg:budding_ametrine_ore", 2, ore_base.end_ether),
     //Nether crystals
     new OreProcessing(
-        Item.of(items.minecraft.quartz, 2),
+        Item.of("minecraft:quartz", 2),
         [],
-        [Item.of(items.minecraft.glowstone_dust).withChance(0.1)],
-        [Item.of(items.minecraft.gold_nugget, 2).withChance(0.2)],
+        [Item.of("minecraft:glowstone_dust").withChance(0.1)],
+        [Item.of("minecraft:gold_nugget", 2).withChance(0.2)],
         "crystal",
         "quartz")
-        .addOre(items.minecraft.nether_quartz_ore, 2, ore_base.nether),
+        .addOre("minecraft:nether_quartz_ore", 2, ore_base.nether),
     new OreProcessing(
-        Item.of(items.minecraft.quartz, 2),
+        Item.of("minecraft:quartz", 2),
         [],
         [new WeightedName("pendorite_ore", 0.02)],
-        [Item.of(items.minecraft.gold_nugget, 2).withChance(0.2)],
+        [Item.of("minecraft:gold_nugget", 2).withChance(0.2)],
         "crystal",
         "blue_nether_quartz_ore",
         true)
-        .addOre(items.byg.blue_nether_quartz_ore, 1.2, ore_base.nether_blue),
+        .addOre("byg:blue_nether_quartz_ore", 1.2, ore_base.nether_blue),
     new OreProcessing(
-        Item.of(items.minecraft.quartz, 2),
+        Item.of("minecraft:quartz", 2),
         [],
         [new WeightedName("anthracite_ore", 0.02)],
-        [Item.of(items.minecraft.gold_nugget, 2).withChance(0.2)],
+        [Item.of("minecraft:gold_nugget", 2).withChance(0.2)],
         "crystal",
         "brimstone_nether_quartz_ore",
         true)
-        .addOre(items.byg.brimstone_nether_quartz_ore, 1.2, ore_base.nether_brim),
+        .addOre("byg:brimstone_nether_quartz_ore", 1.2, ore_base.nether_brim),
     new OreProcessing(
-        Item.of(items.minecraft.netherite_scrap),
-        [Item.of(items.minecraft.soul_sand).withChance(0.3)],
+        Item.of("minecraft:netherite_scrap"),
+        [Item.of("minecraft:soul_sand").withChance(0.3)],
         [new WeightedName("gold", 0.7)],
-        [Item.of(items.minecraft.glowstone).withChance(0.1)],
+        [Item.of("minecraft:glowstone_dust").withChance(0.1)],
         "crystal",
         "netherite_scrap")
-        .addOre(items.minecraft.ancient_debris, 2, ore_base.nether),
+        .addOre("minecraft:ancient_debris", 2, ore_base.nether),
     new OreProcessing(
-        Item.of(items.byg.pendorite_scraps),
+        Item.of("byg:pendorite_scraps"),
         [new WeightedName("blue_nether_quartz_ore", 0.1)],
         [new WeightedName("blue_nether_gold_ore", 0.1)],
         [new WeightedName("netherite_scrap", 0.05)],
         "metal",
         "pendorite_ore")
-        .addOre(items.byg.pendorite_ore, 2, ore_base.nether_blue)
-        .addOre(items.byg.raw_pendorite, 0.7, [])
-        .addOre(items.byg.raw_pendorite_block, 6.3, []),
+        .addOre("byg:pendorite_ore", 2, ore_base.nether_blue)
+        .addOre("byg:raw_pendorite", 0.7, [])
+        .addOre("byg:raw_pendorite_block", 6.3, []),
     new OreProcessing(
-        Item.of(items.byg.anthracite),
+        Item.of("byg:anthracite"),
         [new WeightedName("brimstone_nether_quartz_ore", 0.1)],
         [new WeightedName("brimstone_nether_gold_ore", 0.1)],
-        [Item.of(items.minecraft.soul_sand).withChance(0.2)],
+        [Item.of("minecraft:soul_sand").withChance(0.2)],
         "crystal",
         "anthracite_ore")
-        .addOre(items.byg.anthracite_ore, 2, ore_base.nether_brim),
+        .addOre("byg:anthracite_ore", 2, ore_base.nether_brim),
     // Dusts
     new OreProcessing(
-        Item.of(items.minecraft.redstone, 4),
+        Item.of("minecraft:redstone", 4),
         [],
         [new WeightedName("redstone", 0.1)],
         [new WeightedName("lapis", 0.1)],
         "dust",
         "redstone")
-        .addOre(items.minecraft.redstone_ore, 2, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_redstone_ore, 4, ore_base.deepslate),
+        .addOre("minecraft:redstone_ore", 2, ore_base.overworld)
+        .addOre("minecraft:deepslate_redstone_ore", 4, ore_base.deepslate),
     new OreProcessing(
-        Item.of(items.minecraft.redstone, 4),
+        Item.of("minecraft:redstone", 4),
         [],
         [new WeightedName("cryptic_redstone_ore", 0.1)],
         [],
         'dust',
         'cryptic_redstone_ore',
         true)
-        .addOre(items.byg.cryptic_redstone_ore, 3, ore_base.end_cryptic),
+        .addOre("byg:cryptic_redstone_ore", 3, ore_base.end_cryptic),
     // Others
     new OreProcessing(
-        Item.of(items.minecraft.coal, 2),
+        Item.of("minecraft:coal", 2),
         [],
         [new WeightedName("coal", 0.1)],
         [new WeightedName("diamond", 0.005)],
         "other",
         "coal")
-        .addOre(items.minecraft.coal_ore, 2, ore_base.overworld)
-        .addOre(items.minecraft.deepslate_coal_ore, 4, ore_base.deepslate),
+        .addOre("minecraft:coal_ore", 2, ore_base.overworld)
+        .addOre("minecraft:deepslate_coal_ore", 4, ore_base.deepslate),
     new OreProcessing(
-        Item.of(items.byg.lignite, 2),
+        Item.of("byg:lignite", 2),
         [],
         [new WeightedName("lignite_ore", 0.1)],
         [new WeightedName("coal", 0.1)],
         "other",
         "lignite_ore")
-        .addOre(items.byg.lignite_ore, 2, ore_base.end_ether)
+        .addOre("byg:lignite_ore", 2, ore_base.end_ether)
 ];
 
 onEvent("recipes", event => {
@@ -399,8 +399,8 @@ onEvent("recipes", event => {
     event.remove({ "input": "#create:crushed_ores" });
     event.remove({ "output": "#create:crushed_ores" });
     event.remove({ "type": "create:crushing", "input": "#create:stone_types/crimsite" });
-    event.remove({ "type": "minecraft:smelting", "input": items.byg.raw_pendorite });
-    event.remove({ "type": "minecraft:blasting", "input": items.byg.raw_pendorite });
+    event.remove({ "type": "minecraft:smelting", "input": "byg:raw_pendorite" });
+    event.remove({ "type": "minecraft:blasting", "input": "byg:raw_pendorite" });
     oreProductProcessings.forEach((processing, i, a) => {
         processing.addDustRecipe(event)
         processing.addCrushingRecipe(event)
@@ -408,10 +408,10 @@ onEvent("recipes", event => {
     });
 
     //Early game
-    event.recipes.minecraft.smelting(Item.of(items.minecraft.iron_nugget, 5), items.minecraft.iron_ore)
-    event.recipes.minecraft.blasting(Item.of(items.minecraft.iron_nugget, 5), items.minecraft.iron_ore).cookingTime(100)
+    event.recipes.minecraft.smelting(Item.of("minecraft:iron_nugget", 5), "minecraft:iron_ore")
+    event.recipes.minecraft.blasting(Item.of("minecraft:iron_nugget", 5), "minecraft:iron_ore").cookingTime(100)
 });
 
 captureEvent("block.loot_tables", event => {
-    tags.items.forge.ores.members.forEach((v, i, a) => event.addSimpleBlock(v))
+    tags.items.forge.ores.forEach((v, i, a) => event.addSimpleBlock(v))
 });
