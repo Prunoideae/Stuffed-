@@ -1,0 +1,1 @@
+{"display": {"icon": {"item": "integrateddynamics:wrench"}, "title": {"translate": "advancement.integrateddynamics.menril_wrenching"}, "description": {"translate": "advancement.integrateddynamics.menril_wrenching.desc"}}, "parent": "integrateddynamics:meneglin_basics/menril_production", "criteria": {"removed": {"trigger": "minecraft:impossible"}}, "requirements": [["removed"]]}

@@ -19,6 +19,6 @@ onEvent("recipes", event => {
         .addStep(event.recipes.create.deploying, "create:cogwheel")
         .addStep(event.recipes.create.deploying, "create:large_cogwheel")
         .addStep(event.recipes.create.deploying, "#forge:nuggets/iron")
-        .loops(1000)
+        .loops(5)
         .create(event)
 })

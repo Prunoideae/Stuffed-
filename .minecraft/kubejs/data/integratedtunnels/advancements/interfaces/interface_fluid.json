@@ -1,0 +1,1 @@
+{"display": {"icon": {"item": "integratedtunnels:part_interface_fluid"}, "title": {"translate": "advancement.integratedtunnels.interface_fluid"}, "description": {"translate": "advancement.integratedtunnels.interface_fluid.desc"}}, "parent": "integratedtunnels:root", "criteria": {"removed": {"trigger": "minecraft:impossible"}}, "requirements": [["removed"]]}

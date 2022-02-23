@@ -1,20 +1,5 @@
 // priority: 1000
 const tags ={
-fluids:{
-minecraft:{
-lava:["minecraft:lava", "minecraft:flowing_lava"],
-water:["minecraft:water", "minecraft:flowing_water", "create:flowing_honey", "create:honey", "create:flowing_chocolate", "create:chocolate", "createaddition:flowing_seed_oil", "createaddition:seed_oil"]
-},
-forge:{
-crude_oil:[],
-chocolate:["create:flowing_chocolate", "create:chocolate"],
-milk:["minecraft:milk?", "minecraft:flowing_milk?"],
-tea:["create:flowing_tea", "create:tea"],
-honey:["create:flowing_honey", "create:honey"],
-creosote:[],
-plantoil:["createaddition:flowing_seed_oil", "createaddition:seed_oil"]
-}
-},
 entity_types:{
 minecraft:{
 freeze_hurts_extra_types:["minecraft:strider", "minecraft:blaze", "minecraft:magma_cube"],
@@ -31,6 +16,21 @@ arrows:["minecraft:arrow", "minecraft:spectral_arrow"]
 farmersdelight:{
 horse_feed_users:["minecraft:horse", "minecraft:skeleton_horse", "minecraft:zombie_horse", "minecraft:donkey", "minecraft:mule", "minecraft:llama"],
 dog_food_users:["minecraft:wolf"]
+}
+},
+fluids:{
+minecraft:{
+lava:["minecraft:lava", "minecraft:flowing_lava"],
+water:["minecraft:water", "minecraft:flowing_water", "create:flowing_honey", "create:honey", "create:flowing_chocolate", "create:chocolate", "createaddition:flowing_seed_oil", "createaddition:seed_oil"]
+},
+forge:{
+crude_oil:[],
+chocolate:["create:flowing_chocolate", "create:chocolate"],
+milk:["minecraft:milk?", "minecraft:flowing_milk?"],
+tea:["create:flowing_tea", "create:tea"],
+honey:["create:flowing_honey", "create:honey"],
+creosote:[],
+plantoil:["createaddition:flowing_seed_oil", "createaddition:seed_oil"]
 }
 },
 items:{

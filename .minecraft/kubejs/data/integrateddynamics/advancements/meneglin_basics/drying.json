@@ -1,0 +1,1 @@
+{"display": {"icon": {"item": "integrateddynamics:drying_basin"}, "title": {"translate": "advancement.integrateddynamics.drying"}, "description": {"translate": "advancement.integrateddynamics.drying.desc"}}, "parent": "integrateddynamics:meneglin_basics/squeezing", "criteria": {"removed": {"trigger": "minecraft:impossible"}}, "requirements": [["removed"]]}

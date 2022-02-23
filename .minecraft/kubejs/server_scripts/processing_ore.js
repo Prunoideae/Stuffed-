@@ -69,7 +69,7 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
         else if (this.material == "other") {/* Can do nothing :((*/ }
 
         if (!this.isSub)
-            if ((this.material == "metal" && Ingredient.of("#forge:ingots").test(this.mainProduct))
+            if ((this.material == "metal" && this.mainProduct.getCount() == 1)
                 || (this.material != "metal" && this.material != "dust")) {
                 event.recipes.create.crushing([this.withState("purified_dust")], this.mainProduct.withCount(1));
                 event.recipes.create.milling([this.withState("purified_dust")], this.mainProduct.withCount(1));

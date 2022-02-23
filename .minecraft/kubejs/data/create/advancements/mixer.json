@@ -1,0 +1,1 @@
+{"parent": "create:basin", "display": {"icon": {"item": "create:mechanical_mixer"}, "title": {"translate": "advancement.create.mixer"}, "description": {"translate": "advancement.create.mixer.desc"}, "frame": "task", "show_toast": true, "announce_to_chat": true, "hidden": false}, "criteria": {"removed": {"trigger": "minecraft:impossible"}}, "requirements": [["removed"]]}

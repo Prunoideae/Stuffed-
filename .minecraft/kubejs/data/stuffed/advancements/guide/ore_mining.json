@@ -1,0 +1,50 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:coal_ore"
+        },
+        "title": {
+            "translate": "singularity.advancement.ore_mining"
+        },
+        "description": {
+            "translate": "singularity.advancement.ore_mining.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:guide/root",
+    "criteria": {
+        "coal_ore": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:coal_ore"
+                        ]
+                    }
+                ]
+            }
+        },
+        "iron_ore": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:iron_ore"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "coal_ore",
+            "iron_ore"
+        ]
+    ]
+}

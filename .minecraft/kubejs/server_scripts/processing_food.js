@@ -121,8 +121,8 @@ onEvent("recipes", event => {
     //Corn Flour -> Cornbread batter -> Cornbread/Tortilla
     event.remove({ "output": "corn_delight:cornbread_batter" })
     event.remove({ "output": "corn_delight:tortilla_raw" })
-    event.recipes.create.milling([flours.corn], "corn_delight:corn")
-    event.recipes.create.crushing([flours.corn, Item.of(flours.corn).withChance(0.5), Item.of("corn_delight:corn_seeds").withChance(0.2)], "corn_delight:corn")
+    event.recipes.create.milling([flours.corn], "corn_delight:corn_seeds")
+    event.recipes.create.crushing([flours.corn, Item.of(flours.corn).withChance(0.2)], "corn_delight:corn_seeds")
     addMilkShapeless(doughs.corn, [flours.corn, flours.corn, "minecraft:egg"])
     event.recipes.create.mixing(doughs.corn, [flours.corn, "minecraft:egg", Fluid.of("minecraft:milk", 100)])
     new RollingRecipe(Item.of("corn_delight:tortilla_raw"), Item.of(doughs.corn))

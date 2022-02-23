@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:charcoal"
+        },
+        "title": {
+            "translate": "singularity.advancement.charcoal"
+        },
+        "description": {
+            "translate": "singularity.advancement.charcoal.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:guide/ore_mining",
+    "criteria": {
+        "charcoal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:charcoal"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "charcoal"
+        ]
+    ]
+}
