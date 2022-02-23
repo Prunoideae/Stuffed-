@@ -133,6 +133,11 @@ function OreProcessing(mainProduct, rawProduct, purifiedProduct, washingProduct,
         createCrushingWithByproducts(this, "purified", "purified_dust", 0.7, this.purifiedProduct, false)
         createCrushingWithByproducts(this, "recrystallized", "recrystallized_shard", 0.4, this.rawProduct, true)
 
+        if (this.material != "metal")
+            event.recipes.create.milling([this.mainProduct, Item.of(this.mainProduct).withChance(0.4)], this.withState("purified"))
+        else
+            event.recipes.create.milling([this.withState("purified_dust"), Item.of(this.withState("purified_dust")).withChance(0.4)], this.withState("purified"))
+
         if (this.material == "metal") {
             event.recipes.create.crushing([this.withState("purified_dust")].concat(this.transformProducts(this.purifiedProduct, "purified_dust")), this.withState("recrystallized_shard"));
             event.recipes.integrateddynamics.squeezer([this.withState("purified_dust")], this.withState("recrystallized_shard"));

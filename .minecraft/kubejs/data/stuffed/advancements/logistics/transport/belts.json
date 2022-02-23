@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "create:belt_connector"
+        },
+        "title": {
+            "translate": "singularity.advancement.belt"
+        },
+        "description": {
+            "translate": "singularity.advancement.belt.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/root",
+    "criteria": {
+        "belt": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "create:belt_connector"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "belt"
+        ]
+    ]
+}

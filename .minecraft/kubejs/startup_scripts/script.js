@@ -11,11 +11,6 @@ const namedOnlyItems = [
     "raw_cookie_plain",
     "raw_cookie_berry",
     "raw_cookie_cocoa",
-    "incomplete_logic_director",
-    "incomplete_item_importer",
-    "incomplete_item_exporter",
-    "incomplete_fluid_importer",
-    "incomplete_fluid_exporter"
 ];
 
 const plainFood = [

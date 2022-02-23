@@ -1,18 +1,19 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:cobblestone"
+            "item": "minecraft:hopper"
         },
         "title": {
-            "translate": "singularity.advancement.root"
+            "translate": "singularity.advancement.logistics"
         },
         "description": {
-            "translate": "singularity.advancement.root.desc"
+            "translate": "singularity.advancement.logistics.desc"
         },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,
-        "background": "create:textures/block/mineral/ochrestone.png"
+        "hidden": true,
+        "background": "integrateddynamics:textures/block/crystalized_menril_brick.png"
     },
     "criteria": {
         "seeds": {

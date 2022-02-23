@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "create:crushing_wheel"
+        },
+        "title": {
+            "translate": "singularity.advancement.ore_tier3"
+        },
+        "description": {
+            "translate": "singularity.advancement.ore_tier3.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:guide/ore_processing/ore_tier2",
+    "criteria": {
+        "wheel": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "create:crushing_wheel"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "wheel"
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "kubejs:purified_iron"
+        },
+        "title": {
+            "translate": "singularity.advancement.ore_tier2"
+        },
+        "description": {
+            "translate": "singularity.advancement.ore_tier2.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:guide/ore_processing/ore_tier1",
+    "criteria": {
+        "fan": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "create:encased_fan"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "fan"
+        ]
+    ]
+}

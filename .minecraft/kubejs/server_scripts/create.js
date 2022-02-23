@@ -21,4 +21,11 @@ onEvent("recipes", event => {
         .addStep(event.recipes.create.deploying, "#forge:nuggets/iron")
         .loops(5)
         .create(event)
+
+    //FIX: diamond sandpaper
+    event.remove({ "output": "createaddition:diamond_grit" })
+    event.remove({ "input": "createaddition:diamond_grit" })
+    event.recipes.minecraft.crafting_shapeless("minecraft:paper", ["kubejs:purified_dust_diamond", "minecraft:paper"])
+
+
 })
