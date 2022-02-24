@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "create:mechanical_piston"
+        },
+        "title": {
+            "translate": "singularity.advancement.piston"
+        },
+        "description": {
+            "translate": "singularity.advancement.piston.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/automation/windmill",
+    "criteria": {
+        "piston": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "create:mechanical_piston"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "piston"
+        ]
+    ]
+}

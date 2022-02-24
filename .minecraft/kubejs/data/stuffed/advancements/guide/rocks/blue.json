@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "byg:blue_netherrack"
+        },
+        "title": {
+            "translate": "singularity.advancement.blue_netherrack"
+        },
+        "description": {
+            "translate": "singularity.advancement.blue_netherrack.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:guide/rocks/nether",
+    "criteria": {
+        "blue_netherrack": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "byg:blue_netherrack"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "blue_netherrack"
+        ]
+    ]
+}

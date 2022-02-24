@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "integratedterminals:part_terminal_storage"
+        },
+        "title": {
+            "translate": "singularity.advancement.id_terminal"
+        },
+        "description": {
+            "translate": "singularity.advancement.id_terminal.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/logics/id_redstone",
+    "criteria": {
+        "terminal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "integratedterminals:part_terminal_storage"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "terminal"
+        ]
+    ]
+}

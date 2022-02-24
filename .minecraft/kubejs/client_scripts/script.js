@@ -23,7 +23,8 @@ captureEvent("jei.hide.items", event => {
 		"integratedtunnels:part_importer_world_block",
 		"integratedtunnels:part_importer_world_item",
 		"integratedtunnels:part_importer_world_fluid",
-		"integratedtunnels:part_player_simulator"
+		"integratedtunnels:part_player_simulator",
+		"minecraft:music_disc_otherside"
 	]
 	items_to_hide.forEach((v, i, a) => event.hide(v))
 })

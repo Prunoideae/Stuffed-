@@ -38,6 +38,7 @@ captureEvent("tags.items", event => {
 
 
 captureEvent("tags.blocks", event => {
+    // FIX: Moving ID blocks causes crash
     event.add("create:non_movable", /integrateddynamics:.*/)
     event.add("create:non_movable", /integratedterminals:.*/)
     event.add("create:non_movable", /integratedtunnels:.*/)

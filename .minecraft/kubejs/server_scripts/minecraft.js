@@ -10,4 +10,7 @@ onEvent("recipes", event => {
     event.recipes.create.haunting(["minecraft:rotten_flesh"], "#forge:raw_beef")
     event.recipes.create.haunting(["minecraft:rotten_flesh"], "#forge:raw_mutton")
     event.recipes.create.haunting(["minecraft:rotten_flesh"], "#forge:raw_chicken")
+
+    // Lava -> Magma is not allowed
+    event.remove({ "type": "integrateddynamics:mechanical_drying_basin", "output": "minecraft:magma_block" })
 })

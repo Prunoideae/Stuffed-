@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "create:cart_assembler"
+        },
+        "title": {
+            "translate": "singularity.advancement.cart"
+        },
+        "description": {
+            "translate": "singularity.advancement.cart.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/automation/piston",
+    "criteria": {
+        "cart": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "create:cart_assembler"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "cart"
+        ]
+    ]
+}

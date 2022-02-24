@@ -1,0 +1,50 @@
+{
+    "display": {
+        "icon": {
+            "item": "integrateddynamics:part_redstone_writer"
+        },
+        "title": {
+            "translate": "singularity.advancement.id_redstone"
+        },
+        "description": {
+            "translate": "singularity.advancement.id_redstone.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/logics/cable",
+    "criteria": {
+        "writer": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "integrateddynamics:part_redstone_writer"
+                        ]
+                    }
+                ]
+            }
+        },
+        "reader": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "integrateddynamics:part_redstone_reader"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "writer",
+            "reader"
+        ]
+    ]
+}

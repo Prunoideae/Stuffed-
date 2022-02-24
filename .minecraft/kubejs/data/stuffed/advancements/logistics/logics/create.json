@@ -1,0 +1,50 @@
+{
+    "display": {
+        "icon": {
+            "item": "create:powered_latch"
+        },
+        "title": {
+            "translate": "singularity.advancement.create_redstone"
+        },
+        "description": {
+            "translate": "singularity.advancement.create_redstone.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/logics/basic",
+    "criteria": {
+        "powered_latch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "create:powered_latch"
+                        ]
+                    }
+                ]
+            }
+        },
+        "powered_toggle_latch": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "create:powered_toggle_latch"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "powered_latch",
+            "powered_toggle_latch"
+        ]
+    ]
+}
