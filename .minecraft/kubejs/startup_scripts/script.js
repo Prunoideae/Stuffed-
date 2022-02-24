@@ -27,7 +27,7 @@ const namedOnlyFluids = [
     new NameColorHolder("cream", Color.rgba(255, 255, 240, 1.0)),
 ];
 
-//TODO: fix sigil textures
+//TODO: fix sigil and promise
 const coloredItems = [
     // This dust and that dust
     new PrefixedColoredItems("powder")
@@ -48,10 +48,33 @@ const coloredItems = [
         .addItem("plantae", Color.rgba(255, 255, 255, 1.0))
         // Something not friendly
         .addItem("victoris", Color.rgba(255, 255, 255, 1.0))
-        // Things created by things, not food, potions etc
-        .addItem("artifex", Color.rgba(255, 255, 255, 1.0))
         // Everything
-        .addItem("mundus", Color.rgba(255, 255, 255, 1.0))
+        .addItem("mundus", Color.rgba(255, 255, 255, 1.0)),
+    new PrefixedColoredItems("promise")
+        //Terra
+        .addItem("iron", Color.rgba(255, 255, 255, 1.0))
+        .addItem("gold", Color.rgba(255, 255, 255, 1.0))
+        .addItem("quartz", Color.rgba(255, 255, 255, 1.0))
+        .addItem("redstone", Color.rgba(255, 255, 255, 1.0))
+        .addItem("lava", Color.rgba(255, 255, 255, 1.0))
+        //Animalia
+        .addItem("pig", Color.rgba(255, 255, 255, 1.0))//honey glazed ham
+        .addItem("chicken", Color.rgba(255, 255, 255, 1.0))//egg sandwich
+        .addItem("bee", Color.rgba(255, 255, 255, 1.0))//Honey cake
+        .addItem("fish", Color.rgba(255, 255, 255, 1.0))//fish stew
+        .addItem("cow", Color.rgba(255, 255, 255, 1.0))//shephred's pie
+        //Plantea
+        .addItem("fruit", Color.rgba(255, 255, 255, 1.0))//steamed rice with fruits
+        .addItem("pumpkin", Color.rgba(255, 255, 255, 1.0))//pumpkin soup
+        .addItem("chorus", Color.rgba(255, 255, 255, 1.0)) //crystallized chorus block
+        .addItem("beetroot", Color.rgba(255, 255, 255, 1.0)) //mixed salad
+        .addItem("cocoa", Color.rgba(255, 255, 255, 1.0)) //hot cocoa
+        //Victoris
+        .addItem("zombie", Color.rgba(255, 255, 255, 1.0))//rotten flesh
+        .addItem("ender", Color.rgba(255, 255, 255, 1.0))//enderpearl
+        .addItem("blaze", Color.rgba(255, 255, 255, 1.0))//blaze powder
+        .addItem("spider", Color.rgba(255, 255, 255, 1.0))//spider eye
+        .addItem("skeleton", Color.rgba(255, 255, 255, 1.0))//bone
 ]
 
 const oreColorMappings = {
