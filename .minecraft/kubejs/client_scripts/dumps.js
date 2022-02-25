@@ -1,5 +1,20 @@
 // priority: 1000
 const tags ={
+fluids:{
+minecraft:{
+lava:["minecraft:lava", "minecraft:flowing_lava"],
+water:["minecraft:water", "minecraft:flowing_water", "create:flowing_honey", "create:honey", "create:flowing_chocolate", "create:chocolate", "createaddition:flowing_seed_oil", "createaddition:seed_oil"]
+},
+forge:{
+crude_oil:[],
+chocolate:["create:flowing_chocolate", "create:chocolate"],
+milk:["minecraft:milk?", "minecraft:flowing_milk?"],
+tea:["create:flowing_tea", "create:tea"],
+honey:["create:flowing_honey", "create:honey"],
+creosote:[],
+plantoil:["createaddition:flowing_seed_oil", "createaddition:seed_oil"]
+}
+},
 entity_types:{
 minecraft:{
 freeze_hurts_extra_types:["minecraft:strider", "minecraft:blaze", "minecraft:magma_cube"],
@@ -592,21 +607,6 @@ cherry_logs:["fruittrees:cherry_log?", "fruittrees:cherry_wood?", "fruittrees:st
 },
 storagedrawers:{
 drawers:["storagedrawers:oak_full_drawers_1", "storagedrawers:oak_full_drawers_2", "storagedrawers:oak_full_drawers_4", "storagedrawers:oak_half_drawers_1", "storagedrawers:oak_half_drawers_2", "storagedrawers:oak_half_drawers_4", "storagedrawers:spruce_full_drawers_1", "storagedrawers:spruce_full_drawers_2", "storagedrawers:spruce_full_drawers_4", "storagedrawers:spruce_half_drawers_1", "storagedrawers:spruce_half_drawers_2", "storagedrawers:spruce_half_drawers_4", "storagedrawers:birch_full_drawers_1", "storagedrawers:birch_full_drawers_2", "storagedrawers:birch_full_drawers_4", "storagedrawers:birch_half_drawers_1", "storagedrawers:birch_half_drawers_2", "storagedrawers:birch_half_drawers_4", "storagedrawers:jungle_full_drawers_1", "storagedrawers:jungle_full_drawers_2", "storagedrawers:jungle_full_drawers_4", "storagedrawers:jungle_half_drawers_1", "storagedrawers:jungle_half_drawers_2", "storagedrawers:jungle_half_drawers_4", "storagedrawers:acacia_full_drawers_1", "storagedrawers:acacia_full_drawers_2", "storagedrawers:acacia_full_drawers_4", "storagedrawers:acacia_half_drawers_1", "storagedrawers:acacia_half_drawers_2", "storagedrawers:acacia_half_drawers_4", "storagedrawers:dark_oak_full_drawers_1", "storagedrawers:dark_oak_full_drawers_2", "storagedrawers:dark_oak_full_drawers_4", "storagedrawers:dark_oak_half_drawers_1", "storagedrawers:dark_oak_half_drawers_2", "storagedrawers:dark_oak_half_drawers_4", "storagedrawers:crimson_full_drawers_1", "storagedrawers:crimson_full_drawers_2", "storagedrawers:crimson_full_drawers_4", "storagedrawers:crimson_half_drawers_1", "storagedrawers:crimson_half_drawers_2", "storagedrawers:crimson_half_drawers_4", "storagedrawers:warped_full_drawers_1", "storagedrawers:warped_full_drawers_2", "storagedrawers:warped_full_drawers_4", "storagedrawers:warped_half_drawers_1", "storagedrawers:warped_half_drawers_2", "storagedrawers:warped_half_drawers_4"]
-}
-},
-fluids:{
-minecraft:{
-lava:["minecraft:lava", "minecraft:flowing_lava"],
-water:["minecraft:water", "minecraft:flowing_water", "create:flowing_honey", "create:honey", "create:flowing_chocolate", "create:chocolate", "createaddition:flowing_seed_oil", "createaddition:seed_oil"]
-},
-forge:{
-crude_oil:[],
-chocolate:["create:flowing_chocolate", "create:chocolate"],
-milk:["minecraft:milk?", "minecraft:flowing_milk?"],
-tea:["create:flowing_tea", "create:tea"],
-honey:["create:flowing_honey", "create:honey"],
-creosote:[],
-plantoil:["createaddition:flowing_seed_oil", "createaddition:seed_oil"]
 }
 },
 blocks:{

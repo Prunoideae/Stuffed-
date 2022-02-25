@@ -8,6 +8,7 @@ captureEvent("jei.hide.items", event => {
 	let items_to_hide = [
 		"integrateddynamics:proto_chorus",
 		"create:dough",
+		"createaddition:diamond_grit",
 		"integratedterminals:part_terminal_crafting_job",
 		"integrateddynamics:part_entity_writer",
 		"integrateddynamics:part_machine_writer",

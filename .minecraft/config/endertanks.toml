@@ -1,5 +1,5 @@
 #With this disabled tanks are essentially locked to the crafted color as dyes will no longer work
-enable_in_world_coloring = true
+enable_in_world_coloring = false
 
 #Items used to upgrade the EnderTanks
 [upgrade_items]
@@ -12,7 +12,7 @@ enable_in_world_coloring = true
 	#Items that apply a large storage capacity upgrade
 	large_capacity = ["minecraft:ender_eye"]
 	#Items that are used to increase the tanks internal transfer pump
-	pump = ["minecraft:piston"]
+	pump = []
 	#Items that apply a small storage capacity upgrade
 	#Each item can only be use once per tank
 	small_capacity_singleuse = []
@@ -28,19 +28,19 @@ enable_in_world_coloring = true
 	#How many internal transfer pump upgrades can a tank have?
 	# default is only 1/4 bucket, upgrades make it a bucket per upgrade
 	#Range: 0 ~ 8
-	tank_pump_max = 4
+	tank_pump_max = 0
 	#Minimum capacity an EnderTank holds
 	#Range: 4 ~ 128
-	tank_size_min = 32
+	tank_size_min = 4
 	#Maximum capacity an EnderTank holds
 	#Range: 4 ~ 512
-	tank_size_max = 256
+	tank_size_max = 8
 	#Capacity increased by small capacity upgrade items
 	#Range: 2 ~ 16
-	small_capacity_upgrade = 8
+	small_capacity_upgrade = 2
 	#Capacity increased by large capacity upgrade items
 	#Range: 4 ~ 32
-	large_capacity_upgrade = 16
+	large_capacity_upgrade = 4
 
 [access_settings]
 	#Enables the usage of public tanks, if disabled tanks must be upgraded before use

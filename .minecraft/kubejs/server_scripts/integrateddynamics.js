@@ -10,6 +10,7 @@ onEvent("recipes", event => {
      * */
 
     //Most item/fluid features in ID are stripped off.
+    //Interdimensional linkage before the End is turned off too.
     event.remove({ "output": "integrateddynamics:proto_chorus" })
     event.remove({ "input": "integrateddynamics:proto_chorus" })
     event.remove({ "output": "integratedtunnels:part_exporter_item" })

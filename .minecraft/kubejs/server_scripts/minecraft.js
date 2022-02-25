@@ -1,7 +1,6 @@
 // priority : 0
 
 onEvent("recipes", event => {
-    //TODO: Fill in the blanks
 
     // Shortcut for making slimeballs
     event.recipes.create.mixing("minecraft:slime_ball", ["farmersdelight:wheat_dough", "minecraft:lime_dye", Fluid.water(250)])
