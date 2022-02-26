@@ -1,0 +1,50 @@
+{
+    "display": {
+        "icon": {
+            "item": "enderchests:ender_chest"
+        },
+        "title": {
+            "translate": "singularity.advancement.enderstorage"
+        },
+        "description": {
+            "translate": "singularity.advancement.enderstorage.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/transport/cart",
+    "criteria": {
+        "chest": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "enderchests:ender_chest"
+                        ]
+                    }
+                ]
+            }
+        },
+        "tank": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "endertanks:ender_tank"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "chest",
+            "tank"
+        ]
+    ]
+}

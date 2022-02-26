@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "integrateddynamics:part_connector_omni_directional"
+        },
+        "title": {
+            "translate": "singularity.advancement.id_connector"
+        },
+        "description": {
+            "translate": "singularity.advancement.id_connector.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/logics/id_terminal",
+    "criteria": {
+        "connector": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "integrateddynamics:part_connector_omni_directional"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "connector"
+        ]
+    ]
+}

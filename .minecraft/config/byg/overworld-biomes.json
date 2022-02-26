@@ -5,7 +5,7 @@
         [
           "minecraft:snowy_plains",
           "minecraft:snowy_plains",
-          "minecraft:snowy_plains",
+          "byg:frosted_taiga",
           "minecraft:snowy_taiga",
           "minecraft:snowy_taiga"
         ],
@@ -20,7 +20,7 @@
           "minecraft:meadow",
           "minecraft:meadow",
           "minecraft:meadow",
-          "minecraft:meadow",
+          "byg:fragment_forest",
           "minecraft:dark_forest"
         ],
         [
@@ -42,7 +42,7 @@
         [
           "minecraft:ice_spikes",
           "minecraft:the_void",
-          "minecraft:the_void",
+          "byg:frosted_taiga",
           "minecraft:the_void",
           "minecraft:the_void"
         ],
@@ -58,7 +58,7 @@
           "minecraft:the_void",
           "byg:temperate_grove",
           "minecraft:birch_forest",
-          "minecraft:the_void"
+          "byg:redwood_thicket"
         ],
         [
           "minecraft:the_void",
@@ -115,7 +115,7 @@
       "swapper": {
         "minecraft:swamp": "byg:bayou"
       },
-      "weight": 8,
+      "weight": 6,
       "oceans": [
         [
           "minecraft:deep_frozen_ocean",
@@ -134,7 +134,7 @@
       ],
       "middle_biomes": [
         [
-          "minecraft:snowy_plains",
+          "byg:shattered_glacier",
           "minecraft:snowy_plains",
           "minecraft:snowy_plains",
           "minecraft:snowy_taiga",
@@ -143,14 +143,13 @@
         [
           "minecraft:plains",
           "minecraft:plains",
-          "integrateddynamics:meneglin",
-          "minecraft:forest",
+          "byg:twilight_meadow",
           "byg:autumnal_valley",
           "minecraft:old_growth_spruce_taiga"
         ],
         [
           "minecraft:flower_forest",
-          "minecraft:plains",
+          "byg:prairie",
           "byg:allium_fields",
           "minecraft:birch_forest",
           "minecraft:dark_forest"
@@ -165,9 +164,9 @@
         [
           "minecraft:desert",
           "minecraft:desert",
+          "byg:mojave_desert",
           "minecraft:desert",
-          "minecraft:desert",
-          "minecraft:desert"
+          "byg:tropical_rainforest"
         ]
       ],
       "middle_biomes_variant": [
@@ -180,17 +179,17 @@
         ],
         [
           "minecraft:the_void",
-          "minecraft:the_void",
+          "byg:weeping_witch_forest",
           "byg:aspen_forest",
           "minecraft:the_void",
           "minecraft:old_growth_pine_taiga"
         ],
         [
           "minecraft:the_void",
-          "minecraft:the_void",
-          "minecraft:forest",
+          "byg:prairie",
+          "byg:orchard",
           "minecraft:birch_forest",
-          "minecraft:the_void"
+          "byg:redwood_thicket"
         ],
         [
           "minecraft:the_void",
@@ -201,10 +200,10 @@
         ],
         [
           "minecraft:eroded_badlands",
-          "minecraft:eroded_badlands",
           "minecraft:the_void",
+          "byg:sierra_badlands",
           "minecraft:the_void",
-          "minecraft:the_void"
+          "byg:tropical_rainforest"
         ]
       ]
     },
@@ -213,7 +212,7 @@
         [
           "minecraft:snowy_plains",
           "minecraft:snowy_plains",
-          "minecraft:snowy_plains",
+          "byg:frosted_coniferous_forest",
           "minecraft:snowy_taiga",
           "minecraft:snowy_taiga"
         ],
@@ -222,7 +221,7 @@
           "minecraft:meadow",
           "byg:coniferous_forest",
           "byg:cika_woods",
-          "minecraft:old_growth_spruce_taiga"
+          "byg:skyris_vale"
         ],
         [
           "minecraft:meadow",
@@ -250,7 +249,7 @@
         [
           "minecraft:ice_spikes",
           "minecraft:the_void",
-          "minecraft:the_void",
+          "byg:frosted_coniferous_forest",
           "minecraft:the_void",
           "minecraft:the_void"
         ],
@@ -323,7 +322,7 @@
       "swapper": {
         "minecraft:swamp": "byg:cypress_swamplands"
       },
-      "weight": 8,
+      "weight": 6,
       "oceans": [
         [
           "minecraft:deep_frozen_ocean",
@@ -350,21 +349,21 @@
         ],
         [
           "minecraft:plains",
-          "minecraft:plains",
-          "minecraft:forest",
+          "byg:weeping_witch_forest",
+          "byg:zelkova_forest",
           "minecraft:taiga",
           "minecraft:old_growth_spruce_taiga"
         ],
         [
           "minecraft:flower_forest",
           "minecraft:plains",
-          "minecraft:forest",
+          "byg:orchard",
           "minecraft:birch_forest",
           "minecraft:dark_forest"
         ],
         [
           "minecraft:savanna",
-          "minecraft:savanna",
+          "byg:firecracker_shrubland",
           "byg:forgotten_forest",
           "minecraft:jungle",
           "minecraft:jungle"
@@ -372,7 +371,7 @@
         [
           "minecraft:the_void",
           "minecraft:the_void",
-          "minecraft:the_void",
+          "byg:sierra_badlands",
           "minecraft:the_void",
           "minecraft:the_void"
         ]
@@ -388,20 +387,20 @@
         [
           "minecraft:the_void",
           "minecraft:the_void",
-          "minecraft:the_void",
+          "byg:twilight_meadow",
           "minecraft:the_void",
           "minecraft:old_growth_pine_taiga"
         ],
         [
           "minecraft:sunflower_plains",
           "minecraft:the_void",
-          "minecraft:the_void",
+          "byg:red_oak_forest",
           "minecraft:old_growth_birch_forest",
           "minecraft:the_void"
         ],
         [
           "minecraft:the_void",
-          "minecraft:the_void",
+          "byg:firecracker_shrubland",
           "minecraft:plains",
           "minecraft:sparse_jungle",
           "minecraft:bamboo_jungle"
@@ -528,7 +527,827 @@
         ]
       ],
       "swapper": {},
-      "weight": 8,
+      "weight": 6,
+      "oceans": [
+        [
+          "minecraft:deep_frozen_ocean",
+          "minecraft:deep_cold_ocean",
+          "minecraft:deep_ocean",
+          "minecraft:deep_lukewarm_ocean",
+          "minecraft:warm_ocean"
+        ],
+        [
+          "minecraft:frozen_ocean",
+          "minecraft:cold_ocean",
+          "minecraft:ocean",
+          "minecraft:lukewarm_ocean",
+          "minecraft:warm_ocean"
+        ]
+      ],
+      "middle_biomes": [
+        [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_taiga",
+          "minecraft:taiga"
+        ],
+        [
+          "minecraft:plains",
+          "minecraft:plains",
+          "minecraft:forest",
+          "minecraft:taiga",
+          "minecraft:old_growth_spruce_taiga"
+        ],
+        [
+          "minecraft:flower_forest",
+          "minecraft:plains",
+          "byg:temperate_rainforest",
+          "minecraft:birch_forest",
+          "minecraft:dark_forest"
+        ],
+        [
+          "minecraft:savanna",
+          "minecraft:savanna",
+          "minecraft:forest",
+          "minecraft:jungle",
+          "minecraft:jungle"
+        ],
+        [
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert"
+        ]
+      ],
+      "middle_biomes_variant": [
+        [
+          "minecraft:ice_spikes",
+          "minecraft:the_void",
+          "minecraft:snowy_taiga",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "byg:zelkova_forest",
+          "minecraft:the_void",
+          "minecraft:old_growth_pine_taiga"
+        ],
+        [
+          "minecraft:sunflower_plains",
+          "minecraft:the_void",
+          "byg:temperate_rainforest",
+          "minecraft:old_growth_birch_forest",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:plains",
+          "minecraft:sparse_jungle",
+          "minecraft:bamboo_jungle"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ]
+    },
+    {
+      "plateau_biomes": [
+        [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_taiga",
+          "minecraft:snowy_taiga"
+        ],
+        [
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:forest",
+          "byg:coconino_meadow",
+          "minecraft:old_growth_spruce_taiga"
+        ],
+        [
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:dark_forest"
+        ],
+        [
+          "minecraft:savanna_plateau",
+          "minecraft:savanna_plateau",
+          "minecraft:forest",
+          "minecraft:forest",
+          "minecraft:jungle"
+        ],
+        [
+          "minecraft:badlands",
+          "minecraft:badlands",
+          "minecraft:badlands",
+          "minecraft:wooded_badlands",
+          "minecraft:wooded_badlands"
+        ]
+      ],
+      "plateau_biomes_variant": [
+        [
+          "minecraft:ice_spikes",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:old_growth_pine_taiga"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:forest",
+          "minecraft:birch_forest",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:eroded_badlands",
+          "minecraft:eroded_badlands",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ],
+      "extreme_hills": [
+        [
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:windswept_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ],
+      "swapper": {},
+      "weight": 6,
+      "oceans": [
+        [
+          "minecraft:deep_frozen_ocean",
+          "minecraft:deep_cold_ocean",
+          "minecraft:deep_ocean",
+          "minecraft:deep_lukewarm_ocean",
+          "minecraft:warm_ocean"
+        ],
+        [
+          "minecraft:frozen_ocean",
+          "minecraft:cold_ocean",
+          "minecraft:ocean",
+          "minecraft:lukewarm_ocean",
+          "minecraft:warm_ocean"
+        ]
+      ],
+      "middle_biomes": [
+        [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_taiga",
+          "minecraft:taiga"
+        ],
+        [
+          "minecraft:plains",
+          "minecraft:plains",
+          "minecraft:forest",
+          "minecraft:taiga",
+          "minecraft:old_growth_spruce_taiga"
+        ],
+        [
+          "minecraft:flower_forest",
+          "minecraft:plains",
+          "minecraft:forest",
+          "minecraft:birch_forest",
+          "minecraft:dark_forest"
+        ],
+        [
+          "minecraft:savanna",
+          "minecraft:savanna",
+          "minecraft:forest",
+          "minecraft:jungle",
+          "minecraft:jungle"
+        ],
+        [
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert"
+        ]
+      ],
+      "middle_biomes_variant": [
+        [
+          "minecraft:ice_spikes",
+          "minecraft:the_void",
+          "minecraft:snowy_taiga",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:old_growth_pine_taiga"
+        ],
+        [
+          "minecraft:sunflower_plains",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:old_growth_birch_forest",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:plains",
+          "minecraft:sparse_jungle",
+          "minecraft:bamboo_jungle"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ]
+    },
+    {
+      "plateau_biomes": [
+        [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_taiga",
+          "minecraft:snowy_taiga"
+        ],
+        [
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:forest",
+          "byg:rose_fields",
+          "minecraft:old_growth_spruce_taiga"
+        ],
+        [
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:dark_forest"
+        ],
+        [
+          "minecraft:savanna_plateau",
+          "minecraft:savanna_plateau",
+          "minecraft:forest",
+          "minecraft:forest",
+          "minecraft:jungle"
+        ],
+        [
+          "minecraft:badlands",
+          "minecraft:badlands",
+          "minecraft:badlands",
+          "minecraft:wooded_badlands",
+          "minecraft:wooded_badlands"
+        ]
+      ],
+      "plateau_biomes_variant": [
+        [
+          "minecraft:ice_spikes",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:old_growth_pine_taiga"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:forest",
+          "minecraft:birch_forest",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:eroded_badlands",
+          "minecraft:eroded_badlands",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ],
+      "extreme_hills": [
+        [
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:windswept_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ],
+      "swapper": {},
+      "weight": 6,
+      "oceans": [
+        [
+          "minecraft:deep_frozen_ocean",
+          "minecraft:deep_cold_ocean",
+          "minecraft:deep_ocean",
+          "minecraft:deep_lukewarm_ocean",
+          "minecraft:warm_ocean"
+        ],
+        [
+          "minecraft:frozen_ocean",
+          "minecraft:cold_ocean",
+          "minecraft:ocean",
+          "minecraft:lukewarm_ocean",
+          "minecraft:warm_ocean"
+        ]
+      ],
+      "middle_biomes": [
+        [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_taiga",
+          "minecraft:taiga"
+        ],
+        [
+          "minecraft:plains",
+          "minecraft:plains",
+          "minecraft:forest",
+          "minecraft:taiga",
+          "minecraft:old_growth_spruce_taiga"
+        ],
+        [
+          "minecraft:flower_forest",
+          "minecraft:plains",
+          "minecraft:forest",
+          "minecraft:birch_forest",
+          "minecraft:dark_forest"
+        ],
+        [
+          "minecraft:savanna",
+          "minecraft:savanna",
+          "minecraft:forest",
+          "minecraft:jungle",
+          "minecraft:jungle"
+        ],
+        [
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert"
+        ]
+      ],
+      "middle_biomes_variant": [
+        [
+          "minecraft:ice_spikes",
+          "minecraft:the_void",
+          "minecraft:snowy_taiga",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:old_growth_pine_taiga"
+        ],
+        [
+          "minecraft:sunflower_plains",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:old_growth_birch_forest",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:plains",
+          "minecraft:sparse_jungle",
+          "minecraft:bamboo_jungle"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ]
+    },
+    {
+      "plateau_biomes": [
+        [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_taiga",
+          "minecraft:snowy_taiga"
+        ],
+        [
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:forest",
+          "byg:autumnal_forest",
+          "minecraft:old_growth_spruce_taiga"
+        ],
+        [
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:dark_forest"
+        ],
+        [
+          "minecraft:savanna_plateau",
+          "minecraft:savanna_plateau",
+          "minecraft:forest",
+          "minecraft:forest",
+          "minecraft:jungle"
+        ],
+        [
+          "minecraft:badlands",
+          "minecraft:badlands",
+          "minecraft:badlands",
+          "minecraft:wooded_badlands",
+          "minecraft:wooded_badlands"
+        ]
+      ],
+      "plateau_biomes_variant": [
+        [
+          "minecraft:ice_spikes",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:old_growth_pine_taiga"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:forest",
+          "minecraft:birch_forest",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:eroded_badlands",
+          "minecraft:eroded_badlands",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ],
+      "extreme_hills": [
+        [
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:windswept_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ],
+      "swapper": {},
+      "weight": 6,
+      "oceans": [
+        [
+          "minecraft:deep_frozen_ocean",
+          "minecraft:deep_cold_ocean",
+          "minecraft:deep_ocean",
+          "minecraft:deep_lukewarm_ocean",
+          "minecraft:warm_ocean"
+        ],
+        [
+          "minecraft:frozen_ocean",
+          "minecraft:cold_ocean",
+          "minecraft:ocean",
+          "minecraft:lukewarm_ocean",
+          "minecraft:warm_ocean"
+        ]
+      ],
+      "middle_biomes": [
+        [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_taiga",
+          "minecraft:taiga"
+        ],
+        [
+          "minecraft:plains",
+          "minecraft:plains",
+          "minecraft:forest",
+          "minecraft:taiga",
+          "minecraft:old_growth_spruce_taiga"
+        ],
+        [
+          "minecraft:flower_forest",
+          "minecraft:plains",
+          "minecraft:forest",
+          "minecraft:birch_forest",
+          "minecraft:dark_forest"
+        ],
+        [
+          "minecraft:savanna",
+          "minecraft:savanna",
+          "minecraft:forest",
+          "minecraft:jungle",
+          "minecraft:jungle"
+        ],
+        [
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert",
+          "minecraft:desert"
+        ]
+      ],
+      "middle_biomes_variant": [
+        [
+          "minecraft:ice_spikes",
+          "minecraft:the_void",
+          "minecraft:snowy_taiga",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:old_growth_pine_taiga"
+        ],
+        [
+          "minecraft:sunflower_plains",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:old_growth_birch_forest",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:plains",
+          "minecraft:sparse_jungle",
+          "minecraft:bamboo_jungle"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ]
+    },
+    {
+      "plateau_biomes": [
+        [
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_plains",
+          "minecraft:snowy_taiga",
+          "minecraft:snowy_taiga"
+        ],
+        [
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:forest",
+          "byg:autumnal_taiga",
+          "minecraft:old_growth_spruce_taiga"
+        ],
+        [
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:dark_forest"
+        ],
+        [
+          "minecraft:savanna_plateau",
+          "minecraft:savanna_plateau",
+          "minecraft:forest",
+          "minecraft:forest",
+          "minecraft:jungle"
+        ],
+        [
+          "minecraft:badlands",
+          "minecraft:badlands",
+          "minecraft:badlands",
+          "minecraft:wooded_badlands",
+          "minecraft:wooded_badlands"
+        ]
+      ],
+      "plateau_biomes_variant": [
+        [
+          "minecraft:ice_spikes",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:meadow",
+          "minecraft:meadow",
+          "minecraft:old_growth_pine_taiga"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:forest",
+          "minecraft:birch_forest",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:eroded_badlands",
+          "minecraft:eroded_badlands",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ],
+      "extreme_hills": [
+        [
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_gravelly_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:windswept_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_hills",
+          "minecraft:windswept_forest",
+          "minecraft:windswept_forest"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ],
+        [
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void",
+          "minecraft:the_void"
+        ]
+      ],
+      "swapper": {},
+      "weight": 6,
       "oceans": [
         [
           "minecraft:deep_frozen_ocean",

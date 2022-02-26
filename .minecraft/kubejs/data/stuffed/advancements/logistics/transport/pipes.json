@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "create:fluid_pipe"
+        },
+        "title": {
+            "translate": "singularity.advancement.pipe"
+        },
+        "description": {
+            "translate": "singularity.advancement.pipe.desc"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "stuffed:logistics/transport/belts",
+    "criteria": {
+        "pipe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "create:fluid_pipe"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "pipe"
+        ]
+    ]
+}
