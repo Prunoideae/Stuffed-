@@ -12,4 +12,14 @@ onEvent("recipes", event => {
 
     // Lava -> Magma is not allowed
     event.remove({ "type": "integrateddynamics:mechanical_drying_basin", "output": "minecraft:magma_block" })
+
+    //The disc
+    event.recipes.minecraft.crafting_shaped("minecraft:music_disc_otherside", [
+        'SSS',
+        'SDS',
+        'SSS'
+    ], {
+        'S': "minecraft:purpur_block",
+        'D': "minecraft:ender_eye"
+    })
 })

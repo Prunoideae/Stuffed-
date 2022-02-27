@@ -21,8 +21,7 @@ onEvent("recipes", event => {
     ], "kubejs:nether_flour_blue")
 
     //Fluids
-    event.recipes.create.mixing(Fluid.of("kubejs:dissolvent", 1000), ["kubejs:powder_sulfur", Fluid.of("create:potion", 250, {"Bottle":"REGULAR", "Potion":"minecraft:strength"})])
+    event.recipes.create.mixing(Fluid.of("kubejs:dissolvent", 1000), ["kubejs:powder_sulfur", Fluid.of("create:potion", 250, { "Bottle": "REGULAR", "Potion": "minecraft:strength" })])
     event.recipes.create.mixing(Fluid.of("kubejs:purifying_agent", 1000), ["kubejs:powder_salt", "kubejs:purified_dust_coal", Fluid.water(1000)])
     event.recipes.create.mixing(Fluid.of("kubejs:crystallizing_fluid", 100), ["kubejs:purified_dust_quartz", Fluid.of("kubejs:purifying_agent", 100)]).heated()
-
 })

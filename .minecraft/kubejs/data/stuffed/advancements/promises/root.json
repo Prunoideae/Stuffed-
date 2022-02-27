@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "kubejs:white_hair_wolf_ear_loli"
+        },
+        "title": {
+            "translate": "singularity.advancement.promise"
+        },
+        "description": {
+            "translate": "singularity.advancement.promise.desc"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true,
+        "background": "minecraft:textures/block/bedrock.png"
+    },
+    "criteria": {
+        "egg": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:dragon_egg"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "egg"
+        ]
+    ]
+}

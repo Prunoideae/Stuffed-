@@ -18,6 +18,7 @@ function NameColorHolder(name, color) {
 function PrefixedColoredItems(prefix) {
     this.prefix = prefix
     this.members = []
+    this.handler = undefined
 
     /**
      * 
@@ -26,6 +27,15 @@ function PrefixedColoredItems(prefix) {
      */
     this.addItem = function (name, color) {
         this.members.push(new NameColorHolder(name, color))
+        return this
+    }
+
+    /**
+     * 
+     * @param {function (dev.latvian.mods.kubejs.item.ItemBuilder):void} handler 
+     */
+    this.appendHandler = function (handler) {
+        this.handler = handler
         return this
     }
 }
@@ -37,7 +47,7 @@ function PrefixedColoredItems(prefix) {
  * @param {number} hunger 
  * @param {number} saturation 
  */
- function PlainFood(food, hunger, saturation) {
+function PlainFood(food, hunger, saturation) {
     this.food = food
     this.hunger = hunger
     this.saturation = saturation

@@ -27,7 +27,6 @@ const namedOnlyFluids = [
     new NameColorHolder("cream", Color.rgba(255, 255, 240, 1.0)),
 ];
 
-//TODO: fix sigil and promise
 const coloredItems = [
     // This dust and that dust
     new PrefixedColoredItems("powder")
@@ -41,40 +40,52 @@ const coloredItems = [
     //Doughs, remade and expanded
     new PrefixedColoredItems("sigil")
         // The basis of Minecraft, ingots and gems
-        .addItem("terra", Color.rgba(255, 255, 255, 1.0))
+        .addItem("terra", Color.rgba(214, 220, 228, 1.0))
         // Creatures, mostly food
-        .addItem("animalia", Color.rgba(255, 255, 255, 1.0))
+        .addItem("animalia", Color.rgba(223, 97, 89, 1.0))
         // Crops, mostly food
-        .addItem("plantae", Color.rgba(255, 255, 255, 1.0))
+        .addItem("plantae", Color.rgba(86, 171, 62, 1.0))
         // Something not friendly
-        .addItem("victoris", Color.rgba(255, 255, 255, 1.0))
+        .addItem("victoris", Color.rgba(179, 173, 255, 1.0))
+        // Everything
+        .addItem("mundus", Color.rgba(255, 255, 255, 1.0))
+        .appendHandler(builder => builder.glow(true)),
+    new PrefixedColoredItems("incomplete_sigil")
+        // The basis of Minecraft, ingots and gems
+        .addItem("terra", Color.rgba(214, 220, 228, 1.0))
+        // Creatures, mostly food
+        .addItem("animalia", Color.rgba(223, 97, 89, 1.0))
+        // Crops, mostly food
+        .addItem("plantae", Color.rgba(86, 171, 62, 1.0))
+        // Something not friendly
+        .addItem("victoris", Color.rgba(179, 173, 255, 1.0))
         // Everything
         .addItem("mundus", Color.rgba(255, 255, 255, 1.0)),
     new PrefixedColoredItems("promise")
         //Terra
-        .addItem("iron", Color.rgba(255, 255, 255, 1.0))
-        .addItem("gold", Color.rgba(255, 255, 255, 1.0))
-        .addItem("quartz", Color.rgba(255, 255, 255, 1.0))
-        .addItem("redstone", Color.rgba(255, 255, 255, 1.0))
-        .addItem("lava", Color.rgba(255, 255, 255, 1.0))
+        .addItem("iron", Color.rgba(214, 220, 228, 1.0))
+        .addItem("gold", Color.rgba(250, 242, 94, 1.0))
+        .addItem("quartz", Color.rgba(177, 158, 143, 1.0))
+        .addItem("redstone", Color.rgba(252, 0, 0, 1.0))
+        .addItem("lava", Color.rgba(224, 138, 62, 1.0))
         //Animalia
-        .addItem("pig", Color.rgba(255, 255, 255, 1.0))//honey glazed ham
-        .addItem("chicken", Color.rgba(255, 255, 255, 1.0))//egg sandwich
-        .addItem("bee", Color.rgba(255, 255, 255, 1.0))//Honey cake
-        .addItem("fish", Color.rgba(255, 255, 255, 1.0))//fish stew
-        .addItem("cow", Color.rgba(255, 255, 255, 1.0))//shephred's pie
+        .addItem("pig", Color.rgba(252, 118, 118, 1.0))//honey glazed ham
+        .addItem("chicken", Color.rgba(220, 104, 153, 1.0))//egg sandwich
+        .addItem("bee", Color.rgba(252, 208, 44, 1.0))//Honey cake
+        .addItem("fish", Color.rgba(196, 160, 112, 1.0))//fish stew
+        .addItem("cow", Color.rgba(227, 227, 214, 1.0))//shephred's pie
         //Plantea
-        .addItem("fruit", Color.rgba(255, 255, 255, 1.0))//steamed rice with fruits
-        .addItem("pumpkin", Color.rgba(255, 255, 255, 1.0))//pumpkin soup
-        .addItem("chorus", Color.rgba(255, 255, 255, 1.0)) //crystallized chorus block
-        .addItem("beetroot", Color.rgba(255, 255, 255, 1.0)) //mixed salad
-        .addItem("cocoa", Color.rgba(255, 255, 255, 1.0)) //hot cocoa
+        .addItem("fruit", Color.rgba(252, 28, 42, 1.0))//steamed rice with fruits
+        .addItem("pumpkin", Color.rgba(224, 136, 29, 1.0))//pumpkin soup
+        .addItem("chorus", Color.rgba(168, 121, 168, 1.0)) //crystallized chorus block
+        .addItem("beetroot", Color.rgba(180, 71, 75, 1.0)) //mixed salad
+        .addItem("cocoa", Color.rgba(173, 107, 75, 1.0)) //hot cocoa
         //Victoris
-        .addItem("zombie", Color.rgba(255, 255, 255, 1.0))//rotten flesh
-        .addItem("ender", Color.rgba(255, 255, 255, 1.0))//enderpearl
-        .addItem("blaze", Color.rgba(255, 255, 255, 1.0))//blaze powder
-        .addItem("spider", Color.rgba(255, 255, 255, 1.0))//spider eye
-        .addItem("skeleton", Color.rgba(255, 255, 255, 1.0))//bone
+        .addItem("zombie", Color.rgba(110, 76, 27, 1.0))//rotten flesh
+        .addItem("ender", Color.rgba(138, 241, 223, 1.0))//enderpearl
+        .addItem("blaze", Color.rgba(252, 161, 0, 1.0))//blaze powder
+        .addItem("spider", Color.rgba(10, 56, 66, 1.0))//spider eye
+        .addItem("skeleton", Color.rgba(164, 164, 164, 1.0))//bone
 ]
 
 const oreColorMappings = {
@@ -136,6 +147,8 @@ captureEvent("item.registry", event => {
                 .color(0, n.color.getArgbKJS())
                 .texture("kubejs:item/" + v.prefix)
                 .translationKey(v.prefix + "_" + n.name)
+            if (v.handler != undefined)
+                v.handler(builder)
         })
     }))
     function createColoredOre(prefix, name) {
