@@ -152,7 +152,8 @@
           "byg:prairie",
           "byg:allium_fields",
           "minecraft:birch_forest",
-          "minecraft:dark_forest"
+          "minecraft:dark_forest",
+          "integrateddynamics:meneglin"
         ],
         [
           "minecraft:savanna",
@@ -235,6 +236,7 @@
           "minecraft:savanna_plateau",
           "minecraft:forest",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:jungle"
         ],
         [
@@ -427,6 +429,7 @@
           "minecraft:meadow",
           "minecraft:meadow",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "byg:dacite_ridges",
           "minecraft:old_growth_spruce_taiga"
         ],
@@ -442,6 +445,7 @@
           "minecraft:savanna_plateau",
           "minecraft:forest",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:jungle"
         ],
         [
@@ -556,6 +560,7 @@
           "minecraft:plains",
           "minecraft:plains",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:taiga",
           "minecraft:old_growth_spruce_taiga"
         ],
@@ -570,6 +575,7 @@
           "minecraft:savanna",
           "minecraft:savanna",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:jungle",
           "minecraft:jungle"
         ],
