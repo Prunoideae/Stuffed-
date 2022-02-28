@@ -104,4 +104,5 @@ onEvent("recipes", event => {
         .addStep(event.recipes.create.deploying, "kubejs:sigil_victoris")
         .loops(64)
         .create(event)
+    
 })
