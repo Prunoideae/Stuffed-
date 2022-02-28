@@ -1,4 +1,5 @@
 # Game ignores
+instance.cfg
 coremods/
 crash-reports/
 local/
