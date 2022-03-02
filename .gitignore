@@ -30,3 +30,4 @@ raw_en_us.json
 package.json
 package-lock.json
 
+.minecraft/kubejs/jsconfig.json
