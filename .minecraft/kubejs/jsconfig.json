@@ -1,9 +1,6 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "lib": [
-            "ES6"
-        ]
-    },
-    "exclude": []
+        "lib": ["ES5", "ES2015"],
+        "typeRoots": ["kubetypings"]
+    }
 }

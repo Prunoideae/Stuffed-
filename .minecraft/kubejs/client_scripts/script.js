@@ -1,6 +1,6 @@
 // priority: 0
 
-captureEvent("jei.hide.items", event => {
+onEvent("jei.hide.items", event => {
 	tags.items.create.crushed_ores.forEach((v, i, a) => {
 		event.hide(v)
 	})
@@ -30,7 +30,7 @@ captureEvent("jei.hide.items", event => {
 	items_to_hide.forEach((v, i, a) => event.hide(v))
 })
 
-captureEvent("item.tooltip", event => {
+onEvent("item.tooltip", event => {
 	let raw_food = [
 		"minecraft:porkchop",
 		"minecraft:beef",

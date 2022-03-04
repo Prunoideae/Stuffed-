@@ -19,10 +19,10 @@ const oreFluidIntermediates = [
     "solution"
 ]
 
-captureEvent("recipes", event => { });
+onEvent("recipes", event => { });
 
 
-captureEvent("tags.items", event => {
+onEvent("tags.items", event => {
     event.add("kubejs:ores/nether_gold", "minecraft:nether_gold_ore")
     event.add("forge:ores", "#kubejs:ores/nether_gold")
     tags.items.forge.ores.forEach((ore, index, array) => {
@@ -37,11 +37,11 @@ captureEvent("tags.items", event => {
 })
 
 
-captureEvent("tags.blocks", event => {
+onEvent("tags.blocks", event => {
     // FIX: Moving ID blocks causes crash
     event.add("create:non_movable", /integrateddynamics:.*/)
     event.add("create:non_movable", /integratedterminals:.*/)
     event.add("create:non_movable", /integratedtunnels:.*/)
 })
 
-captureEvent("tags.fluids", event => { })
+onEvent("tags.fluids", event => { })

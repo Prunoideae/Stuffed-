@@ -127,7 +127,7 @@ const oreFluidIntermediates = [
     "solution"
 ]
 
-captureEvent("item.registry", event => {
+onEvent("item.registry", event => {
 
     event.create("white_hair_wolf_ear_loli", builder => {
         builder
@@ -178,7 +178,7 @@ captureEvent("item.registry", event => {
 
 });
 
-captureEvent('item.modification', event => {
+onEvent('item.modification', event => {
     event.modify("kubejs:purified_dust_coal", prop => {
         prop.setBurnTime(1600)
     })
@@ -210,7 +210,7 @@ captureEvent('item.modification', event => {
     giveContainer("kubejs:cream_bucket", "minecraft:bucket")
 })
 
-captureEvent("fluid.registry", event => {
+onEvent("fluid.registry", event => {
     function createColoredOreFluid(prefix, name) {
         var color = oreColorMappings[name]
         if (color == undefined) {
@@ -247,6 +247,6 @@ captureEvent("fluid.registry", event => {
     })
 });
 
-captureEvent("block.registry", event => {
+onEvent("block.registry", event => {
 
 });

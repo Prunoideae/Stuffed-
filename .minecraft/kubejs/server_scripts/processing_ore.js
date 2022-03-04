@@ -417,6 +417,6 @@ onEvent("recipes", event => {
     event.recipes.minecraft.blasting(Item.of("minecraft:iron_nugget", 5), "minecraft:iron_ore").cookingTime(100)
 });
 
-captureEvent("block.loot_tables", event => {
+onEvent("block.loot_tables", event => {
     tags.items.forge.ores.forEach((v, i, a) => event.addSimpleBlock(v))
 });

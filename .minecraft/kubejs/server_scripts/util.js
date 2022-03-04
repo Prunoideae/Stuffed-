@@ -10,10 +10,10 @@
  * `.universal(event)` for both. Requires at least one of the two
  * inputs to run, or an error will be logged.
  * 
- * @param {Item} output 
+ * @param {Internal.ItemStackJS} output 
  * @param {number} duration 
- * @param {Ingredient} input 
- * @param {Fluid} fluid 
+ * @param {Internal.IngredientJS} input 
+ * @param {Internal.FluidStackJS} fluid 
  * @return {DryingBasingRecipe}
  */
 function DryingBasingRecipe(output, duration, input, fluid) {
@@ -69,7 +69,7 @@ function CuttingRecipe(output, input, tool) {
 
     /**
      * 
-     * @param {dev.latvian.mods.kubejs.recipe.RecipeEventJS} event 
+     * @param {Internal.RecipeEventJS} event 
      */
     this.create = function (event) {
         event.custom({
@@ -110,7 +110,7 @@ function CookingRecipe(output, inputs) {
 
     /**
      * 
-     * @param {dev.latvian.mods.kubejs.recipe.RecipeEventJS} event 
+     * @param {Internal.RecipeEventJS} event 
      */
     this.create = function (event) {
         var transformed_inputs = []
@@ -135,7 +135,7 @@ function RollingRecipe(output, input) {
 
     /**
      * 
-     * @param {dev.latvian.mods.kubejs.recipe.RecipeEventJS} event 
+     * @param {Internal.RecipeEventJS} event 
      */
     this.create = function (event) {
         event.custom({
@@ -169,7 +169,7 @@ function AssemblyRecipe(outputs) {
 
     /**
      * 
-     * @param {dev.latvian.mods.kubejs.item.ingredient.IngredientJS} intermediate 
+     * @param {Internal.IngredientJS} intermediate 
      * @returns {AssemblyRecipe}
      */
     this.intermediate = function (intermediate) {
@@ -179,7 +179,7 @@ function AssemblyRecipe(outputs) {
 
     /**
      * 
-     * @param {dev.latvian.mods.kubejs.item.ingredient.IngredientJS} input 
+     * @param {Internal.IngredientJS} input 
      * @returns {AssemblyRecipe}
      */
     this.input = function (input) {
@@ -189,8 +189,8 @@ function AssemblyRecipe(outputs) {
 
     /**
      * 
-     * @param {function (dev.latvian.mods.kubejs.item.ingredient.IngredientJS, dev.latvian.mods.kubejs.item.ingredient.IngredientJS):dev.latvian.mods.kubejs.recipe.RecipeJS} method 
-     * @param {dev.latvian.mods.kubejs.item.ingredient.IngredientJS} ingredient 
+     * @param {function (Internal.IngredientJS, Internal.IngredientJS): Internal.RecipeJS} method 
+     * @param {Internal.IngredientJS} ingredient 
      * @returns {AssemblyRecipe}
      */
     this.addStep = function (method, ingredient) {
@@ -200,8 +200,8 @@ function AssemblyRecipe(outputs) {
 
     /**
      * 
-     * @param {function (dev.latvian.mods.kubejs.item.ingredient.IngredientJS):dev.latvian.mods.kubejs.recipe.RecipeJS} method 
-     * @param {dev.latvian.mods.kubejs.item.ingredient.IngredientJS} ingredient 
+     * @param {function (Internal.IngredientJS):Internal.RecipeJS} method 
+     * @param {Internal.IngredientJS} ingredient 
      * @returns {AssemblyRecipe}
      */
     this.addProcess = function (method) {
@@ -211,7 +211,7 @@ function AssemblyRecipe(outputs) {
 
     /**
      * 
-     * @param {dev.latvian.mods.kubejs.recipe.RecipeEventJS} event 
+     * @param {Internal.RecipeEventJS} event 
      * @returns {AssemblyRecipe}
      */
     this.create = function (event) {
