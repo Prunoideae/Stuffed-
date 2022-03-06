@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
         "lib": ["ES5", "ES2015"],
-        "typeRoots": ["kubetypings"]
+        "typeRoots": ["./probe/generated", "./probe/user"]
     }
 }

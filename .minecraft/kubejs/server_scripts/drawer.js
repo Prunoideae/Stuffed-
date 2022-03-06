@@ -3,7 +3,3 @@
 onEvent("recipes", event => {
 
 })
-
-onEvent("player.chat", event => {
-
-})

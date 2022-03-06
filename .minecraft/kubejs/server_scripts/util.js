@@ -81,11 +81,16 @@ function CuttingRecipe(output, input, tool) {
     }
 }
 
+/**
+ * 
+ * @param {Internal.ItemStackJS} output 
+ * @param {Internal.IngredientJS[]} inputs 
+ */
 function CookingRecipe(output, inputs) {
     this.output = output
     this.inputs = inputs
     this._bowl = undefined
-    this._xp = 0
+    this._xp = 1
     this._duration = 200
 
     /**
@@ -94,7 +99,7 @@ function CookingRecipe(output, inputs) {
      * @returns {CookingRecipe}
      */
     this.bowl = function (bowl) {
-        this.bowl = bowl
+        this._bowl = bowl
         return this
     }
 
@@ -119,12 +124,14 @@ function CookingRecipe(output, inputs) {
             type: "farmersdelight:cooking",
             ingredients: transformed_inputs,
             result: this.output.toResultJson(),
-            experience: this.xp,
-            cookingtime: this.duration
+            experience: this._xp,
+            cookingtime: this._duration
         }
         if (this._bowl != undefined) {
             recipeJson.container = this._bowl.toJson()
         }
+        console.log(this._bowl)
+        console.log(recipeJson)
         event.custom(recipeJson)
     }
 }

@@ -29,5 +29,6 @@ tsconfig.json
 raw_en_us.json
 package.json
 package-lock.json
+probe/
 
 .minecraft/kubejs/jsconfig.json
