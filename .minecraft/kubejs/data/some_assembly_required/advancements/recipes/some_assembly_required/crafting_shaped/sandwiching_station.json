@@ -1,0 +1,1 @@
+{"parent": "minecraft:recipes/root", "rewards": {"recipes": ["some_assembly_required:crafting_shaped/sandwiching_station"]}, "criteria": {"removed": {"trigger": "minecraft:impossible"}}, "requirements": [["removed"]]}

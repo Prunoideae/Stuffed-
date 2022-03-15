@@ -1,4 +1,5 @@
 {
+  "overworld_enabled": true,
   "providers": [
     {
       "plateau_biomes": [
@@ -26,7 +27,9 @@
         [
           "minecraft:savanna_plateau",
           "minecraft:savanna_plateau",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle"
         ],
@@ -152,8 +155,7 @@
           "byg:prairie",
           "byg:allium_fields",
           "minecraft:birch_forest",
-          "minecraft:dark_forest",
-          "integrateddynamics:meneglin"
+          "minecraft:dark_forest"
         ],
         [
           "minecraft:savanna",
@@ -197,7 +199,7 @@
           "byg:araucaria_savanna",
           "minecraft:the_void",
           "byg:amaranth_fields",
-          "minecraft:the_void"
+          "byg:crag_gardens"
         ],
         [
           "minecraft:eroded_badlands",
@@ -234,9 +236,10 @@
         [
           "minecraft:savanna_plateau",
           "minecraft:savanna_plateau",
-          "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "integrateddynamics:meneglin",
+          "minecraft:forest",
           "minecraft:jungle"
         ],
         [
@@ -265,6 +268,7 @@
         [
           "minecraft:the_void",
           "minecraft:the_void",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:the_void"
@@ -428,8 +432,8 @@
         [
           "minecraft:meadow",
           "minecraft:meadow",
-          "minecraft:forest",
           "integrateddynamics:meneglin",
+          "minecraft:forest",
           "byg:dacite_ridges",
           "minecraft:old_growth_spruce_taiga"
         ],
@@ -443,9 +447,10 @@
         [
           "minecraft:savanna_plateau",
           "minecraft:savanna_plateau",
-          "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "integrateddynamics:meneglin",
+          "minecraft:forest",
           "minecraft:jungle"
         ],
         [
@@ -474,6 +479,7 @@
         [
           "minecraft:the_void",
           "minecraft:the_void",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:the_void"
@@ -559,8 +565,8 @@
         [
           "minecraft:plains",
           "minecraft:plains",
-          "minecraft:forest",
           "integrateddynamics:meneglin",
+          "minecraft:forest",
           "minecraft:taiga",
           "minecraft:old_growth_spruce_taiga"
         ],
@@ -574,8 +580,8 @@
         [
           "minecraft:savanna",
           "minecraft:savanna",
-          "minecraft:forest",
           "integrateddynamics:meneglin",
+          "minecraft:forest",
           "minecraft:jungle",
           "minecraft:jungle"
         ],
@@ -637,6 +643,7 @@
         [
           "minecraft:meadow",
           "minecraft:meadow",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "byg:coconino_meadow",
           "minecraft:old_growth_spruce_taiga"
@@ -651,7 +658,9 @@
         [
           "minecraft:savanna_plateau",
           "minecraft:savanna_plateau",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle"
         ],
@@ -681,6 +690,7 @@
         [
           "minecraft:the_void",
           "minecraft:the_void",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:the_void"
@@ -766,6 +776,7 @@
         [
           "minecraft:plains",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:taiga",
           "minecraft:old_growth_spruce_taiga"
@@ -773,6 +784,7 @@
         [
           "minecraft:flower_forest",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:dark_forest"
@@ -780,6 +792,7 @@
         [
           "minecraft:savanna",
           "minecraft:savanna",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle",
           "minecraft:jungle"
@@ -842,6 +855,7 @@
         [
           "minecraft:meadow",
           "minecraft:meadow",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "byg:rose_fields",
           "minecraft:old_growth_spruce_taiga"
@@ -856,7 +870,9 @@
         [
           "minecraft:savanna_plateau",
           "minecraft:savanna_plateau",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle"
         ],
@@ -886,6 +902,7 @@
         [
           "minecraft:the_void",
           "minecraft:the_void",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:the_void"
@@ -971,6 +988,7 @@
         [
           "minecraft:plains",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:taiga",
           "minecraft:old_growth_spruce_taiga"
@@ -978,6 +996,7 @@
         [
           "minecraft:flower_forest",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:dark_forest"
@@ -985,6 +1004,7 @@
         [
           "minecraft:savanna",
           "minecraft:savanna",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle",
           "minecraft:jungle"
@@ -1047,6 +1067,7 @@
         [
           "minecraft:meadow",
           "minecraft:meadow",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "byg:autumnal_forest",
           "minecraft:old_growth_spruce_taiga"
@@ -1061,7 +1082,9 @@
         [
           "minecraft:savanna_plateau",
           "minecraft:savanna_plateau",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle"
         ],
@@ -1091,6 +1114,7 @@
         [
           "minecraft:the_void",
           "minecraft:the_void",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:the_void"
@@ -1176,6 +1200,7 @@
         [
           "minecraft:plains",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:taiga",
           "minecraft:old_growth_spruce_taiga"
@@ -1183,6 +1208,7 @@
         [
           "minecraft:flower_forest",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:dark_forest"
@@ -1190,6 +1216,7 @@
         [
           "minecraft:savanna",
           "minecraft:savanna",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle",
           "minecraft:jungle"
@@ -1252,6 +1279,7 @@
         [
           "minecraft:meadow",
           "minecraft:meadow",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "byg:autumnal_taiga",
           "minecraft:old_growth_spruce_taiga"
@@ -1266,7 +1294,9 @@
         [
           "minecraft:savanna_plateau",
           "minecraft:savanna_plateau",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle"
         ],
@@ -1296,6 +1326,7 @@
         [
           "minecraft:the_void",
           "minecraft:the_void",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:the_void"
@@ -1381,6 +1412,7 @@
         [
           "minecraft:plains",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:taiga",
           "minecraft:old_growth_spruce_taiga"
@@ -1388,6 +1420,7 @@
         [
           "minecraft:flower_forest",
           "minecraft:plains",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:birch_forest",
           "minecraft:dark_forest"
@@ -1395,6 +1428,7 @@
         [
           "minecraft:savanna",
           "minecraft:savanna",
+          "integrateddynamics:meneglin",
           "minecraft:forest",
           "minecraft:jungle",
           "minecraft:jungle"

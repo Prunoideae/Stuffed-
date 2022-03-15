@@ -1,0 +1,1 @@
+{"parent": "minecraft:recipes/root", "rewards": {"recipes": ["some_assembly_required:smoking/toasted_bread_slice"]}, "criteria": {"removed": {"trigger": "minecraft:impossible"}}, "requirements": [["removed"]]}

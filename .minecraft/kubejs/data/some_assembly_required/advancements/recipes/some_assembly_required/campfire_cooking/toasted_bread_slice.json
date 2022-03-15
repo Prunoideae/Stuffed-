@@ -1,0 +1,1 @@
+{"parent": "minecraft:recipes/root", "rewards": {"recipes": ["some_assembly_required:campfire_cooking/toasted_bread_slice"]}, "criteria": {"removed": {"trigger": "minecraft:impossible"}}, "requirements": [["removed"]]}
